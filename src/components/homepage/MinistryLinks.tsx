@@ -24,10 +24,10 @@ type MinistryCard = {
 
 const EMBASSY_INFO = {
   name: "Hungary High Commission in New Delhi, India",
-  address: "Hungary Street, D-133, Anand Niketan, New Delhi – 110021.",
-  phone: "+91 11 2411 2851",
-  email: "armindiaembassy@mfa.am",
-  website: "https://india.mfa.am/en/",
+  address: "2/50-M Niti Marg,Chanakyapuri, New Delhi – 110021",
+  phone: "+91 11 2688 1135",
+  email: "mission.del@mfa.gov.hu",
+  website: "https://delhi.mfa.gov.hu/en",
   consular:
     "Consular appointments are handled through official mission channels",
   hours: "Monday to Friday: 9:00 AM - 4:00 PM",
