@@ -1,5 +1,5 @@
 /**
- * Static data for Armenia Quick Facts page.
+ * Static data for Hungary Quick Facts page.
  * Kept in a separate module to keep the page component lean.
  */
 import {
@@ -29,40 +29,40 @@ import {
 } from "lucide-react";
 
 export const essentialFacts = [
-  { icon: Building, color: "blue", label: "Capital", value: "Yerevan" },
-  { icon: Users, color: "green", label: "Population", value: "3 Million+" },
+  { icon: Building, color: "blue", label: "Capital", value: "Budapest" },
+  { icon: Users, color: "green", label: "Population", value: "9.6 Million+" },
   {
     icon: Languages,
     color: "purple",
     label: "Languages",
-    value: "Armenian, Russian, English",
+    value: "Hungarian, English",
   },
   {
     icon: DollarSign,
     color: "orange",
     label: "Currency",
-    value: "Armenian Dram (AMD)",
+    value: "Hungarian Forint (HUF)",
   },
-  { icon: MapPin, color: "red", label: "Location", value: "South Caucasus" },
-  { icon: Clock, color: "teal", label: "Timezone", value: "UTC+4" },
+  { icon: MapPin, color: "red", label: "Location", value: "Central Europe" },
+  { icon: Clock, color: "teal", label: "Timezone", value: "UTC+1" },
   {
     icon: Flag,
     color: "yellow",
     label: "Independence",
-    value: "September 21, 1991",
+    value: "October 23, 1989",
   },
   {
     icon: Mountain,
     color: "indigo",
     label: "Highest Peak",
-    value: "Mount Aragats (4,090 m)",
+    value: "Kékes (1,014 m)",
   },
 ];
 
 export const geographyPoints = [
   {
     icon: Mountain,
-    color: "text-red-600",
+    color: "text-[#A52B3A]",
     text: "Landlocked highland country with dramatic volcanic landscapes",
   },
   {
@@ -100,7 +100,7 @@ export const climateZones = [
   },
   {
     icon: Sun,
-    color: "text-red-600",
+    color: "text-[#A52B3A]",
     text: "Over 300 sunny days per year — ideal for student life",
   },
 ];
@@ -108,7 +108,7 @@ export const climateZones = [
 export const attractions = [
   {
     icon: Church,
-    color: "text-slate-600",
+    color: "text-[#5F6F67]",
     name: "Garni Temple",
     desc: "Iconic 1st-century Hellenistic temple overlooking the Azat River gorge",
   },
@@ -121,12 +121,12 @@ export const attractions = [
   {
     icon: Compass,
     color: "text-purple-200",
-    name: "Lake Sevan",
+    name: "Lake Balaton",
     desc: "One of the largest high-altitude freshwater lakes in the world",
   },
   {
     icon: Mountain,
-    color: "text-red-600",
+    color: "text-[#A52B3A]",
     name: "Tatev Monastery",
     desc: "Medieval monastery accessible via the world's longest aerial tramway",
   },
@@ -136,23 +136,23 @@ export const majorCities = [
   {
     name: "Yerevan",
     gradient: " ",
-    textMain: "text-slate-600",
-    textSub: "text-slate-600",
-    desc: "The vibrant capital city known as the 'Pink City' — the cultural, economic, and educational heart of Armenia.",
+    textMain: "text-[#5F6F67]",
+    textSub: "text-[#5F6F67]",
+    desc: "The vibrant capital city known as the 'Pink City' — the cultural, economic, and educational heart of Hungary.",
     pop: "1,100,000+",
     highlight: "Capital & Educational Hub",
   },
   {
-    name: "Gyumri",
+    name: "Debrecen",
     gradient: " ",
     textMain: "text-green-100",
     textSub: "text-green-200",
-    desc: "Armenia's second-largest city, renowned for its rich cultural heritage and historic architecture.",
+    desc: "Hungary's second-largest city, renowned for its rich cultural heritage and historic architecture.",
     pop: "120,000+",
     highlight: "Cultural & Historical Center",
   },
   {
-    name: "Vanadzor",
+    name: "Szeged",
     gradient: " ",
     textMain: "text-orange-100",
     textSub: "text-orange-200",
@@ -166,30 +166,30 @@ export const defaultCuisines = [
   {
     id: 0,
     iconClass: "🍖",
-    dishName: "Khorovats",
+    dishName: "Goulash",
     dishDescription:
-      "Armenia's beloved barbecue — marinated meat grilled over charcoal, a national tradition",
+      "Hungary's beloved barbecue — marinated meat grilled over charcoal, a national tradition",
     dishImage: null,
   },
   {
     id: 1,
     iconClass: "🥘",
-    dishName: "Dolma",
+    dishName: "Lángos",
     dishDescription: "Grape leaves stuffed with seasoned meat, rice, and fresh herbs",
     dishImage: null,
   },
   {
     id: 2,
     iconClass: "🫓",
-    dishName: "Lavash",
+    dishName: "Chimney Cake",
     dishDescription:
-      "UNESCO-recognized traditional Armenian flatbread baked in a clay tonir oven",
+      "UNESCO-recognized traditional Hungarian flatbread baked in a clay tonir oven",
     dishImage: null,
   },
   {
     id: 3,
     iconClass: "🎃",
-    dishName: "Ghapama",
+    dishName: "Chicken Paprikash",
     dishDescription: "Festive stuffed pumpkin filled with rice, dried fruits, nuts, and honey",
     dishImage: null,
   },
@@ -198,8 +198,8 @@ export const defaultCuisines = [
 export const transportOptions = [
   {
     icon: Plane,
-    color: "text-red-600",
-    text: "Zvartnots International Airport (EVN) — main gateway to Armenia",
+    color: "text-[#A52B3A]",
+    text: "Budapest Ferenc Liszt International Airport (BUD) — main gateway to Hungary",
   },
   {
     icon: MapPin,
@@ -231,12 +231,12 @@ export const visaFacts = [
   },
   {
     icon: Plane,
-    color: "text-red-600",
+    color: "text-[#A52B3A]",
     text: "Support provided for entry permits and residence registration",
   },
   {
     icon: Heart,
-    color: "text-red-600",
+    color: "text-[#A52B3A]",
     text: "Student-friendly policies for international medical aspirants",
   },
 ];
@@ -276,8 +276,8 @@ export const quickFacts = [
   {
     icon: Mountain,
     label: "Land Area",
-    value: "29,743 km²",
-    color: "text-slate-600",
+    value: "93,028 km²",
+    color: "text-[#5F6F67]",
   },
   {
     icon: Globe,
@@ -289,7 +289,7 @@ export const quickFacts = [
     icon: Award,
     label: "Education",
     value: "Growing Intl Interest",
-    color: "text-red-600",
+    color: "text-[#A52B3A]",
   },
 ];
 
@@ -297,7 +297,7 @@ export const healthcare = [
   {
     title: "Public Healthcare",
     desc: "Reliable government healthcare system available throughout the country.",
-    color: "border-gray-200",
+    color: "border-[#DDE5DD]",
   },
   {
     title: "Private Healthcare",
@@ -322,7 +322,7 @@ export const studentLifeCards = [
   {
     icon: Heart,
     label: "Safe & Friendly",
-    desc: "Armenia is known as one of the safest countries in the region.",
+    desc: "Hungary is known as one of the safest countries in the region.",
   },
   {
     icon: Building,

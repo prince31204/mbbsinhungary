@@ -80,19 +80,19 @@ export default function ArticleCategoriesPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex items-center gap-3">
-        <Tag size={22} className="text-red-600" />
+        <Tag size={22} className="text-[#A52B3A]" />
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold text-[#202D28]">
             Article Categories
           </h1>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-[#7A877F]">
             Organize blog articles into topics
           </p>
         </div>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-        <div className="p-4 border-b border-gray-100 bg-gray-50 flex gap-3">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
+        <div className="p-4 border-b border-[#DDE5DD] bg-[#FBF8F0] flex gap-3">
           <Input
             placeholder="New category name..."
             value={newName}
@@ -103,7 +103,7 @@ export default function ArticleCategoriesPage() {
           <Button
             onClick={handleAdd}
             disabled={adding || !newName.trim()}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 shrink-0"
+            className="bg-[#175747] hover:bg-[#175747] shrink-0"
           >
             {adding ? (
               <Loader2 size={14} className="animate-spin mr-1" />
@@ -116,16 +116,16 @@ export default function ArticleCategoriesPage() {
 
         {loading ? (
           <div className="p-8 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : items.length === 0 ? (
-          <div className="p-8 text-center text-gray-500">
+          <div className="p-8 text-center text-[#7A877F]">
             No categories yet.
           </div>
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-gray-100 text-left text-gray-500">
+              <tr className="border-b border-[#DDE5DD] text-left text-[#7A877F]">
                 <th className="px-4 py-3 font-medium">Name</th>
                 <th className="px-4 py-3 font-medium">Slug</th>
                 <th className="px-4 py-3 font-medium text-center">Active</th>
@@ -136,7 +136,7 @@ export default function ArticleCategoriesPage() {
               {items.map((item) => (
                 <tr
                   key={item.id}
-                  className="border-b border-gray-50 hover:bg-gray-50"
+                  className="border-b border-gray-50 hover:bg-[#FBF8F0]"
                 >
                   <td className="px-4 py-3">
                     {editId === item.id ? (
@@ -148,7 +148,7 @@ export default function ArticleCategoriesPage() {
                       />
                     ) : (
                       <span
-                        className="cursor-pointer hover:text-[#285BB5]"
+                        className="cursor-pointer hover:text-[#175747]"
                         onClick={() => {
                           setEditId(item.id);
                           setEditName(item.name);
@@ -158,7 +158,7 @@ export default function ArticleCategoriesPage() {
                       </span>
                     )}
                   </td>
-                  <td className="px-4 py-3 text-gray-500 font-mono text-xs">
+                  <td className="px-4 py-3 text-[#7A877F] font-mono text-xs">
                     {item.slug}
                   </td>
                   <td className="px-4 py-3 text-center">
@@ -183,7 +183,7 @@ export default function ArticleCategoriesPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-7 w-7 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                        className="h-7 w-7 p-0 text-[#A52B3A] hover:bg-[#175747]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={13} />

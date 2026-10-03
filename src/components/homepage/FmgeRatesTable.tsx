@@ -30,11 +30,11 @@ type SortField =
 type SortDir = "asc" | "desc";
 
 function getRateColor(rate: number | null) {
-  if (!rate) return "text-gray-500 bg-gray-50";
+  if (!rate) return "text-[#7A877F] bg-[#FBF8F0]";
   if (rate >= 30) return "text-green-600 bg-green-50";
-  if (rate >= 15) return "text-red-600 bg-white";
+  if (rate >= 15) return "text-[#A52B3A] bg-white";
   if (rate > 0) return "text-orange-600 bg-orange-50";
-  return "text-red-600 bg-white";
+  return "text-[#A52B3A] bg-white";
 }
 
 export default function FmgeRatesTable({ data }: Props) {
@@ -107,15 +107,15 @@ export default function FmgeRatesTable({ data }: Props) {
     universityFilter !== "all" || yearFilter !== "all" || search;
 
   return (
-    <div className="overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white/65 shadow-[0_18px_60px_rgba(15,23,42,0.10)] backdrop-hidden">
+    <div className="overflow-hidden rounded-[1.75rem] border border-[#DDE5DD] bg-white/65 shadow-[0_18px_60px_rgba(15,23,42,0.10)] backdrop-hidden">
       {/* Header — matches old React Newanup.tsx exactly */}
-      <div className="relative overflow-hidden bg-[#EAF1FB]0 px-8 py-6 text-white">
+      <div className="relative overflow-hidden bg-[#175747] px-8 py-6 text-white">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.22),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.12),transparent_30%)]" />
         <div className="relative">
           <h3 className="text-3xl font-bold mb-2">
-            Armenia Medical Universities
+            Hungary Medical Universities
           </h3>
-          <p className="text-slate-600 mb-4">
+          <p className="text-[#DCE8E2] mb-4">
             FMGE (Foreign Medical Graduate Exam) Acceptance Rates &amp;
             Performance Data
           </p>
@@ -142,9 +142,9 @@ export default function FmgeRatesTable({ data }: Props) {
             ].map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl border border-gray-200 bg-white/12 p-4 shadow-lg shadow-black/5 "
+                className="rounded-xl border border-white/20 bg-white/10 p-4 shadow-lg shadow-black/5 "
               >
-                <p className="text-slate-600 text-sm">{s.label}</p>
+                <p className="text-[#DCE8E2] text-sm">{s.label}</p>
                 <p className="text-2xl font-bold">{s.value}</p>
               </div>
             ))}
@@ -153,12 +153,12 @@ export default function FmgeRatesTable({ data }: Props) {
       </div>
 
       {/* Search and Filters */}
-      <div className="border-b border-gray-200 bg-white/40 p-6 ">
+      <div className="border-b border-[#DDE5DD] bg-[#FBF8F0] p-6">
         <div className="flex flex-col md:flex-row gap-4">
           {/* Search */}
           <div className="relative flex-1">
             <Search
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#7A877F] w-5 h-5"
               aria-hidden="true"
             />
             <input
@@ -166,7 +166,7 @@ export default function FmgeRatesTable({ data }: Props) {
               placeholder="Search universities..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-xl border border-gray-200 bg-white/70 py-3 pl-10 pr-4 shadow-sm transition-all focus:border-transparent focus:ring-2 focus:ring-[#285BB5]/500"
+              className="w-full rounded-xl border border-[#DDE5DD] bg-white py-3 pl-10 pr-4 shadow-sm transition-all focus:border-[#175747] focus:ring-1 focus:ring-[#175747]"
               suppressHydrationWarning={true}
               aria-label="Search universities"
             />
@@ -175,13 +175,13 @@ export default function FmgeRatesTable({ data }: Props) {
           {/* University Filter */}
           <div className="relative">
             <Filter
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#7A877F] w-5 h-5"
               aria-hidden="true"
             />
             <select
               value={universityFilter}
               onChange={(e) => setUniversityFilter(e.target.value)}
-              className="min-w-[200px] rounded-xl border border-gray-200 bg-white/70 py-3 pl-10 pr-8 shadow-sm focus:border-transparent focus:ring-2 focus:ring-[#285BB5]/500"
+              className="min-w-[200px] rounded-xl border border-[#DDE5DD] bg-white py-3 pl-10 pr-8 shadow-sm focus:border-[#175747] focus:ring-1 focus:ring-[#175747]"
               suppressHydrationWarning={true}
               aria-label="Filter by University"
             >
@@ -197,13 +197,13 @@ export default function FmgeRatesTable({ data }: Props) {
           {/* Year Filter */}
           <div className="relative">
             <Calendar
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#7A877F] w-5 h-5"
               aria-hidden="true"
             />
             <select
               value={yearFilter}
               onChange={(e) => setYearFilter(e.target.value)}
-              className="min-w-[150px] rounded-xl border border-gray-200 bg-white/70 py-3 pl-10 pr-8 shadow-sm focus:border-transparent focus:ring-2 focus:ring-[#285BB5]/500"
+              className="min-w-[150px] rounded-xl border border-[#DDE5DD] bg-white py-3 pl-10 pr-8 shadow-sm focus:border-[#175747] focus:ring-1 focus:ring-[#175747]"
               suppressHydrationWarning={true}
               aria-label="Filter by Year"
             >
@@ -217,7 +217,7 @@ export default function FmgeRatesTable({ data }: Props) {
           </div>
 
           {/* Result count */}
-          <div className="flex items-center gap-2 text-sm text-gray-600">
+          <div className="flex items-center gap-2 text-sm text-[#5F6F67]">
             <Filter className="w-4 h-4" />
             <span>Showing {filtered.length} results</span>
           </div>
@@ -226,16 +226,16 @@ export default function FmgeRatesTable({ data }: Props) {
         {/* Active Filters */}
         {hasActiveFilters && (
           <div className="mt-4 flex flex-wrap gap-2">
-            <span className="text-sm text-gray-600">Active filters:</span>
+            <span className="text-sm text-[#5F6F67]">Active filters:</span>
             {universityFilter !== "all" && (
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#EAF1FB] text-[#101B4D]">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#F3F7F3] text-[#103D32]">
                 University:{" "}
                 {universityFilter.length > 30
                   ? universityFilter.substring(0, 30) + "..."
                   : universityFilter}
                 <button
                   onClick={() => setUniversityFilter("all")}
-                  className="ml-2 text-red-600 hover:text-[#101B4D]"
+                  className="ml-2 text-[#A52B3A] hover:text-[#103D32]"
                   suppressHydrationWarning={true}
                 >
                   ×
@@ -271,50 +271,50 @@ export default function FmgeRatesTable({ data }: Props) {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto bg-white/35 ">
+      <div className="overflow-x-auto bg-white">
         <table className="w-full">
-          <thead className="border-b border-gray-200 bg-white/55">
+          <thead className="border-b border-[#DDE5DD] bg-[#F3F7F3]">
             <tr>
-              <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+              <th className="px-6 py-4 text-left text-sm font-semibold text-[#202D28]">
                 <button
                   onClick={() => handleSort("universityName")}
-                  className="flex items-center gap-2 hover:text-[#285BB5] transition-colors"
+                  className="flex items-center gap-2 hover:text-[#175747] transition-colors"
                   suppressHydrationWarning={true}
                 >
                   University Name {renderSortIcon("universityName")}
                 </button>
               </th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
+              <th className="px-6 py-4 text-center text-sm font-semibold text-[#202D28]">
                 Year
               </th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
+              <th className="px-6 py-4 text-center text-sm font-semibold text-[#202D28]">
                 <button
                   onClick={() => handleSort("appeared")}
-                  className="flex items-center gap-2 hover:text-[#285BB5] transition-colors"
+                  className="flex items-center gap-2 hover:text-[#175747] transition-colors"
                   suppressHydrationWarning={true}
                 >
                   Total Applications {renderSortIcon("appeared")}
                 </button>
               </th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
+              <th className="px-6 py-4 text-center text-sm font-semibold text-[#202D28]">
                 <button
                   onClick={() => handleSort("passed")}
-                  className="flex items-center gap-2 hover:text-[#285BB5] transition-colors"
+                  className="flex items-center gap-2 hover:text-[#175747] transition-colors"
                   suppressHydrationWarning={true}
                 >
                   Accepted Students {renderSortIcon("passed")}
                 </button>
               </th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
+              <th className="px-6 py-4 text-center text-sm font-semibold text-[#202D28]">
                 <button
                   onClick={() => handleSort("passPercentage")}
-                  className="flex items-center gap-2 hover:text-[#285BB5] transition-colors"
+                  className="flex items-center gap-2 hover:text-[#175747] transition-colors"
                   suppressHydrationWarning={true}
                 >
                   Acceptance Rate {renderSortIcon("passPercentage")}
                 </button>
               </th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
+              <th className="px-6 py-4 text-center text-sm font-semibold text-[#202D28]">
                 Trend
               </th>
             </tr>
@@ -322,7 +322,7 @@ export default function FmgeRatesTable({ data }: Props) {
           <tbody className="divide-y divide-white/70">
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={6} className="py-12 text-center text-gray-500">
+                <td colSpan={6} className="py-12 text-center text-[#7A877F]">
                   No FMGE data found.
                 </td>
               </tr>
@@ -336,30 +336,30 @@ export default function FmgeRatesTable({ data }: Props) {
                   >
                     <td className="px-6 py-4">
                       <div className="flex items-start">
-                        <div className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-gray-200 bg-[#EAF1FB]/85 shadow-sm">
-                          <span className="text-sm font-medium text-[#101B4D]">
+                        <div className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#DDE5DD] bg-[#F3F7F3]/85 shadow-sm">
+                          <span className="text-sm font-medium text-[#103D32]">
                             {i + 1}
                           </span>
                         </div>
                         <div>
-                          <h3 className="text-sm font-medium text-gray-900 leading-5">
+                          <h3 className="text-sm font-medium text-[#202D28] leading-5">
                             {row.universityName}
                           </h3>
                         </div>
                       </div>
                     </td>
                     <td className="px-6 py-4 text-center">
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-[#EAF1FB] text-[#101B4D]">
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-[#F3F7F3] text-[#103D32]">
                         {row.year}
                       </span>
                     </td>
                     <td className="px-6 py-4 text-center">
-                      <span className="text-lg font-semibold text-gray-900">
+                      <span className="text-lg font-semibold text-[#202D28]">
                         {row.appeared?.toLocaleString() ?? "—"}
                       </span>
                     </td>
                     <td className="px-6 py-4 text-center">
-                      <span className="text-lg font-semibold text-gray-900">
+                      <span className="text-lg font-semibold text-[#202D28]">
                         {row.passed?.toLocaleString() ?? "—"}
                       </span>
                     </td>
@@ -371,17 +371,17 @@ export default function FmgeRatesTable({ data }: Props) {
                           {Number(rate).toFixed(2)}%
                         </span>
                       ) : (
-                        <span className="text-gray-500">—</span>
+                        <span className="text-[#7A877F]">—</span>
                       )}
                     </td>
                     <td className="px-6 py-4 text-center">
                       <div className="flex justify-center">
                         {rate == null ? (
-                          <Minus className="w-4 h-4 text-gray-500" />
+                          <Minus className="w-4 h-4 text-[#7A877F]" />
                         ) : rate >= 30 ? (
                           <TrendingUp className="w-4 h-4 text-green-500" />
                         ) : rate >= 15 ? (
-                          <Minus className="w-4 h-4 text-red-600" />
+                          <Minus className="w-4 h-4 text-[#A52B3A]" />
                         ) : (
                           <TrendingDown className="w-4 h-4 text-red-500" />
                         )}
@@ -396,8 +396,8 @@ export default function FmgeRatesTable({ data }: Props) {
       </div>
 
       {/* Footer */}
-      <div className="border-t border-gray-200 bg-white/45 px-6 py-4 ">
-        <p className="text-sm text-gray-600 text-center">
+      <div className="border-t border-[#DDE5DD] bg-white/45 px-6 py-4 ">
+        <p className="text-sm text-[#5F6F67] text-center">
           Showing {filtered.length} results
           {yearFilter !== "all" && ` for ${yearFilter}`}
           {universityFilter !== "all" &&

@@ -146,21 +146,21 @@ export default function UniversityReviewsPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-gray-900">Student Reviews</h2>
-            <p className="text-sm text-gray-500">
+            <h2 className="text-xl font-bold text-[#202D28]">Student Reviews</h2>
+            <p className="text-sm text-[#7A877F]">
               {items.length} review{items.length !== 1 ? "s" : ""} — ratings and
               written feedback
             </p>
           </div>
-          <Button onClick={openAdd} className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0">
+          <Button onClick={openAdd} className="bg-[#175747] hover:bg-[#175747]">
             <Plus size={16} className="mr-2" />
             Add Review
           </Button>
         </div>
 
         {showForm && (
-          <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
-            <h3 className="font-semibold text-gray-800">
+          <div className="bg-white border border-[#DDE5DD] rounded-xl p-5 space-y-4">
+            <h3 className="font-semibold text-[#202D28]">
               {editId ? "Edit Review" : "Add New Review"}
             </h3>
             <div className="grid grid-cols-2 gap-3">
@@ -255,7 +255,7 @@ export default function UniversityReviewsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#175747] hover:bg-[#175747]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -277,13 +277,13 @@ export default function UniversityReviewsPage() {
 
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : items.length === 0 ? (
           <div className="p-12 text-center border border-dashed border-gray-300 rounded-xl">
-            <MessageSquare size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500 font-medium">No reviews yet</p>
-            <p className="text-gray-500 text-sm">
+            <MessageSquare size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F] font-medium">No reviews yet</p>
+            <p className="text-[#7A877F] text-sm">
               Add student reviews and ratings for this university
             </p>
           </div>
@@ -292,10 +292,10 @@ export default function UniversityReviewsPage() {
             {items.map((r) => (
               <div
                 key={r.id}
-                className="bg-white border border-gray-200 rounded-xl p-4 space-y-3"
+                className="bg-white border border-[#DDE5DD] rounded-xl p-4 space-y-3"
               >
                 <div className="flex items-start gap-3">
-                  <div className="w-11 h-11 rounded-full bg-gray-100 overflow-hidden shrink-0">
+                  <div className="w-11 h-11 rounded-full bg-[#F3F7F3] overflow-hidden shrink-0">
                     {r.imagePath ? (
                       <Image
                         src={cdn(r.imagePath) || ""}
@@ -305,7 +305,7 @@ export default function UniversityReviewsPage() {
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-500 font-bold text-lg">
+                      <div className="w-full h-full flex items-center justify-center text-[#7A877F] font-bold text-lg">
                         {r.name[0]}
                       </div>
                     )}
@@ -313,10 +313,10 @@ export default function UniversityReviewsPage() {
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm">
+                        <p className="font-semibold text-[#202D28] text-sm">
                           {r.name}
                         </p>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-[#7A877F]">
                           {[r.course, r.country, r.year]
                             .filter(Boolean)
                             .join(" · ")}
@@ -334,7 +334,7 @@ export default function UniversityReviewsPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 w-7 p-0 text-red-600"
+                          className="h-7 w-7 p-0 text-[#A52B3A]"
                           onClick={() => handleDelete(r.id)}
                         >
                           <Trash2 size={13} />
@@ -348,13 +348,13 @@ export default function UniversityReviewsPage() {
                           size={12}
                           className={
                             i < (r.rating || 5)
-                              ? "text-red-600 fill-yellow-400"
-                              : "text-gray-700"
+                              ? "text-[#A52B3A] fill-yellow-400"
+                              : "text-[#5F6F67]"
                           }
                         />
                       ))}
                       {r.rating && (
-                        <span className="text-xs text-gray-500 ml-1">
+                        <span className="text-xs text-[#7A877F] ml-1">
                           {r.rating}/5
                         </span>
                       )}
@@ -362,12 +362,12 @@ export default function UniversityReviewsPage() {
                   </div>
                 </div>
                 {r.description && (
-                  <p className="text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+                  <p className="text-sm text-[#5F6F67] leading-relaxed border-t border-[#DDE5DD] pt-3">
                     {r.description}
                   </p>
                 )}
                 {!r.status && (
-                  <span className="text-xs bg-[#EAF1FB]0 text-red-600 px-2 py-0.5 rounded-full">
+                  <span className="text-xs bg-[#175747] text-[#A52B3A] px-2 py-0.5 rounded-full">
                     Inactive
                   </span>
                 )}

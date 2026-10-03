@@ -22,7 +22,7 @@ export async function GET() {
     if (!record) {
       // Create default if missing
       const newRecord = await prisma.educationSystem.create({
-        data: { id: SYSTEM_ID, title: "Education System in Armenia" },
+        data: { id: SYSTEM_ID, title: "Education System in Hungary" },
       });
       return NextResponse.json(newRecord);
     }

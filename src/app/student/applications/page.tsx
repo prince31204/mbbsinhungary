@@ -17,12 +17,12 @@ const statusConfig = {
   applied: {
     label: "Applied",
     icon: Clock,
-    color: "text-red-600 bg-white border-gray-200",
+    color: "text-[#A52B3A] bg-white border-[#DDE5DD]",
   },
   shortlisted: {
     label: "Shortlisted",
     icon: AlertCircle,
-    color: "text-red-600 bg-red-400 border-gray-200",
+    color: "text-[#A52B3A] bg-red-400 border-[#DDE5DD]",
   },
   accepted: {
     label: "Accepted",
@@ -32,7 +32,7 @@ const statusConfig = {
   rejected: {
     label: "Rejected",
     icon: XCircle,
-    color: "text-red-600 bg-white border-gray-200",
+    color: "text-[#A52B3A] bg-white border-[#DDE5DD]",
   },
 } as const;
 
@@ -68,8 +68,8 @@ export default function ApplicationsPage() {
   return (
     <div>
       <div className="flex items-center gap-3 mb-6">
-        <FileText className="w-6 h-6 text-red-600" />
-        <h1 className="text-2xl font-bold text-gray-900">My Applications</h1>
+        <FileText className="w-6 h-6 text-[#A52B3A]" />
+        <h1 className="text-2xl font-bold text-[#202D28]">My Applications</h1>
       </div>
 
       {loading && (
@@ -77,13 +77,13 @@ export default function ApplicationsPage() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl border border-gray-200 p-5 animate-pulse"
+              className="bg-white rounded-2xl border border-[#DDE5DD] p-5 animate-pulse"
             >
               <div className="flex gap-4">
                 <div className="w-14 h-14 bg-gray-200 rounded-xl" />
                 <div className="flex-1 space-y-2">
                   <div className="h-4 bg-gray-200 rounded w-48" />
-                  <div className="h-3 bg-gray-100 rounded w-32" />
+                  <div className="h-3 bg-[#F3F7F3] rounded w-32" />
                 </div>
               </div>
             </div>
@@ -92,17 +92,17 @@ export default function ApplicationsPage() {
       )}
 
       {!loading && applications.length === 0 && (
-        <div className="bg-white rounded-2xl border border-gray-200 p-12 text-center">
-          <FileText className="w-12 h-12 text-gray-600 mx-auto mb-3" />
-          <h2 className="text-lg font-semibold text-gray-700 mb-1">
+        <div className="bg-white rounded-2xl border border-[#DDE5DD] p-12 text-center">
+          <FileText className="w-12 h-12 text-[#5F6F67] mx-auto mb-3" />
+          <h2 className="text-lg font-semibold text-[#5F6F67] mb-1">
             No Applications Yet
           </h2>
-          <p className="text-gray-500 text-sm mb-6">
+          <p className="text-[#7A877F] text-sm mb-6">
             Browse universities and apply to your preferred MBBS program.
           </p>
           <Link
             href="/universities"
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-xl font-medium transition-colors"
+            className="inline-flex items-center gap-2 bg-[#A52B3A] hover:bg-[#8C2030] text-white px-6 py-2.5 rounded-xl font-medium transition-colors"
           >
             Browse Universities
           </Link>
@@ -119,11 +119,11 @@ export default function ApplicationsPage() {
             return (
               <div
                 key={app.id}
-                className="bg-white rounded-2xl border border-gray-200 p-5 hover:shadow-sm transition-shadow"
+                className="bg-white rounded-2xl border border-[#DDE5DD] p-5 hover:shadow-sm transition-shadow"
               >
                 <div className="flex items-start gap-4">
                   {/* University logo */}
-                  <div className="w-14 h-14 bg-gray-100 rounded-xl overflow-hidden shrink-0">
+                  <div className="w-14 h-14 bg-[#F3F7F3] rounded-xl overflow-hidden shrink-0">
                     {uniImg ? (
                       <Image
                         src={uniImg}
@@ -133,7 +133,7 @@ export default function ApplicationsPage() {
                         className="object-contain p-1 w-full h-full"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-600 text-2xl font-bold">
+                      <div className="w-full h-full flex items-center justify-center text-[#5F6F67] text-2xl font-bold">
                         {app.program.university.name[0]}
                       </div>
                     )}
@@ -143,10 +143,10 @@ export default function ApplicationsPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-3 flex-wrap">
                       <div>
-                        <h3 className="font-semibold text-gray-900">
+                        <h3 className="font-semibold text-[#202D28]">
                           {app.program.programName}
                         </h3>
-                        <p className="text-sm text-gray-500 mt-0.5">
+                        <p className="text-sm text-[#7A877F] mt-0.5">
                           {app.program.university.name}
                         </p>
                       </div>
@@ -157,7 +157,7 @@ export default function ApplicationsPage() {
                         {cfg.label}
                       </span>
                     </div>
-                    <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-500">
+                    <div className="flex flex-wrap gap-3 mt-2 text-xs text-[#7A877F]">
                       {app.program.duration && (
                         <span>⏱ {app.program.duration}</span>
                       )}
@@ -180,7 +180,7 @@ export default function ApplicationsPage() {
                       </span>
                     </div>
                     {app.notes && (
-                      <p className="text-xs text-gray-500 mt-2 bg-gray-50 rounded-lg px-3 py-2">
+                      <p className="text-xs text-[#7A877F] mt-2 bg-[#FBF8F0] rounded-lg px-3 py-2">
                         {app.notes}
                       </p>
                     )}
@@ -189,7 +189,7 @@ export default function ApplicationsPage() {
                   {/* Link */}
                   <Link
                     href={`/universities/${app.program.university.slug}/courses/${app.program.programSlug}`}
-                    className="text-gray-500 hover:text-[#285BB5] transition-colors shrink-0"
+                    className="text-[#7A877F] hover:text-[#175747] transition-colors shrink-0"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </Link>

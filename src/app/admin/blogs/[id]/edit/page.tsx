@@ -194,12 +194,12 @@ export default function BlogEditPage() {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <div className="flex items-center justify-between sticky top-0 bg-gray-50/80 z-[60] py-3 border-b mb-6 px-1 gap-4">
+      <div className="flex items-center justify-between sticky top-0 bg-[#FBF8F0]/80 z-[60] py-3 border-b mb-6 px-1 gap-4">
         <div className="min-w-0">
-          <h1 className="text-xl font-bold text-gray-800 truncate">
+          <h1 className="text-xl font-bold text-[#202D28] truncate">
             {form.title || "Edit Blog Post"}
           </h1>
-          <p className="text-xs text-gray-500">ID: {id}</p>
+          <p className="text-xs text-[#7A877F]">ID: {id}</p>
         </div>
         <div className="flex items-center gap-2 shrink-0">
           <button
@@ -207,8 +207,8 @@ export default function BlogEditPage() {
             onClick={() => setActiveTab("Preview")}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${
               activeTab === "Preview"
-                ? "bg-[#EAF1FB]0 text-white border-gray-200"
-                : "bg-white text-gray-600 border-gray-200 hover:border-gray-200 hover:text-[#285BB5]"
+                ? "bg-[#175747] text-white border-[#DDE5DD]"
+                : "bg-white text-[#5F6F67] border-[#DDE5DD] hover:border-[#DDE5DD] hover:text-[#175747]"
             }`}
           >
             <Eye size={14} /> Preview
@@ -217,7 +217,7 @@ export default function BlogEditPage() {
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border bg-white text-gray-600 border-gray-200 hover:border-gray-200 hover:text-[#285BB5] transition-all"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border bg-white text-[#5F6F67] border-[#DDE5DD] hover:border-[#DDE5DD] hover:text-[#175747] transition-all"
           >
             <ExternalLink size={14} /> Live
           </a>
@@ -225,12 +225,12 @@ export default function BlogEditPage() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 bg-gray-100 p-1 rounded-xl mb-6 w-fit">
+      <div className="flex gap-1 bg-[#F3F7F3] p-1 rounded-xl mb-6 w-fit">
         {TABS.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === tab ? "bg-white shadow text-gray-900" : "text-gray-500 hover:text-gray-700"}`}
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === tab ? "bg-white shadow text-[#202D28]" : "text-[#7A877F] hover:text-[#5F6F67]"}`}
           >
             {tab}
           </button>
@@ -241,8 +241,8 @@ export default function BlogEditPage() {
         <form id="blog-edit-form" onSubmit={handleSubmit} className="space-y-6">
           {/* Top Row: Publish Settings & Thumbnail side-by-side */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4 shadow-sm">
-              <h3 className="font-semibold text-gray-700 text-sm border-b pb-2">
+            <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4 shadow-sm">
+              <h3 className="font-semibold text-[#5F6F67] text-sm border-b pb-2">
                 Publish Settings
               </h3>
               <div className="grid grid-cols-2 gap-x-4 gap-y-3">
@@ -293,7 +293,7 @@ export default function BlogEditPage() {
                     className="h-9"
                   />
                 </div>
-                <div className="flex items-center justify-between bg-gray-50 p-2 rounded-lg border border-gray-100 mt-5">
+                <div className="flex items-center justify-between bg-[#FBF8F0] p-2 rounded-lg border border-[#DDE5DD] mt-5">
                   <Label className="text-xs">Published Status</Label>
                   <Switch
                     checked={form.status}
@@ -303,14 +303,14 @@ export default function BlogEditPage() {
               </div>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="flex items-center justify-between bg-gray-50 p-2 rounded-lg border border-gray-100">
+                <div className="flex items-center justify-between bg-[#FBF8F0] p-2 rounded-lg border border-[#DDE5DD]">
                   <Label className="text-xs font-semibold">Home Featured</Label>
                   <Switch
                     checked={form.homeView}
                     onCheckedChange={(v) => set("homeView", v)}
                   />
                 </div>
-                <div className="flex items-center justify-between bg-gray-50 p-2 rounded-lg border border-gray-100">
+                <div className="flex items-center justify-between bg-[#FBF8F0] p-2 rounded-lg border border-[#DDE5DD]">
                   <Label className="text-xs font-semibold">Trending Post</Label>
                   <Switch
                     checked={form.trending}
@@ -320,8 +320,8 @@ export default function BlogEditPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-              <h3 className="font-semibold text-gray-700 text-sm border-b pb-2 mb-4">
+            <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 shadow-sm">
+              <h3 className="font-semibold text-[#5F6F67] text-sm border-b pb-2 mb-4">
                 Thumbnail Image
               </h3>
               <ImageUpload
@@ -339,7 +339,7 @@ export default function BlogEditPage() {
           </div>
 
           {/* Main Content: Full Width Editor Area */}
-          <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-6 shadow-sm">
+          <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-6 shadow-sm">
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-1.5">
                 <Label>Title *</Label>
@@ -385,7 +385,7 @@ export default function BlogEditPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+          <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 shadow-sm">
             <SeoFields
               values={{
                 metaTitle: form.metaTitle,
@@ -404,7 +404,7 @@ export default function BlogEditPage() {
               type="submit"
               disabled={loading}
               size="lg"
-              className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 text-white font-bold h-12 shadow-md"
+              className="flex-1 bg-[#175747] hover:bg-[#175747] text-white font-bold h-12 shadow-md"
             >
               {loading ? (
                 <Loader2 className="animate-spin mr-2" />
@@ -427,7 +427,7 @@ export default function BlogEditPage() {
       )}
 
       {activeTab === "Contents" && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
           <ContentSectionsTab
             entityId={id}
             apiBase={`/api/admin/blogs/${id}/contents`}
@@ -437,31 +437,31 @@ export default function BlogEditPage() {
       )}
 
       {activeTab === "FAQs" && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
           <FaqsTab apiBase={`/api/admin/blogs/${id}/faqs`} />
         </div>
       )}
       {activeTab === "Preview" && (
         <div className="space-y-6">
           {/* Breadcrumb Mockup */}
-          <nav className="bg-white border rounded-xl border-gray-100 p-3 flex flex-wrap items-center gap-1.5 text-xs text-gray-500">
-            <span className="hover:text-[#285BB5] cursor-default">Home</span>
-            <ChevronRight className="w-3 h-3 text-gray-600" />
-            <span className="hover:text-[#285BB5] cursor-default">Blog</span>
-            <ChevronRight className="w-3 h-3 text-gray-600" />
-            <span className="hover:text-[#285BB5] cursor-default">
+          <nav className="bg-white border rounded-xl border-[#DDE5DD] p-3 flex flex-wrap items-center gap-1.5 text-xs text-[#7A877F]">
+            <span className="hover:text-[#175747] cursor-default">Home</span>
+            <ChevronRight className="w-3 h-3 text-[#5F6F67]" />
+            <span className="hover:text-[#175747] cursor-default">Blog</span>
+            <ChevronRight className="w-3 h-3 text-[#5F6F67]" />
+            <span className="hover:text-[#175747] cursor-default">
               {categories.find((c) => String(c.id) === form.categoryId)?.name ||
                 "Category"}
             </span>
-            <ChevronRight className="w-3 h-3 text-gray-600" />
-            <span className="text-gray-800 font-medium truncate max-w-[200px]">
+            <ChevronRight className="w-3 h-3 text-[#5F6F67]" />
+            <span className="text-[#202D28] font-medium truncate max-w-[200px]">
               {form.title || "Blog Title"}
             </span>
           </nav>
-          <article className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden p-8">
+          <article className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm overflow-hidden p-8">
             {/* Category pill + badges */}
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="inline-flex items-center bg-[#EAF1FB]0 text-red-600 border border-gray-200 text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="inline-flex items-center bg-[#175747] text-[#A52B3A] border border-[#DDE5DD] text-xs font-semibold px-3 py-1 rounded-full">
                 {currentCategory?.name || "Uncategorized"}
               </span>
               {form.status && (
@@ -475,20 +475,20 @@ export default function BlogEditPage() {
                 </span>
               )}
               {form.homeView && (
-                <span className="inline-flex items-center bg-white text-red-600 border border-gray-200 text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="inline-flex items-center bg-white text-[#A52B3A] border border-[#DDE5DD] text-xs font-semibold px-3 py-1 rounded-full">
                   Home Featured
                 </span>
               )}
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-snug mb-5">
+            <h1 className="text-3xl lg:text-4xl font-bold text-[#202D28] leading-snug mb-5">
               {form.title || "(Untitled Post)"}
             </h1>
 
             {/* Author + date + reading time */}
-            <div className="flex flex-wrap items-center gap-4 text-sm font-medium mb-6 pb-6 border-b border-gray-100">
-              <span className="flex items-center gap-1.5 text-red-600">
+            <div className="flex flex-wrap items-center gap-4 text-sm font-medium mb-6 pb-6 border-b border-[#DDE5DD]">
+              <span className="flex items-center gap-1.5 text-[#A52B3A]">
                 <User className="w-4 h-4" />{" "}
                 {getExpertProfile(parseInt(form.authorId))?.name ||
                   "Expert Author"}
@@ -519,9 +519,9 @@ export default function BlogEditPage() {
 
             {/* Short note / excerpt */}
             {form.excerpt && (
-              <div className="border-l-4 border-gray-200 pl-4 mb-8 bg-[#EAF1FB]0/10 py-3 rounded-r-xl">
+              <div className="border-l-4 border-[#DDE5DD] pl-4 mb-8 bg-[#F3F7F3]/10 py-3 rounded-r-xl">
                 <div
-                  className="text-gray-700 text-lg leading-relaxed prose prose-sm max-w-none prose-p:my-1"
+                  className="text-[#5F6F67] text-lg leading-relaxed prose prose-sm max-w-none prose-p:my-1"
                   dangerouslySetInnerHTML={{ __html: form.excerpt }}
                 />
               </div>
@@ -529,17 +529,17 @@ export default function BlogEditPage() {
 
             {/* Main description */}
             <div
-              className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-red-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-blockquote:border-gray-200 text-gray-700 mb-10"
+              className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-[#202D28] prose-a:text-[#A52B3A] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-blockquote:border-[#DDE5DD] text-[#5F6F67] mb-10"
               dangerouslySetInnerHTML={{
                 __html:
                   form.content ||
-                  "<p class='text-gray-500 italic'>No content yet.</p>",
+                  "<p class='text-[#7A877F] italic'>No content yet.</p>",
               }}
             />
 
             {/* Content sections */}
             {previewLoading ? (
-              <div className="space-y-4 my-8 animate-pulse text-center text-gray-500 py-10 border-t">
+              <div className="space-y-4 my-8 animate-pulse text-center text-[#7A877F] py-10 border-t">
                 <Loader2 className="w-6 h-6 animate-spin mx-auto mb-2" />
                 Loading article sections...
               </div>
@@ -548,14 +548,14 @@ export default function BlogEditPage() {
                 {topLevelSections.map((section) => (
                   <div key={section.id}>
                     {section.title && (
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                        <span className="w-1 h-6 bg-[#EAF1FB]0 rounded-full inline-block shrink-0" />
+                      <h2 className="text-2xl font-bold text-[#202D28] mb-4 flex items-center gap-2">
+                        <span className="w-1 h-6 bg-[#175747] rounded-full inline-block shrink-0" />
                         {section.title}
                       </h2>
                     )}
                     {section.description && (
                       <div
-                        className="prose prose-lg max-w-none text-gray-700 prose-headings:text-gray-900 prose-a:text-red-600"
+                        className="prose prose-lg max-w-none text-[#5F6F67] prose-headings:text-[#202D28] prose-a:text-[#A52B3A]"
                         dangerouslySetInnerHTML={{
                           __html: section.description,
                         }}
@@ -573,17 +573,17 @@ export default function BlogEditPage() {
 
                     {/* Child sections */}
                     {getChildrenOf(section.id).length > 0 && (
-                      <div className="mt-6 space-y-6 pl-4 border-l-2 border-gray-100">
+                      <div className="mt-6 space-y-6 pl-4 border-l-2 border-[#DDE5DD]">
                         {getChildrenOf(section.id).map((child) => (
                           <div key={child.id}>
                             {child.title && (
-                              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                              <h3 className="text-lg font-semibold text-[#202D28] mb-2">
                                 {child.title}
                               </h3>
                             )}
                             {child.description && (
                               <div
-                                className="prose max-w-none text-gray-600"
+                                className="prose max-w-none text-[#5F6F67]"
                                 dangerouslySetInnerHTML={{
                                   __html: child.description,
                                 }}
@@ -598,24 +598,24 @@ export default function BlogEditPage() {
 
                 {/* FAQ Section */}
                 {previewData.faqs.length > 0 && (
-                  <div className="bg-gray-50 rounded-2xl p-8 mt-12 border border-gray-100">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6 fund-primary">
+                  <div className="bg-[#FBF8F0] rounded-2xl p-8 mt-12 border border-[#DDE5DD]">
+                    <h2 className="text-2xl font-bold text-[#202D28] mb-6 fund-primary">
                       Frequently Asked Questions
                     </h2>
                     <div className="space-y-4">
                       {previewData.faqs.map((faq) => (
                         <details
                           key={faq.id}
-                          className="group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                          className="group bg-white border border-[#DDE5DD] rounded-xl overflow-hidden"
                         >
-                          <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 list-none select-none hover:text-[#285BB5] transition-colors">
+                          <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-[#202D28] list-none select-none hover:text-[#175747] transition-colors">
                             {faq.question}
-                            <span className="ml-4 shrink-0 text-gray-500 group-open:rotate-45 transition-transform duration-200 text-xl leading-none">
+                            <span className="ml-4 shrink-0 text-[#7A877F] group-open:rotate-45 transition-transform duration-200 text-xl leading-none">
                               +
                             </span>
                           </summary>
                           <div
-                            className="px-5 pb-5 text-gray-600 text-sm leading-relaxed prose prose-sm max-w-none"
+                            className="px-5 pb-5 text-[#5F6F67] text-sm leading-relaxed prose prose-sm max-w-none"
                             dangerouslySetInnerHTML={{ __html: faq.answer }}
                           />
                         </details>

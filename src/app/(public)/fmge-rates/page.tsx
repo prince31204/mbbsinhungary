@@ -5,12 +5,12 @@ import { prisma } from "@/lib/prisma";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "FMGE / NExT Pass Rates — Armenia MBBS Universities 2024",
+  title: "FMGE / NExT Pass Rates — Hungary MBBS Universities 2024",
   description:
-    "Compare FMGE and NExT pass rates for Armenia MBBS graduates by university and year. Real data from NMC-approved Armenia medical universities.",
+    "Compare FMGE and NExT pass rates for Hungary MBBS graduates by university and year. Real data from NMC-approved Hungary medical universities.",
   entitySeo: {
     metaKeyword:
-      "FMGE pass rate Armenia, NExT exam Armenia MBBS, FMGE percentage Armenia, Armenia medical university pass rate",
+      "FMGE pass rate Hungary, NExT exam Hungary MBBS, FMGE percentage Hungary, Hungary medical university pass rate",
   },
   path: "/fmge-rates",
   pageKey: "fmge-rates",
@@ -73,13 +73,13 @@ export default async function FmgeRatesPage() {
   ]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#FBF8F0]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Hero */}
-      <div className="bg-white text-gray-900 py-16">
+      <div className="bg-white text-[#202D28] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <BarChart3 className="w-10 h-10 text-black" />
@@ -88,7 +88,7 @@ export default async function FmgeRatesPage() {
             </h1>
           </div>
           <p className="text-xl text-black max-w-3xl mx-auto mt-3">
-            Compare pass rates for Armenia MBBS graduates by university and
+            Compare pass rates for Hungary MBBS graduates by university and
             year. Make an informed decision based on real performance data.
           </p>
           {/* Summary stats */}
@@ -105,7 +105,7 @@ export default async function FmgeRatesPage() {
               },
               { label: "Top Pass Rate", value: topRate ? `${topRate}%` : "—" },
             ].map((s) => (
-              <div key={s.label} className="bg-gray-100 rounded-2xl py-4 px-3">
+              <div key={s.label} className="bg-[#F3F7F3] rounded-2xl py-4 px-3">
                 <div className="text-2xl font-bold text-green-600">{s.value}</div>
                 <div className="text-black text-sm mt-1">{s.label}</div>
               </div>
@@ -117,12 +117,12 @@ export default async function FmgeRatesPage() {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {rates.length === 0 ? (
           <div className="text-center py-20">
-            <BarChart3 className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-            <h2 className="text-xl font-semibold text-gray-600 mb-2">
+            <BarChart3 className="w-16 h-16 text-[#5F6F67] mx-auto mb-4" />
+            <h2 className="text-xl font-semibold text-[#5F6F67] mb-2">
               FMGE Data Coming Soon
             </h2>
-            <p className="text-gray-500">
-              We are compiling FMGE pass rate data for Armenia universities.
+            <p className="text-[#7A877F]">
+              We are compiling FMGE pass rate data for Hungary universities.
               Check back soon.
             </p>
           </div>
@@ -132,7 +132,7 @@ export default async function FmgeRatesPage() {
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
                 <Award className="w-5 h-5 text-green-600" />
-                <h2 className="text-2xl font-bold text-gray-900">
+                <h2 className="text-2xl font-bold text-[#202D28]">
                   By University
                 </h2>
               </div>
@@ -140,12 +140,12 @@ export default async function FmgeRatesPage() {
                 {universityGroups.map((uni) => (
                   <div
                     key={uni.id}
-                    className="bg-white rounded-2xl border border-gray-200 p-5 hover:shadow-md transition-shadow"
+                    className="bg-white rounded-2xl border border-[#DDE5DD] p-5 hover:shadow-md transition-shadow"
                   >
                     <div className="flex items-start justify-between gap-3 mb-4">
                       <Link
                         href={`/universities/${uni.slug}`}
-                        className="font-bold text-gray-900 hover:text-green-700 transition-colors leading-tight"
+                        className="font-bold text-[#202D28] hover:text-green-700 transition-colors leading-tight"
                       >
                         {uni.name}
                       </Link>
@@ -154,7 +154,7 @@ export default async function FmgeRatesPage() {
                           <div className="text-2xl font-bold text-green-600">
                             {uni.avgPass.toFixed(1)}%
                           </div>
-                          <div className="text-xs text-gray-500">
+                          <div className="text-xs text-[#7A877F]">
                             avg pass rate
                           </div>
                         </div>
@@ -163,7 +163,7 @@ export default async function FmgeRatesPage() {
                     <div className="overflow-x-auto">
                       <table className="w-full text-sm">
                         <thead>
-                          <tr className="text-left text-gray-500 text-xs border-b border-gray-100">
+                          <tr className="text-left text-[#7A877F] text-xs border-b border-[#DDE5DD]">
                             <th className="pb-2 font-medium">Year</th>
                             <th className="pb-2 font-medium text-right">
                               Appeared
@@ -179,13 +179,13 @@ export default async function FmgeRatesPage() {
                         <tbody className="divide-y divide-gray-50">
                           {uni.rates.map((r) => (
                             <tr key={r.id}>
-                              <td className="py-2 font-medium text-gray-800">
+                              <td className="py-2 font-medium text-[#202D28]">
                                 {r.year}
                               </td>
-                              <td className="py-2 text-right text-gray-500">
+                              <td className="py-2 text-right text-[#7A877F]">
                                 {r.appeared ?? "—"}
                               </td>
-                              <td className="py-2 text-right text-gray-500">
+                              <td className="py-2 text-right text-[#7A877F]">
                                 {r.passed ?? "—"}
                               </td>
                               <td className="py-2 text-right font-bold text-green-600">
@@ -204,17 +204,17 @@ export default async function FmgeRatesPage() {
             </div>
 
             {/* Full Data Table */}
-            <div className="bg-white rounded-2xl border border-gray-200 p-6">
+            <div className="bg-white rounded-2xl border border-[#DDE5DD] p-6">
               <div className="flex items-center gap-2 mb-5">
-                <Filter className="w-5 h-5 text-gray-500" />
-                <h2 className="text-xl font-bold text-gray-900">
+                <Filter className="w-5 h-5 text-[#7A877F]" />
+                <h2 className="text-xl font-bold text-[#202D28]">
                   Complete FMGE Data
                 </h2>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="bg-gray-50 text-gray-600">
+                    <tr className="bg-[#FBF8F0] text-[#5F6F67]">
                       <th className="text-left p-3 rounded-l-lg font-medium">
                         University
                       </th>
@@ -231,29 +231,29 @@ export default async function FmgeRatesPage() {
                     {rates.map((r) => (
                       <tr
                         key={r.id}
-                        className="hover:bg-gray-50 transition-colors"
+                        className="hover:bg-[#FBF8F0] transition-colors"
                       >
                         <td className="p-3">
                           <Link
                             href={`/universities/${r.university.slug}`}
-                            className="font-medium text-gray-800 hover:text-green-700"
+                            className="font-medium text-[#202D28] hover:text-green-700"
                           >
                             {r.university.name}
                           </Link>
                         </td>
-                        <td className="p-3 text-right text-gray-600">
+                        <td className="p-3 text-right text-[#5F6F67]">
                           {r.year}
                         </td>
-                        <td className="p-3 text-right text-gray-500">
+                        <td className="p-3 text-right text-[#7A877F]">
                           {r.appeared ?? "—"}
                         </td>
-                        <td className="p-3 text-right text-gray-500">
+                        <td className="p-3 text-right text-[#7A877F]">
                           {r.passed ?? "—"}
                         </td>
                         <td className="p-3 text-right">
                           {r.passPercentage ? (
                             <span
-                              className={`font-bold ${parseFloat(r.passPercentage.toString()) >= 40 ? "text-green-600" : parseFloat(r.passPercentage.toString()) >= 25 ? "text-red-600" : "text-red-600"}`}
+                              className={`font-bold ${parseFloat(r.passPercentage.toString()) >= 40 ? "text-green-600" : parseFloat(r.passPercentage.toString()) >= 25 ? "text-[#A52B3A]" : "text-[#A52B3A]"}`}
                             >
                               {parseFloat(r.passPercentage.toString()).toFixed(
                                 1,
@@ -264,7 +264,7 @@ export default async function FmgeRatesPage() {
                             "—"
                           )}
                         </td>
-                        <td className="p-3 text-right text-gray-500">
+                        <td className="p-3 text-right text-[#7A877F]">
                           {r.firstAttemptPassRate
                             ? `${parseFloat(r.firstAttemptPassRate.toString()).toFixed(1)}%`
                             : "—"}
@@ -277,10 +277,10 @@ export default async function FmgeRatesPage() {
             </div>
 
             {/* CTA */}
-            <div className="mt-10 bg-green-600 rounded-2xl p-8 text-gray-900 text-center">
+            <div className="mt-10 bg-green-600 rounded-2xl p-8 text-[#202D28] text-center">
               <TrendingUp className="w-10 h-10 mx-auto mb-3 text-green-200" />
               <h3 className="text-2xl font-bold mb-2">
-                Ready to Study MBBS in Armenia?
+                Ready to Study MBBS in Hungary?
               </h3>
               <p className="text-green-100 mb-6 max-w-xl mx-auto">
                 Join universities with strong FMGE track records. Get free

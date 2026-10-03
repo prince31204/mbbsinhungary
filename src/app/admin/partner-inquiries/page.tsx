@@ -25,8 +25,8 @@ const columns: Column<PartnerInquiry>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-gray-900 text-sm">{row.name}</p>
-        <p className="text-xs text-gray-500">{row.email}</p>
+        <p className="font-medium text-[#202D28] text-sm">{row.name}</p>
+        <p className="text-xs text-[#7A877F]">{row.email}</p>
       </div>
     ),
   },
@@ -34,28 +34,28 @@ const columns: Column<PartnerInquiry>[] = [
     key: "phone",
     label: "Phone",
     render: (row) => (
-      <span className="text-sm text-gray-600">{row.phone ?? "—"}</span>
+      <span className="text-sm text-[#5F6F67]">{row.phone ?? "—"}</span>
     ),
   },
   {
     key: "company",
     label: "Company",
     render: (row) => (
-      <span className="text-sm text-gray-600">{row.company ?? "—"}</span>
+      <span className="text-sm text-[#5F6F67]">{row.company ?? "—"}</span>
     ),
   },
   {
     key: "city",
     label: "City",
     render: (row) => (
-      <span className="text-sm text-gray-600">{row.city ?? "—"}</span>
+      <span className="text-sm text-[#5F6F67]">{row.city ?? "—"}</span>
     ),
   },
   {
     key: "partnerType",
     label: "Type",
     render: (row) => (
-      <span className="text-sm text-gray-600">{row.partnerType ?? "—"}</span>
+      <span className="text-sm text-[#5F6F67]">{row.partnerType ?? "—"}</span>
     ),
   },
   {
@@ -65,12 +65,12 @@ const columns: Column<PartnerInquiry>[] = [
       <Badge
         className={
           row.status === "pending"
-            ? "bg-red-400 text-red-600"
+            ? "bg-red-400 text-[#A52B3A]"
             : row.status === "contacted"
-              ? "bg-[#EAF1FB] text-[#285BB5]"
+              ? "bg-[#F3F7F3] text-[#175747]"
               : row.status === "converted"
                 ? "bg-green-100 text-green-700"
-                : "bg-gray-100 text-gray-600"
+                : "bg-[#F3F7F3] text-[#5F6F67]"
         }
       >
         {row.status}
@@ -82,7 +82,7 @@ const columns: Column<PartnerInquiry>[] = [
     label: "Date",
     sortable: true,
     render: (row) => (
-      <span className="text-xs text-gray-500">
+      <span className="text-xs text-[#7A877F]">
         {new Date(row.createdAt).toLocaleDateString("en-IN")}
       </span>
     ),

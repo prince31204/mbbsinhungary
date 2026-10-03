@@ -68,9 +68,9 @@ export function ImageUpload({
 
   return (
     <div className="space-y-2">
-      <Label className="text-sm font-medium text-gray-700">{label}</Label>
+      <Label className="text-sm font-medium text-[#5F6F67]">{label}</Label>
       {value ? (
-        <div className="relative w-48 h-32 rounded-xl overflow-hidden border border-gray-200 group">
+        <div className="relative w-48 h-32 rounded-xl overflow-hidden border border-[#DDE5DD] group">
           <Image
             src={cdn(value)}
             alt={label}
@@ -102,7 +102,7 @@ export function ImageUpload({
         </div>
       ) : (
         <div
-          className="border-2 border-dashed border-gray-200 rounded-xl p-8 text-center cursor-pointer hover:border-gray-200 hover:bg-[#EAF1FB]0/10 transition-colors"
+          className="border-2 border-dashed border-[#DDE5DD] rounded-xl p-8 text-center cursor-pointer hover:border-[#DDE5DD] hover:bg-[#F3F7F3]/10 transition-colors"
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
           onClick={() => inputRef.current?.click()}
@@ -110,15 +110,15 @@ export function ImageUpload({
           {loading ? (
             <Loader2
               size={24}
-              className="mx-auto text-gray-500 animate-spin mb-2"
+              className="mx-auto text-[#7A877F] animate-spin mb-2"
             />
           ) : (
-            <ImageIcon size={24} className="mx-auto text-gray-600 mb-2" />
+            <ImageIcon size={24} className="mx-auto text-[#5F6F67] mb-2" />
           )}
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-[#7A877F]">
             {loading ? "Uploading..." : "Drop image here or click to browse"}
           </p>
-          <p className="text-xs text-gray-500 mt-1">PNG, JPG, WebP up to 5MB</p>
+          <p className="text-xs text-[#7A877F] mt-1">PNG, JPG, WebP up to 5MB</p>
         </div>
       )}
       <input

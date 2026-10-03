@@ -32,7 +32,7 @@ export default function UniversityTrustSeals({ university }: Props) {
       desc: "Listed in the WHO World Directory of Medical Schools.",
       badge: "LISTED",
       grad: " ",
-      badgeCls: "bg-[#EAF1FB] text-[#101B4D]",
+      badgeCls: "bg-[#F3F7F3] text-[#103D32]",
       active: university.whoListed,
     },
     {
@@ -48,8 +48,8 @@ export default function UniversityTrustSeals({ university }: Props) {
     {
       icon: CheckCircle,
       title: "Ministry Licensed",
-      subtitle: "Government of Armenia",
-      desc: "Licensed by the Ministry of Education & Science, Armenia.",
+      subtitle: "Government of Hungary",
+      desc: "Licensed by the Ministry of Education & Science, Hungary.",
       badge: "LICENSED",
       grad: " ",
       badgeCls: "bg-orange-100 text-orange-800",
@@ -89,13 +89,13 @@ export default function UniversityTrustSeals({ university }: Props) {
   if (activeSeals.length === 0 && activeAdditional.length === 0) return null;
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#FBF8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-[#202D28] mb-4">
             Trust &amp; Recognition
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[#5F6F67] max-w-3xl mx-auto">
             Our university holds prestigious accreditations ensuring your degree
             is globally accepted.
           </p>
@@ -107,26 +107,26 @@ export default function UniversityTrustSeals({ university }: Props) {
             .map((seal) => (
               <div
                 key={seal.title}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#DDE5DD]"
               >
                 <div className="text-center">
                   <div
                     className={`w-20 h-20 mx-auto mb-5 rounded-full bg-gradient-to-br ${seal.grad} flex items-center justify-center shadow-lg`}
                   >
-                    <seal.icon className="h-10 w-10 text-gray-900" />
+                    <seal.icon className="h-10 w-10 text-[#202D28]" />
                   </div>
                   <span
                     className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 ${seal.badgeCls}`}
                   >
                     {seal.badge}
                   </span>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">
+                  <h3 className="text-lg font-bold text-[#202D28] mb-1">
                     {seal.titleHref ? (
                       <a
                         href={seal.titleHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#285BB5] hover:underline transition-colors"
+                        className="hover:text-[#175747] hover:underline transition-colors"
                       >
                         {seal.title}
                       </a>
@@ -134,8 +134,8 @@ export default function UniversityTrustSeals({ university }: Props) {
                       seal.title
                     )}
                   </h3>
-                  <p className="text-sm text-gray-500 mb-2">{seal.subtitle}</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-sm text-[#7A877F] mb-2">{seal.subtitle}</p>
+                  <p className="text-sm text-[#5F6F67] leading-relaxed">
                     {seal.desc}
                   </p>
                 </div>
@@ -146,13 +146,13 @@ export default function UniversityTrustSeals({ university }: Props) {
         {additional.some((r) => r.active) && (
           <div className="mt-10">
             <div className="text-center mb-8">
-              <span className="inline-block bg-[#EAF1FB] text-[#285BB5] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
+              <span className="inline-block bg-[#F3F7F3] text-[#175747] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
                 Global Standards
               </span>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl font-bold text-[#202D28]">
                 Additional Recognitions
               </h3>
-              <p className="text-gray-500 text-sm mt-1">
+              <p className="text-[#7A877F] text-sm mt-1">
                 Our university maintains high standards recognized globally
               </p>
             </div>
@@ -162,13 +162,13 @@ export default function UniversityTrustSeals({ university }: Props) {
                 .map((r) => (
                   <div
                     key={r.label}
-                    className={`bg-white rounded-2xl border border-gray-100 border-t-4 ${r.border} shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col gap-4`}
+                    className={`bg-white rounded-2xl border border-[#DDE5DD] border-t-4 ${r.border} shadow-md hover:shadow-xl transition-all duration-300 p-6 flex flex-col gap-4`}
                   >
                     <div className="flex items-center justify-between">
                       <div
                         className={`bg-gradient-to-br ${r.grad} w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shrink-0`}
                       >
-                        <span className="text-gray-900 font-black text-xs tracking-tight text-center leading-tight px-1">
+                        <span className="text-[#202D28] font-black text-xs tracking-tight text-center leading-tight px-1">
                           {r.abbr}
                         </span>
                       </div>
@@ -177,10 +177,10 @@ export default function UniversityTrustSeals({ university }: Props) {
                       </span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 text-base">
+                      <h4 className="font-bold text-[#202D28] text-base">
                         {r.label}
                       </h4>
-                      <p className="text-gray-500 text-sm mt-1 leading-relaxed">
+                      <p className="text-[#7A877F] text-sm mt-1 leading-relaxed">
                         {r.desc}
                       </p>
                     </div>

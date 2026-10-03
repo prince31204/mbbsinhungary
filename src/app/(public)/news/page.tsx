@@ -7,12 +7,12 @@ import { cdn } from "@/lib/cdn";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "News — MBBS Armenia Medical Education Updates",
+  title: "News — MBBS Hungary Medical Education Updates",
   description:
-    "Stay updated with the latest news about MBBS in Armenia, medical education policies, university announcements, and student success stories.",
+    "Stay updated with the latest news about MBBS in Hungary, medical education policies, university announcements, and student success stories.",
   entitySeo: {
     metaKeyword:
-      "MBBS Armenia news, medical education news, Armenia university news",
+      "MBBS Hungary news, medical education news, Hungary university news",
   },
   path: "/news",
   pageKey: "news",
@@ -43,16 +43,16 @@ export default async function NewsPage() {
   ]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#FBF8F0]">
       {/* Header */}
-      <div className="bg-white text-gray-900 py-16">
+      <div className="bg-white text-[#202D28] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Newspaper className="w-10 h-10 text-slate-600" />
+            <Newspaper className="w-10 h-10 text-[#5F6F67]" />
             <h1 className="text-4xl lg:text-5xl font-bold">Latest News</h1>
           </div>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Stay informed with the latest updates on MBBS in Armenia, medical
+          <p className="text-xl text-[#5F6F67] max-w-3xl mx-auto">
+            Stay informed with the latest updates on MBBS in Hungary, medical
             education, and university announcements.
           </p>
         </div>
@@ -63,8 +63,8 @@ export default async function NewsPage() {
           {/* Main news */}
           <div className="lg:col-span-3">
             {recentNews.length === 0 ? (
-              <div className="text-center py-16 text-gray-500">
-                <Newspaper className="w-12 h-12 mx-auto mb-3 text-gray-600" />
+              <div className="text-center py-16 text-[#7A877F]">
+                <Newspaper className="w-12 h-12 mx-auto mb-3 text-[#5F6F67]" />
                 <p>No news articles published yet.</p>
               </div>
             ) : (
@@ -73,7 +73,7 @@ export default async function NewsPage() {
                   <Link
                     key={item.id}
                     href={`/news/${item.category?.slug ?? ""}/${item.slug ?? ""}`}
-                    className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    className="group bg-white rounded-2xl border border-[#DDE5DD] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                   >
                     <div className="relative h-48 bg-white">
                       {item.thumbnailPath ? (
@@ -86,26 +86,26 @@ export default async function NewsPage() {
                         />
                       ) : (
                         <div className="flex items-center justify-center h-full bg-white">
-                          <Newspaper className="w-12 h-12 text-slate-600" />
+                          <Newspaper className="w-12 h-12 text-[#5F6F67]" />
                         </div>
                       )}
                       {item.category && (
-                        <span className="absolute top-3 left-3 bg-red-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                        <span className="absolute top-3 left-3 bg-[#A52B3A] text-white text-xs px-2 py-1 rounded-full font-medium">
                           {item.category.name}
                         </span>
                       )}
                     </div>
                     <div className="p-5">
-                      <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#285BB5] transition-colors">
+                      <h2 className="font-bold text-[#202D28] mb-2 line-clamp-2 group-hover:text-[#175747] transition-colors">
                         {item.title}
                       </h2>
                       {item.shortnote && (
                         <div
-                          className="text-sm text-gray-500 line-clamp-2 mb-3 prose prose-sm max-w-none prose-p:my-0"
+                          className="text-sm text-[#7A877F] line-clamp-2 mb-3 prose prose-sm max-w-none prose-p:my-0"
                           dangerouslySetInnerHTML={{ __html: item.shortnote }}
                         />
                       )}
-                      <div className="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-50">
+                      <div className="flex items-center justify-between text-xs text-[#7A877F] pt-3 border-t border-gray-50">
                         <div className="flex items-center gap-1">
                           <User className="w-3 h-3" />
                           <span>{item.author?.name ?? "Admin"}</span>
@@ -133,17 +133,17 @@ export default async function NewsPage() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="bg-white rounded-2xl border border-gray-100 p-5">
-              <h3 className="font-bold text-gray-900 mb-4">News Categories</h3>
+            <div className="bg-white rounded-2xl border border-[#DDE5DD] p-5">
+              <h3 className="font-bold text-[#202D28] mb-4">News Categories</h3>
               <ul className="space-y-2">
                 {categories.map((cat) => (
                   <li key={cat.id}>
                     <Link
                       href={`/news/${cat.slug}`}
-                      className="flex items-center justify-between text-sm text-gray-600 hover:text-[#285BB5] transition-colors py-1 border-b border-gray-50 last:border-0"
+                      className="flex items-center justify-between text-sm text-[#5F6F67] hover:text-[#175747] transition-colors py-1 border-b border-gray-50 last:border-0"
                     >
                       <span>{cat.name}</span>
-                      <span className="bg-white text-red-600 text-xs px-2 py-0.5 rounded-full">
+                      <span className="bg-white text-[#A52B3A] text-xs px-2 py-0.5 rounded-full">
                         {cat._count.news}
                       </span>
                     </Link>
@@ -151,14 +151,14 @@ export default async function NewsPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-red-600 rounded-2xl p-6 text-gray-900 text-center">
+            <div className="bg-[#A52B3A] rounded-2xl p-6 text-[#202D28] text-center">
               <h3 className="font-bold text-lg mb-2">Want to Study MBBS?</h3>
-              <p className="text-slate-600 text-sm mb-4">
+              <p className="text-[#5F6F67] text-sm mb-4">
                 Get free counseling from our experts
               </p>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 bg-white text-[#285BB5] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
+                className="inline-flex items-center gap-2 bg-white text-[#175747] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
               >
                 Contact Us <ArrowRight className="w-4 h-4" />
               </Link>

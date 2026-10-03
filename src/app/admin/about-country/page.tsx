@@ -8,7 +8,7 @@ const sections = [
     title: "Cuisine & Food",
     href: "/admin/about-country/cuisine",
     icon: "🍜",
-    desc: "Armenia traditional dishes and food culture",
+    desc: "Hungary traditional dishes and food culture",
     done: true,
   },
   {
@@ -45,11 +45,11 @@ export default function AboutCountryPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
-        <Globe2 size={22} className="text-red-600" />
+        <Globe2 size={22} className="text-[#A52B3A]" />
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">About Armenia</h1>
-          <p className="text-sm text-gray-500">
-            Manage country information shown on the public About Armenia page
+          <h1 className="text-2xl font-bold text-[#202D28]">About Hungary</h1>
+          <p className="text-sm text-[#7A877F]">
+            Manage country information shown on the public About Hungary page
           </p>
         </div>
       </div>
@@ -59,12 +59,12 @@ export default function AboutCountryPage() {
           <Link
             key={s.href}
             href={s.href}
-            className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-shadow flex items-start gap-4"
+            className="bg-white rounded-xl border border-[#DDE5DD] p-5 hover:shadow-md transition-shadow flex items-start gap-4"
           >
             <div className="text-3xl">{s.icon}</div>
             <div className="flex-1 min-w-0">
-              <h2 className="font-semibold text-gray-900 mb-1">{s.title}</h2>
-              <p className="text-sm text-gray-500 mb-3">{s.desc}</p>
+              <h2 className="font-semibold text-[#202D28] mb-1">{s.title}</h2>
+              <p className="text-sm text-[#7A877F] mb-3">{s.desc}</p>
               <div className="inline-flex items-center gap-1.5 text-xs text-green-700 bg-green-50 border border-green-200 px-3 py-1 rounded-full">
                 <ExternalLink size={11} /> Manage Content
               </div>
@@ -74,9 +74,9 @@ export default function AboutCountryPage() {
       </div>
 
       <Link
-        href="/about-Armenia"
+        href="/about-Hungary"
         target="_blank"
-        className="inline-flex items-center gap-2 border border-gray-200 text-gray-600 px-4 py-2 rounded-lg text-sm hover:bg-gray-50 transition-colors"
+        className="inline-flex items-center gap-2 border border-[#DDE5DD] text-[#5F6F67] px-4 py-2 rounded-lg text-sm hover:bg-[#FBF8F0] transition-colors"
       >
         <Globe2 size={14} /> View Public Page
       </Link>

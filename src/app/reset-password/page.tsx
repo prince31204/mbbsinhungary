@@ -58,11 +58,11 @@ export default function ResetPasswordPage() {
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[#A52B3A] rounded-full flex items-center justify-center mx-auto mb-4">
             <GraduationCap className="w-9 h-9 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-800">Reset Password</h1>
-          <p className="text-gray-500 text-sm mt-1">
+          <h1 className="text-2xl font-bold text-[#202D28]">Reset Password</h1>
+          <p className="text-[#7A877F] text-sm mt-1">
             Enter the OTP sent to your email
           </p>
         </div>
@@ -72,15 +72,15 @@ export default function ResetPasswordPage() {
             <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="w-9 h-9 text-green-500" />
             </div>
-            <h2 className="text-xl font-bold text-gray-800 mb-2">
+            <h2 className="text-xl font-bold text-[#202D28] mb-2">
               Password Reset!
             </h2>
-            <p className="text-gray-600 mb-4">
+            <p className="text-[#5F6F67] mb-4">
               Your password has been successfully reset. Redirecting to login...
             </p>
             <Link
               href="/login"
-              className="text-red-600 hover:underline font-medium"
+              className="text-[#A52B3A] hover:underline font-medium"
             >
               Go to Login →
             </Link>
@@ -88,13 +88,13 @@ export default function ResetPasswordPage() {
         ) : (
           <>
             {error && (
-              <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-lg mb-5 text-sm">
+              <div className="bg-white border border-[#DDE5DD] text-[#175747] px-4 py-3 rounded-lg mb-5 text-sm">
                 {error}
               </div>
             )}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
                   Email Address
                 </label>
                 <input
@@ -103,11 +103,11 @@ export default function ResetPasswordPage() {
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   placeholder="your@email.com"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#202D28] focus:outline-none focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
                   OTP Code
                 </label>
                 <input
@@ -122,11 +122,11 @@ export default function ResetPasswordPage() {
                   }
                   placeholder="6-digit OTP"
                   maxLength={6}
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 font-mono text-lg tracking-widest focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#202D28] font-mono text-lg tracking-widest focus:outline-none focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
                   New Password
                 </label>
                 <div className="relative">
@@ -138,12 +138,12 @@ export default function ResetPasswordPage() {
                       setForm({ ...form, password: e.target.value })
                     }
                     placeholder="Min 8 characters"
-                    className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                    className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-[#202D28] focus:outline-none focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-600"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-[#7A877F] hover:text-[#5F6F67]"
                   >
                     {showPassword ? (
                       <EyeOff className="w-5 h-5" />
@@ -154,7 +154,7 @@ export default function ResetPasswordPage() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
                   Confirm Password
                 </label>
                 <input
@@ -165,13 +165,13 @@ export default function ResetPasswordPage() {
                     setForm({ ...form, confirm: e.target.value })
                   }
                   placeholder="Repeat new password"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#202D28] focus:outline-none focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent"
                 />
               </div>
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-red-600 text-white py-3.5 rounded-xl font-semibold hover:bg-red-700 disabled:opacity-60 transition-colors flex items-center justify-center gap-2 mt-2"
+                className="w-full bg-[#A52B3A] text-white py-3.5 rounded-xl font-semibold hover:bg-[#8C2030] disabled:opacity-60 transition-colors flex items-center justify-center gap-2 mt-2"
               >
                 {loading ? (
                   <>
@@ -186,15 +186,15 @@ export default function ResetPasswordPage() {
           </>
         )}
 
-        <div className="mt-6 text-center text-sm text-gray-600">
+        <div className="mt-6 text-center text-sm text-[#5F6F67]">
           <Link
             href="/forgot-password"
-            className="text-red-600 hover:text-[#285BB5] font-medium"
+            className="text-[#A52B3A] hover:text-[#175747] font-medium"
           >
             ← Request New OTP
           </Link>
           {" · "}
-          <Link href="/login" className="text-gray-500 hover:text-gray-700">
+          <Link href="/login" className="text-[#7A877F] hover:text-[#5F6F67]">
             Sign In
           </Link>
         </div>

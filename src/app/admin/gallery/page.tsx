@@ -84,17 +84,17 @@ export default function GalleryPage() {
     <div className="max-w-5xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <ImageIcon size={22} className="text-red-600" />
+          <ImageIcon size={22} className="text-[#A52B3A]" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Gallery</h1>
-            <p className="text-sm text-gray-500">
+            <h1 className="text-2xl font-bold text-[#202D28]">Gallery</h1>
+            <p className="text-sm text-[#7A877F]">
               {items.length} photos in gallery
             </p>
           </div>
         </div>
         <Button
           onClick={() => setShowAdd(!showAdd)}
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#175747] hover:bg-[#175747]"
         >
           {showAdd ? (
             <>
@@ -111,8 +111,8 @@ export default function GalleryPage() {
       </div>
 
       {showAdd && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900">Add Photo to Gallery</h2>
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28]">Add Photo to Gallery</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <ImageUpload
               label="Photo *"
@@ -137,7 +137,7 @@ export default function GalleryPage() {
             <Button
               onClick={handleAdd}
               disabled={uploading || !newImage}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#175747] hover:bg-[#175747]"
             >
               {uploading ? (
                 <>
@@ -157,12 +157,12 @@ export default function GalleryPage() {
 
       {loading ? (
         <div className="p-12 text-center">
-          <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+          <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
         </div>
       ) : items.length === 0 ? (
-        <div className="p-12 text-center bg-white rounded-xl border border-gray-200">
-          <ImageIcon size={36} className="mx-auto mb-3 text-gray-600" />
-          <p className="text-gray-500">Gallery is empty.</p>
+        <div className="p-12 text-center bg-white rounded-xl border border-[#DDE5DD]">
+          <ImageIcon size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+          <p className="text-[#7A877F]">Gallery is empty.</p>
           <Button
             variant="outline"
             className="mt-4"
@@ -177,7 +177,7 @@ export default function GalleryPage() {
           {items.map((item) => (
             <div
               key={item.id}
-              className={`relative group rounded-xl overflow-hidden border-2 ${item.status ? "border-gray-200" : "border-gray-200 opacity-60"}`}
+              className={`relative group rounded-xl overflow-hidden border-2 ${item.status ? "border-[#DDE5DD]" : "border-[#DDE5DD] opacity-60"}`}
             >
               <img
                 src={cdn(item.imagePath)}
@@ -203,12 +203,12 @@ export default function GalleryPage() {
                 </Button>
               </div>
               {item.title && (
-                <div className="absolute bottom-0 left-0 right-0 bg-white/60 text-gray-900 text-xs p-2 truncate">
+                <div className="absolute bottom-0 left-0 right-0 bg-white/60 text-[#202D28] text-xs p-2 truncate">
                   {item.title}
                 </div>
               )}
               {!item.status && (
-                <div className="absolute top-2 right-2 bg-[#EAF1FB]0 text-white text-xs px-2 py-0.5 rounded">
+                <div className="absolute top-2 right-2 bg-[#175747] text-white text-xs px-2 py-0.5 rounded">
                   Hidden
                 </div>
               )}

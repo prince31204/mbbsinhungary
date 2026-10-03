@@ -92,19 +92,19 @@ export default function OgImagesPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <ImageIcon size={22} className="text-red-600" />
+          <ImageIcon size={22} className="text-[#A52B3A]" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">
+            <h1 className="text-2xl font-bold text-[#202D28]">
               Default OG Images
             </h1>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-[#7A877F]">
               Fallback Open Graph images for social sharing
             </p>
           </div>
         </div>
         <Button
           size="sm"
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#175747] hover:bg-[#175747]"
           onClick={() => setShowAdd(true)}
         >
           <Plus size={14} className="mr-1" /> Add OG Image
@@ -112,10 +112,10 @@ export default function OgImagesPage() {
       </div>
 
       {showAdd && (
-        <div className="bg-white rounded-xl border border-gray-200 p-4 space-y-4">
-          <h3 className="font-medium text-gray-800">New Default OG Image</h3>
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-4 space-y-4">
+          <h3 className="font-medium text-[#202D28]">New Default OG Image</h3>
           <div className="space-y-1.5">
-            <label className="text-xs text-gray-500 block">Name / Label</label>
+            <label className="text-xs text-[#7A877F] block">Name / Label</label>
             <Input
               placeholder="e.g. Homepage Default"
               value={newName}
@@ -133,7 +133,7 @@ export default function OgImagesPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#175747] hover:bg-[#175747]"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -160,12 +160,12 @@ export default function OgImagesPage() {
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {loading ? (
           <div className="col-span-4 p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : images.length === 0 ? (
-          <div className="col-span-4 p-12 text-center bg-white rounded-xl border border-gray-200">
-            <ImageIcon size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">
+          <div className="col-span-4 p-12 text-center bg-white rounded-xl border border-[#DDE5DD]">
+            <ImageIcon size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">
               No OG images yet. Add a default image for social sharing.
             </p>
           </div>
@@ -173,9 +173,9 @@ export default function OgImagesPage() {
           images.map((img) => (
             <div
               key={img.id}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden"
+              className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden"
             >
-              <div className="aspect-video bg-gray-100 overflow-hidden">
+              <div className="aspect-video bg-[#F3F7F3] overflow-hidden">
                 <img
                   src={
                     cdn(img.imagePath) ||
@@ -194,7 +194,7 @@ export default function OgImagesPage() {
                 />
               </div>
               <div className="p-3">
-                <p className="text-sm font-medium text-gray-800 truncate">
+                <p className="text-sm font-medium text-[#202D28] truncate">
                   {img.name}
                 </p>
                 <div className="flex items-center justify-between mt-2">
@@ -238,7 +238,7 @@ export default function OgImagesPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="h-7 w-7 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                      className="h-7 w-7 p-0 text-[#A52B3A] hover:bg-[#175747]"
                       onClick={() => handleDelete(img.id)}
                     >
                       <Trash2 size={13} />

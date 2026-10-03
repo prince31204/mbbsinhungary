@@ -148,14 +148,15 @@ export function AdminSidebar() {
     children?.some((c) => pathname.startsWith(c.href)) ?? false;
 
   return (
-    <aside className="w-64 min-h-screen bg-white text-gray-100 flex flex-col border-r border-gray-200">
+    <aside className="w-64 min-h-screen bg-white text-gray-100 flex flex-col border-r border-[#DDE5DD]">
       {/* Logo */}
-      <div className="h-16 flex items-center px-5 border-b border-gray-200">
+      <div className="h-16 flex items-center px-5 border-b border-[#DDE5DD]">
         <Link href="/admin" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-[#EAF1FB]0 flex items-center justify-center text-gray-900 font-bold text-sm">
+          <div className="w-8 h-8 rounded-lg bg-[#103D32] flex items-center justify-center text-white font-bold text-sm">
+            <GraduationCap className="w-5 h-5" />
           </div>
-          <span className="font-semibold text-sm text-gray-900">
-            MBBS Armenia
+          <span className="font-semibold text-sm text-[#202D28]">
+            MBBS Hungary
           </span>
         </Link>
       </div>
@@ -169,10 +170,10 @@ export function AdminSidebar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-3 px-3 py-2 rounded-lg text-sm mb-0.5 transition-colors",
+                  "flex items-center gap-3 px-3 py-2.5 rounded-lg text-base font-medium mb-0.5 transition-colors",
                   isActive(item.href)
-                    ? "bg-[#EAF1FB]0 text-white"
-                    : "text-gray-500 hover:text-gray-900 hover:bg-[#EAF1FB]",
+                    ? "bg-[#175747] text-white"
+                    : "text-[#7A877F] hover:text-[#202D28] hover:bg-[#F3F7F3]",
                 )}
               >
                 {item.icon}
@@ -190,10 +191,10 @@ export function AdminSidebar() {
                 onClick={() => toggle(item.label)}
                 suppressHydrationWarning
                 className={cn(
-                  "w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors",
+                  "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-base font-medium transition-colors",
                   groupActive
-                    ? "text-gray-900 bg-[#EAF1FB]"
-                    : "text-gray-500 hover:text-gray-900 hover:bg-[#EAF1FB]",
+                    ? "text-[#202D28] bg-[#F3F7F3]"
+                    : "text-[#7A877F] hover:text-[#202D28] hover:bg-[#F3F7F3]",
                 )}
               >
                 {item.icon}
@@ -207,11 +208,11 @@ export function AdminSidebar() {
                       key={child.href}
                       href={child.href}
                       className={cn(
-                        "block px-3 py-1.5 rounded-md text-xs transition-colors",
+                        "block px-3 py-2 rounded-md text-sm font-medium transition-colors",
                         isActive(child.href) ||
                           pathname.startsWith(child.href + "/")
-                          ? "bg-[#EAF1FB]0 text-white"
-                          : "text-gray-500 hover:text-gray-900 hover:bg-[#EAF1FB]",
+                          ? "bg-[#175747] text-white"
+                          : "text-[#7A877F] hover:text-[#202D28] hover:bg-[#F3F7F3]",
                       )}
                     >
                       {child.label}
@@ -225,11 +226,11 @@ export function AdminSidebar() {
       </nav>
 
       {/* Footer */}
-      <div className="p-3 border-t border-gray-200">
+      <div className="p-3 border-t border-[#DDE5DD]">
         <Link
           href="/"
           target="_blank"
-          className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-gray-500 hover:text-gray-900 hover:bg-[#EAF1FB] transition-colors"
+          className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs text-[#7A877F] hover:text-[#202D28] hover:bg-[#F3F7F3] transition-colors"
         >
           <Globe size={14} />
           View Public Site

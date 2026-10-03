@@ -11,12 +11,12 @@ const UniversityMap = dynamic(
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#f3f4f6",
+          background: "#FBF8F0",
           borderRadius: "16px",
         }}
       >
         {" "}
-        <p style={{ color: "#6b7280", fontSize: "14px" }}>
+        <p style={{ color: "#7A877F", fontSize: "14px" }}>
           Loading map...
         </p>{" "}
       </div>

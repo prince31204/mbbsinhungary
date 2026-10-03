@@ -28,17 +28,17 @@ export default async function AgentLayout({
   ];
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-[#FBF8F0]">
       {/* Sidebar */}
-      <aside className="w-60 bg-white flex flex-col text-gray-900 shrink-0">
-        <div className="p-5 border-b border-gray-200">
+      <aside className="w-60 bg-white flex flex-col text-[#202D28] shrink-0">
+        <div className="p-5 border-b border-[#DDE5DD]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-red-600 rounded-lg flex items-center justify-center">
-              <GraduationCap size={20} className="text-gray-900" />
+            <div className="w-9 h-9 bg-[#A52B3A] rounded-lg flex items-center justify-center">
+              <GraduationCap size={20} className="text-[#202D28]" />
             </div>
             <div>
               <p className="text-sm font-bold">Agent Portal</p>
-              <p className="text-xs text-slate-500">MBBS Armenia</p>
+              <p className="text-xs text-[#7A877F]">MBBS Hungary</p>
             </div>
           </div>
         </div>
@@ -47,15 +47,15 @@ export default async function AgentLayout({
             <Link
               key={href}
               href={href}
-              className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-800 hover:text-gray-900 transition-colors text-sm font-medium"
+              className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#5F6F67] hover:bg-slate-800 hover:text-[#202D28] transition-colors text-sm font-medium"
             >
               <Icon size={16} />
               {label}
             </Link>
           ))}
         </nav>
-        <div className="p-4 border-t border-gray-200">
-          <div className="text-xs text-slate-500 mb-3 px-1">
+        <div className="p-4 border-t border-[#DDE5DD]">
+          <div className="text-xs text-[#7A877F] mb-3 px-1">
             {session.user?.name}
           </div>
           <form
@@ -66,7 +66,7 @@ export default async function AgentLayout({
           >
             <button
               type="submit"
-              className="flex items-center gap-2 text-slate-500 hover:text-gray-900 text-sm px-3 py-2 rounded-lg hover:bg-slate-800 w-full transition-colors"
+              className="flex items-center gap-2 text-[#7A877F] hover:text-[#202D28] text-sm px-3 py-2 rounded-lg hover:bg-slate-800 w-full transition-colors"
             >
               <LogOut size={14} />
               Sign out

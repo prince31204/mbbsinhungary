@@ -7,7 +7,7 @@ const PAGE_ID = 1;
 export async function GET() {
   await prisma.aboutCountryPage.upsert({
     where: { id: PAGE_ID },
-    create: { id: PAGE_ID, name: "Armenia" },
+    create: { id: PAGE_ID, name: "Hungary" },
     update: {},
   });
   const items = await prisma.countryMajorCity.findMany({

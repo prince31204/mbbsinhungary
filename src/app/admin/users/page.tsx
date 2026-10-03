@@ -22,12 +22,12 @@ const columns: Column<User>[] = [
     sortable: true,
     render: (row) => (
       <div className="flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full bg-[#EAF1FB]0 flex items-center justify-center text-red-600 font-semibold text-xs">
+        <div className="w-8 h-8 rounded-full bg-[#175747] flex items-center justify-center text-[#A52B3A] font-semibold text-xs">
           {row.name.charAt(0).toUpperCase()}
         </div>
         <div>
-          <p className="font-medium text-gray-900 text-sm">{row.name}</p>
-          <p className="text-xs text-gray-500">{row.email}</p>
+          <p className="font-medium text-[#202D28] text-sm">{row.name}</p>
+          <p className="text-xs text-[#7A877F]">{row.email}</p>
         </div>
       </div>
     ),
@@ -39,8 +39,8 @@ const columns: Column<User>[] = [
       <Badge
         className={
           row.role === "admin"
-            ? "bg-[#EAF1FB]0 text-red-600"
-            : "bg-[#EAF1FB] text-[#285BB5]"
+            ? "bg-[#175747] text-[#A52B3A]"
+            : "bg-[#F3F7F3] text-[#175747]"
         }
       >
         {row.role}
@@ -51,7 +51,7 @@ const columns: Column<User>[] = [
     key: "createdAt",
     label: "Joined",
     render: (row) => (
-      <span className="text-xs text-gray-500">
+      <span className="text-xs text-[#7A877F]">
         {new Date(row.createdAt).toLocaleDateString("en-IN")}
       </span>
     ),

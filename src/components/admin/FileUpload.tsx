@@ -74,7 +74,7 @@ export function FileUpload({
 
   return (
     <div className="space-y-2">
-      <Label className="text-sm font-medium text-gray-700">{label}</Label>
+      <Label className="text-sm font-medium text-[#5F6F67]">{label}</Label>
 
       {value ? (
         <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-xl">
@@ -82,7 +82,7 @@ export function FileUpload({
             <FileText size={20} className="text-green-600" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-gray-800 truncate">
+            <p className="text-sm font-medium text-[#202D28] truncate">
               {displayName || "Uploaded file"}
             </p>
             <a
@@ -124,7 +124,7 @@ export function FileUpload({
         </div>
       ) : (
         <div
-          className="border-2 border-dashed border-gray-200 rounded-xl p-8 text-center cursor-pointer hover:border-gray-200 hover:bg-[#EAF1FB]0/10 transition-colors"
+          className="border-2 border-dashed border-[#DDE5DD] rounded-xl p-8 text-center cursor-pointer hover:border-[#DDE5DD] hover:bg-[#F3F7F3]/10 transition-colors"
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
           onClick={() => inputRef.current?.click()}
@@ -132,15 +132,15 @@ export function FileUpload({
           {loading ? (
             <Loader2
               size={24}
-              className="mx-auto text-gray-500 animate-spin mb-2"
+              className="mx-auto text-[#7A877F] animate-spin mb-2"
             />
           ) : (
-            <FileText size={24} className="mx-auto text-gray-600 mb-2" />
+            <FileText size={24} className="mx-auto text-[#5F6F67] mb-2" />
           )}
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-[#7A877F]">
             {loading ? "Uploading..." : "Drop PDF here or click to browse"}
           </p>
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="text-xs text-[#7A877F] mt-1">
             PDF, DOC, DOCX up to 20MB
           </p>
         </div>

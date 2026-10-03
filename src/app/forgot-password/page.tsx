@@ -37,11 +37,11 @@ export default function ForgotPasswordPage() {
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[#A52B3A] rounded-full flex items-center justify-center mx-auto mb-4">
             <GraduationCap className="w-9 h-9 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-800">Forgot Password?</h1>
-          <p className="text-gray-500 text-sm mt-1">
+          <h1 className="text-2xl font-bold text-[#202D28]">Forgot Password?</h1>
+          <p className="text-[#7A877F] text-sm mt-1">
             Enter your email to receive a reset OTP
           </p>
         </div>
@@ -51,24 +51,24 @@ export default function ForgotPasswordPage() {
             <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="w-9 h-9 text-green-500" />
             </div>
-            <h2 className="text-xl font-bold text-gray-800 mb-2">
+            <h2 className="text-xl font-bold text-[#202D28] mb-2">
               Check Your Email
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-[#5F6F67] mb-6">
               If an account exists for <strong>{email}</strong>, we&apos;ve sent
               a 6-digit OTP. Check your inbox (and spam folder).
             </p>
             <Link
               href="/reset-password"
-              className="block w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold text-center transition-colors"
+              className="block w-full bg-[#A52B3A] hover:bg-[#8C2030] text-white py-3 rounded-xl font-semibold text-center transition-colors"
             >
               Enter OTP & Reset Password →
             </Link>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-sm text-[#7A877F]">
               Didn&apos;t get it?{" "}
               <button
                 onClick={() => setSent(false)}
-                className="text-red-600 hover:underline font-medium"
+                className="text-[#A52B3A] hover:underline font-medium"
               >
                 Try again
               </button>
@@ -77,31 +77,31 @@ export default function ForgotPasswordPage() {
         ) : (
           <>
             {error && (
-              <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-lg mb-6 text-sm">
+              <div className="bg-white border border-[#DDE5DD] text-[#175747] px-4 py-3 rounded-lg mb-6 text-sm">
                 {error}
               </div>
             )}
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
                   Email Address
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#7A877F]" />
                   <input
                     type="email"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
-                    className="w-full border border-gray-300 rounded-xl pl-12 pr-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                    className="w-full border border-gray-300 rounded-xl pl-12 pr-4 py-3 text-[#202D28] focus:outline-none focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent"
                   />
                 </div>
               </div>
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-red-600 text-white py-3.5 rounded-xl font-semibold hover:bg-red-700 disabled:opacity-60 transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-[#A52B3A] text-white py-3.5 rounded-xl font-semibold hover:bg-[#8C2030] disabled:opacity-60 transition-colors flex items-center justify-center gap-2"
               >
                 {loading ? (
                   <>
@@ -116,11 +116,11 @@ export default function ForgotPasswordPage() {
           </>
         )}
 
-        <div className="mt-6 text-center text-sm text-gray-600">
+        <div className="mt-6 text-center text-sm text-[#5F6F67]">
           Remember your password?{" "}
           <Link
             href="/login"
-            className="text-red-600 hover:text-[#285BB5] font-semibold"
+            className="text-[#A52B3A] hover:text-[#175747] font-semibold"
           >
             Sign in
           </Link>

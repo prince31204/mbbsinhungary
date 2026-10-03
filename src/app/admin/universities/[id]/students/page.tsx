@@ -119,12 +119,12 @@ export default function UniversityStudentsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Users size={22} className="text-red-600" />
+          <Users size={22} className="text-[#A52B3A]" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">
+            <h1 className="text-2xl font-bold text-[#202D28]">
               Student Records
             </h1>
-            <p className="text-sm text-gray-500">{students.length} students</p>
+            <p className="text-sm text-[#7A877F]">{students.length} students</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -135,7 +135,7 @@ export default function UniversityStudentsPage() {
           </Button>
           <Button
             size="sm"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
             onClick={() => setShowAdd(true)}
           >
             <Plus size={14} className="mr-1" /> Add Student
@@ -145,8 +145,8 @@ export default function UniversityStudentsPage() {
 
       {/* Add form */}
       {showAdd && (
-        <div className="bg-white rounded-xl border border-gray-200 p-4 space-y-3">
-          <h3 className="font-medium text-gray-800">Add New Student</h3>
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-4 space-y-3">
+          <h3 className="font-medium text-[#202D28]">Add New Student</h3>
           <div className="grid grid-cols-3 gap-3">
             <Input
               placeholder="Name"
@@ -196,7 +196,7 @@ export default function UniversityStudentsPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#175747] hover:bg-[#175747]"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -212,20 +212,20 @@ export default function UniversityStudentsPage() {
         </div>
       )}
 
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : students.length === 0 ? (
           <div className="p-12 text-center">
-            <Users size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No student records yet.</p>
+            <Users size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No student records yet.</p>
           </div>
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-gray-100 bg-gray-50 text-left text-gray-500">
+              <tr className="border-b border-[#DDE5DD] bg-[#FBF8F0] text-left text-[#7A877F]">
                 <th className="px-4 py-3 font-medium">Name</th>
                 <th className="px-4 py-3 font-medium">Course / Year</th>
                 <th className="px-4 py-3 font-medium">Country</th>
@@ -238,7 +238,7 @@ export default function UniversityStudentsPage() {
               {students.map((s) => (
                 <tr
                   key={s.id}
-                  className="border-b border-gray-50 hover:bg-gray-50"
+                  className="border-b border-gray-50 hover:bg-[#FBF8F0]"
                 >
                   {editId === s.id ? (
                     <>
@@ -319,16 +319,16 @@ export default function UniversityStudentsPage() {
                     </>
                   ) : (
                     <>
-                      <td className="px-4 py-3 font-medium text-gray-800">
+                      <td className="px-4 py-3 font-medium text-[#202D28]">
                         {s.name || "—"}
                       </td>
-                      <td className="px-4 py-3 text-gray-600">
+                      <td className="px-4 py-3 text-[#5F6F67]">
                         {s.course || "—"} {s.year ? `· ${s.year}` : ""}
                       </td>
-                      <td className="px-4 py-3 text-gray-500">
+                      <td className="px-4 py-3 text-[#7A877F]">
                         {s.country || "—"}
                       </td>
-                      <td className="px-4 py-3 text-gray-500 text-xs">
+                      <td className="px-4 py-3 text-[#7A877F] text-xs">
                         {s.email || s.phone || "—"}
                       </td>
                       <td className="px-4 py-3 text-center">
@@ -359,7 +359,7 @@ export default function UniversityStudentsPage() {
                           <Button
                             size="sm"
                             variant="ghost"
-                            className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                            className="h-8 w-8 p-0 text-[#A52B3A] hover:bg-[#175747]"
                             onClick={() => handleDelete(s.id)}
                           >
                             <Trash2 size={14} />

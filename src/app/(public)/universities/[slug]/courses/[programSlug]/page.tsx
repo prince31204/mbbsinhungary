@@ -72,15 +72,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title:
       program.metaTitle ||
-      `${program.programName} at ${program.university.name} — Armenia ${APP_YEAR}`,
+      `${program.programName} at ${program.university.name} — Hungary ${APP_YEAR}`,
     description:
       program.metaDescription ||
-      `Study ${program.programName} at ${program.university.name}, Armenia. NMC recognized, English medium, affordable fees. Apply for ${ADMISSION_YEAR}.`,
+      `Study ${program.programName} at ${program.university.name}, Hungary. NMC recognized, English medium, affordable fees. Apply for ${ADMISSION_YEAR}.`,
     path: `/universities/${slug}/courses/${programSlug}`,
     entitySeo: {
       metaKeyword:
         program.metaKeyword ||
-        `${program.programName} Armenia, MBBS Armenia, ${program.university.name}`,
+        `${program.programName} Hungary, MBBS Hungary, ${program.university.name}`,
     },
   });
 }
@@ -168,7 +168,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       description:
         "Clear NEET with minimum qualifying percentile as required by NMC guidelines.",
       timeline: "May–June",
-      color: "bg-[#EAF1FB] text-red-600",
+      color: "bg-[#F3F7F3] text-[#A52B3A]",
     },
     {
       step: 2,
@@ -202,7 +202,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       icon: Plane,
       title: "Visa Processing",
       description:
-        "Apply for Armenia student visa with your admission documents.",
+        "Apply for Hungary student visa with your admission documents.",
       timeline: "Aug–Sep",
       color: "bg-pink-100 text-pink-600",
     },
@@ -211,9 +211,9 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       icon: GraduationCap,
       title: "Travel & Enrollment",
       description:
-        "Travel to Armenia and complete university enrollment and orientation.",
+        "Travel to Hungary and complete university enrollment and orientation.",
       timeline: "September",
-      color: "bg-[#EAF1FB] text-red-600",
+      color: "bg-[#F3F7F3] text-[#A52B3A]",
     },
   ];
 
@@ -248,24 +248,24 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       />
 
       {/* Breadcrumb */}
-      <nav className="bg-gray-50 border-b">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center flex-wrap gap-x-2 gap-y-1 text-sm text-gray-600">
-          <Link href="/" className="hover:text-[#285BB5]">
+      <nav className="bg-[#FBF8F0] border-b">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center flex-wrap gap-x-2 gap-y-1 text-sm text-[#5F6F67]">
+          <Link href="/" className="hover:text-[#175747]">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/universities" className="hover:text-[#285BB5]">
+          <Link href="/universities" className="hover:text-[#175747]">
             Universities
           </Link>
           <ChevronRight className="w-3 h-3" />
           <Link
             href={`/universities/${u.slug}`}
-            className="hover:text-[#285BB5]"
+            className="hover:text-[#175747]"
           >
             {u.name}
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-gray-800 font-medium">
+          <span className="text-[#202D28] font-medium">
             {program.programName}
           </span>
         </div>
@@ -278,7 +278,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-2 mb-4 flex-wrap">
                 {program.level && (
-                  <span className="bg-white/20 text-gray-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                  <span className="bg-white/20 text-[#202D28] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                     {program.level.name}
                   </span>
                 )}
@@ -292,7 +292,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     href="https://www.who.int/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#EAF1FB]/30 text-red-100 text-xs font-bold px-3 py-1 rounded-full hover:bg-[#EAF1FB]/50 transition-colors"
+                    className="bg-[#F3F7F3]/30 text-[#F8E9EB] text-xs font-bold px-3 py-1 rounded-full hover:bg-[#F3F7F3]/50 transition-colors"
                   >
                     ✓ WHO Listed
                   </a>
@@ -301,12 +301,12 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
               <h1 className="text-3xl lg:text-4xl font-bold mb-3">
                 {program.programName}
               </h1>
-              <p className="text-slate-600 text-lg mb-2">{u.name}</p>
+              <p className="text-[#5F6F67] text-lg mb-2">{u.name}</p>
               {u.city && (
-                <p className="text-slate-600 text-sm">📍 {u.city}, Armenia</p>
+                <p className="text-[#5F6F67] text-sm">📍 {u.city}, Hungary</p>
               )}
               {program.overview && (
-                <p className="text-slate-600 mt-5 leading-relaxed max-w-2xl line-clamp-4">
+                <p className="text-[#5F6F67] mt-5 leading-relaxed max-w-2xl line-clamp-4">
                   {getPlainText(program.overview)}
                 </p>
               )}
@@ -314,36 +314,36 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
               {/* Quick highlight badges */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
                 {program.duration && (
-                  <div className="bg-gray-100 rounded-xl p-4 ">
-                    <Clock className="w-5 h-5 text-slate-600 mb-2" />
-                    <p className="text-sm text-slate-600">Duration</p>
+                  <div className="bg-[#F3F7F3] rounded-xl p-4 ">
+                    <Clock className="w-5 h-5 text-[#5F6F67] mb-2" />
+                    <p className="text-sm text-[#5F6F67]">Duration</p>
                     <p className="text-base font-semibold">
                       {program.duration}
                     </p>
                   </div>
                 )}
                 {program.recognition && (
-                  <div className="bg-gray-100 rounded-xl p-4 ">
-                    <Globe className="w-5 h-5 text-slate-600 mb-2" />
-                    <p className="text-sm text-slate-600">Recognition</p>
+                  <div className="bg-[#F3F7F3] rounded-xl p-4 ">
+                    <Globe className="w-5 h-5 text-[#5F6F67] mb-2" />
+                    <p className="text-sm text-[#5F6F67]">Recognition</p>
                     <p className="text-base font-semibold">
                       {program.recognition}
                     </p>
                   </div>
                 )}
                 {program.annualTuitionFee && (
-                  <div className="bg-gray-100 rounded-xl p-4 ">
-                    <DollarSign className="w-5 h-5 text-slate-600 mb-2" />
-                    <p className="text-sm text-slate-600">Annual Fee</p>
+                  <div className="bg-[#F3F7F3] rounded-xl p-4 ">
+                    <DollarSign className="w-5 h-5 text-[#5F6F67] mb-2" />
+                    <p className="text-sm text-[#5F6F67]">Annual Fee</p>
                     <p className="text-base font-semibold">
                       {String(program.annualTuitionFee)}
                     </p>
                   </div>
                 )}
                 {program.mediumOfInstruction && (
-                  <div className="bg-gray-100 rounded-xl p-4 ">
-                    <BookOpen className="w-5 h-5 text-slate-600 mb-2" />
-                    <p className="text-sm text-slate-600">Medium</p>
+                  <div className="bg-[#F3F7F3] rounded-xl p-4 ">
+                    <BookOpen className="w-5 h-5 text-[#5F6F67] mb-2" />
+                    <p className="text-sm text-[#5F6F67]">Medium</p>
                     <p className="text-base font-semibold">
                       {program.mediumOfInstruction}
                     </p>
@@ -353,14 +353,14 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
             </div>
 
             {/* Quick Info Card */}
-            <div className="bg-white text-gray-800 rounded-2xl p-6 shadow-2xl">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">
+            <div className="bg-white text-[#202D28] rounded-2xl p-6 shadow-2xl">
+              <h3 className="font-bold text-lg mb-4 text-[#202D28]">
                 Program Details
               </h3>
               <div className="space-y-3">
                 {program.duration && (
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-500 flex items-center gap-1.5 text-base">
+                  <div className="flex justify-between items-center py-2 border-b border-[#DDE5DD]">
+                    <span className="text-[#7A877F] flex items-center gap-1.5 text-base">
                       <Clock className="w-4 h-4" />
                       Duration
                     </span>
@@ -370,8 +370,8 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   </div>
                 )}
                 {program.annualTuitionFee && (
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-500 flex items-center gap-1.5 text-base">
+                  <div className="flex justify-between items-center py-2 border-b border-[#DDE5DD]">
+                    <span className="text-[#7A877F] flex items-center gap-1.5 text-base">
                       <DollarSign className="w-4 h-4" />
                       Annual Fee
                     </span>
@@ -381,8 +381,8 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   </div>
                 )}
                 {program.totalFee && (
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-500 flex items-center gap-1.5 text-base">
+                  <div className="flex justify-between items-center py-2 border-b border-[#DDE5DD]">
+                    <span className="text-[#7A877F] flex items-center gap-1.5 text-base">
                       <DollarSign className="w-4 h-4" />
                       Total Fee
                     </span>
@@ -392,8 +392,8 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   </div>
                 )}
                 {program.mediumOfInstruction && (
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-500 flex items-center gap-1.5 text-base">
+                  <div className="flex justify-between items-center py-2 border-b border-[#DDE5DD]">
+                    <span className="text-[#7A877F] flex items-center gap-1.5 text-base">
                       <Globe className="w-4 h-4" />
                       Medium
                     </span>
@@ -403,8 +403,8 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   </div>
                 )}
                 {program.recognition && (
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-500 flex items-center gap-1.5 text-base">
+                  <div className="flex justify-between items-center py-2 border-b border-[#DDE5DD]">
+                    <span className="text-[#7A877F] flex items-center gap-1.5 text-base">
                       <CheckCircle className="w-4 h-4" />
                       Recognition
                     </span>
@@ -414,8 +414,8 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   </div>
                 )}
                 {program.intake && (
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-500 flex items-center gap-1.5 text-base">
+                  <div className="flex justify-between items-center py-2 border-b border-[#DDE5DD]">
+                    <span className="text-[#7A877F] flex items-center gap-1.5 text-base">
                       <Calendar className="w-4 h-4" />
                       Intake
                     </span>
@@ -425,8 +425,8 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   </div>
                 )}
                 {program.applicationDeadline && (
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-500 flex items-center gap-1.5 text-base">
+                  <div className="flex justify-between items-center py-2 border-b border-[#DDE5DD]">
+                    <span className="text-[#7A877F] flex items-center gap-1.5 text-base">
                       <Calendar className="w-4 h-4" />
                       Deadline
                     </span>
@@ -438,13 +438,13 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                 <div className="pt-3 space-y-2">
                   <Link
                     href="/apply"
-                    className="block w-full bg-red-600 hover:bg-red-700 text-white text-center py-3 rounded-xl font-semibold transition-colors text-sm"
+                    className="block w-full bg-[#A52B3A] hover:bg-[#8C2030] text-white text-center py-3 rounded-xl font-semibold transition-colors text-sm"
                   >
                     Apply Now <ArrowRight className="w-4 h-4 inline ml-1" />
                   </Link>
                   <Link
                     href={`/universities/${u.slug}`}
-                    className="block w-full border border-gray-200 text-gray-700 hover:bg-gray-50 text-center py-2.5 rounded-xl text-base font-medium transition-colors"
+                    className="block w-full border border-[#DDE5DD] text-[#5F6F67] hover:bg-[#FBF8F0] text-center py-2.5 rounded-xl text-base font-medium transition-colors"
                   >
                     View University →
                   </Link>
@@ -459,24 +459,24 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="space-y-10">
           {/* Course Overview */}
-          <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <BookOpen className="w-7 h-7 text-red-600" /> Course Overview
+          <section className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm p-8">
+            <h2 className="text-2xl font-bold text-[#202D28] mb-6 flex items-center gap-2">
+              <BookOpen className="w-7 h-7 text-[#A52B3A]" /> Course Overview
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg font-semibold text-[#202D28] mb-4">
                   Program Structure
                 </h3>
                 <div className="space-y-3">
                   {program.duration && (
-                    <div className="flex items-center p-4 bg-white rounded-xl border border-gray-200">
-                      <Calendar className="w-5 h-5 text-red-600 mr-3 shrink-0" />
+                    <div className="flex items-center p-4 bg-white rounded-xl border border-[#DDE5DD]">
+                      <Calendar className="w-5 h-5 text-[#A52B3A] mr-3 shrink-0" />
                       <div>
-                        <p className="font-semibold text-gray-800 text-base">
+                        <p className="font-semibold text-[#202D28] text-base">
                           Duration
                         </p>
-                        <p className="text-[#285BB5] text-base">
+                        <p className="text-[#175747] text-base">
                           {program.duration}
                         </p>
                       </div>
@@ -509,13 +509,13 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     </div>
                   )}
                   {program.annualTuitionFee && (
-                    <div className="flex items-center p-4 bg-red-400 rounded-xl border border-gray-200">
-                      <DollarSign className="w-5 h-5 text-red-600 mr-3 shrink-0" />
+                    <div className="flex items-center p-4 bg-red-400 rounded-xl border border-[#DDE5DD]">
+                      <DollarSign className="w-5 h-5 text-[#A52B3A] mr-3 shrink-0" />
                       <div>
-                        <p className="font-semibold text-red-600 text-base">
+                        <p className="font-semibold text-[#A52B3A] text-base">
                           Annual Tuition Fee
                         </p>
-                        <p className="text-red-600 text-base">
+                        <p className="text-[#A52B3A] text-base">
                           {String(program.annualTuitionFee)}
                         </p>
                       </div>
@@ -538,12 +538,12 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg font-semibold text-[#202D28] mb-4">
                   Why Choose This Program?
                 </h3>
                 {program.whyChooseVietnam ? (
                   <div
-                    className="text-gray-700 leading-relaxed text-base prose prose-base max-w-none"
+                    className="text-[#5F6F67] leading-relaxed text-base prose prose-base max-w-none"
                     dangerouslySetInnerHTML={{
                       __html: program.whyChooseVietnam,
                     }}
@@ -562,7 +562,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     ].map((point, index) => (
                       <li key={index} className="flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-base">{point}</span>
+                        <span className="text-[#5F6F67] text-base">{point}</span>
                       </li>
                     ))}
                   </ul>
@@ -573,20 +573,20 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
 
           {/* Eligibility Criteria */}
           {program.eligibility && (
-            <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <section className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm p-8">
+              <h2 className="text-2xl font-bold text-[#202D28] mb-6 flex items-center gap-2">
                 <CheckCircle className="w-7 h-7 text-green-600" /> Eligibility
                 Criteria
               </h2>
               <div
-                className="prose prose-sm max-w-none text-gray-700 leading-relaxed"
+                className="prose prose-sm max-w-none text-[#5F6F67] leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: program.eligibility }}
               />
-              <div className="mt-6 p-5 bg-red-400 rounded-xl border border-gray-200">
-                <h3 className="text-base font-semibold text-red-600 mb-1">
+              <div className="mt-6 p-5 bg-red-400 rounded-xl border border-[#DDE5DD]">
+                <h3 className="text-base font-semibold text-[#A52B3A] mb-1">
                   Important Note for Indian Students
                 </h3>
-                <p className="text-red-600 text-base">
+                <p className="text-[#A52B3A] text-base">
                   NEET qualification is mandatory for Indian students as per NMC
                   guidelines. Students must also clear the Foreign Medical
                   Graduate Examination (FMGE/NExT) to practice in India after
@@ -598,13 +598,13 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
 
           {/* Additional Information */}
           {additionalInfoText && (
-            <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <section className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm p-8">
+              <h2 className="text-2xl font-bold text-[#202D28] mb-2">
                 Additional Information
               </h2>
-              <p className="text-gray-500 text-base mb-5">
+              <p className="text-[#7A877F] text-base mb-5">
                 Learn more about the education system and opportunities in
-                Armenia
+                Hungary
               </p>
               <ExpandableText text={additionalInfoText} wordLimit={80} />
             </section>
@@ -612,10 +612,10 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
 
           {/* Year-wise Syllabus */}
           {syllabusYears.length > 0 && (
-            <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <span className="bg-[#EAF1FB] p-2 rounded-xl shadow-sm">
-                  <Layers className="w-5 h-5 text-gray-900" />
+            <section className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm p-8">
+              <h2 className="text-2xl font-bold text-[#202D28] mb-6 flex items-center gap-2">
+                <span className="bg-[#F3F7F3] p-2 rounded-xl shadow-sm">
+                  <Layers className="w-5 h-5 text-[#202D28]" />
                 </span>
                 Year-wise Syllabus
               </h2>
@@ -624,18 +624,18 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   <details
                     key={year}
                     open
-                    className="group border border-gray-100 border-l-4 border-l-[#285BB5] rounded-2xl shadow-sm overflow-hidden"
+                    className="group border border-[#DDE5DD] border-l-4 border-l-[#175747] rounded-2xl shadow-sm overflow-hidden"
                   >
-                    <summary className="flex justify-between items-center px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors">
+                    <summary className="flex justify-between items-center px-5 py-4 cursor-pointer hover:bg-[#FBF8F0] transition-colors">
                       <div className="flex items-center gap-3">
-                        <span className="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-[#EAF1FB] text-white font-bold text-sm shadow-sm shrink-0">
+                        <span className="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-[#F3F7F3] text-white font-bold text-sm shadow-sm shrink-0">
                           {idx + 1}
                         </span>
                         <div>
-                          <span className="font-bold text-gray-900 text-base">
+                          <span className="font-bold text-[#202D28] text-base">
                             {year}
                           </span>
-                          <span className="ml-2 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#EAF1FB] text-[#285BB5]">
+                          <span className="ml-2 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#F3F7F3] text-[#175747]">
                             {label}
                           </span>
                         </div>
@@ -643,7 +643,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                       <ChevronRight className="w-4 h-4 text-red-500 group-open:rotate-90 transition-transform shrink-0" />
                     </summary>
                     <div
-                      className="px-5 pb-5 pt-3 text-gray-600 text-base leading-relaxed prose prose-base max-w-none bg-gray-50 border-t border-gray-100"
+                      className="px-5 pb-5 pt-3 text-[#5F6F67] text-base leading-relaxed prose prose-base max-w-none bg-[#FBF8F0] border-t border-[#DDE5DD]"
                       dangerouslySetInnerHTML={{ __html: content! }}
                     />
                   </details>
@@ -654,8 +654,8 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
 
           {/* University Facilities */}
           {u.facilities.length > 0 && (
-            <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <section className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm p-8">
+              <h2 className="text-2xl font-bold text-[#202D28] mb-6 flex items-center gap-2">
                 <Building2 className="w-7 h-7 text-orange-600" /> University
                 Facilities
               </h2>
@@ -663,12 +663,12 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                 {u.facilities.map((uf) => {
                   const facilityType = facilityIconMap[uf.facilityId] || "lab";
                   const iconColors: Record<string, string> = {
-                    lab: "text-red-600",
+                    lab: "text-[#A52B3A]",
                     library: "text-purple-600",
                     hostel: "text-orange-600",
                     cafeteria: "text-green-600",
                     wifi: "text-teal-600",
-                    transport: "text-gray-600",
+                    transport: "text-[#5F6F67]",
                   };
                   const bgColors: Record<string, string> = {
                     lab: "bg-white",
@@ -676,26 +676,26 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     hostel: "bg-orange-50",
                     cafeteria: "bg-green-50",
                     wifi: "bg-teal-50",
-                    transport: "bg-gray-50",
+                    transport: "bg-[#FBF8F0]",
                   };
                   return (
                     <div
                       key={uf.id}
-                      className={`flex items-start gap-4 p-5 rounded-xl border ${bgColors[facilityType] || "bg-gray-50"} border-gray-200`}
+                      className={`flex items-start gap-4 p-5 rounded-xl border ${bgColors[facilityType] || "bg-[#FBF8F0]"} border-[#DDE5DD]`}
                     >
                       <div
                         className={`p-3 rounded-xl bg-white shadow-sm shrink-0`}
                       >
                         <Microscope
-                          className={`w-6 h-6 ${iconColors[facilityType] || "text-gray-600"}`}
+                          className={`w-6 h-6 ${iconColors[facilityType] || "text-[#5F6F67]"}`}
                         />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900">
+                        <h3 className="font-semibold text-[#202D28]">
                           {uf.facility?.name || "Facility"}
                         </h3>
                         {uf.description && (
-                          <p className="text-gray-600 text-base mt-1">
+                          <p className="text-[#5F6F67] text-base mt-1">
                             {uf.description}
                           </p>
                         )}
@@ -709,46 +709,46 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
 
           {/* Hospital Affiliations */}
           {u.hospitals.length > 0 && (
-            <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                <Stethoscope className="w-7 h-7 text-red-600" /> Hospital
+            <section className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm p-8">
+              <h2 className="text-2xl font-bold text-[#202D28] mb-3 flex items-center gap-2">
+                <Stethoscope className="w-7 h-7 text-[#A52B3A]" /> Hospital
                 Affiliations & Clinical Training
               </h2>
-              <p className="text-gray-600 mb-6 text-sm">
+              <p className="text-[#5F6F67] mb-6 text-sm">
                 Students gain hands-on clinical experience at top-tier hospitals
-                across Armenia, ensuring comprehensive practical training.
+                across Hungary, ensuring comprehensive practical training.
               </p>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 {u.hospitals.map((uh) => (
                   <div
                     key={uh.id}
-                    className="rounded-xl border border-gray-200 p-5 hover:shadow-md transition-shadow"
+                    className="rounded-xl border border-[#DDE5DD] p-5 hover:shadow-md transition-shadow"
                   >
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex items-center gap-3">
-                        <div className="bg-[#EAF1FB] p-2.5 rounded-xl shrink-0">
+                        <div className="bg-[#F3F7F3] p-2.5 rounded-xl shrink-0">
                           <Stethoscope className="w-5 h-5 text-red-500" />
                         </div>
                         <div>
-                          <h3 className="font-bold text-gray-900 text-sm">
+                          <h3 className="font-bold text-[#202D28] text-sm">
                             {uh.hospital.name}
                           </h3>
                           {uh.hospital.accreditation && (
-                            <p className="text-red-600 text-xs font-medium">
+                            <p className="text-[#A52B3A] text-xs font-medium">
                               {uh.hospital.accreditation}
                             </p>
                           )}
                         </div>
                       </div>
                       {uh.hospital.beds && (
-                        <span className="bg-white text-[#285BB5] px-3 py-1 rounded-full text-xs font-medium shrink-0">
+                        <span className="bg-white text-[#175747] px-3 py-1 rounded-full text-xs font-medium shrink-0">
                           {uh.hospital.beds} Beds
                         </span>
                       )}
                     </div>
-                    <div className="flex flex-wrap gap-2 text-xs text-gray-500">
+                    <div className="flex flex-wrap gap-2 text-xs text-[#7A877F]">
                       {(uh.hospital.city || uh.hospital.state) && (
-                        <span className="flex items-center gap-1 bg-gray-50 rounded-md px-2 py-1">
+                        <span className="flex items-center gap-1 bg-[#FBF8F0] rounded-md px-2 py-1">
                           <MapPin className="w-3 h-3" />
                           {[uh.hospital.city, uh.hospital.state]
                             .filter(Boolean)
@@ -756,7 +756,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                         </span>
                       )}
                       {uh.hospital.establishedYear && (
-                        <span className="bg-gray-50 rounded-md px-2 py-1">
+                        <span className="bg-[#FBF8F0] rounded-md px-2 py-1">
                           Est. {uh.hospital.establishedYear}
                         </span>
                       )}
@@ -768,15 +768,15 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
           )}
 
           {/* Admission Process */}
-          <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <FileText className="w-7 h-7 text-red-600" /> Admission Process
+          <section className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm p-8">
+            <h2 className="text-2xl font-bold text-[#202D28] mb-6 flex items-center gap-2">
+              <FileText className="w-7 h-7 text-[#A52B3A]" /> Admission Process
             </h2>
             <div className="space-y-5">
               {admissionProcess.map((step, index) => (
                 <div key={step.step} className="flex items-start gap-5">
                   <div className="flex flex-col items-center shrink-0">
-                    <div className="w-11 h-11 bg-red-600 text-white rounded-full flex items-center justify-center text-base font-bold shadow-sm">
+                    <div className="w-11 h-11 bg-[#A52B3A] text-white rounded-full flex items-center justify-center text-base font-bold shadow-sm">
                       {step.step}
                     </div>
                     {index < admissionProcess.length - 1 && (
@@ -785,7 +785,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   </div>
                   <div className="flex-1 pt-1">
                     <div className="flex items-center justify-between mb-1 flex-wrap gap-2">
-                      <h3 className="font-semibold text-gray-900">
+                      <h3 className="font-semibold text-[#202D28]">
                         {step.title}
                       </h3>
                       <span
@@ -794,7 +794,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                         {step.timeline}
                       </span>
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-[#5F6F67] text-sm leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -803,14 +803,14 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
             </div>
           </section>
 
-          {/* Why Armenia */}
+          {/* Why Hungary */}
           {program.whyChooseVietnam && !program.additionalInformation && (
-            <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <GraduationCap className="w-7 h-7 text-red-600" /> Why Study in
-                Armenia?
+            <section className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm p-8">
+              <h2 className="text-2xl font-bold text-[#202D28] mb-6 flex items-center gap-2">
+                <GraduationCap className="w-7 h-7 text-[#A52B3A]" /> Why Study in
+                Hungary?
               </h2>
-              <div className="prose prose-sm max-w-none text-gray-700 leading-relaxed">
+              <div className="prose prose-sm max-w-none text-[#5F6F67] leading-relaxed">
                 <div
                   dangerouslySetInnerHTML={{ __html: program.whyChooseVietnam }}
                 />
@@ -822,11 +822,11 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               {/* CTA Section */}
-              <div className="bg-[#101B4D] rounded-2xl p-8 text-gray-900 text-center">
+              <div className="bg-[#103D32] rounded-2xl p-8 text-[#202D28] text-center">
                 <h2 className="text-2xl font-bold mb-3">
                   Ready to Start Your Medical Journey?
                 </h2>
-                <p className="text-red-100 text-sm mb-6 max-w-xl mx-auto">
+                <p className="text-[#F8E9EB] text-sm mb-6 max-w-xl mx-auto">
                   Join thousands of students who have successfully completed
                   their MBBS at {u.name}. Get personalized guidance throughout
                   your admission process.
@@ -834,7 +834,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                 <div className="flex flex-wrap justify-center gap-3">
                   <Link
                     href="/apply"
-                    className="bg-white text-red-600 hover:bg-white px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
+                    className="bg-white text-[#A52B3A] hover:bg-white px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
                   >
                     Apply Now
                   </Link>
@@ -844,7 +844,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   />
                   <Link
                     href="/contact-us"
-                    className="border-2 border-white text-white hover:bg-[#101B4D] hover:border-[#173A7A] px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
+                    className="border-2 border-white text-white hover:bg-[#103D32] hover:border-[#103D32] px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
                   >
                     Talk to Counsellor
                   </Link>
@@ -855,7 +855,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
             <aside className="space-y-5">
               {/* University card */}
               {u.thumbnailPath && (
-                <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
+                <div className="bg-white rounded-2xl border border-[#DDE5DD] overflow-hidden shadow-sm">
                   <div className="relative h-36">
                     <Image
                       src={cdn(u.thumbnailPath) || ""}
@@ -866,12 +866,12 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-bold text-gray-900 text-sm">
+                    <h3 className="font-bold text-[#202D28] text-sm">
                       {u.name}
                     </h3>
                     {u.city && (
-                      <p className="text-xs text-gray-500 mt-0.5">
-                        📍 {u.city}, Armenia
+                      <p className="text-xs text-[#7A877F] mt-0.5">
+                        📍 {u.city}, Hungary
                       </p>
                     )}
                   </div>
@@ -880,8 +880,8 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
 
               {/* Other Programs */}
               {u.programs.length > 1 && (
-                <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
-                  <h3 className="font-bold text-gray-900 mb-3 text-sm">
+                <div className="bg-white rounded-2xl border border-[#DDE5DD] p-5 shadow-sm">
+                  <h3 className="font-bold text-[#202D28] mb-3 text-sm">
                     Other Programs
                   </h3>
                   <div className="space-y-2">
@@ -891,9 +891,9 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                         <Link
                           key={p.id}
                           href={`/universities/${u.slug}/courses/${p.programSlug}`}
-                          className="flex items-center justify-between p-2.5 rounded-lg hover:bg-gray-50 border border-gray-100 text-sm transition-colors"
+                          className="flex items-center justify-between p-2.5 rounded-lg hover:bg-[#FBF8F0] border border-[#DDE5DD] text-sm transition-colors"
                         >
-                          <span className="font-medium text-gray-800 line-clamp-1">
+                          <span className="font-medium text-[#202D28] line-clamp-1">
                             {p.programName}
                           </span>
                           {p.annualTuitionFee && (
@@ -908,16 +908,16 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
               )}
 
               {/* Counsellor Card */}
-              <div className="bg-white border border-gray-200 rounded-2xl p-5 text-center shadow-sm">
-                <h3 className="font-bold text-gray-900 mb-1.5 text-sm">
+              <div className="bg-white border border-[#DDE5DD] rounded-2xl p-5 text-center shadow-sm">
+                <h3 className="font-bold text-[#202D28] mb-1.5 text-sm">
                   Need Guidance?
                 </h3>
-                <p className="text-xs text-gray-600 mb-4">
+                <p className="text-xs text-[#5F6F67] mb-4">
                   Our counsellors are available Mon–Sat, 9am–7pm IST.
                 </p>
                 <Link
                   href="/contact-us"
-                  className="block bg-red-600 hover:bg-red-700 text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
+                  className="block bg-[#A52B3A] hover:bg-[#8C2030] text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
                 >
                   Talk to Counsellor
                 </Link>

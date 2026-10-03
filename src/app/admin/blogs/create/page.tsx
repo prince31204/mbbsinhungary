@@ -100,24 +100,24 @@ export default function CreateBlogPage() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
-      <div className="flex items-center gap-4 sticky top-0 bg-gray-50/80 py-4 border-b mb-6">
+      <div className="flex items-center gap-4 sticky top-0 bg-[#FBF8F0]/80 py-4 border-b mb-6">
         <Button variant="ghost" size="icon" asChild>
           <Link href="/admin/blogs">
             <ArrowLeft size={18} />
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">New Blog Post</h1>
+          <h1 className="text-2xl font-bold text-[#202D28]">New Blog Post</h1>
         </div>
       </div>
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Post Details
           </h2>
           <div className="space-y-1.5">
             <Label>
-              Title <span className="text-red-600">*</span>
+              Title <span className="text-[#A52B3A]">*</span>
             </Label>
             <Input
               value={form.title}
@@ -125,13 +125,13 @@ export default function CreateBlogPage() {
                 set("title", e.target.value);
                 set("slug", slugify(e.target.value));
               }}
-              placeholder="e.g. MBBS in Armenia — Complete Guide 2025"
+              placeholder="e.g. MBBS in Hungary — Complete Guide 2025"
             />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1.5">
               <Label>
-                Slug <span className="text-red-600">*</span>
+                Slug <span className="text-[#A52B3A]">*</span>
               </Label>
               <Input
                 value={form.slug}
@@ -219,8 +219,8 @@ export default function CreateBlogPage() {
             ))}
           </div>
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 className="font-semibold text-gray-900 border-b pb-3 mb-4">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3 mb-4">
             Thumbnail
           </h2>
           <ImageUpload
@@ -230,8 +230,8 @@ export default function CreateBlogPage() {
             folder="blogs/_tmp/thumbnail"
           />
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 className="font-semibold text-gray-900 border-b pb-3 mb-4">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3 mb-4">
             SEO
           </h2>
           <SeoFields
@@ -251,7 +251,7 @@ export default function CreateBlogPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
             disabled={loading}
           >
             {loading ? (

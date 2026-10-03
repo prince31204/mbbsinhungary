@@ -7,7 +7,7 @@ const ApplyForm = dynamic(() => import("./ApplyForm"), {
   loading: () => (
     <div className="animate-pulse space-y-4">
       {[...Array(5)].map((_, i) => (
-        <div key={i} className="h-16 bg-gray-100 rounded-xl" />
+        <div key={i} className="h-16 bg-[#F3F7F3] rounded-xl" />
       ))}
     </div>
   ),

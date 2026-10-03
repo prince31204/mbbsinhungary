@@ -54,8 +54,8 @@ export default function AgentAddLeadPage() {
     <div className="space-y-6 max-w-2xl">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Add New Lead</h1>
-          <p className="text-gray-500 text-sm mt-1">
+          <h1 className="text-2xl font-bold text-[#202D28]">Add New Lead</h1>
+          <p className="text-[#7A877F] text-sm mt-1">
             Refer a student and track their application
           </p>
         </div>
@@ -70,23 +70,23 @@ export default function AgentAddLeadPage() {
       </div>
 
       {/* Info box */}
-      <div className="bg-white border border-gray-200 rounded-xl p-4 text-sm text-[#101B4D]">
+      <div className="bg-white border border-[#DDE5DD] rounded-xl p-4 text-sm text-[#103D32]">
         <strong className="block mb-1">💡 Pro Tip</strong>
         Copy the application link and share it with your student — they can fill
         out the form themselves. Or fill the details below to add them directly.
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 bg-[#EAF1FB] rounded-xl flex items-center justify-center">
-            <UserPlus size={18} className="text-red-600" />
+          <div className="w-10 h-10 bg-[#F3F7F3] rounded-xl flex items-center justify-center">
+            <UserPlus size={18} className="text-[#A52B3A]" />
           </div>
-          <h2 className="font-semibold text-gray-900">Student Information</h2>
+          <h2 className="font-semibold text-[#202D28]">Student Information</h2>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-1.5">
-              <label className="text-xs text-gray-500">Full Name *</label>
+              <label className="text-xs text-[#7A877F]">Full Name *</label>
               <Input
                 required
                 value={form.name}
@@ -95,7 +95,7 @@ export default function AgentAddLeadPage() {
               />
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs text-gray-500">Email *</label>
+              <label className="text-xs text-[#7A877F]">Email *</label>
               <Input
                 required
                 type="email"
@@ -105,7 +105,7 @@ export default function AgentAddLeadPage() {
               />
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs text-gray-500">Phone</label>
+              <label className="text-xs text-[#7A877F]">Phone</label>
               <Input
                 value={form.phone}
                 onChange={(e) => set("phone", e.target.value)}
@@ -113,11 +113,11 @@ export default function AgentAddLeadPage() {
               />
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs text-gray-500">Preferred Program</label>
+              <label className="text-xs text-[#7A877F]">Preferred Program</label>
               <select
                 value={form.program}
                 onChange={(e) => set("program", e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
               >
                 {PROGRAMS.map((p) => (
                   <option key={p}>{p}</option>
@@ -125,7 +125,7 @@ export default function AgentAddLeadPage() {
               </select>
             </div>
             <div className="md:col-span-2 space-y-1.5">
-              <label className="text-xs text-gray-500">
+              <label className="text-xs text-[#7A877F]">
                 Preferred University (optional)
               </label>
               <Input
@@ -135,13 +135,13 @@ export default function AgentAddLeadPage() {
               />
             </div>
             <div className="md:col-span-2 space-y-1.5">
-              <label className="text-xs text-gray-500">Notes</label>
+              <label className="text-xs text-[#7A877F]">Notes</label>
               <textarea
                 value={form.message}
                 onChange={(e) => set("message", e.target.value)}
                 rows={3}
                 placeholder="Any additional context about this student…"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
               />
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function AgentAddLeadPage() {
             <Button
               type="submit"
               disabled={saving}
-              className="bg-red-600 hover:bg-red-700"
+              className="bg-[#A52B3A] hover:bg-[#8C2030]"
             >
               {saving ? (
                 <>

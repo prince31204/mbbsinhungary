@@ -21,8 +21,8 @@ export default function CompareForm({ all, selectedIds }: Props) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow border border-gray-200 p-6">
-      <h2 className="font-semibold text-gray-800 mb-4 text-lg">
+    <div className="bg-white rounded-2xl shadow border border-[#DDE5DD] p-6">
+      <h2 className="font-semibold text-[#202D28] mb-4 text-lg">
         Select Universities
       </h2>
       <div className="flex flex-wrap gap-4 items-end">
@@ -30,14 +30,14 @@ export default function CompareForm({ all, selectedIds }: Props) {
           <div key={i} className="flex-1 min-w-[200px]">
             <label
               htmlFor={`u${i}`}
-              className="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide"
+              className="block text-xs font-semibold text-[#5F6F67] mb-1.5 uppercase tracking-wide"
             >
               University {i + 1}
             </label>
             <select
               id={`u${i}`}
               defaultValue={selectedIds[i] || ""}
-              className="w-full border border-gray-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 bg-white"
+              className="w-full border border-gray-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500 bg-white"
             >
               <option value="">— Select University —</option>
               {all.map((u) => (
@@ -50,7 +50,7 @@ export default function CompareForm({ all, selectedIds }: Props) {
         ))}
         <button
           onClick={handleCompare}
-          className="bg-red-600 hover:bg-red-700 text-white px-8 py-2.5 rounded-xl text-sm font-semibold transition-colors whitespace-nowrap"
+          className="bg-[#A52B3A] hover:bg-[#8C2030] text-white px-8 py-2.5 rounded-xl text-sm font-semibold transition-colors whitespace-nowrap"
         >
           Compare Now →
         </button>

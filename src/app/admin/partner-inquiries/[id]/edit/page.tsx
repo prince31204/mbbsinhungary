@@ -109,23 +109,23 @@ export default function PartnerInquiryEditPage() {
       </div>
     );
   if (!inquiry)
-    return <div className="p-6 text-red-600">Inquiry not found</div>;
+    return <div className="p-6 text-[#A52B3A]">Inquiry not found</div>;
 
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">
+        <h1 className="text-2xl font-bold text-[#202D28]">
           Review Partner Inquiry
         </h1>
         <Badge
           className={
             inquiry.status === "pending"
-              ? "bg-red-400 text-red-600 hover:bg-red-400"
+              ? "bg-red-400 text-[#A52B3A] hover:bg-red-400"
               : inquiry.status === "contacted"
-                ? "bg-[#EAF1FB] text-[#285BB5] hover:bg-[#EAF1FB]"
+                ? "bg-[#F3F7F3] text-[#175747] hover:bg-[#F3F7F3]"
                 : inquiry.status === "converted"
                   ? "bg-green-100 text-green-700 hover:bg-green-100"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-100"
+                  : "bg-[#F3F7F3] text-[#5F6F67] hover:bg-[#F3F7F3]"
           }
         >
           <span className="capitalize">{inquiry.status}</span>
@@ -135,37 +135,37 @@ export default function PartnerInquiryEditPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Profile Snapshot */}
         <div className="col-span-1 space-y-4">
-          <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
-            <h2 className="font-semibold text-gray-700 mb-4">Snapshot</h2>
+          <div className="bg-white rounded-xl border border-[#DDE5DD] p-5 shadow-sm">
+            <h2 className="font-semibold text-[#5F6F67] mb-4">Snapshot</h2>
             <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-2 text-gray-700">
-                <User size={14} className="text-gray-500" />
+              <div className="flex items-center gap-2 text-[#5F6F67]">
+                <User size={14} className="text-[#7A877F]" />
                 <span>{inquiry.name}</span>
               </div>
-              <div className="flex items-center gap-2 text-gray-700">
-                <Mail size={14} className="text-gray-500" />
+              <div className="flex items-center gap-2 text-[#5F6F67]">
+                <Mail size={14} className="text-[#7A877F]" />
                 <span className="truncate">{inquiry.email}</span>
               </div>
               {inquiry.phone && (
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Phone size={14} className="text-gray-500" />
+                <div className="flex items-center gap-2 text-[#5F6F67]">
+                  <Phone size={14} className="text-[#7A877F]" />
                   <span>{inquiry.phone}</span>
                 </div>
               )}
               {inquiry.company && (
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Building2 size={14} className="text-gray-500" />
+                <div className="flex items-center gap-2 text-[#5F6F67]">
+                  <Building2 size={14} className="text-[#7A877F]" />
                   <span>{inquiry.company}</span>
                 </div>
               )}
               {inquiry.city && (
-                <div className="flex items-center gap-2 text-gray-700">
-                  <MapPin size={14} className="text-gray-500" />
+                <div className="flex items-center gap-2 text-[#5F6F67]">
+                  <MapPin size={14} className="text-[#7A877F]" />
                   <span>{inquiry.city}</span>
                 </div>
               )}
-              <div className="flex items-center gap-2 text-gray-500">
-                <Calendar size={14} className="text-gray-500" />
+              <div className="flex items-center gap-2 text-[#7A877F]">
+                <Calendar size={14} className="text-[#7A877F]" />
                 <span>
                   {new Date(inquiry.createdAt).toLocaleDateString("en-US", {
                     dateStyle: "medium",
@@ -175,24 +175,24 @@ export default function PartnerInquiryEditPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
-            <h2 className="font-semibold text-gray-700 mb-4">Partner Stats</h2>
+          <div className="bg-white rounded-xl border border-[#DDE5DD] p-5 shadow-sm">
+            <h2 className="font-semibold text-[#5F6F67] mb-4">Partner Stats</h2>
             <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-2 text-gray-700">
-                <GraduationCap size={14} className="text-gray-500" />
+              <div className="flex items-center gap-2 text-[#5F6F67]">
+                <GraduationCap size={14} className="text-[#7A877F]" />
                 <span>
                   Students Placed:{" "}
                   <strong>{inquiry.studentsPlaced || 0}</strong>
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-gray-700">
-                <Award size={14} className="text-gray-500" />
+              <div className="flex items-center gap-2 text-[#5F6F67]">
+                <Award size={14} className="text-[#7A877F]" />
                 <span>
                   Experience: <strong>{inquiry.experience || 0} Yrs</strong>
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-gray-700">
-                <Star size={14} className="text-red-600 fill-yellow-500" />
+              <div className="flex items-center gap-2 text-[#5F6F67]">
+                <Star size={14} className="text-[#A52B3A] fill-yellow-500" />
                 <span>
                   Rating: <strong>{inquiry.rating || "N/A"}</strong>
                 </span>
@@ -204,8 +204,8 @@ export default function PartnerInquiryEditPage() {
         {/* Editable Fields */}
         <div className="col-span-1 md:col-span-2">
           <form onSubmit={handleSubmit} className="space-y-5">
-            <div className="bg-white rounded-xl border border-gray-200 p-5 space-y-4 shadow-sm">
-              <h2 className="font-semibold text-gray-700 border-b pb-2">
+            <div className="bg-white rounded-xl border border-[#DDE5DD] p-5 space-y-4 shadow-sm">
+              <h2 className="font-semibold text-[#5F6F67] border-b pb-2">
                 Inquiry Details
               </h2>
 
@@ -326,7 +326,7 @@ export default function PartnerInquiryEditPage() {
               </div>
 
               <div className="space-y-1.5 pt-4 border-t">
-                <Label className="text-gray-800 font-semibold mb-2 block">
+                <Label className="text-[#202D28] font-semibold mb-2 block">
                   Resolution Status
                 </Label>
                 <Select
@@ -356,7 +356,7 @@ export default function PartnerInquiryEditPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="flex-1 bg-[#175747] hover:bg-[#175747]"
               >
                 {loading ? "Saving…" : "Save Changes"}
               </Button>

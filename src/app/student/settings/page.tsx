@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { Settings, Save, Loader2 } from "lucide-react";
 
 const INPUT =
-  "w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500";
-const LABEL = "block text-sm font-medium text-gray-700 mb-1";
+  "w-full border border-[#DDE5DD] rounded-xl px-4 py-2.5 text-sm text-[#202D28] focus:outline-none focus:ring-2 focus:ring-[#175747]/500";
+const LABEL = "block text-sm font-medium text-[#5F6F67] mb-1";
 
 interface Profile {
   name?: string;
@@ -68,7 +68,7 @@ export default function SettingsPage() {
         {[1, 2, 3].map((i) => (
           <div
             key={i}
-            className="bg-white rounded-2xl border h-24 border-gray-200"
+            className="bg-white rounded-2xl border h-24 border-[#DDE5DD]"
           />
         ))}
       </div>
@@ -78,12 +78,12 @@ export default function SettingsPage() {
   return (
     <div>
       <div className="flex items-center gap-3 mb-6">
-        <Settings className="w-6 h-6 text-red-600" />
-        <h1 className="text-2xl font-bold text-gray-900">Profile Settings</h1>
+        <Settings className="w-6 h-6 text-[#A52B3A]" />
+        <h1 className="text-2xl font-bold text-[#202D28]">Profile Settings</h1>
       </div>
 
       {error && (
-        <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-xl mb-4 text-sm">
+        <div className="bg-white border border-[#DDE5DD] text-[#175747] px-4 py-3 rounded-xl mb-4 text-sm">
           {error}
         </div>
       )}
@@ -94,8 +94,8 @@ export default function SettingsPage() {
       )}
 
       <form onSubmit={handleSave} className="space-y-6">
-        <div className="bg-white rounded-2xl border border-gray-200 p-6">
-          <h2 className="font-semibold text-gray-800 mb-4">
+        <div className="bg-white rounded-2xl border border-[#DDE5DD] p-6">
+          <h2 className="font-semibold text-[#202D28] mb-4">
             Personal Information
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -160,8 +160,8 @@ export default function SettingsPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl border border-gray-200 p-6">
-          <h2 className="font-semibold text-gray-800 mb-4">Family Details</h2>
+        <div className="bg-white rounded-2xl border border-[#DDE5DD] p-6">
+          <h2 className="font-semibold text-[#202D28] mb-4">Family Details</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label className={LABEL}>Father&apos;s Name</label>
@@ -184,8 +184,8 @@ export default function SettingsPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl border border-gray-200 p-6">
-          <h2 className="font-semibold text-gray-800 mb-4">
+        <div className="bg-white rounded-2xl border border-[#DDE5DD] p-6">
+          <h2 className="font-semibold text-[#202D28] mb-4">
             Academic Preferences
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -214,7 +214,7 @@ export default function SettingsPage() {
                 className={INPUT}
                 value={profile.interestedUniversity || ""}
                 onChange={(e) => set("interestedUniversity", e.target.value)}
-                placeholder="e.g. Armenia State Medical Academy"
+                placeholder="e.g. Hungary State Medical Academy"
               />
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function SettingsPage() {
           <button
             type="submit"
             disabled={saving}
-            className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-xl font-semibold disabled:opacity-60 transition-colors"
+            className="flex items-center gap-2 bg-[#A52B3A] hover:bg-[#8C2030] text-white px-8 py-3 rounded-xl font-semibold disabled:opacity-60 transition-colors"
           >
             {saving ? (
               <>

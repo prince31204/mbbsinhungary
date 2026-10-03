@@ -73,17 +73,17 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[#A52B3A] rounded-full flex items-center justify-center mx-auto mb-4">
             <GraduationCap className="w-9 h-9 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-800">Create Account</h1>
-          <p className="text-gray-500 text-sm mt-1">
-            Start your MBBS journey in Armenia
+          <h1 className="text-2xl font-bold text-[#202D28]">Create Account</h1>
+          <p className="text-[#7A877F] text-sm mt-1">
+            Start your MBBS journey in Hungary
           </p>
         </div>
 
         {error && (
-          <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-lg mb-6 text-sm">
+          <div className="bg-white border border-[#DDE5DD] text-[#175747] px-4 py-3 rounded-lg mb-6 text-sm">
             {error}
           </div>
         )}
@@ -122,7 +122,7 @@ export default function RegisterPage() {
             },
           ].map((field) => (
             <div key={field.name}>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
                 {field.label}
               </label>
               <input
@@ -132,18 +132,18 @@ export default function RegisterPage() {
                 value={form[field.name as keyof RegistrationForm]}
                 onChange={handleChange}
                 placeholder={field.placeholder}
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#202D28] focus:outline-none focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent"
               />
             </div>
           ))}
 
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-[#7A877F]">
             By registering, you agree to our{" "}
-            <Link href="#" className="text-red-600 underline">
+            <Link href="#" className="text-[#A52B3A] underline">
               Terms of Service
             </Link>{" "}
             and{" "}
-            <Link href="#" className="text-red-600 underline">
+            <Link href="#" className="text-[#A52B3A] underline">
               Privacy Policy
             </Link>
             .
@@ -152,7 +152,7 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-red-600 text-white py-3.5 rounded-xl font-semibold hover:bg-red-700 disabled:opacity-60 transition-colors flex items-center justify-center space-x-2"
+            className="w-full bg-[#A52B3A] text-white py-3.5 rounded-xl font-semibold hover:bg-[#8C2030] disabled:opacity-60 transition-colors flex items-center justify-center space-x-2"
           >
             {loading ? (
               <>
@@ -165,11 +165,11 @@ export default function RegisterPage() {
           </button>
         </form>
 
-        <div className="mt-6 text-center text-sm text-gray-600">
+        <div className="mt-6 text-center text-sm text-[#5F6F67]">
           Already have an account?{" "}
           <Link
             href="/login"
-            className="text-red-600 hover:text-[#285BB5] font-semibold"
+            className="text-[#A52B3A] hover:text-[#175747] font-semibold"
           >
             Sign in here
           </Link>

@@ -49,7 +49,7 @@ async function seedAdminUser() {
       role: UserRole.admin,
       password: hashedPassword,
       designation: "Administrator",
-      description: "Platform administrator for MBBS in Armenia.",
+      description: "Platform administrator for MBBS in Hungary.",
       status: true,
     },
     create: {
@@ -58,7 +58,7 @@ async function seedAdminUser() {
       role: UserRole.admin,
       password: hashedPassword,
       designation: "Administrator",
-      description: "Platform administrator for MBBS in Armenia.",
+      description: "Platform administrator for MBBS in Hungary.",
       status: true,
     },
   });
@@ -66,8 +66,8 @@ async function seedAdminUser() {
 
 async function seedWebsiteSettings() {
   const settings = [
-    { key: "site_name", value: "MBBS in Armenia", type: "text", group: "general" },
-    { key: "support_email", value: "admissions@mbbsinarmenia.com", type: "text", group: "contact" },
+    { key: "site_name", value: "MBBS in Hungary", type: "text", group: "general" },
+    { key: "support_email", value: "admissions@mbbsinhungary.com", type: "text", group: "contact" },
     { key: "support_phone", value: "+91-11-2410-2161", type: "text", group: "contact" },
     { key: "stats_total_students", value: "2500+", type: "text", group: "stats" },
     { key: "stats_total_universities", value: "8+", type: "text", group: "stats" },
@@ -170,8 +170,8 @@ async function seedReferenceData() {
     const slug = slugify(item.name);
     await prisma.hospital.upsert({
       where: { slug },
-      update: { ...item, slug, state: "Armenia", status: true },
-      create: { ...item, slug, state: "Armenia", status: true },
+      update: { ...item, slug, state: "Hungary", status: true },
+      create: { ...item, slug, state: "Hungary", status: true },
     });
   }
 
@@ -184,11 +184,11 @@ async function seedCountryAndEducationPages() {
   const aboutCountry = await prisma.aboutCountryPage.upsert({
     where: { id: 1 },
     update: {
-      name: "Armenia",
+      name: "Hungary",
       tagline: "A safe and multicultural destination for medical studies",
       capital: "Yerevan",
       population: "2.8 Million+",
-      languages: "English, French, Armenian",
+      languages: "English, French, Hungaryn",
       currency: "AMD",
       location: "Indian Ocean, East of Madagascar",
       timezone: "UTC+4",
@@ -208,15 +208,15 @@ async function seedCountryAndEducationPages() {
       privateHealthcare: "Private hospitals complement public care with specialist services.",
       studentHealthcare: "Medical support services are accessible in major study cities.",
       tourismGrowth: "A globally popular island destination with modern infrastructure.",
-      bannerImage: "/uploads/about-country/armenia-banner.jpg",
+      bannerImage: "/uploads/about-country/hungary-banner.jpg",
     },
     create: {
       id: 1,
-      name: "Armenia",
+      name: "Hungary",
       tagline: "A safe and multicultural destination for medical studies",
       capital: "Yerevan",
       population: "2.8 Million+",
-      languages: "English, French, Armenian",
+      languages: "English, French, Hungaryn",
       currency: "AMD",
       location: "Indian Ocean, East of Madagascar",
       timezone: "UTC+4",
@@ -236,7 +236,7 @@ async function seedCountryAndEducationPages() {
       privateHealthcare: "Private hospitals complement public care with specialist services.",
       studentHealthcare: "Medical support services are accessible in major study cities.",
       tourismGrowth: "A globally popular island destination with modern infrastructure.",
-      bannerImage: "/uploads/about-country/armenia-banner.jpg",
+      bannerImage: "/uploads/about-country/hungary-banner.jpg",
     },
   });
 
@@ -254,7 +254,7 @@ async function seedCountryAndEducationPages() {
   }
 
   const cuisines = [
-    { dishName: "Ghaprsa", dishDescription: "Popular Armenian street meal.", dishImage: "/uploads/about-country/ghaprsa.jpg" },
+    { dishName: "Ghaprsa", dishDescription: "Popular Hungaryn street meal.", dishImage: "/uploads/about-country/ghaprsa.jpg" },
     { dishName: "Khash", dishDescription: "Fried lentil snack served island-wide.", dishImage: "/uploads/about-country/khash.jpg" },
   ];
   for (const item of cuisines) {
@@ -267,7 +267,7 @@ async function seedCountryAndEducationPages() {
 
   const lifestyles = [
     { title: "Multicultural Community", description: "Students from multiple countries learn together." },
-    { title: "Safe Student Lifestyle", description: "Armenia is known for social stability and community support." },
+    { title: "Safe Student Lifestyle", description: "Hungary is known for social stability and community support." },
   ];
   for (const item of lifestyles) {
     await upsertByWhere(
@@ -292,9 +292,9 @@ async function seedCountryAndEducationPages() {
   const educationSystem = await prisma.educationSystem.upsert({
     where: { id: 1 },
     update: {
-      title: "Education System in Armenia",
+      title: "Education System in Hungary",
       description:
-        "Armenia follows a British-influenced framework with strong quality control and international compatibility.",
+        "Hungary follows a British-influenced framework with strong quality control and international compatibility.",
       introductionTitle: "Structured and Recognized Academic Pathway",
       introductionDescription:
         "Medical education combines theory, simulation, and hospital-based practical learning.",
@@ -302,7 +302,7 @@ async function seedCountryAndEducationPages() {
       officialLanguage: "English",
       officialLanguagePercentage: 100,
       officialLanguageNote: "Primary language of instruction",
-      foreignLanguage: "French and Armenian Creole",
+      foreignLanguage: "French and Hungaryn Creole",
       foreignLanguagePercentage: 80,
       foreignLanguageNote: "Widely used in daily communication",
       universitiesCount: 8,
@@ -311,9 +311,9 @@ async function seedCountryAndEducationPages() {
     },
     create: {
       id: 1,
-      title: "Education System in Armenia",
+      title: "Education System in Hungary",
       description:
-        "Armenia follows a British-influenced framework with strong quality control and international compatibility.",
+        "Hungary follows a British-influenced framework with strong quality control and international compatibility.",
       introductionTitle: "Structured and Recognized Academic Pathway",
       introductionDescription:
         "Medical education combines theory, simulation, and hospital-based practical learning.",
@@ -321,7 +321,7 @@ async function seedCountryAndEducationPages() {
       officialLanguage: "English",
       officialLanguagePercentage: 100,
       officialLanguageNote: "Primary language of instruction",
-      foreignLanguage: "Armenian",
+      foreignLanguage: "Hungaryn",
       foreignLanguagePercentage: 80,
       foreignLanguageNote: "Widely used in daily communication",
       universitiesCount: 8,
@@ -382,7 +382,7 @@ async function seedCountryAndEducationPages() {
   await prisma.aboutUs.upsert({
     where: { id: 1 },
     update: {
-      heroTitle: "Your Trusted MBBS in Armenia Advisory Team",
+      heroTitle: "Your Trusted MBBS in Hungary Advisory Team",
       heroDescription:
         "We guide students from profile assessment to admission and pre-departure support.",
       partnerUniversities: 8,
@@ -390,16 +390,16 @@ async function seedCountryAndEducationPages() {
       channelPartners: 35,
       yearsExperience: 10,
       mission: "Ethical and transparent MBBS counseling for students and parents.",
-      vision: "To be the most trusted Armenia medical admission support platform.",
+      vision: "To be the most trusted Hungary medical admission support platform.",
       contact1: "+91-11-2410-2161",
       contact2: "+230-208-9000",
-      email1: "admissions@mbbsinarmenia.com",
-      email2: "support@mbbsinarmenia.com",
-      address: "New Delhi, India and Ebene Cybercity, Armenia",
+      email1: "admissions@mbbsinhungary.com",
+      email2: "support@mbbsinhungary.com",
+      address: "New Delhi, India and Ebene Cybercity, Hungary",
     },
     create: {
       id: 1,
-      heroTitle: "Your Trusted MBBS in Armenia Advisory Team",
+      heroTitle: "Your Trusted MBBS in Hungary Advisory Team",
       heroDescription:
         "We guide students from profile assessment to admission and pre-departure support.",
       partnerUniversities: 8,
@@ -407,12 +407,12 @@ async function seedCountryAndEducationPages() {
       channelPartners: 35,
       yearsExperience: 10,
       mission: "Ethical and transparent MBBS counseling for students and parents.",
-      vision: "To be the most trusted Armenia medical admission support platform.",
+      vision: "To be the most trusted Hungary medical admission support platform.",
       contact1: "+91-11-2410-2161",
       contact2: "+230-208-9000",
-      email1: "admissions@mbbsinarmenia.com",
-      email2: "support@mbbsinarmenia.com",
-      address: "New Delhi, India and Ebene Cybercity, Armenia",
+      email1: "admissions@mbbsinhungary.com",
+      email2: "support@mbbsinhungary.com",
+      address: "New Delhi, India and Ebene Cybercity, Hungary",
     },
   });
 
@@ -432,16 +432,16 @@ async function seedCountryAndEducationPages() {
 
 async function seedContentAndMisc(adminId: number) {
   const staticSeoPages = [
-    { page: "home", metaTitle: "Study MBBS in Armenia 2026", metaDescription: "Admission guidance, fee insights, and university comparison." },
-    { page: "about-us", metaTitle: "About MBBS in Armenia Team", metaDescription: "Meet the counselors and operations team supporting students." },
-    { page: "about-Armenia", metaTitle: "About Armenia for Students", metaDescription: "Understand lifestyle, safety, and healthcare ecosystem." },
-    { page: "education-system", metaTitle: "Education System in Armenia", metaDescription: "Academic structure and MBBS training overview." },
-    { page: "universities", metaTitle: "Medical Universities in Armenia", metaDescription: "Compare colleges, tuition, and support facilities." },
-    { page: "blog", metaTitle: "MBBS Armenia Blog", metaDescription: "Guides for admission, visa, and student life." },
-    { page: "news", metaTitle: "MBBS Armenia News", metaDescription: "Education and policy updates for aspirants." },
-    { page: "articles", metaTitle: "MBBS Armenia Articles", metaDescription: "Long-form practical planning guides." },
-    { page: "contact-us", metaTitle: "Contact MBBS Armenia Advisors", metaDescription: "Book counseling with India and Armenia teams." },
-    { page: "scholarships", metaTitle: "MBBS Scholarships in Armenia", metaDescription: "Merit and tuition support opportunities." },
+    { page: "home", metaTitle: "Study MBBS in Hungary 2026", metaDescription: "Admission guidance, fee insights, and university comparison." },
+    { page: "about-us", metaTitle: "About MBBS in Hungary Team", metaDescription: "Meet the counselors and operations team supporting students." },
+    { page: "about-Hungary", metaTitle: "About Hungary for Students", metaDescription: "Understand lifestyle, safety, and healthcare ecosystem." },
+    { page: "education-system", metaTitle: "Education System in Hungary", metaDescription: "Academic structure and MBBS training overview." },
+    { page: "universities", metaTitle: "Medical Universities in Hungary", metaDescription: "Compare colleges, tuition, and support facilities." },
+    { page: "blog", metaTitle: "MBBS Hungary Blog", metaDescription: "Guides for admission, visa, and student life." },
+    { page: "news", metaTitle: "MBBS Hungary News", metaDescription: "Education and policy updates for aspirants." },
+    { page: "articles", metaTitle: "MBBS Hungary Articles", metaDescription: "Long-form practical planning guides." },
+    { page: "contact-us", metaTitle: "Contact MBBS Hungary Advisors", metaDescription: "Book counseling with India and Hungary teams." },
+    { page: "scholarships", metaTitle: "MBBS Scholarships in Hungary", metaDescription: "Merit and tuition support opportunities." },
   ];
   for (const item of staticSeoPages) {
     await prisma.staticPageSeo.upsert({
@@ -462,21 +462,21 @@ async function seedContentAndMisc(adminId: number) {
       where: { page: item },
       update: {
         page: item,
-        metaTitle: "MBBS in Armenia",
-        metaDescription: "Dynamic page SEO baseline for Armenia-focused content.",
+        metaTitle: "MBBS in Hungary",
+        metaDescription: "Dynamic page SEO baseline for Hungary-focused content.",
         status: true,
       },
       create: {
         page: item,
-        metaTitle: "MBBS in Armenia",
-        metaDescription: "Dynamic page SEO baseline for Armenia-focused content.",
+        metaTitle: "MBBS in Hungary",
+        metaDescription: "Dynamic page SEO baseline for Hungary-focused content.",
         status: true,
       },
     });
   }
 
-  await upsertByWhere(prisma.defaultOgImage, { name: "Armenia Default OG" }, {
-    name: "Armenia Default OG",
+  await upsertByWhere(prisma.defaultOgImage, { name: "Hungary Default OG" }, {
+    name: "Hungary Default OG",
     imageName: "og-default.jpg",
     imagePath: "/og-default.jpg",
     status: true,
@@ -487,9 +487,9 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Homepage", slug: "homepage", status: true },
     create: { name: "Homepage", slug: "homepage", status: true },
   });
-  await upsertByWhere(prisma.faq, { question: "Is MBBS in Armenia taught in English?" }, {
-    question: "Is MBBS in Armenia taught in English?",
-    answer: "Yes, most international MBBS pathways in Armenia are delivered in English.",
+  await upsertByWhere(prisma.faq, { question: "Is MBBS in Hungary taught in English?" }, {
+    question: "Is MBBS in Hungary taught in English?",
+    answer: "Yes, most international MBBS pathways in Hungary are delivered in English.",
     categoryId: faqCategory.id,
     position: 1,
     status: true,
@@ -502,24 +502,24 @@ async function seedContentAndMisc(adminId: number) {
     state: "Delhi",
     country: "India",
     phone: "+91-11-2410-2161",
-    email: "india@mbbsinarmenia.com",
+    email: "india@mbbsinhungary.com",
     mapEmbed: "https://maps.google.com/?q=Chanakyapuri+New+Delhi",
     imageName: "office-india.jpg",
     imagePath: "/uploads/offices/india-head-office.jpg",
     position: 1,
     status: true,
   });
-  await upsertByWhere(prisma.office, { name: "Armenia Support Office" }, {
-    name: "Armenia Support Office",
+  await upsertByWhere(prisma.office, { name: "Hungary Support Office" }, {
+    name: "Hungary Support Office",
     address: "Cyber Tower 1, Ebene Cybercity",
     city: "Ebene",
     state: "Plaines Wilhems",
-    country: "Armenia",
+    country: "Hungary",
     phone: "+230-208-9000",
-    email: "armenia@mbbsinarmenia.com",
-    mapEmbed: "https://maps.google.com/?q=Ebene+Cybercity+Armenia",
-    imageName: "office-armenia.jpg",
-    imagePath: "/uploads/offices/armenia-office.jpg",
+    email: "hungary@mbbsinhungary.com",
+    mapEmbed: "https://maps.google.com/?q=Ebene+Cybercity+Hungary",
+    imageName: "office-hungary.jpg",
+    imagePath: "/uploads/offices/hungary-office.jpg",
     position: 2,
     status: true,
   });
@@ -548,9 +548,9 @@ async function seedContentAndMisc(adminId: number) {
       position: 2,
     },
     {
-      name: "Ministry of Health and Wellness - Armenia",
+      name: "Ministry of Health and Wellness - Hungary",
       url: "https://health.govmu.org",
-      category: "armenia-government",
+      category: "hungary-government",
       position: 3,
     },
   ];
@@ -562,16 +562,16 @@ async function seedContentAndMisc(adminId: number) {
     });
   }
 
-  await upsertByWhere(prisma.countryDocument, { country: "Armenia", type: CountryDocType.embassy_letter }, {
-    country: "Armenia",
+  await upsertByWhere(prisma.countryDocument, { country: "Hungary", type: CountryDocType.embassy_letter }, {
+    country: "Hungary",
     type: CountryDocType.embassy_letter,
     title: "Embassy Student Letter Template",
     fileName: "embassy-student-letter.pdf",
     filePath: "/uploads/country-documents/embassy-student-letter.pdf",
     isActive: true,
   });
-  await upsertByWhere(prisma.countryDocument, { country: "Armenia", type: CountryDocType.nmc_guidelines }, {
-    country: "Armenia",
+  await upsertByWhere(prisma.countryDocument, { country: "Hungary", type: CountryDocType.nmc_guidelines }, {
+    country: "Hungary",
     type: CountryDocType.nmc_guidelines,
     title: "NMC Guidelines Reference",
     fileName: "nmc-guidelines-reference.pdf",
@@ -579,9 +579,9 @@ async function seedContentAndMisc(adminId: number) {
     isActive: true,
   });
 
-  await upsertByWhere(prisma.pageContent, { pageSlug: "about-us", title: "Why Armenia" }, {
+  await upsertByWhere(prisma.pageContent, { pageSlug: "about-us", title: "Why Hungary" }, {
     pageSlug: "about-us",
-    title: "Why Armenia",
+    title: "Why Hungary",
     content: "Affordable medical education, English-medium instruction, and practical hospital exposure.",
     position: 1,
     status: true,
@@ -592,11 +592,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Admission Guides", slug: "admission-guides", status: true },
     create: { name: "Admission Guides", slug: "admission-guides", status: true },
   });
-  const blog = await upsertByWhere(prisma.blog, { slug: "mbbs-in-armenia-admission-roadmap-2026" }, {
+  const blog = await upsertByWhere(prisma.blog, { slug: "mbbs-in-hungary-admission-roadmap-2026" }, {
     categoryId: blogCategory.id,
     authorId: adminId,
-    title: "MBBS in Armenia Admission Roadmap 2026",
-    slug: "mbbs-in-armenia-admission-roadmap-2026",
+    title: "MBBS in Hungary Admission Roadmap 2026",
+    slug: "mbbs-in-hungary-admission-roadmap-2026",
     shortnote: "A practical timeline from counseling to visa.",
     description: "Stepwise checklist for profile review, documents, application, and travel readiness.",
     status: true,
@@ -623,11 +623,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Policy and Admissions", slug: "policy-and-admissions", status: true },
     create: { name: "Policy and Admissions", slug: "policy-and-admissions", status: true },
   });
-  const news = await upsertByWhere(prisma.news, { slug: "armenia-intake-advisory-2026" }, {
+  const news = await upsertByWhere(prisma.news, { slug: "hungary-intake-advisory-2026" }, {
     categoryId: newsCategory.id,
     authorId: adminId,
-    title: "Armenia Intake Advisory for 2026 Applicants",
-    slug: "armenia-intake-advisory-2026",
+    title: "Hungary Intake Advisory for 2026 Applicants",
+    slug: "hungary-intake-advisory-2026",
     description: "Applicants are advised to complete document checks early.",
     status: true,
     homeView: true,
@@ -652,11 +652,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "MBBS Planning", slug: "mbbs-planning", status: true },
     create: { name: "MBBS Planning", slug: "mbbs-planning", status: true },
   });
-  const article = await upsertByWhere(prisma.article, { slug: "realistic-cost-breakdown-mbbs-armenia" }, {
+  const article = await upsertByWhere(prisma.article, { slug: "realistic-cost-breakdown-mbbs-hungary" }, {
     categoryId: articleCategory.id,
     authorId: adminId,
-    title: "Realistic Cost Breakdown for MBBS in Armenia",
-    slug: "realistic-cost-breakdown-mbbs-armenia",
+    title: "Realistic Cost Breakdown for MBBS in Hungary",
+    slug: "realistic-cost-breakdown-mbbs-hungary",
     description: "Understand tuition, living costs, and annual budget planning.",
     status: true,
     homeView: true,
@@ -677,10 +677,10 @@ async function seedContentAndMisc(adminId: number) {
   });
 
   const scholarship = await prisma.scholarship.upsert({
-    where: { slug: "armenia-merit-scholarship-mbbs" },
+    where: { slug: "hungary-merit-scholarship-mbbs" },
     update: {
-      title: "Armenia Merit Scholarship for MBBS",
-      slug: "armenia-merit-scholarship-mbbs",
+      title: "Hungary Merit Scholarship for MBBS",
+      slug: "hungary-merit-scholarship-mbbs",
       scholarshipType: "Merit-based",
       amountMin: 1500,
       amountMax: 4000,
@@ -692,8 +692,8 @@ async function seedContentAndMisc(adminId: number) {
       isActive: true,
     },
     create: {
-      title: "Armenia Merit Scholarship for MBBS",
-      slug: "armenia-merit-scholarship-mbbs",
+      title: "Hungary Merit Scholarship for MBBS",
+      slug: "hungary-merit-scholarship-mbbs",
       scholarshipType: "Merit-based",
       amountMin: 1500,
       amountMax: 4000,
@@ -716,7 +716,7 @@ async function seedContentAndMisc(adminId: number) {
   await upsertByWhere(prisma.testimonial, { name: "Arjun Sharma", designation: "MBBS Graduate" }, {
     name: "Arjun Sharma",
     designation: "MBBS Graduate",
-    description: "Smooth admission support and strong post-arrival coordination in Armenia.",
+    description: "Smooth admission support and strong post-arrival coordination in Hungary.",
     rating: 4.8,
     position: 1,
     status: true,
@@ -798,11 +798,11 @@ async function seedUniversityDependentData() {
 
   await upsertByWhere(
     prisma.universityStudent,
-    { universityId: university.id, email: "intl.batch@mbbsinarmenia.com" },
+    { universityId: university.id, email: "intl.batch@mbbsinhungary.com" },
     {
       universityId: university.id,
       name: "International Student Cohort",
-      email: "intl.batch@mbbsinarmenia.com",
+      email: "intl.batch@mbbsinhungary.com",
       phone: "+230-5555-0101",
       country: "India",
       numberOfStudents: 120,
@@ -924,7 +924,7 @@ async function seedOptionalLeadData(adminId: number, universityProgramId: number
     { leadId: lead.id, source: "website", message: "Need counseling for September intake." },
     {
       leadId: lead.id,
-      universityName: "Armenia MBBS options",
+      universityName: "Hungary MBBS options",
       message: "Need counseling for September intake.",
       source: "website",
       status: "pending",
@@ -949,7 +949,7 @@ async function seedOptionalLeadData(adminId: number, universityProgramId: number
 }
 
 async function main() {
-  console.log("Starting Armenia baseline database seed...");
+  console.log("Starting Hungary baseline database seed...");
   console.log(
     "University bulk-upload tables are intentionally not seeded here (University, UniversityRanking, UniversityLink, UniversityIntake, UniversityProgram, UniversityDocument, UniversityPhoto, UniversityFmgeRate).",
   );
@@ -962,7 +962,7 @@ async function main() {
   const { universityProgramId } = await seedUniversityDependentData();
   await seedOptionalLeadData(admin.id, universityProgramId);
 
-  console.log("Armenia baseline seed completed.");
+  console.log("Hungary baseline seed completed.");
 }
 
 main()

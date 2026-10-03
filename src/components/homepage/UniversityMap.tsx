@@ -31,7 +31,7 @@ const createMarkerIcon = () =>
     html: `
  <div style="
  width: 32px; height: 32px;
- background: #1565C0;
+ background: #175747;
  border: 3px solid white;
  border-radius: 50% 50% 50% 0;
  transform: rotate(-45deg);
@@ -201,7 +201,7 @@ export default function UniversityMap({
                     style={{
                       fontWeight: 700,
                       fontSize: "13px",
-                      color: "#1a1a1a",
+                      color: "#202D28",
                       marginBottom: "4px",
                       lineHeight: "1.3",
                     }}
@@ -211,17 +211,17 @@ export default function UniversityMap({
                   <div
                     style={{
                       fontSize: "11px",
-                      color: "#666",
+                      color: "#5F6F67",
                       marginBottom: "10px",
                     }}
                   >
-                    📍 {uni.city}, Armenia
+                    📍 {uni.city}, Hungary
                   </div>
                   <Link
                     href={`/universities/${uni.slug}`}
                     style={{
                       display: "inline-block",
-                      background: "#1565C0",
+                      background: "#175747",
                       color: "white",
                       fontSize: "12px",
                       fontWeight: 600,
@@ -263,8 +263,8 @@ export default function UniversityMap({
               fontWeight: 600,
               border: "none",
               cursor: "pointer",
-              background: activeLayer === layer ? "#1565C0" : "white",
-              color: activeLayer === layer ? "white" : "#333",
+              background: activeLayer === layer ? "#175747" : "white",
+              color: activeLayer === layer ? "white" : "#202D28",
               transition: "all 0.2s",
             }}
           >
@@ -286,7 +286,7 @@ export default function UniversityMap({
           boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
           fontSize: "13px",
           fontWeight: 700,
-          color: "#1565C0",
+          color: "#175747",
           display: "flex",
           alignItems: "center",
           gap: "6px",
@@ -294,7 +294,7 @@ export default function UniversityMap({
       >
         <span
           style={{
-            background: "#1565C0",
+            background: "#175747",
             color: "white",
             borderRadius: "50%",
             width: "22px",

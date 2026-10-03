@@ -90,19 +90,19 @@ export default function CitiesAdminPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">🏙️ Major Cities</h1>
-          <p className="text-sm text-gray-500">{items.length} cities</p>
+          <h1 className="text-2xl font-bold text-[#202D28]">🏙️ Major Cities</h1>
+          <p className="text-sm text-[#7A877F]">{items.length} cities</p>
         </div>
         <Button
           onClick={() => setShowAdd(true)}
-          className="ml-auto bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="ml-auto bg-[#175747] hover:bg-[#175747]"
         >
           <Plus size={14} className="mr-1" /> Add City
         </Button>
       </div>
 
       {showAdd && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <Label>City Name *</Label>
@@ -164,16 +164,16 @@ export default function CitiesAdminPage() {
 
       <div className="space-y-3">
         {loading ? (
-          <div className="p-8 text-center text-gray-500">Loading...</div>
+          <div className="p-8 text-center text-[#7A877F]">Loading...</div>
         ) : items.length === 0 ? (
-          <div className="p-8 text-center text-gray-500">
+          <div className="p-8 text-center text-[#7A877F]">
             No cities added yet.
           </div>
         ) : (
           items.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl border border-gray-200 p-4"
+              className="bg-white rounded-xl border border-[#DDE5DD] p-4"
             >
               {editId === item.id ? (
                 <div className="space-y-3">
@@ -253,16 +253,16 @@ export default function CitiesAdminPage() {
               ) : (
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="font-semibold text-gray-900">
+                    <p className="font-semibold text-[#202D28]">
                       {item.cityName}
                       {item.population && (
-                        <span className="ml-2 text-sm font-normal text-gray-500">
+                        <span className="ml-2 text-sm font-normal text-[#7A877F]">
                           Pop: {item.population}
                         </span>
                       )}
                     </p>
                     {item.description && (
-                      <p className="text-sm text-gray-500 mt-1 line-clamp-2">
+                      <p className="text-sm text-[#7A877F] mt-1 line-clamp-2">
                         {item.description}
                       </p>
                     )}
@@ -288,7 +288,7 @@ export default function CitiesAdminPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="text-red-600"
+                      className="text-[#A52B3A]"
                       onClick={() => handleDelete(item.id)}
                     >
                       <Trash2 size={14} />

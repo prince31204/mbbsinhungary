@@ -64,17 +64,17 @@ export default function StudyModesPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex items-center gap-3">
-        <BookOpen size={22} className="text-red-600" />
+        <BookOpen size={22} className="text-[#A52B3A]" />
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Study Modes</h1>
-          <p className="text-sm text-gray-500">
+          <h1 className="text-2xl font-bold text-[#202D28]">Study Modes</h1>
+          <p className="text-sm text-[#7A877F]">
             {items.length} mode{items.length !== 1 ? "s" : ""} available
           </p>
         </div>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 p-5">
-        <h2 className="font-semibold text-gray-800 mb-4">Add New Study Mode</h2>
+      <div className="bg-white rounded-xl border border-[#DDE5DD] p-5">
+        <h2 className="font-semibold text-[#202D28] mb-4">Add New Study Mode</h2>
         <div className="flex gap-3">
           <Input
             value={newMode}
@@ -90,18 +90,18 @@ export default function StudyModesPage() {
           />
           <Button
             onClick={handleAdd}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 shrink-0"
+            className="bg-[#175747] hover:bg-[#175747] shrink-0"
           >
             <Plus size={14} className="mr-1" /> Add
           </Button>
         </div>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 divide-y">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] divide-y">
         {loading ? (
-          <div className="p-8 text-center text-gray-500">Loading...</div>
+          <div className="p-8 text-center text-[#7A877F]">Loading...</div>
         ) : items.length === 0 ? (
-          <div className="p-8 text-center text-gray-500">
+          <div className="p-8 text-center text-[#7A877F]">
             No study modes yet.
           </div>
         ) : (
@@ -131,7 +131,7 @@ export default function StudyModesPage() {
                 </>
               ) : (
                 <>
-                  <span className="flex-1 text-gray-900">{item.studyMode}</span>
+                  <span className="flex-1 text-[#202D28]">{item.studyMode}</span>
                   <Button
                     size="sm"
                     variant="ghost"
@@ -145,7 +145,7 @@ export default function StudyModesPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="text-red-600 hover:text-[#285BB5]"
+                    className="text-[#A52B3A] hover:text-[#175747]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

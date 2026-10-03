@@ -34,31 +34,31 @@ export function SeoFields({ values, onChange, hideOgImage }: SeoFieldsProps) {
         className="w-full flex items-center justify-between px-4 py-3 h-auto text-left border-dashed"
         onClick={() => setOpen((v) => !v)}
       >
-        <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
+        <div className="flex items-center gap-2 text-sm font-medium text-[#5F6F67]">
           <Search size={15} className="text-red-500" />
           SEO Settings
           {!open && values.metaTitle && (
-            <span className="text-xs text-gray-500 font-normal truncate max-w-[200px]">
+            <span className="text-xs text-[#7A877F] font-normal truncate max-w-[200px]">
               — {values.metaTitle}
             </span>
           )}
         </div>
         {open ? (
-          <ChevronUp size={16} className="text-gray-500" />
+          <ChevronUp size={16} className="text-[#7A877F]" />
         ) : (
-          <ChevronDown size={16} className="text-gray-500" />
+          <ChevronDown size={16} className="text-[#7A877F]" />
         )}
       </Button>
       {open && (
-        <div className="mt-3 p-4 bg-white/40 border border-gray-200 rounded-xl space-y-4">
+        <div className="mt-3 p-4 bg-white/40 border border-[#DDE5DD] rounded-xl space-y-4">
           {/* Meta Title */}
           <div className="space-y-1.5">
             <div className="flex items-center justify-between">
-              <Label className="text-sm font-medium text-gray-700">
+              <Label className="text-sm font-medium text-[#5F6F67]">
                 Meta Title
               </Label>
               <span
-                className={`text-xs ${titleLen > 60 ? "text-red-600" : "text-gray-500"}`}
+                className={`text-xs ${titleLen > 60 ? "text-[#A52B3A]" : "text-[#7A877F]"}`}
               >
                 {titleLen}/60
               </span>
@@ -73,7 +73,7 @@ export function SeoFields({ values, onChange, hideOgImage }: SeoFieldsProps) {
 
           {/* Meta Keywords */}
           <div className="space-y-1.5">
-            <Label className="text-sm font-medium text-gray-700">
+            <Label className="text-sm font-medium text-[#5F6F67]">
               Meta Keywords
             </Label>
             <Input
@@ -87,11 +87,11 @@ export function SeoFields({ values, onChange, hideOgImage }: SeoFieldsProps) {
           {/* Meta Description */}
           <div className="space-y-1.5">
             <div className="flex items-center justify-between">
-              <Label className="text-sm font-medium text-gray-700">
+              <Label className="text-sm font-medium text-[#5F6F67]">
                 Meta Description
               </Label>
               <span
-                className={`text-xs ${descLen > 160 ? "text-red-600" : "text-gray-500"}`}
+                className={`text-xs ${descLen > 160 ? "text-[#A52B3A]" : "text-[#7A877F]"}`}
               >
                 {descLen}/160
               </span>
@@ -107,7 +107,7 @@ export function SeoFields({ values, onChange, hideOgImage }: SeoFieldsProps) {
 
           {/* OG Image Picker */}
           {!hideOgImage && (
-            <div className="pt-2 border-t border-gray-200">
+            <div className="pt-2 border-t border-[#DDE5DD]">
               <OgImagePicker
                 value={values.ogImagePath ?? ""}
                 onChange={(v) => onChange("ogImagePath", v)}
@@ -118,7 +118,7 @@ export function SeoFields({ values, onChange, hideOgImage }: SeoFieldsProps) {
 
           {/* Schema (JSON-LD) */}
           <div className="space-y-1.5">
-            <Label className="text-sm font-medium text-gray-700">
+            <Label className="text-sm font-medium text-[#5F6F67]">
               JSON-LD Schema
             </Label>
             <Textarea

@@ -38,11 +38,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch(() => null);
   if (!cat) return { title: "Blog Category Not Found" };
   return buildMetadata({
-    title: cat.metaTitle || `${cat.name} — MBBS Armenia Blog`,
+    title: cat.metaTitle || `${cat.name} — MBBS Hungary Blog`,
     description:
       cat.metaDescription ||
       cat.description ||
-      `Read articles about ${cat.name} — MBBS in Armenia. Tips, guides, and student experiences.`,
+      `Read articles about ${cat.name} — MBBS in Hungary. Tips, guides, and student experiences.`,
     path: `/blog/${categorySlug}`,
   });
 }
@@ -100,34 +100,34 @@ export default async function BlogCategoryPage({ params }: Props) {
       />
 
       {/* Breadcrumb */}
-      <nav className="bg-gray-50 border-b">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center space-x-2 text-sm text-gray-600">
-          <Link href="/" className="hover:text-[#285BB5]">
+      <nav className="bg-[#FBF8F0] border-b">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center space-x-2 text-sm text-[#5F6F67]">
+          <Link href="/" className="hover:text-[#175747]">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/blog" className="hover:text-[#285BB5]">
+          <Link href="/blog" className="hover:text-[#175747]">
             Blog
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-gray-800 font-medium">{category.name}</span>
+          <span className="text-[#202D28] font-medium">{category.name}</span>
         </div>
       </nav>
 
       {/* Header */}
-      <div className="bg-white text-gray-900 py-14">
+      <div className="bg-white text-[#202D28] py-14">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="inline-flex items-center gap-2 bg-gray-100 px-4 py-1.5 rounded-full text-sm mb-4">
+          <div className="inline-flex items-center gap-2 bg-[#F3F7F3] px-4 py-1.5 rounded-full text-sm mb-4">
             <Tag className="w-4 h-4" />
             {category.name}
           </div>
           <h1 className="text-4xl font-bold mb-4">{category.name}</h1>
           {category.description && (
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <p className="text-[#5F6F67] max-w-2xl mx-auto text-lg">
               {category.description}
             </p>
           )}
-          <p className="text-gray-500 mt-4">
+          <p className="text-[#7A877F] mt-4">
             {category.blogs.length} article
             {category.blogs.length !== 1 ? "s" : ""}
           </p>
@@ -139,13 +139,13 @@ export default async function BlogCategoryPage({ params }: Props) {
           {/* Article List */}
           <div className="lg:col-span-3">
             {category.blogs.length === 0 ? (
-              <div className="text-center py-16 bg-white rounded-2xl border border-gray-100">
-                <p className="text-gray-500 text-lg">
+              <div className="text-center py-16 bg-white rounded-2xl border border-[#DDE5DD]">
+                <p className="text-[#7A877F] text-lg">
                   No articles in this category yet.
                 </p>
                 <Link
                   href="/blog"
-                  className="mt-4 inline-block text-red-600 hover:underline"
+                  className="mt-4 inline-block text-[#A52B3A] hover:underline"
                 >
                   ← All Articles
                 </Link>
@@ -156,9 +156,9 @@ export default async function BlogCategoryPage({ params }: Props) {
                   <Link
                     key={blog.id}
                     href={`/blog/${category.slug}/${blog.slug ?? ""}`}
-                    className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    className="group bg-white rounded-2xl border border-[#DDE5DD] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                   >
-                    <div className="relative aspect-[1023/614] bg-gray-100">
+                    <div className="relative aspect-[1023/614] bg-[#F3F7F3]">
                       {blog.thumbnailPath ? (
                         <Image
                           src={cdn(blog.thumbnailPath) || ""}
@@ -169,23 +169,23 @@ export default async function BlogCategoryPage({ params }: Props) {
                         />
                       ) : (
                         <div className="flex items-center justify-center h-full bg-white">
-                          <span className="text-red-600 text-4xl font-bold">
+                          <span className="text-[#A52B3A] text-4xl font-bold">
                             {(blog.title ?? "B")[0]}
                           </span>
                         </div>
                       )}
                     </div>
                     <div className="p-5">
-                      <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#285BB5] transition-colors">
+                      <h2 className="font-bold text-[#202D28] mb-2 line-clamp-2 group-hover:text-[#175747] transition-colors">
                         {blog.title}
                       </h2>
                       {blog.shortnote && (
                         <div
-                          className="text-sm text-gray-500 line-clamp-2 mb-3 prose prose-sm max-w-none prose-p:my-0"
+                          className="text-sm text-[#7A877F] line-clamp-2 mb-3 prose prose-sm max-w-none prose-p:my-0"
                           dangerouslySetInnerHTML={{ __html: blog.shortnote }}
                         />
                       )}
-                      <div className="flex items-center gap-3 text-xs text-gray-500">
+                      <div className="flex items-center gap-3 text-xs text-[#7A877F]">
                         <span className="flex items-center gap-1 text-emerald-600">
                           <Calendar className="w-3 h-3" />
                           {new Date(blog.createdAt).toLocaleDateString(
@@ -194,7 +194,7 @@ export default async function BlogCategoryPage({ params }: Props) {
                           )}
                         </span>
                         {blog.author?.name && (
-                          <span className="flex items-center gap-1 text-red-600">
+                          <span className="flex items-center gap-1 text-[#A52B3A]">
                             <User className="w-3 h-3" />
                             {blog.author.name}
                           </span>
@@ -209,17 +209,17 @@ export default async function BlogCategoryPage({ params }: Props) {
 
           {/* Sidebar */}
           <aside className="space-y-6">
-            <div className="bg-white rounded-2xl border border-gray-100 p-5">
-              <h3 className="font-bold text-gray-900 mb-4">All Categories</h3>
+            <div className="bg-white rounded-2xl border border-[#DDE5DD] p-5">
+              <h3 className="font-bold text-[#202D28] mb-4">All Categories</h3>
               <div className="space-y-2">
                 {categories.map((cat) => (
                   <Link
                     key={cat.slug}
                     href={`/blog/${cat.slug}`}
-                    className={`flex items-center justify-between p-2.5 rounded-lg text-sm transition-colors ${cat.slug === categorySlug ? "bg-white text-red-600 font-medium" : "hover:bg-gray-50 text-gray-700"}`}
+                    className={`flex items-center justify-between p-2.5 rounded-lg text-sm transition-colors ${cat.slug === categorySlug ? "bg-white text-[#A52B3A] font-medium" : "hover:bg-[#FBF8F0] text-[#5F6F67]"}`}
                   >
                     <span>{cat.name}</span>
-                    <span className="text-xs bg-gray-100 px-2 py-0.5 rounded-full">
+                    <span className="text-xs bg-[#F3F7F3] px-2 py-0.5 rounded-full">
                       {cat._count.blogs}
                     </span>
                   </Link>
@@ -227,14 +227,14 @@ export default async function BlogCategoryPage({ params }: Props) {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-2xl p-5 text-center">
-              <h3 className="font-bold text-gray-900 mb-2">Ready to Apply?</h3>
-              <p className="text-sm text-gray-600 mb-4">
+            <div className="bg-white border border-[#DDE5DD] rounded-2xl p-5 text-center">
+              <h3 className="font-bold text-[#202D28] mb-2">Ready to Apply?</h3>
+              <p className="text-sm text-[#5F6F67] mb-4">
                 Talk to our counsellors for free guidance.
               </p>
               <Link
                 href="/contact-us"
-                className="block bg-red-600 hover:bg-red-700 text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
+                className="block bg-[#A52B3A] hover:bg-[#8C2030] text-white py-2.5 rounded-xl text-sm font-semibold transition-colors"
               >
                 Contact Us <ArrowRight className="w-4 h-4 inline ml-1" />
               </Link>

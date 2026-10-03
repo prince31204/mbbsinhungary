@@ -152,24 +152,24 @@ export default async function BlogDetailPage({ params }: Props) {
       />
 
       {/* Breadcrumb */}
-      <nav className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-1.5 text-sm text-gray-500 flex-wrap">
-          <Link href="/" className="hover:text-[#285BB5] transition-colors">
+      <nav className="bg-white border-b border-[#DDE5DD]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-1.5 text-sm text-[#7A877F] flex-wrap">
+          <Link href="/" className="hover:text-[#175747] transition-colors">
             Home
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600" />
-          <Link href="/blog" className="hover:text-[#285BB5] transition-colors">
+          <ChevronRight className="w-3.5 h-3.5 text-[#5F6F67]" />
+          <Link href="/blog" className="hover:text-[#175747] transition-colors">
             Blog
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600" />
+          <ChevronRight className="w-3.5 h-3.5 text-[#5F6F67]" />
           <Link
             href={`/blog/${categorySlug}`}
-            className="hover:text-[#285BB5] transition-colors"
+            className="hover:text-[#175747] transition-colors"
           >
             {blog.category.name}
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-gray-600" />
-          <span className="text-gray-800 font-medium line-clamp-1">
+          <ChevronRight className="w-3.5 h-3.5 text-[#5F6F67]" />
+          <span className="text-[#202D28] font-medium line-clamp-1">
             {blog.title}
           </span>
         </div>
@@ -179,12 +179,12 @@ export default async function BlogDetailPage({ params }: Props) {
         <div className="grid lg:grid-cols-3 gap-10">
           {/* ── Main article ── */}
           <article className="lg:col-span-2 min-w-0">
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden p-8">
+            <div className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm overflow-hidden p-8">
               {/* Category pill + badges */}
               <div className="flex flex-wrap gap-2 mb-4">
                 <Link
                   href={`/blog/${categorySlug}`}
-                  className="inline-flex items-center bg-white text-red-600 border border-gray-200 text-xs font-semibold px-3 py-1 rounded-full hover:bg-[#EAF1FB] transition-colors"
+                  className="inline-flex items-center bg-white text-[#A52B3A] border border-[#DDE5DD] text-xs font-semibold px-3 py-1 rounded-full hover:bg-[#F3F7F3] transition-colors"
                 >
                   {blog.category.name}
                 </Link>
@@ -197,20 +197,20 @@ export default async function BlogDetailPage({ params }: Props) {
                   </span>
                 )}
                 {blog.homeView && (
-                  <span className="inline-flex items-center bg-white text-red-600 border border-gray-200 text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="inline-flex items-center bg-white text-[#A52B3A] border border-[#DDE5DD] text-xs font-semibold px-3 py-1 rounded-full">
                     Home Featured
                   </span>
                 )}
               </div>
 
               {/* Title */}
-              <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-snug mb-5">
+              <h1 className="text-3xl lg:text-4xl font-bold text-[#202D28] leading-snug mb-5">
                 {blog.title}
               </h1>
               {/* Author + date + reading time */}
-              <div className="flex flex-wrap items-center gap-4 text-sm font-medium mb-6 pb-6 border-b border-gray-100">
+              <div className="flex flex-wrap items-center gap-4 text-sm font-medium mb-6 pb-6 border-b border-[#DDE5DD]">
                 {blog.author && (
-                  <span className="flex items-center gap-1.5 text-red-600">
+                  <span className="flex items-center gap-1.5 text-[#A52B3A]">
                     <User className="w-4 h-4" /> {blog.author.name}
                   </span>
                 )}
@@ -243,9 +243,9 @@ export default async function BlogDetailPage({ params }: Props) {
 
               {/* Short note / excerpt */}
               {blog.shortnote && (
-                <div className="border-l-4 border-gray-200 pl-4 mb-8 bg-white/50 py-3 rounded-r-xl">
+                <div className="border-l-4 border-[#DDE5DD] pl-4 mb-8 bg-white/50 py-3 rounded-r-xl">
                   <div
-                    className="text-gray-700 text-lg leading-relaxed prose prose-sm max-w-none prose-p:my-1"
+                    className="text-[#5F6F67] text-lg leading-relaxed prose prose-sm max-w-none prose-p:my-1"
                     dangerouslySetInnerHTML={{ __html: blog.shortnote }}
                   />
                 </div>
@@ -254,7 +254,7 @@ export default async function BlogDetailPage({ params }: Props) {
               {/* Main description */}
               {blog.description && (
                 <div
-                  className="prose max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-red-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-blockquote:border-gray-300 text-gray-700 mb-10"
+                  className="prose max-w-none prose-headings:font-bold prose-headings:text-[#202D28] prose-a:text-[#A52B3A] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-blockquote:border-gray-300 text-[#5F6F67] mb-10"
                   dangerouslySetInnerHTML={{ __html: blog.description }}
                 />
               )}
@@ -265,14 +265,14 @@ export default async function BlogDetailPage({ params }: Props) {
                   {topLevel.map((section) => (
                     <div key={section.id}>
                       {section.title && (
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                          <span className="w-1 h-6 bg-[#EAF1FB]0 rounded-full inline-block shrink-0" />
+                        <h2 className="text-2xl font-bold text-[#202D28] mb-4 flex items-center gap-2">
+                          <span className="w-1 h-6 bg-[#175747] rounded-full inline-block shrink-0" />
                           {section.title}
                         </h2>
                       )}
                       {section.description && (
                         <div
-                          className="prose max-w-none text-gray-700 prose-headings:text-gray-900 prose-a:text-red-600"
+                          className="prose max-w-none text-[#5F6F67] prose-headings:text-[#202D28] prose-a:text-[#A52B3A]"
                           dangerouslySetInnerHTML={{
                             __html: section.description,
                           }}
@@ -292,17 +292,17 @@ export default async function BlogDetailPage({ params }: Props) {
 
                       {/* Child sections */}
                       {childrenOf(section.id).length > 0 && (
-                        <div className="mt-6 space-y-6 pl-4 border-l-2 border-gray-100">
+                        <div className="mt-6 space-y-6 pl-4 border-l-2 border-[#DDE5DD]">
                           {childrenOf(section.id).map((child) => (
                             <div key={child.id}>
                               {child.title && (
-                                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                                <h3 className="text-lg font-semibold text-[#202D28] mb-2">
                                   {child.title}
                                 </h3>
                               )}
                               {child.description && (
                                 <div
-                                  className="prose max-w-none text-gray-600"
+                                  className="prose max-w-none text-[#5F6F67]"
                                   dangerouslySetInnerHTML={{
                                     __html: child.description,
                                   }}
@@ -319,23 +319,23 @@ export default async function BlogDetailPage({ params }: Props) {
 
               {/* FAQs */}
               {blog.faqs.length > 0 && (
-                <div className="bg-gray-50 rounded-2xl p-8 mt-12 border border-gray-100">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <div className="bg-[#FBF8F0] rounded-2xl p-8 mt-12 border border-[#DDE5DD]">
+                  <h2 className="text-2xl font-bold text-[#202D28] mb-6">
                     Frequently Asked Questions
                   </h2>
                   <div className="space-y-4">
                     {blog.faqs.map((faq) => (
                       <details
                         key={faq.id}
-                        className="group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                        className="group bg-white border border-[#DDE5DD] rounded-xl overflow-hidden"
                       >
-                        <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 list-none select-none hover:text-[#285BB5] transition-colors">
+                        <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-[#202D28] list-none select-none hover:text-[#175747] transition-colors">
                           {faq.question}
-                          <span className="ml-4 shrink-0 text-gray-500 group-open:rotate-45 transition-transform duration-200 text-xl leading-none">
+                          <span className="ml-4 shrink-0 text-[#7A877F] group-open:rotate-45 transition-transform duration-200 text-xl leading-none">
                             +
                           </span>
                         </summary>
-                        <p className="px-5 pb-5 text-gray-600 text-sm leading-relaxed">
+                        <p className="px-5 pb-5 text-[#5F6F67] text-sm leading-relaxed">
                           {faq.answer}
                         </p>
                       </details>
@@ -350,17 +350,17 @@ export default async function BlogDetailPage({ params }: Props) {
               )}
 
               {/* Back */}
-              <div className="mt-10 pt-6 border-t border-gray-100 flex items-center justify-between">
+              <div className="mt-10 pt-6 border-t border-[#DDE5DD] flex items-center justify-between">
                 <Link
                   href="/blog"
-                  className="inline-flex items-center gap-2 text-red-600 hover:text-[#285BB5] font-medium text-sm transition-colors group"
+                  className="inline-flex items-center gap-2 text-[#A52B3A] hover:text-[#175747] font-medium text-sm transition-colors group"
                 >
                   <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />
                   Back to Blog Index
                 </Link>
                 <Link
                   href={`/blog/${categorySlug}`}
-                  className="text-gray-500 hover:text-gray-600 text-sm font-medium"
+                  className="text-[#7A877F] hover:text-[#5F6F67] text-sm font-medium"
                 >
                   View Category: {blog.category.name}
                 </Link>
@@ -372,8 +372,8 @@ export default async function BlogDetailPage({ params }: Props) {
           <aside className="space-y-6 lg:sticky lg:top-6 lg:self-start">
             {/* Related articles */}
             {relatedBlogs.length > 0 && (
-              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-                <h3 className="font-bold text-gray-900 mb-5 text-base">
+              <div className="bg-white rounded-2xl border border-[#DDE5DD] shadow-sm p-6">
+                <h3 className="font-bold text-[#202D28] mb-5 text-base">
                   Related Articles
                 </h3>
                 <div className="space-y-4">
@@ -383,7 +383,7 @@ export default async function BlogDetailPage({ params }: Props) {
                       href={`/blog/${categorySlug}/${rel.slug}`}
                       className="flex gap-3 group"
                     >
-                      <div className="relative w-20 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
+                      <div className="relative w-20 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-[#F3F7F3]">
                         <Image
                           src={
                             cdn(rel.thumbnailPath) ||
@@ -396,10 +396,10 @@ export default async function BlogDetailPage({ params }: Props) {
                         />
                       </div>
                       <div className="min-w-0">
-                        <p className="text-sm font-medium text-gray-800 group-hover:text-[#285BB5] transition-colors line-clamp-2 leading-snug">
+                        <p className="text-sm font-medium text-[#202D28] group-hover:text-[#175747] transition-colors line-clamp-2 leading-snug">
                           {rel.title}
                         </p>
-                        <p className="text-xs text-gray-500 mt-1">
+                        <p className="text-xs text-[#7A877F] mt-1">
                           {new Date(rel.createdAt).toLocaleDateString("en-US", {
                             month: "short",
                             day: "numeric",
@@ -411,7 +411,7 @@ export default async function BlogDetailPage({ params }: Props) {
                 </div>
                 <Link
                   href={`/blog/${categorySlug}`}
-                  className="flex items-center gap-1 text-red-600 text-sm font-medium mt-5 hover:text-[#285BB5] transition-colors"
+                  className="flex items-center gap-1 text-[#A52B3A] text-sm font-medium mt-5 hover:text-[#175747] transition-colors"
                 >
                   See all in {blog.category.name}{" "}
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -420,16 +420,16 @@ export default async function BlogDetailPage({ params }: Props) {
             )}
 
             {/* CTA */}
-            <div className="bg-red-600 text-white rounded-2xl p-6 shadow-md">
+            <div className="bg-[#A52B3A] text-white rounded-2xl p-6 shadow-md">
               <h3 className="font-bold text-lg mb-2">
-                Interested in MBBS Armenia?
+                Interested in MBBS Hungary?
               </h3>
-              <p className="text-slate-600 text-sm mb-5">
+              <p className="text-[#5F6F67] text-sm mb-5">
                 Get free counselling from our experts today.
               </p>
               <Link
                 href="/contact-us"
-                className="block bg-white text-red-600 py-2.5 rounded-xl font-semibold text-center text-sm hover:bg-white transition-colors"
+                className="block bg-white text-[#A52B3A] py-2.5 rounded-xl font-semibold text-center text-sm hover:bg-white transition-colors"
               >
                 Talk to Counsellor
               </Link>

@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { normalizeLocalUpload, promoteTmpUpload } from "@/lib/upload-paths";
 
 // Cuisine & Lifestyle items live under an AboutCountryPage record.
-// We always work with page_id = 1 (the singleton Armenia country page).
+// We always work with page_id = 1 (the singleton Hungary country page).
 
 const PAGE_ID = 1;
 
@@ -11,7 +11,7 @@ export async function GET() {
   // Ensure page exists
   await prisma.aboutCountryPage.upsert({
     where: { id: PAGE_ID },
-    create: { id: PAGE_ID, name: "Armenia" },
+    create: { id: PAGE_ID, name: "Hungary" },
     update: {},
   });
   const items = await prisma.countryCuisineLifestyle.findMany({

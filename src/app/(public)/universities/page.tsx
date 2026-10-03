@@ -9,12 +9,12 @@ import {
 import UniversitySearch from "@/components/universities/UniversitySearch";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: `MBBS Universities in Armenia — All NMC & WHO Recognized Medical Colleges ${APP_YEAR}`,
-  description: `Browse all NMC & WHO recognized MBBS universities in Armenia. Compare fees, intake, seats, and apply online for ${ADMISSION_YEAR} admission.`,
+  title: `MBBS Universities in Hungary — All NMC & WHO Recognized Medical Colleges ${APP_YEAR}`,
+  description: `Browse all NMC & WHO recognized MBBS universities in Hungary. Compare fees, intake, seats, and apply online for ${ADMISSION_YEAR} admission.`,
   path: "/universities",
   pageKey: "universities",
   entitySeo: {
-    metaKeyword: `MBBS universities Armenia, NMC recognized colleges Armenia, medical university list Armenia, study MBBS ${APP_YEAR}`,
+    metaKeyword: `MBBS universities Hungary, NMC recognized colleges Hungary, medical university list Hungary, study MBBS ${APP_YEAR}`,
   },
 });
 
@@ -64,22 +64,22 @@ export default async function UniversitiesPage() {
   ]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#FBF8F0]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Page Header */}
-      <div className="bg-white text-gray-900 py-16">
+      <div className="bg-white text-[#202D28] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-            MBBS Universities in Armenia
+            MBBS Universities in Hungary
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Explore all NMC and WHO recognized medical universities in Armenia.
+          <p className="text-xl text-[#5F6F67] max-w-3xl mx-auto">
+            Explore all NMC and WHO recognized medical universities in Hungary.
             Compare programs, fees, and apply online.
           </p>
-          <p className="mt-4 text-slate-600 text-sm">
+          <p className="mt-4 text-[#5F6F67] text-sm">
             {universities.length} universities listed
           </p>
         </div>

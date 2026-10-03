@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Armenia";
+const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Hungary";
 const FROM_NAME = process.env.EMAIL_FROM_NAME || SITE_NAME;
 
 /** Build a Gmail SMTP transporter, or null if creds not configured */
@@ -38,14 +38,14 @@ export async function sendOtpEmail(
     to: email,
     subject: `Your ${SITE_NAME} verification code: ${otp}`,
     html: `
- <div style="font-family:Arial,sans-serif;max-width:480px;margin:0 auto;padding:32px 24px;background:#f9fafb;border-radius:8px">
- <h2 style="color:#1e293b;margin-bottom:8px">Verify your email</h2>
- <p style="color:#475569;margin-bottom:24px">Hi${name ? ` ${name}` : ""},</p>
- <p style="color:#475569">Use the code below to verify your email address. It expires in <strong>10 minutes</strong>.</p>
- <div style="margin:32px auto;width:fit-content;background:#c0392b;color:#fff;font-size:36px;font-weight:700;letter-spacing:10px;padding:16px 32px;border-radius:8px">
+ <div style="font-family:Arial,sans-serif;max-width:480px;margin:0 auto;padding:32px 24px;background:#FBF8F0;border-radius:8px">
+ <h2 style="color:#202D28;margin-bottom:8px">Verify your email</h2>
+ <p style="color:#5F6F67;margin-bottom:24px">Hi${name ? ` ${name}` : ""},</p>
+ <p style="color:#5F6F67">Use the code below to verify your email address. It expires in <strong>10 minutes</strong>.</p>
+ <div style="margin:32px auto;width:fit-content;background:#A52B3A;color:#fff;font-size:36px;font-weight:700;letter-spacing:10px;padding:16px 32px;border-radius:8px">
  ${otp}
  </div>
- <p style="color:#94a3b8;font-size:13px;margin-top:32px">If you didn't create an account, you can safely ignore this email.</p>
+ <p style="color:#7A877F;font-size:13px;margin-top:32px">If you didn't create an account, you can safely ignore this email.</p>
  </div>`,
   });
   console.log(`📧 OTP email sent → ${info.messageId} to: ${email}`);
@@ -71,14 +71,14 @@ export async function sendPasswordResetEmail(
     to: email,
     subject: `Your ${SITE_NAME} password reset code: ${otp}`,
     html: `
- <div style="font-family:Arial,sans-serif;max-width:480px;margin:0 auto;padding:32px 24px;background:#f9fafb;border-radius:8px">
- <h2 style="color:#1e293b;margin-bottom:8px">Reset your password</h2>
- <p style="color:#475569;margin-bottom:24px">We received a request to reset the password for <strong>${email}</strong>.</p>
- <p style="color:#475569">Use this code to reset your password. It expires in <strong>15 minutes</strong>.</p>
- <div style="margin:32px auto;width:fit-content;background:#c0392b;color:#fff;font-size:36px;font-weight:700;letter-spacing:10px;padding:16px 32px;border-radius:8px">
+ <div style="font-family:Arial,sans-serif;max-width:480px;margin:0 auto;padding:32px 24px;background:#FBF8F0;border-radius:8px">
+ <h2 style="color:#202D28;margin-bottom:8px">Reset your password</h2>
+ <p style="color:#5F6F67;margin-bottom:24px">We received a request to reset the password for <strong>${email}</strong>.</p>
+ <p style="color:#5F6F67">Use this code to reset your password. It expires in <strong>15 minutes</strong>.</p>
+ <div style="margin:32px auto;width:fit-content;background:#A52B3A;color:#fff;font-size:36px;font-weight:700;letter-spacing:10px;padding:16px 32px;border-radius:8px">
  ${otp}
  </div>
- <p style="color:#94a3b8;font-size:13px;margin-top:32px">If you didn't request a password reset, you can safely ignore this email.</p>
+ <p style="color:#7A877F;font-size:13px;margin-top:32px">If you didn't request a password reset, you can safely ignore this email.</p>
  </div>`,
   });
 }

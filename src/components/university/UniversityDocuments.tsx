@@ -32,33 +32,33 @@ export default function UniversityDocuments({ university }: Props) {
 
   return (
     <section className="py-14 bg-red-700 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 bg-gray-50 rounded-full -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-gray-50 rounded-full translate-y-1/2 -translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-72 h-72 bg-[#FBF8F0] rounded-full -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#FBF8F0] rounded-full translate-y-1/2 -translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <span className="inline-block bg-red-400 text-gray-800 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
+          <span className="inline-block bg-red-400 text-[#202D28] text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
             Official Documents
           </span>
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-1">
+          <h2 className="text-3xl font-extrabold text-[#202D28] mb-1">
             Download Resources
           </h2>
-          <p className="text-slate-600 text-sm">
+          <p className="text-[#5F6F67] text-sm">
             All documents verified &amp; official
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {university.brochurePath && (
-            <div className="group flex items-center gap-4 bg-gray-100 hover:bg-white/15 border border-gray-200 rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
-              <div className="bg-red-400 group-hover:bg-red-700 transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <FileText className="w-6 h-6 text-[#101B4D]" />
+            <div className="group flex items-center gap-4 bg-[#F3F7F3] hover:bg-white/15 border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
+              <div className="bg-red-400 group-hover:bg-[#8C2030] transition-colors p-3 rounded-xl shrink-0 shadow-md">
+                <FileText className="w-6 h-6 text-[#103D32]" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-gray-900 text-sm">
+                <p className="font-bold text-[#202D28] text-sm">
                   University Brochure
                 </p>
-                <p className="text-slate-600 text-xs mt-0.5">
+                <p className="text-[#5F6F67] text-xs mt-0.5">
                   Fees, syllabus &amp; admission details
                 </p>
               </div>
@@ -71,15 +71,15 @@ export default function UniversityDocuments({ university }: Props) {
           )}
 
           {university.nmcGuidelinesPath && (
-            <div className="group flex items-center gap-4 bg-gray-100 hover:bg-white/15 border border-gray-200 rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
-              <div className="bg-red-400 group-hover:bg-red-700 transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <Award className="w-6 h-6 text-[#101B4D]" />
+            <div className="group flex items-center gap-4 bg-[#F3F7F3] hover:bg-white/15 border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
+              <div className="bg-red-400 group-hover:bg-[#8C2030] transition-colors p-3 rounded-xl shrink-0 shadow-md">
+                <Award className="w-6 h-6 text-[#103D32]" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-gray-900 text-sm">
+                <p className="font-bold text-[#202D28] text-sm">
                   NMC Guidelines
                 </p>
-                <p className="text-slate-600 text-xs mt-0.5">
+                <p className="text-[#5F6F67] text-xs mt-0.5">
                   Official NMC advisory for MBBS abroad
                 </p>
               </div>
@@ -96,15 +96,15 @@ export default function UniversityDocuments({ university }: Props) {
           )}
 
           {university.embassyLetterPath && (
-            <div className="group flex items-center gap-4 bg-gray-100 hover:bg-white/15 border border-gray-200 rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
-              <div className="bg-red-400 group-hover:bg-red-700 transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <Globe className="w-6 h-6 text-[#101B4D]" />
+            <div className="group flex items-center gap-4 bg-[#F3F7F3] hover:bg-white/15 border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
+              <div className="bg-red-400 group-hover:bg-[#8C2030] transition-colors p-3 rounded-xl shrink-0 shadow-md">
+                <Globe className="w-6 h-6 text-[#103D32]" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-gray-900 text-sm">
+                <p className="font-bold text-[#202D28] text-sm">
                   Embassy Letter
                 </p>
-                <p className="text-slate-600 text-xs mt-0.5">
+                <p className="text-[#5F6F67] text-xs mt-0.5">
                   Official embassy verification
                 </p>
               </div>
@@ -112,7 +112,7 @@ export default function UniversityDocuments({ university }: Props) {
                 href={cdn(university.embassyLetterPath) ?? "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-gray-200 text-red-600 hover:bg-red-700 hover:text-gray-800 text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
+                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-[#DDE5DD] text-[#A52B3A] hover:bg-[#8C2030] hover:text-[#202D28] text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
               >
                 <Download className="w-3.5 h-3.5" />
                 Download
@@ -121,15 +121,15 @@ export default function UniversityDocuments({ university }: Props) {
           )}
 
           {university.universityLicensePath && (
-            <div className="group flex items-center gap-4 bg-gray-100 hover:bg-white/15 border border-gray-200 rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
-              <div className="bg-red-400 group-hover:bg-red-700 transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <Shield className="w-6 h-6 text-[#101B4D]" />
+            <div className="group flex items-center gap-4 bg-[#F3F7F3] hover:bg-white/15 border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
+              <div className="bg-red-400 group-hover:bg-[#8C2030] transition-colors p-3 rounded-xl shrink-0 shadow-md">
+                <Shield className="w-6 h-6 text-[#103D32]" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-gray-900 text-sm">
+                <p className="font-bold text-[#202D28] text-sm">
                   University License
                 </p>
-                <p className="text-slate-600 text-xs mt-0.5">
+                <p className="text-[#5F6F67] text-xs mt-0.5">
                   Ministry approved license
                 </p>
               </div>
@@ -137,7 +137,7 @@ export default function UniversityDocuments({ university }: Props) {
                 href={cdn(university.universityLicensePath) ?? "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-gray-200 text-red-600 hover:bg-red-700 hover:text-gray-800 text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
+                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-[#DDE5DD] text-[#A52B3A] hover:bg-[#8C2030] hover:text-[#202D28] text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
               >
                 <Download className="w-3.5 h-3.5" />
                 Download
@@ -146,15 +146,15 @@ export default function UniversityDocuments({ university }: Props) {
           )}
 
           {university.aggregationLetterPath && (
-            <div className="group flex items-center gap-4 bg-gray-100 hover:bg-white/15 border border-gray-200 rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
-              <div className="bg-red-400 group-hover:bg-red-700 transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <CheckCircle className="w-6 h-6 text-[#101B4D]" />
+            <div className="group flex items-center gap-4 bg-[#F3F7F3] hover:bg-white/15 border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
+              <div className="bg-red-400 group-hover:bg-[#8C2030] transition-colors p-3 rounded-xl shrink-0 shadow-md">
+                <CheckCircle className="w-6 h-6 text-[#103D32]" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-gray-900 text-sm">
+                <p className="font-bold text-[#202D28] text-sm">
                   Aggregation Letter
                 </p>
-                <p className="text-slate-600 text-xs mt-0.5">
+                <p className="text-[#5F6F67] text-xs mt-0.5">
                   Official grade aggregation doc
                 </p>
               </div>
@@ -162,7 +162,7 @@ export default function UniversityDocuments({ university }: Props) {
                 href={cdn(university.aggregationLetterPath) ?? "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-gray-200 text-red-600 hover:bg-red-700 hover:text-gray-800 text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
+                className="shrink-0 inline-flex items-center gap-1.5 border-2 border-[#DDE5DD] text-[#A52B3A] hover:bg-[#8C2030] hover:text-[#202D28] text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200"
               >
                 <Download className="w-3.5 h-3.5" />
                 Download

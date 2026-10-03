@@ -111,10 +111,10 @@ export default function UniversityTestimonialsPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-gray-900">
+            <h2 className="text-xl font-bold text-[#202D28]">
               Student Testimonials
             </h2>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-[#7A877F]">
               {items.length} testimonial{items.length !== 1 ? "s" : ""}
             </p>
           </div>
@@ -134,7 +134,7 @@ export default function UniversityTestimonialsPage() {
                 status: true,
               });
             }}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
           >
             <Plus size={16} className="mr-2" />
             Add Testimonial
@@ -142,8 +142,8 @@ export default function UniversityTestimonialsPage() {
         </div>
 
         {showForm && (
-          <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-3">
-            <h3 className="font-semibold text-gray-800">
+          <div className="bg-white border border-[#DDE5DD] rounded-xl p-5 space-y-3">
+            <h3 className="font-semibold text-[#202D28]">
               {editId ? "Edit Testimonial" : "Add Testimonial"}
             </h3>
             <div className="grid grid-cols-2 gap-3">
@@ -222,7 +222,7 @@ export default function UniversityTestimonialsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#175747] hover:bg-[#175747]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -244,22 +244,22 @@ export default function UniversityTestimonialsPage() {
 
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : items.length === 0 ? (
           <div className="p-12 text-center border border-dashed border-gray-300 rounded-xl">
-            <Users size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No testimonials yet.</p>
+            <Users size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No testimonials yet.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {items.map((t) => (
               <div
                 key={t.id}
-                className="bg-white border border-gray-200 rounded-xl p-4 space-y-3"
+                className="bg-white border border-[#DDE5DD] rounded-xl p-4 space-y-3"
               >
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gray-100 overflow-hidden shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#F3F7F3] overflow-hidden shrink-0">
                     {t.imagePath ? (
                       <Image
                         src={cdn(t.imagePath) || ""}
@@ -271,13 +271,13 @@ export default function UniversityTestimonialsPage() {
                     ) : (
                       <Users
                         size={20}
-                        className="m-auto mt-2.5 text-gray-500"
+                        className="m-auto mt-2.5 text-[#7A877F]"
                       />
                     )}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <p className="font-semibold text-gray-900 text-sm">
+                      <p className="font-semibold text-[#202D28] text-sm">
                         {t.name}
                       </p>
                       <div className="flex gap-1">
@@ -306,14 +306,14 @@ export default function UniversityTestimonialsPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 w-7 p-0 text-red-600"
+                          className="h-7 w-7 p-0 text-[#A52B3A]"
                           onClick={() => handleDelete(t.id)}
                         >
                           <Trash2 size={13} />
                         </Button>
                       </div>
                     </div>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-[#7A877F]">
                       {[t.course, t.country, t.year]
                         .filter(Boolean)
                         .join(" · ")}
@@ -325,8 +325,8 @@ export default function UniversityTestimonialsPage() {
                           size={11}
                           className={
                             i < (t.rating || 5)
-                              ? "text-red-600 fill-yellow-400"
-                              : "text-gray-700"
+                              ? "text-[#A52B3A] fill-yellow-400"
+                              : "text-[#5F6F67]"
                           }
                         />
                       ))}
@@ -334,7 +334,7 @@ export default function UniversityTestimonialsPage() {
                   </div>
                 </div>
                 {t.description && (
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-sm text-[#5F6F67] leading-relaxed">
                     {t.description}
                   </p>
                 )}

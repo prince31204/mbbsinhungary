@@ -71,7 +71,7 @@ export default function EditHospitalPage() {
   if (!form)
     return (
       <div className="p-12 text-center">
-        <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+        <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
       </div>
     );
 
@@ -84,20 +84,20 @@ export default function EditHospitalPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Edit Hospital</h1>
-          <p className="text-sm text-gray-500">{form.name}</p>
+          <h1 className="text-2xl font-bold text-[#202D28]">Edit Hospital</h1>
+          <p className="text-sm text-[#7A877F]">{form.name}</p>
         </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Hospital Details
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="md:col-span-2 space-y-1.5">
               <Label>
-                Hospital Name <span className="text-red-600">*</span>
+                Hospital Name <span className="text-[#A52B3A]">*</span>
               </Label>
               <Input
                 value={form.name}
@@ -106,7 +106,7 @@ export default function EditHospitalPage() {
             </div>
             <div className="space-y-1.5">
               <Label>
-                Slug <span className="text-red-600">*</span>
+                Slug <span className="text-[#A52B3A]">*</span>
               </Label>
               <Input
                 value={form.slug}
@@ -170,7 +170,7 @@ export default function EditHospitalPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
             disabled={loading}
           >
             {loading ? (

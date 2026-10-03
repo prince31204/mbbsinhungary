@@ -59,9 +59,9 @@ export default function TestimonialCreatePage() {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <h1 className="text-2xl font-bold text-gray-800 mb-6">Add Testimonial</h1>
+      <h1 className="text-2xl font-bold text-[#202D28] mb-6">Add Testimonial</h1>
       <form onSubmit={handleSubmit} className="space-y-5">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1.5">
               <Label>Name *</Label>
@@ -129,7 +129,7 @@ export default function TestimonialCreatePage() {
             />
           </div>
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
           <Label className="mb-3 block">Photo</Label>
           <ImageUpload
             value={form.imagePath}
@@ -147,7 +147,7 @@ export default function TestimonialCreatePage() {
           <Button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="flex-1 bg-[#175747] hover:bg-[#175747]"
           >
             {loading ? "Saving…" : "Create Testimonial"}
           </Button>

@@ -35,13 +35,13 @@ const FALLBACK =
 
 export default function UniversityFacilities({ facilities }: Props) {
   return (
-    <section id="facilities" className="py-10 bg-gray-50">
+    <section id="facilities" className="py-10 bg-[#FBF8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">
+          <h2 className="text-4xl font-bold text-[#202D28] mb-2">
             World-Class Facilities
           </h2>
-          <p className="text-base text-gray-500 max-w-3xl mx-auto">
+          <p className="text-base text-[#7A877F] max-w-3xl mx-auto">
             Modern campus facilities designed to give medical students the best
             learning environment.
           </p>
@@ -58,15 +58,15 @@ export default function UniversityFacilities({ facilities }: Props) {
                 >
                   <div className="p-3">
                     <div className="flex items-center gap-2 mb-1">
-                      <div className="bg-[#EAF1FB] p-1.5 rounded-lg shrink-0">
-                        <IconComponent className="h-4 w-4 text-red-600" />
+                      <div className="bg-[#F3F7F3] p-1.5 rounded-lg shrink-0">
+                        <IconComponent className="h-4 w-4 text-[#A52B3A]" />
                       </div>
-                      <h3 className="text-sm font-bold text-gray-900 leading-tight">
+                      <h3 className="text-sm font-bold text-[#202D28] leading-tight">
                         {uf.facility?.name || "Facility"}
                       </h3>
                     </div>
                     {uf.description && (
-                      <p className="text-gray-500 text-xs leading-relaxed line-clamp-2">
+                      <p className="text-[#7A877F] text-xs leading-relaxed line-clamp-2">
                         {uf.description}
                       </p>
                     )}

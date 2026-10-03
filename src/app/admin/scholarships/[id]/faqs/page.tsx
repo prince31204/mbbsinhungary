@@ -117,12 +117,12 @@ export default function ScholarshipFaqsPage() {
     <div className="space-y-6 max-w-3xl">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <HelpCircle size={22} className="text-red-600" />
+          <HelpCircle size={22} className="text-[#A52B3A]" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">
+            <h1 className="text-2xl font-bold text-[#202D28]">
               Scholarship FAQs
             </h1>
-            <p className="text-sm text-gray-500">{faqs.length} questions</p>
+            <p className="text-sm text-[#7A877F]">{faqs.length} questions</p>
           </div>
         </div>
         <div className="flex gap-2">
@@ -133,7 +133,7 @@ export default function ScholarshipFaqsPage() {
           </Button>
           <Button
             size="sm"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
             onClick={() => setShowAdd(true)}
           >
             <Plus size={14} className="mr-1" /> Add FAQ
@@ -142,8 +142,8 @@ export default function ScholarshipFaqsPage() {
       </div>
 
       {showAdd && (
-        <div className="bg-white rounded-xl border border-gray-200 p-4 space-y-3">
-          <h3 className="font-medium text-gray-800">New FAQ</h3>
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-4 space-y-3">
+          <h3 className="font-medium text-[#202D28]">New FAQ</h3>
           <div className="space-y-2">
             <Input
               placeholder="Question"
@@ -155,7 +155,7 @@ export default function ScholarshipFaqsPage() {
               value={newA}
               onChange={(e) => setNewA(e.target.value)}
               rows={4}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
             />
           </div>
           <div className="flex gap-2">
@@ -163,7 +163,7 @@ export default function ScholarshipFaqsPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#175747] hover:bg-[#175747]"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -182,18 +182,18 @@ export default function ScholarshipFaqsPage() {
       <div className="space-y-3">
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : faqs.length === 0 ? (
-          <div className="p-12 text-center bg-white rounded-xl border border-gray-200">
-            <HelpCircle size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No FAQs yet. Add the first one!</p>
+          <div className="p-12 text-center bg-white rounded-xl border border-[#DDE5DD]">
+            <HelpCircle size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No FAQs yet. Add the first one!</p>
           </div>
         ) : (
           faqs.map((f) => (
             <div
               key={f.id}
-              className="bg-white rounded-xl border border-gray-200 p-4"
+              className="bg-white rounded-xl border border-[#DDE5DD] p-4"
             >
               {editId === f.id ? (
                 <div className="space-y-2">
@@ -206,7 +206,7 @@ export default function ScholarshipFaqsPage() {
                     value={editA}
                     onChange={(e) => setEditA(e.target.value)}
                     rows={4}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
                   />
                   <div className="flex gap-2">
                     <Button
@@ -228,10 +228,10 @@ export default function ScholarshipFaqsPage() {
               ) : (
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <p className="font-medium text-gray-800 mb-1">
+                    <p className="font-medium text-[#202D28] mb-1">
                       {f.question}
                     </p>
-                    <p className="text-sm text-gray-600 whitespace-pre-wrap">
+                    <p className="text-sm text-[#5F6F67] whitespace-pre-wrap">
                       {f.answer}
                     </p>
                   </div>
@@ -255,7 +255,7 @@ export default function ScholarshipFaqsPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                      className="h-8 w-8 p-0 text-[#A52B3A] hover:bg-[#175747]"
                       onClick={() => handleDelete(f.id)}
                     >
                       <Trash2 size={14} />

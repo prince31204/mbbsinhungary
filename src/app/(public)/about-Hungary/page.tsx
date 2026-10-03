@@ -28,60 +28,60 @@ import { buildMetadata } from "@/lib/seo";
 import { getAboutCountryContent } from "@/lib/public-page-content";
 import { replaceCurrencySymbol } from "@/lib/currency";
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "About Armenia - Culture, Lifestyle and Education | mbbsinarmenia.com",
+  title: "About Hungary - Culture, Lifestyle and Education | mbbsinhungary.com",
   description:
-    "Discover Armenia - a safe, culture-rich, and globally connected destination for MBBS aspirants with quality education and strong clinical exposure.",
+    "Discover Hungary - a safe, culture-rich, and globally connected destination for MBBS aspirants with quality education and strong clinical exposure.",
   entitySeo: {
     metaKeyword:
-      "about Armenia, Armenia culture, life in Armenia for students, mbbs Armenia environment, study MBBS in Armenia",
+      "about Hungary, Hungary culture, life in Hungary for students, mbbs Hungary environment, study MBBS in Hungary",
   },
-  path: "/about-Armenia",
-  pageKey: "about-Armenia",
+  path: "/about-Hungary",
+  pageKey: "about-Hungary",
 });
 const themeStyles = {
   red: {
-    softPanel: "border-gray-200 bg-white/80",
-    iconWrap: "bg-[#EAF1FB] text-red-600",
-    iconHover: "group-hover:bg-red-600 group-hover:text-gray-900",
-    titleHover: "group-hover:text-[#285BB5]",
+    softPanel: "border-[#DDE5DD] bg-white/80",
+    iconWrap: "bg-[#F3F7F3] text-[#A52B3A]",
+    iconHover: "group-hover:bg-[#A52B3A] group-hover:text-[#202D28]",
+    titleHover: "group-hover:text-[#175747]",
     wash: " via-white/0 ",
-    ringHover: "hover:border-gray-200 hover:",
-    pill: "bg-[#EAF1FB] text-[#285BB5]",
+    ringHover: "hover:border-[#DDE5DD]",
+    pill: "bg-[#F3F7F3] text-[#175747]",
   },
   blue: {
-    softPanel: "border-gray-200 bg-white/80",
-    iconWrap: "bg-[#EAF1FB] text-red-600",
-    iconHover: "group-hover:bg-red-600 group-hover:text-gray-900",
-    titleHover: "group-hover:text-[#285BB5]",
+    softPanel: "border-[#DDE5DD] bg-white/80",
+    iconWrap: "bg-[#F3F7F3] text-[#A52B3A]",
+    iconHover: "group-hover:bg-[#A52B3A] group-hover:text-[#202D28]",
+    titleHover: "group-hover:text-[#175747]",
     wash: " via-white/0 ",
-    ringHover: "hover:border-gray-200 hover:",
-    pill: "bg-[#EAF1FB] text-[#285BB5]",
+    ringHover: "hover:border-[#DDE5DD]",
+    pill: "bg-[#F3F7F3] text-[#175747]",
   },
   green: {
     softPanel: "border-green-100 bg-green-50/80",
     iconWrap: "bg-green-100 text-green-600",
-    iconHover: "group-hover:bg-green-600 group-hover:text-gray-900",
+    iconHover: "group-hover:bg-green-600 group-hover:text-[#202D28]",
     titleHover: "group-hover:text-green-700",
     wash: " via-white/0 ",
-    ringHover: "hover:border-green-200 hover:",
+    ringHover: "hover:border-green-200",
     pill: "bg-green-100 text-green-700",
   },
   amber: {
-    softPanel: "border-gray-200 bg-[#EAF1FB]0/10",
-    iconWrap: "bg-red-400 text-red-600",
-    iconHover: "group-hover:bg-red-400 group-hover:text-gray-900",
-    titleHover: "group-hover:text-[#285BB5]",
+    softPanel: "border-[#DDE5DD] bg-[#F3F7F3]/10",
+    iconWrap: "bg-red-400 text-[#A52B3A]",
+    iconHover: "group-hover:bg-red-400 group-hover:text-[#202D28]",
+    titleHover: "group-hover:text-[#175747]",
     wash: " via-white/0 ",
-    ringHover: "hover:border-gray-200 hover:",
-    pill: "bg-red-400 text-red-600",
+    ringHover: "hover:border-[#DDE5DD]",
+    pill: "bg-red-400 text-[#A52B3A]",
   },
   purple: {
     softPanel: "border-purple-100 bg-purple-50/80",
     iconWrap: "bg-purple-100 text-purple-600",
-    iconHover: "group-hover:bg-purple-600 group-hover:text-gray-900",
+    iconHover: "group-hover:bg-purple-600 group-hover:text-[#202D28]",
     titleHover: "group-hover:text-purple-700",
     wash: " via-white/0 ",
-    ringHover: "hover:border-purple-200 hover:",
+    ringHover: "hover:border-purple-200",
     pill: "bg-purple-100 text-purple-700",
   },
 } as const;
@@ -90,19 +90,19 @@ const overviewIcons = [Sparkles, Globe, Landmark, Sun, Users, Mountain];
 const comparisonRows = [
   {
     label: "Tuition Fees / Year",
-    armenia: replaceCurrencySymbol("$3,500 – $5,500"),
+    hungary: replaceCurrencySymbol("$3,500 – $5,500"),
     india: replaceCurrencySymbol("$15,000 – $18,000"),
     uk: replaceCurrencySymbol("$60,000 – $80,000"),
   },
   {
     label: "Hostel / Year",
-    armenia: replaceCurrencySymbol("$600 – $1,200"),
+    hungary: replaceCurrencySymbol("$600 – $1,200"),
     india: replaceCurrencySymbol("$1,500 – $3,000"),
     uk: replaceCurrencySymbol("$8,000 – $15,000"),
   },
   {
     label: "Food / Month",
-    armenia: replaceCurrencySymbol("$150 – $250"),
+    hungary: replaceCurrencySymbol("$150 – $250"),
     india: replaceCurrencySymbol("$150 – $300"),
     uk: replaceCurrencySymbol("$800 – $1,200"),
   },
@@ -110,7 +110,7 @@ const comparisonRows = [
 const geographyHighlights = [
   {
     icon: Mountain,
-    iconColor: "text-red-600",
+    iconColor: "text-[#A52B3A]",
     text: "Landlocked mountainous nation in the South Caucasus region",
   },
   {
@@ -132,7 +132,7 @@ const geographyHighlights = [
 const climateZones = [
   {
     icon: Sun,
-    iconColor: "text-red-600",
+    iconColor: "text-[#A52B3A]",
     text: "Highland continental climate with four distinct vibrant seasons",
   },
   {
@@ -151,7 +151,7 @@ const climateZones = [
     text: "Over 2,700 hours of clear sunshine annually across the country",
   },
 ];
-const armeniaAttractions = [
+const hungaryAttractions = [
   {
     icon: Landmark,
     title: "Republic Square & Cascade",
@@ -161,7 +161,7 @@ const armeniaAttractions = [
     icon: Sun,
     title: "Lake Sevan",
     description:
-      "Breathtaking high-altitude alpine lake known as Armenia's blue eye",
+      "Breathtaking high-altitude alpine lake known as Hungary's blue eye",
   },
   {
     icon: Mountain,
@@ -179,7 +179,7 @@ const armeniaAttractions = [
 const transportPoints = [
   {
     icon: Plane,
-    iconColor: "text-red-600",
+    iconColor: "text-[#A52B3A]",
     text: "Zvartnots International Airport (EVN) connects Yerevan directly with major international hubs",
   },
   {
@@ -195,7 +195,7 @@ const transportPoints = [
   {
     icon: MapPinned,
     iconColor: "text-emerald-600",
-    text: "Well-paved highways and regional transport connect university towns across Armenia",
+    text: "Well-paved highways and regional transport connect university towns across Hungary",
   },
 ];
 const visaOnboardingPoints = [
@@ -211,7 +211,7 @@ const visaOnboardingPoints = [
   },
   {
     icon: Plane,
-    iconColor: "text-red-600",
+    iconColor: "text-[#A52B3A]",
     text: "Universities provide dedicated legal assistance for student residence registration",
   },
   {
@@ -224,7 +224,7 @@ const healthcareCards = [
   {
     title: "Public Healthcare",
     description:
-      "Armenia's network of state medical centers and university teaching hospitals provide essential healthcare services and strong clinical rotation exposure.",
+      "Hungary's network of state medical centers and university teaching hospitals provide essential healthcare services and strong clinical rotation exposure.",
     accent: "border-sky-200",
   },
   {
@@ -240,7 +240,7 @@ const healthcareCards = [
     accent: "border-violet-200",
   },
 ];
-export default async function AboutArmeniaPage() {
+export default async function AboutHungaryPage() {
   const content = await getAboutCountryContent();
   const stats = content.summaryStats.map((item, index) => {
     const icons = [Building2, Users, Languages, DollarSign];
@@ -255,25 +255,25 @@ export default async function AboutArmeniaPage() {
     {
       title: "First Christian Nation",
       description:
-        "Armenia was the first country in the world to adopt Christianity as its official state religion in 301 AD.",
+        "Hungary was the first country in the world to adopt Christianity as its official state religion in 301 AD.",
       theme: "blue" as const,
     },
     {
       title: "Ancient Heritage",
       description:
-        "Armenia has an ancient civilization featuring a unique script created by Mesrop Mashtots in 405 AD.",
+        "Hungary has an ancient civilization featuring a unique script created by Mesrop Mashtots in 405 AD.",
       theme: "green" as const,
     },
     {
       title: "High Literacy Rate",
       description:
-        "Armenia boasts a 99.7% literacy rate with long-standing traditions in medical & scientific research.",
+        "Hungary boasts a 99.7% literacy rate with long-standing traditions in medical & scientific research.",
       theme: "amber" as const,
     },
     {
       title: "Geography & Mountains",
       description:
-        "Nestled in the South Caucasus, Armenia features scenic mountainous terrain, alpine lakes, and fertile valleys.",
+        "Nestled in the South Caucasus, Hungary features scenic mountainous terrain, alpine lakes, and fertile valleys.",
       theme: "purple" as const,
     },
     {
@@ -330,7 +330,7 @@ export default async function AboutArmeniaPage() {
       title: "Languages",
       value:
         stats.find((stat) => stat.label === "Languages")?.value ||
-        "Armenian, Russian, English",
+        "Hungaryn, Russian, English",
       icon: Languages,
       style: themeStyles.purple,
     },
@@ -338,7 +338,7 @@ export default async function AboutArmeniaPage() {
       title: "Currency",
       value:
         stats.find((stat) => stat.label === "Currency")?.value ||
-        "AMD (Armenian Dram)",
+        "AMD (Hungaryn Dram)",
       icon: DollarSign,
       style: themeStyles.amber,
     },
@@ -370,24 +370,24 @@ export default async function AboutArmeniaPage() {
   return (
     <div className="min-h-screen bg-white">
       {" "}
-      <section className="relative overflow-hidden bg-[#EAF1FB]0 py-20 text-gray-900">
+      <section className="relative overflow-hidden bg-[#175747] py-20 text-white">
         {" "}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(153,27,27,0.18),transparent_32%)]" />{" "}
         <div className="relative mx-auto max-w-7xl px-4 text-center">
           {" "}
           <div className="mb-6">
             {" "}
-            <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-red-600/80 px-6 py-2.5 text-xl font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] ">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#DDE5DD] bg-[#A52B3A]/80 px-6 py-2.5 text-xl font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] ">
               {" "}
-              <MapPinned className="h-5 w-5" /> About Armenia{" "}
+              <MapPinned className="h-5 w-5" /> About Hungary{" "}
             </span>{" "}
           </div>{" "}
-          <h1 className="mb-6 text-4xl font-bold lg:text-6xl">
-            {content.heroTitle || "Life and Study in Armenia"}
+          <h1 className="mb-6 text-4xl font-bold lg:text-6xl text-white">
+            {content.heroTitle || "Life and Study in Hungary"}
           </h1>{" "}
-          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-slate-600">
+          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-[#DCE8E2]">
             {content.heroDescription ||
-              "Discover why Armenia is a top choice for international medical students offering WHO & NMC recognized MBBS programs, low tuition fees, and rich cultural heritage."}
+              "Discover why Hungary is a top choice for international medical students offering WHO & NMC recognized MBBS programs, low tuition fees, and rich cultural heritage."}
           </p>{" "}
         </div>{" "}
       </section>{" "}
@@ -395,13 +395,13 @@ export default async function AboutArmeniaPage() {
         {" "}
         <div className="mb-8 text-center">
           {" "}
-          <span className="text-sm font-semibold uppercase tracking-widest text-red-600">
+          <span className="text-sm font-semibold uppercase tracking-widest text-[#A52B3A]">
             Country Snapshot
           </span>{" "}
-          <h2 className="mt-2 text-3xl font-bold text-gray-900 lg:text-4xl">
-            Quick Facts About Armenia
+          <h2 className="mt-2 text-3xl font-bold text-[#202D28] lg:text-4xl">
+            Quick Facts About Hungary
           </h2>{" "}
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+          <p className="mx-auto mt-4 max-w-2xl text-[#5F6F67]">
             {" "}
             Capital, population, languages, currency, and student budget
             insights at a glance before you choose your MBBS university.{" "}
@@ -427,11 +427,11 @@ export default async function AboutArmeniaPage() {
                   <fact.icon className="h-6 w-6" />{" "}
                 </div>{" "}
                 <h3
-                  className={`text-lg font-bold text-gray-900 transition-colors duration-300 ${fact.style.titleHover}`}
+                  className={`text-lg font-bold text-[#202D28] transition-colors duration-300 ${fact.style.titleHover}`}
                 >
                   {fact.title}
                 </h3>{" "}
-                <p className="mt-2 text-sm leading-relaxed text-gray-900">
+                <p className="mt-2 text-sm leading-relaxed text-[#202D28]">
                   {fact.value}
                 </p>{" "}
               </div>{" "}
@@ -443,15 +443,15 @@ export default async function AboutArmeniaPage() {
         {" "}
         <div className="mb-12 text-center">
           {" "}
-          <span className="text-sm font-semibold uppercase tracking-widest text-red-600">
-            Why Armenia?
+          <span className="text-sm font-semibold uppercase tracking-widest text-[#A52B3A]">
+            Why Hungary?
           </span>{" "}
-          <h2 className="mt-2 text-3xl font-bold text-gray-900 lg:text-4xl">
+          <h2 className="mt-2 text-3xl font-bold text-[#202D28] lg:text-4xl">
             A Top Destination for MBBS Aspirants
           </h2>{" "}
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+          <p className="mx-auto mt-4 max-w-2xl text-[#5F6F67]">
             {" "}
-            Armenia offers globally accredited medical education with modern
+            Hungary offers globally accredited medical education with modern
             infrastructure, 100% English-medium instruction, and high clinical
             exposure.{" "}
           </p>{" "}
@@ -478,12 +478,12 @@ export default async function AboutArmeniaPage() {
                     <item.icon className="h-6 w-6" />{" "}
                   </div>{" "}
                   <h3
-                    className={`text-xl font-bold text-gray-900 transition-colors duration-300 ${item.style.titleHover}`}
+                    className={`text-xl font-bold text-[#202D28] transition-colors duration-300 ${item.style.titleHover}`}
                   >
                     {item.title}
                   </h3>{" "}
                 </div>{" "}
-                <p className="text-sm leading-relaxed text-gray-600">
+                <p className="text-sm leading-relaxed text-[#5F6F67]">
                   {item.description}
                 </p>{" "}
               </div>{" "}
@@ -491,7 +491,7 @@ export default async function AboutArmeniaPage() {
           ))}{" "}
         </div>{" "}
       </section>{" "}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-[#FBF8F0] py-16">
         {" "}
         <div className="mx-auto max-w-7xl px-4">
           {" "}
@@ -499,17 +499,17 @@ export default async function AboutArmeniaPage() {
             {" "}
             <div>
               {" "}
-              <span className="text-sm font-semibold uppercase tracking-widest text-red-600">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#A52B3A]">
                 Did You Know?
               </span>{" "}
-              <h2 className="mt-2 mb-8 text-3xl font-bold text-gray-900">
-                Armenia Education Facts
+              <h2 className="mt-2 mb-8 text-3xl font-bold text-[#202D28]">
+                Hungary Education Facts
               </h2>{" "}
               <div className="space-y-4">
                 {" "}
                 {[
                   "High Educational Standards: Adult literacy rate is 99.7% with a century-long tradition of medical education.",
-                  "Global Accreditation: Medical universities in Armenia are recognized by WHO, NMC (India), ECFMG (USA), FAIMER, and WDOMS.",
+                  "Global Accreditation: Medical universities in Hungary are recognized by WHO, NMC (India), ECFMG (USA), FAIMER, and WDOMS.",
                   "English-Medium Instruction: Complete 6-year MBBS / MD General Medicine program is taught in English for international students.",
                   "Strong Clinical Exposure: Hands-on practical training in top government multi-specialty hospitals and clinics across Yerevan.",
                   "Affordable Living & Fees: Tuition fees start from as low as $3,500/year with low cost of living compared to Western nations.",
@@ -517,14 +517,14 @@ export default async function AboutArmeniaPage() {
                   <div key={fact} className="flex items-start gap-3">
                     {" "}
                     <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-green-500" />{" "}
-                    <p className="text-gray-700">{fact}</p>{" "}
+                    <p className="text-[#5F6F67]">{fact}</p>{" "}
                   </div>
                 ))}{" "}
               </div>{" "}
             </div>{" "}
             <div className="rounded-3xl bg-white p-8">
               {" "}
-              <h3 className="mb-6 text-xl font-bold text-gray-900">
+              <h3 className="mb-6 text-xl font-bold text-[#202D28]">
                 Cost Comparison
               </h3>{" "}
               <div className="space-y-4">
@@ -532,10 +532,10 @@ export default async function AboutArmeniaPage() {
                 {comparisonRows.map((row) => (
                   <div
                     key={row.label}
-                    className="rounded-xl bg-white p-4 shadow-sm border border-gray-100"
+                    className="rounded-xl bg-white p-4 shadow-sm border border-[#DDE5DD]"
                   >
                     {" "}
-                    <div className="mb-3 text-sm font-bold text-gray-800">
+                    <div className="mb-3 text-sm font-bold text-[#202D28]">
                       {row.label}
                     </div>{" "}
                     <div className="grid grid-cols-3 gap-3 text-xs leading-normal">
@@ -543,27 +543,27 @@ export default async function AboutArmeniaPage() {
                       <div className="text-center">
                         {" "}
                         <div className="font-bold text-green-600 mb-1">
-                          {row.armenia}
+                          {row.hungary}
                         </div>{" "}
-                        <div className="text-[10px] uppercase font-medium tracking-wider text-gray-500">
-                          Armenia
+                        <div className="text-[10px] uppercase font-medium tracking-wider text-[#7A877F]">
+                          Hungary
                         </div>{" "}
                       </div>{" "}
-                      <div className="text-center border-l border-gray-100">
+                      <div className="text-center border-l border-[#DDE5DD]">
                         {" "}
-                        <div className="font-bold text-gray-700 mb-1">
+                        <div className="font-bold text-[#5F6F67] mb-1">
                           {row.india}
                         </div>{" "}
-                        <div className="text-[10px] uppercase font-medium tracking-wider text-gray-500">
+                        <div className="text-[10px] uppercase font-medium tracking-wider text-[#7A877F]">
                           India (Pvt)
                         </div>{" "}
                       </div>{" "}
-                      <div className="text-center border-l border-gray-100">
+                      <div className="text-center border-l border-[#DDE5DD]">
                         {" "}
-                        <div className="font-bold text-gray-700 mb-1">
+                        <div className="font-bold text-[#5F6F67] mb-1">
                           {row.uk}
                         </div>{" "}
-                        <div className="text-[10px] uppercase font-medium tracking-wider text-gray-500">
+                        <div className="text-[10px] uppercase font-medium tracking-wider text-[#7A877F]">
                           UK
                         </div>{" "}
                       </div>{" "}
@@ -580,15 +580,15 @@ export default async function AboutArmeniaPage() {
           {" "}
           <div className="mb-12 text-center">
             {" "}
-            <span className="text-sm font-semibold uppercase tracking-widest text-red-600">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#A52B3A]">
               MBBS Education Hub
             </span>{" "}
-            <h2 className="mt-2 text-3xl font-bold text-gray-900 lg:text-4xl">
+            <h2 className="mt-2 text-3xl font-bold text-[#202D28] lg:text-4xl">
               International recognition with modern medical training
             </h2>{" "}
-            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+            <p className="mx-auto mt-4 max-w-2xl text-[#5F6F67]">
               {" "}
-              Armenia is a preferred MBBS destination with globally aligned
+              Hungary is a preferred MBBS destination with globally aligned
               curriculum, English-medium pathways, and quality clinical
               exposure.{" "}
             </p>{" "}
@@ -613,11 +613,11 @@ export default async function AboutArmeniaPage() {
                     <item.icon className="h-6 w-6" />{" "}
                   </div>{" "}
                   <h3
-                    className={`text-xl font-bold text-gray-900 transition-colors duration-300 ${item.style.titleHover}`}
+                    className={`text-xl font-bold text-[#202D28] transition-colors duration-300 ${item.style.titleHover}`}
                   >
                     {item.title}
                   </h3>{" "}
-                  <p className="mt-3 text-sm leading-7 text-gray-700">
+                  <p className="mt-3 text-sm leading-7 text-[#5F6F67]">
                     {item.description}
                   </p>{" "}
                 </div>{" "}
@@ -627,19 +627,19 @@ export default async function AboutArmeniaPage() {
         </section>
       ) : null}{" "}
       {content.universityCities.length > 0 ? (
-        <section className="bg-gray-50 py-16">
+        <section className="bg-[#FBF8F0] py-16">
           {" "}
           <div className="mx-auto max-w-7xl px-4">
             {" "}
             <div className="mb-12 text-center">
               {" "}
-              <span className="text-sm font-semibold uppercase tracking-widest text-red-600">
+              <span className="text-sm font-semibold uppercase tracking-widest text-[#A52B3A]">
                 Major University Cities
               </span>{" "}
-              <h2 className="mt-2 text-3xl font-bold text-gray-900 lg:text-4xl">
-                Urban hubs for MBBS universities in Armenia
+              <h2 className="mt-2 text-3xl font-bold text-[#202D28] lg:text-4xl">
+                Urban hubs for MBBS universities in Hungary
               </h2>{" "}
-              <p className="mx-auto mt-4 max-w-3xl text-gray-600">
+              <p className="mx-auto mt-4 max-w-3xl text-[#5F6F67]">
                 {" "}
                 City-level highlights based on active medical institutions and
                 student-friendly environment.{" "}
@@ -653,7 +653,7 @@ export default async function AboutArmeniaPage() {
                 return (
                   <article
                     key={city.city}
-                    className={`rounded-[1.75rem] bg-gradient-to-br ${gradient} p-7 text-gray-900 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
+                    className={`rounded-[1.75rem] bg-gradient-to-br ${gradient} p-7 text-[#202D28] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
                   >
                     {" "}
                     <h3 className="text-2xl font-bold">
@@ -665,11 +665,11 @@ export default async function AboutArmeniaPage() {
                           : city.city}{" "}
                     </h3>{" "}
                     {index === 0 ? (
-                      <div className="mt-6 space-y-6 text-sm leading-relaxed text-gray-900/90">
+                      <div className="mt-6 space-y-6 text-sm leading-relaxed text-[#202D28]/90">
                         {" "}
                         <section>
                           {" "}
-                          <h4 className="flex items-center gap-2 text-md font-bold text-gray-900">
+                          <h4 className="flex items-center gap-2 text-md font-bold text-[#202D28]">
                             {" "}
                             <span>🏫</span> About Yerevan State Medical
                             University (YSMU){" "}
@@ -677,7 +677,7 @@ export default async function AboutArmeniaPage() {
                           <p className="mt-2">
                             {" "}
                             Yerevan State Medical University (YSMU), founded in
-                            1920, is the leading medical institution in Armenia.
+                            1920, is the leading medical institution in Hungary.
                             Named after Mkhitar Heratsi, it has educated
                             thousands of international doctors over its
                             century-long history.{" "}
@@ -692,7 +692,7 @@ export default async function AboutArmeniaPage() {
                         </section>{" "}
                         <section>
                           {" "}
-                          <h5 className="flex items-center gap-2 font-bold text-gray-900">
+                          <h5 className="flex items-center gap-2 font-bold text-[#202D28]">
                             {" "}
                             <span>📜</span> History & Heritage{" "}
                           </h5>{" "}
@@ -700,7 +700,7 @@ export default async function AboutArmeniaPage() {
                             {" "}
                             <li>
                               Established in 1920 as the flagship medical school
-                              of Armenia
+                              of Hungary
                             </li>{" "}
                             <li>
                               Over 100 years of academic excellence in medical
@@ -718,7 +718,7 @@ export default async function AboutArmeniaPage() {
                         </section>{" "}
                         <section>
                           {" "}
-                          <h5 className="flex items-center gap-2 font-bold text-gray-900">
+                          <h5 className="flex items-center gap-2 font-bold text-[#202D28]">
                             {" "}
                             <span>🎓</span> Courses & Duration{" "}
                           </h5>{" "}
@@ -726,7 +726,7 @@ export default async function AboutArmeniaPage() {
                             {" "}
                             <div>
                               {" "}
-                              <p className="font-semibold text-gray-900">
+                              <p className="font-semibold text-[#202D28]">
                                 MD / MBBS General Medicine
                               </p>{" "}
                               <ul className="mt-1 list-inside list-disc space-y-1">
@@ -746,7 +746,7 @@ export default async function AboutArmeniaPage() {
                         </section>{" "}
                         <section>
                           {" "}
-                          <h5 className="flex items-center gap-2 font-bold text-gray-900">
+                          <h5 className="flex items-center gap-2 font-bold text-[#202D28]">
                             {" "}
                             <span>🌍</span> Recognition & Accreditation{" "}
                           </h5>{" "}
@@ -766,7 +766,7 @@ export default async function AboutArmeniaPage() {
                         </section>{" "}
                         <section>
                           {" "}
-                          <h5 className="flex items-center gap-2 font-bold text-gray-900">
+                          <h5 className="flex items-center gap-2 font-bold text-[#202D28]">
                             {" "}
                             <span>🏥</span> Clinical Hospitals & Facilities{" "}
                           </h5>{" "}
@@ -775,7 +775,7 @@ export default async function AboutArmeniaPage() {
                             <li>Heratsi Hospital Complex No. 1</li>{" "}
                             <li>Muratsan University Hospital Complex</li>{" "}
                             <li>
-                              Armenia Medical Center & St. Gregory the
+                              Hungary Medical Center & St. Gregory the
                               Illuminator Medical Center
                             </li>{" "}
                             <li>
@@ -786,17 +786,17 @@ export default async function AboutArmeniaPage() {
                         </section>{" "}
                       </div>
                     ) : index === 1 ? (
-                      <div className="mt-6 space-y-6 text-sm leading-relaxed text-gray-900/90">
+                      <div className="mt-6 space-y-6 text-sm leading-relaxed text-[#202D28]/90">
                         {" "}
                         <section>
                           {" "}
-                          <h4 className="flex items-center gap-2 text-md font-bold text-gray-900">
+                          <h4 className="flex items-center gap-2 text-md font-bold text-[#202D28]">
                             {" "}
                             <span>🏙️</span> About Gyumri{" "}
                           </h4>{" "}
                           <p className="mt-2">
                             {" "}
-                            Gyumri is the second largest city in Armenia and
+                            Gyumri is the second largest city in Hungary and
                             serves as the cultural capital of the country. Known
                             for its distinct 19th-century black tufa
                             architecture, historic urban center, and rich
@@ -805,7 +805,7 @@ export default async function AboutArmeniaPage() {
                         </section>{" "}
                         <section>
                           {" "}
-                          <h5 className="flex items-center gap-2 font-bold text-gray-900">
+                          <h5 className="flex items-center gap-2 font-bold text-[#202D28]">
                             {" "}
                             <span>🏥</span> Healthcare & Education Hub{" "}
                           </h5>{" "}
@@ -827,12 +827,12 @@ export default async function AboutArmeniaPage() {
                         </section>{" "}
                       </div>
                     ) : (
-                      <p className="mt-4 text-sm leading-8 text-gray-900/90">
+                      <p className="mt-4 text-sm leading-8 text-[#202D28]/90">
                         {city.description}
                       </p>
                     )}{" "}
                     {index !== 2 && (
-                      <div className="mt-6 space-y-3 text-gray-900/90">
+                      <div className="mt-6 space-y-3 text-[#202D28]/90">
                         {" "}
                         <div className="flex items-center gap-2.5 text-sm">
                           {" "}
@@ -866,16 +866,16 @@ export default async function AboutArmeniaPage() {
           </div>{" "}
         </section>
       ) : null}{" "}
-      <section className="bg-slate-100 py-14">
+      <section className="bg-[#F3F7F3] py-14">
         {" "}
         <div className="mx-auto max-w-7xl px-4">
           {" "}
           <div className="mx-auto max-w-4xl text-center">
             {" "}
-            <h2 className="text-3xl font-bold text-slate-800 lg:text-4xl">
+            <h2 className="text-3xl font-bold text-[#202D28] lg:text-4xl">
               Geography and Climate
             </h2>{" "}
-            <p className="mt-4 text-base leading-7 text-slate-700">
+            <p className="mt-4 text-base leading-7 text-[#5F6F67]">
               {" "}
               A mountainous land in the South Caucasus known for sunny weather,
               alpine lakes, and safe urban life.{" "}
@@ -885,7 +885,7 @@ export default async function AboutArmeniaPage() {
             {" "}
             <article className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 lg:p-7">
               {" "}
-              <h3 className="text-xl font-bold text-slate-900 lg:text-2xl">
+              <h3 className="text-xl font-bold text-[#202D28] lg:text-2xl">
                 Geography Highlights
               </h3>{" "}
               <ul className="mt-6 space-y-4">
@@ -896,7 +896,7 @@ export default async function AboutArmeniaPage() {
                     <item.icon
                       className={`mt-0.5 h-6 w-6 shrink-0 ${item.iconColor}`}
                     />{" "}
-                    <p className="text-base leading-7 text-slate-700">
+                    <p className="text-base leading-7 text-[#5F6F67]">
                       {item.text}
                     </p>{" "}
                   </li>
@@ -905,7 +905,7 @@ export default async function AboutArmeniaPage() {
             </article>{" "}
             <article className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 lg:p-7">
               {" "}
-              <h3 className="text-xl font-bold text-slate-900 lg:text-2xl">
+              <h3 className="text-xl font-bold text-[#202D28] lg:text-2xl">
                 Climate Zones
               </h3>{" "}
               <ul className="mt-6 space-y-4">
@@ -916,7 +916,7 @@ export default async function AboutArmeniaPage() {
                     <item.icon
                       className={`mt-0.5 h-6 w-6 shrink-0 ${item.iconColor}`}
                     />{" "}
-                    <p className="text-base leading-7 text-slate-700">
+                    <p className="text-base leading-7 text-[#5F6F67]">
                       {item.text}
                     </p>{" "}
                   </li>
@@ -924,20 +924,20 @@ export default async function AboutArmeniaPage() {
               </ul>{" "}
             </article>{" "}
           </div>{" "}
-          <div className="mt-8 rounded-[2rem] border border-gray-200/20 bg-orange-500 px-6 py-8 text-gray-900 shadow-lg lg:px-10">
+          <div className="mt-8 rounded-[2rem] border border-[#DDE5DD]/20 bg-orange-500 px-6 py-8 text-[#202D28] shadow-lg lg:px-10">
             {" "}
             <h3 className="text-center text-2xl font-bold lg:text-3xl">
-              Top Attractions in Armenia
+              Top Attractions in Hungary
             </h3>{" "}
             <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {" "}
-              {armeniaAttractions.map((item) => (
+              {hungaryAttractions.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-2xl bg-gray-100 p-4 text-center ring-1 ring-white/15 "
+                  className="rounded-2xl bg-[#F3F7F3] p-4 text-center ring-1 ring-white/15 "
                 >
                   {" "}
-                  <item.icon className="mx-auto h-8 w-8 text-red-600" />{" "}
+                  <item.icon className="mx-auto h-8 w-8 text-[#A52B3A]" />{" "}
                   <h4 className="mt-3 text-xl font-semibold">{item.title}</h4>{" "}
                   <p className="mt-2 text-sm leading-6 text-red-50">
                     {item.description}
@@ -948,17 +948,17 @@ export default async function AboutArmeniaPage() {
           </div>{" "}
         </div>{" "}
       </section>{" "}
-      <section className="bg-slate-100 py-14">
+      <section className="bg-[#F3F7F3] py-14">
         {" "}
         <div className="mx-auto max-w-7xl px-4">
           {" "}
           <div className="mx-auto max-w-4xl text-center">
             {" "}
-            <Plane className="mx-auto h-10 w-10 text-red-600" />{" "}
-            <h2 className="mt-4 text-3xl font-bold text-slate-800 lg:text-4xl">
+            <Plane className="mx-auto h-10 w-10 text-[#A52B3A]" />{" "}
+            <h2 className="mt-4 text-3xl font-bold text-[#202D28] lg:text-4xl">
               Travel and Connectivity
             </h2>{" "}
-            <p className="mt-4 text-base leading-7 text-slate-700">
+            <p className="mt-4 text-base leading-7 text-[#5F6F67]">
               {" "}
               Direct flights, modern transport infrastructure, and simple
               student visa guidelines make student onboarding seamless.{" "}
@@ -968,7 +968,7 @@ export default async function AboutArmeniaPage() {
             {" "}
             <article className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 lg:p-7">
               {" "}
-              <h3 className="text-xl font-bold text-slate-900 lg:text-2xl">
+              <h3 className="text-xl font-bold text-[#202D28] lg:text-2xl">
                 Transportation
               </h3>{" "}
               <ul className="mt-6 space-y-4">
@@ -979,7 +979,7 @@ export default async function AboutArmeniaPage() {
                     <item.icon
                       className={`mt-0.5 h-6 w-6 shrink-0 ${item.iconColor}`}
                     />{" "}
-                    <p className="text-base leading-7 text-slate-700">
+                    <p className="text-base leading-7 text-[#5F6F67]">
                       {item.text}
                     </p>{" "}
                   </li>
@@ -988,7 +988,7 @@ export default async function AboutArmeniaPage() {
             </article>{" "}
             <article className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100 lg:p-7">
               {" "}
-              <h3 className="text-xl font-bold text-slate-900 lg:text-2xl">
+              <h3 className="text-xl font-bold text-[#202D28] lg:text-2xl">
                 Visa and Onboarding
               </h3>{" "}
               <ul className="mt-6 space-y-4">
@@ -999,7 +999,7 @@ export default async function AboutArmeniaPage() {
                     <item.icon
                       className={`mt-0.5 h-6 w-6 shrink-0 ${item.iconColor}`}
                     />{" "}
-                    <p className="text-base leading-7 text-slate-700">
+                    <p className="text-base leading-7 text-[#5F6F67]">
                       {item.text}
                     </p>{" "}
                   </li>
@@ -1016,10 +1016,10 @@ export default async function AboutArmeniaPage() {
           <div className="mx-auto max-w-4xl text-center">
             {" "}
             <Stethoscope className="mx-auto h-11 w-11 text-emerald-600" />{" "}
-            <h2 className="mt-4 text-3xl font-bold text-slate-800 lg:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold text-[#202D28] lg:text-4xl">
               Healthcare System
             </h2>{" "}
-            <p className="mt-4 text-base leading-7 text-slate-700">
+            <p className="mt-4 text-base leading-7 text-[#5F6F67]">
               {" "}
               Healthcare access for students is supported through campus medical
               desks and city-wide healthcare networks.{" "}
@@ -1033,10 +1033,10 @@ export default async function AboutArmeniaPage() {
                 className={`rounded-3xl border-t-4 bg-white p-6 shadow-sm ring-1 ring-slate-100 ${card.accent}`}
               >
                 {" "}
-                <h3 className="text-2xl font-bold text-slate-900">
+                <h3 className="text-2xl font-bold text-[#202D28]">
                   {card.title}
                 </h3>{" "}
-                <p className="mt-4 text-base leading-8 text-slate-700">
+                <p className="mt-4 text-base leading-8 text-[#5F6F67]">
                   {card.description}
                 </p>{" "}
               </article>
@@ -1049,11 +1049,11 @@ export default async function AboutArmeniaPage() {
           {" "}
           <div className="mb-12 text-center">
             {" "}
-            <span className="text-sm font-semibold uppercase tracking-widest text-red-600">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#A52B3A]">
               Cuisine and Student Life
             </span>{" "}
-            <h2 className="mt-2 text-3xl font-bold text-gray-900 lg:text-4xl">
-              Food, culture, and lifestyle across Armenia
+            <h2 className="mt-2 text-3xl font-bold text-[#202D28] lg:text-4xl">
+              Food, culture, and lifestyle across Hungary
             </h2>{" "}
           </div>{" "}
           <div className="grid gap-8 lg:grid-cols-2">
@@ -1062,11 +1062,11 @@ export default async function AboutArmeniaPage() {
               {" "}
               <div className="mb-5 flex items-center gap-3">
                 {" "}
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EAF1FB] text-red-600">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F3F7F3] text-[#A52B3A]">
                   {" "}
                   <Utensils className="h-5 w-5" />{" "}
                 </div>{" "}
-                <h3 className="text-2xl font-bold text-gray-900">
+                <h3 className="text-2xl font-bold text-[#202D28]">
                   Popular cuisines
                 </h3>{" "}
               </div>{" "}
@@ -1094,11 +1094,11 @@ export default async function AboutArmeniaPage() {
                         <div className="flex-1 pt-1">
                           {" "}
                           <h4
-                            className={`text-xl font-bold text-gray-900 transition-colors duration-300 ${item.style.titleHover}`}
+                            className={`text-xl font-bold text-[#202D28] transition-colors duration-300 ${item.style.titleHover}`}
                           >
                             {item.title}
                           </h4>{" "}
-                          <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                          <p className="mt-3 text-sm leading-relaxed text-[#5F6F67]">
                             {item.description}
                           </p>{" "}
                           {item.image && (
@@ -1124,11 +1124,11 @@ export default async function AboutArmeniaPage() {
               {" "}
               <div className="mb-5 flex items-center gap-3">
                 {" "}
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-red-400 text-red-600">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-red-400 text-[#A52B3A]">
                   {" "}
                   <Mountain className="h-5 w-5" />{" "}
                 </div>{" "}
-                <h3 className="text-2xl font-bold text-gray-900">
+                <h3 className="text-2xl font-bold text-[#202D28]">
                   Places and experiences
                 </h3>{" "}
               </div>{" "}
@@ -1156,11 +1156,11 @@ export default async function AboutArmeniaPage() {
                         <div className="flex-1 pt-1">
                           {" "}
                           <h4
-                            className={`text-xl font-bold text-gray-900 transition-colors duration-300 ${item.style.titleHover}`}
+                            className={`text-xl font-bold text-[#202D28] transition-colors duration-300 ${item.style.titleHover}`}
                           >
                             {item.title}
                           </h4>{" "}
-                          <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                          <p className="mt-3 text-sm leading-relaxed text-[#5F6F67]">
                             {item.description}
                           </p>{" "}
                           {item.image && (
@@ -1185,17 +1185,17 @@ export default async function AboutArmeniaPage() {
           </div>{" "}
         </section>
       ) : null}{" "}
-      <section className="bg-[#EAF1FB]0 py-16 text-gray-900">
+      <section className="bg-[#175747] py-16 text-white">
         {" "}
         <div className="mx-auto max-w-4xl px-4 text-center">
           {" "}
-          <h2 className="text-3xl font-bold lg:text-4xl">
-            Ready to choose Armenia for your MBBS journey?
+          <h2 className="text-3xl font-bold lg:text-4xl text-white">
+            Ready to choose Hungary for your MBBS journey?
           </h2>{" "}
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#DCE8E2]">
             {" "}
             Compare top universities, tuition fees, and admission guidance to
-            plan your MBBS journey in Armenia.{" "}
+            plan your MBBS journey in Hungary.{" "}
           </p>{" "}
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {" "}

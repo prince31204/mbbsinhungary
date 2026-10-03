@@ -107,14 +107,14 @@ export default function CreateNewsPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">New Article</h1>
-          <p className="text-sm text-gray-500">Write a news article</p>
+          <h1 className="text-2xl font-bold text-[#202D28]">New Article</h1>
+          <p className="text-sm text-[#7A877F]">Write a news article</p>
         </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Article Details
           </h2>
           <div className="space-y-1.5">
@@ -200,8 +200,8 @@ export default function CreateNewsPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">Media</h2>
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">Media</h2>
           <div className="grid grid-cols-2 gap-4">
             <ImageUpload
               label="Thumbnail"
@@ -218,8 +218,8 @@ export default function CreateNewsPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 className="font-semibold text-gray-900 border-b pb-3 mb-4">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3 mb-4">
             SEO
           </h2>
           <SeoFields
@@ -240,7 +240,7 @@ export default function CreateNewsPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
             disabled={loading}
           >
             {loading ? (

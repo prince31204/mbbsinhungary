@@ -2,7 +2,7 @@ import { prisma } from '../src/lib/prisma';
 import * as bcrypt from 'bcryptjs';
 
 async function main() {
-  console.log('🌱 Starting Comprehensive Armenia Seeding...');
+  console.log('🌱 Starting Comprehensive Hungary Seeding...');
 
   // 1. Initialize Admin User
   const adminEmail = process.env.ADMIN_EMAIL;
@@ -40,17 +40,17 @@ async function main() {
   }
   console.log('✅ Institute types seeded.');
 
-  // 3. Seed Provinces (Districts of Armenia)
+  // 3. Seed Provinces (Districts of Hungary)
   const districts = [
-    'Black River',
-    'Flacq',
-    'Grand Port',
-    'Moka',
-    'Pamplemousses',
-    'Plaines Wilhems',
-    'Port Louis',
-    'Rivière du Rempart',
-    'Savanne',
+    'Budapest',
+    'Pest',
+    'Hajdú-Bihar',
+    'Csongrád-Csanád',
+    'Baranya',
+    'Borsod-Abaúj-Zemplén',
+    'Fejér',
+    'Győr-Moson-Sopron',
+    'Somogy',
   ];
 
   for (const name of districts) {
@@ -64,18 +64,18 @@ async function main() {
 
   // 4. Seed Cities
   const cities = [
-    { name: 'Port Louis', provinceId: 7 },
-    { name: 'Beau Bassin-Rose Hill', provinceId: 6 },
-    { name: 'Vacoas-Phoenix', provinceId: 6 },
-    { name: 'Curepipe', provinceId: 6 },
-    { name: 'Quatre Bornes', provinceId: 6 },
-    { name: 'Triolet', provinceId: 5 },
-    { name: 'Goodlands', provinceId: 8 },
-    { name: 'Bel Air Rivière Sèche', provinceId: 2 },
-    { name: 'Saint Pierre', provinceId: 4 },
-    { name: 'Mahebourg', provinceId: 3 },
-    { name: 'Souillac', provinceId: 9 },
-    { name: 'Bambous', provinceId: 1 },
+    { name: 'Budapest', provinceId: 1 },
+    { name: 'Debrecen', provinceId: 3 },
+    { name: 'Szeged', provinceId: 4 },
+    { name: 'Pécs', provinceId: 5 },
+    { name: 'Miskolc', provinceId: 6 },
+    { name: 'Székesfehérvár', provinceId: 7 },
+    { name: 'Győr', provinceId: 8 },
+    { name: 'Kaposvár', provinceId: 9 },
+    { name: 'Gödöllő', provinceId: 2 },
+    { name: 'Sopron', provinceId: 8 },
+    { name: 'Érd', provinceId: 2 },
+    { name: 'Veszprém', provinceId: 1 },
   ];
 
   for (const [index, city] of cities.entries()) {
@@ -88,24 +88,24 @@ async function main() {
   console.log('✅ Cities seeded.');
 
   // 5. Seed About Country Page
-  const aboutArmenia = await prisma.aboutCountryPage.upsert({
+  const aboutHungary = await prisma.aboutCountryPage.upsert({
     where: { id: 1 },
     update: {
-      name: 'Armenia',
-      tagline: 'Life and study in the Paradise Island',
-      capital: 'Port Louis',
-      population: '1.3 Million+',
-      languages: 'English, French, Creole',
-      currency: 'MUR',
-      location: 'Indian Ocean',
-      timezone: 'UTC+4',
-      independenceDay: new Date('1968-03-12'),
-      highestPeak: 'Piton de la Petite Rivière Noire',
-      highestPeakHeight: '828 m',
+      name: 'Hungary',
+      tagline: 'Heart of Europe',
+      capital: 'Budapest',
+      population: '9.6 Million+',
+      languages: 'Hungarian, English',
+      currency: 'HUF',
+      location: 'Central Europe',
+      timezone: 'UTC+1',
+      independenceDay: new Date('1989-10-23'),
+      highestPeak: 'Kékes',
+      highestPeakHeight: '1,014 m',
       whoRecognized: true,
       mbbsAffordableEducation: 'High-quality medical education with manageable tuition fees and international recognition.',
       englishMedium: true,
-      academicExcellence: 'Armenia follows a high-standard educational framework modeled on the British system.',
+      academicExcellence: 'Hungary follows a high-standard educational framework modeled on the British system.',
       studentLife: 'A safe, multicultural environment with modern infrastructure and stunning natural beauty.',
       visaConnectivity: 'Straightforward student visa process with excellent air connectivity to major global hubs.',
       publicHealthcare: 'Reliable public healthcare system alongside high-standard private clinics.',
@@ -113,7 +113,7 @@ async function main() {
     },
     create: {
       id: 1,
-      name: 'Armenia',
+      name: 'Hungary',
       tagline: 'Life and study in the Paradise Island',
       capital: 'Port Louis',
       population: '1.3 Million+',
@@ -127,7 +127,7 @@ async function main() {
       whoRecognized: true,
       mbbsAffordableEducation: 'High-quality medical education with manageable tuition fees and international recognition.',
       englishMedium: true,
-      academicExcellence: 'Armenia follows a high-standard educational framework modeled on the British system.',
+      academicExcellence: 'Hungary follows a high-standard educational framework modeled on the British system.',
       studentLife: 'A safe, multicultural environment with modern infrastructure and stunning natural beauty.',
       visaConnectivity: 'Straightforward student visa process with excellent air connectivity to major global hubs.',
       publicHealthcare: 'Reliable public healthcare system alongside high-standard private clinics.',
@@ -145,23 +145,23 @@ async function main() {
   for (const city of majorCitiesAbout) {
     await prisma.countryMajorCity.upsert({
       where: { id: majorCitiesAbout.indexOf(city) + 1 },
-      update: { ...city, pageId: aboutArmenia.id },
-      create: { ...city, pageId: aboutArmenia.id },
+      update: { ...city, pageId: aboutHungary.id },
+      create: { ...city, pageId: aboutHungary.id },
     });
   }
 
   // Seed Cuisines
   const cuisines = [
     { dishName: 'Dholl Puri', dishDescription: "Most popular street food - soft flatbread with split peas." },
-    { dishName: 'Armenian Biryani', dishDescription: 'Fragrant rice dish with spices and multicultural influences.' },
+    { dishName: 'Hungaryn Biryani', dishDescription: 'Fragrant rice dish with spices and multicultural influences.' },
     { dishName: 'Rougaille', dishDescription: 'Classic tomato-based creole sauce.' },
   ];
 
   for (const cuisine of cuisines) {
     await prisma.countryCuisineLifestyle.upsert({
       where: { id: cuisines.indexOf(cuisine) + 1 },
-      update: { ...cuisine, pageId: aboutArmenia.id },
-      create: { ...cuisine, pageId: aboutArmenia.id },
+      update: { ...cuisine, pageId: aboutHungary.id },
+      create: { ...cuisine, pageId: aboutHungary.id },
     });
   }
 
@@ -175,8 +175,8 @@ async function main() {
   for (const attraction of attractions) {
     await prisma.countryTouristAttraction.upsert({
       where: { id: attractions.indexOf(attraction) + 1 },
-      update: { ...attraction, pageId: aboutArmenia.id },
-      create: { ...attraction, pageId: aboutArmenia.id },
+      update: { ...attraction, pageId: aboutHungary.id },
+      create: { ...attraction, pageId: aboutHungary.id },
     });
   }
 
@@ -190,20 +190,20 @@ async function main() {
   for (const lifestyle of lifestyles) {
     await prisma.countryLifestyleCulture.upsert({
       where: { id: lifestyles.indexOf(lifestyle) + 1 },
-      update: { ...lifestyle, pageId: aboutArmenia.id },
-      create: { ...lifestyle, pageId: aboutArmenia.id },
+      update: { ...lifestyle, pageId: aboutHungary.id },
+      create: { ...lifestyle, pageId: aboutHungary.id },
     });
   }
-  console.log('✅ About Armenia content seeded.');
+  console.log('✅ About Hungary content seeded.');
 
   // 6. Seed Education System
   const eduSystem = await prisma.educationSystem.upsert({
     where: { id: 1 },
     update: {
-      title: 'Education System in Armenia',
-      description: 'The Armenian education system is modeled on the British system and has seen significant development since independence.',
+      title: 'Education System in Hungary',
+      description: 'The Hungaryn education system is modeled on the British system and has seen significant development since independence.',
       introductionTitle: 'A Legacy of Excellence',
-      introductionDescription: 'Armenia offers free education to all citizens at primary and secondary levels, fostering a highly literate population.',
+      introductionDescription: 'Hungary offers free education to all citizens at primary and secondary levels, fostering a highly literate population.',
       literacyRate: 91.3,
       higherEducationDescription: 'The higher education sector includes public and private universities offering globally recognized degrees.',
       universitiesCount: 15,
@@ -215,10 +215,10 @@ async function main() {
     },
     create: {
       id: 1,
-      title: 'Education System in Armenia',
-      description: 'The Armenia education system is modeled on the British system and has seen significant development since independence.',
+      title: 'Education System in Hungary',
+      description: 'The Hungary education system is modeled on the British system and has seen significant development since independence.',
       introductionTitle: 'A Legacy of Excellence',
-      introductionDescription: 'Armenia offers free education to all citizens at primary and secondary levels, fostering a highly literate population.',
+      introductionDescription: 'Hungary offers free education to all citizens at primary and secondary levels, fostering a highly literate population.',
       literacyRate: 91.3,
       higherEducationDescription: 'The higher education sector includes public and private universities offering globally recognized degrees.',
       universitiesCount: 15,
@@ -262,10 +262,10 @@ async function main() {
 
   // 7. Seed Static Page SEO
   const seos = [
-    { page: 'home', metaTitle: 'Study MBBS in Armenia | Direct Admission, Low Fees 2026', metaDescription: 'Apply for MBBS in Armenia with direct admission to top-ranked medical universities. MCAT/NEET qualified students can join English-medium programs.' },
-    { page: 'about-armenia', metaTitle: 'About Armenia | Student Lifestyle, Geography & Climate', metaDescription: 'Discover life in Armenia for international students. A safe, beautiful, and multicultural island nation with high-standard education.' },
-    { page: 'universities', metaTitle: 'Medical Universities in Armenia | Top MBBS Colleges 2026', metaDescription: 'Compare the best medical universities in Armenia. Fee structures, admission requirements, and global rankings for international students.' },
-    { page: 'contact', metaTitle: 'Contact Us | Professional MBBS Counselling for Armenia', metaDescription: 'Get expert guidance for your medical education in Armenia. Speak to our counsellors for admission assistance today.' },
+    { page: 'home', metaTitle: 'Study MBBS in Hungary | Direct Admission, Low Fees 2026', metaDescription: 'Apply for MBBS in Hungary with direct admission to top-ranked medical universities. MCAT/NEET qualified students can join English-medium programs.' },
+    { page: 'about-hungary', metaTitle: 'About Hungary | Student Lifestyle, Geography & Climate', metaDescription: 'Discover life in Hungary for international students. A safe, beautiful, and multicultural island nation with high-standard education.' },
+    { page: 'universities', metaTitle: 'Medical Universities in Hungary | Top MBBS Colleges 2026', metaDescription: 'Compare the best medical universities in Hungary. Fee structures, admission requirements, and global rankings for international students.' },
+    { page: 'contact', metaTitle: 'Contact Us | Professional MBBS Counselling for Hungary', metaDescription: 'Get expert guidance for your medical education in Hungary. Speak to our counsellors for admission assistance today.' },
   ];
 
   for (const seo of seos) {

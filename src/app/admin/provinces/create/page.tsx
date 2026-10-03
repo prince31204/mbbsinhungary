@@ -38,10 +38,10 @@ export default function ProvinceCreatePage() {
 
   return (
     <div className="max-w-lg mx-auto p-6">
-      <h1 className="text-2xl font-bold text-gray-800 mb-6">Add Province</h1>
+      <h1 className="text-2xl font-bold text-[#202D28] mb-6">Add Province</h1>
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-xl border border-gray-200 p-6 space-y-5"
+        className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-5"
       >
         <div className="space-y-1.5">
           <Label>Province Name *</Label>
@@ -63,7 +63,7 @@ export default function ProvinceCreatePage() {
           <Button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="flex-1 bg-[#175747] hover:bg-[#175747]"
           >
             {loading ? "Saving…" : "Create Province"}
           </Button>

@@ -261,9 +261,9 @@ export default function OurPartnersContent({
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50" suppressHydrationWarning>
+    <div className="min-h-screen bg-[#FBF8F0]" suppressHydrationWarning>
       {/* -- HEMD -- */}
-      <section className="relative overflow-hidden text-gray-900 bg-white">
+      <section className="relative overflow-hidden text-[#202D28] bg-white">
         {/* Background Image Setup */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -277,18 +277,18 @@ export default function OurPartnersContent({
         <div className="absolute inset-0 z-0 bg-white " />
 
         {/* decorative blobs */}
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#EAF1FB]0/20 rounded-full hidden z-0" />
-        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-[#F2A800]/20 rounded-full hidden z-0" />
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#F3F7F3]/20 rounded-full hidden z-0" />
+        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-[#D5AE67]/20 rounded-full hidden z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 lg:py-10 text-center">
-          <span className="inline-flex items-center gap-2 bg-white/20 text-gray-900 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-3 border border-gray-200">
+          <span className="inline-flex items-center gap-2 bg-white/20 text-[#202D28] text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-3 border border-[#DDE5DD]">
             <MapPin className="w-4 h-4" />
             India Network
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 mt-2">
-            Our <span className="text-red-600">Partners</span> in India
+            Our <span className="text-[#A52B3A]">Partners</span> in India
           </h1>
-          <p className="text-gray-600 max-w-4xl mx-auto text-lg md:text-xl leading-relaxed mb-6">
+          <p className="text-[#5F6F67] max-w-4xl mx-auto text-lg md:text-xl leading-relaxed mb-6">
             Meet our trusted network of education consultants and partners
             across India who help students achieve their dreams of studying
             medicine abroad. From counseling to admissions, they provide
@@ -300,14 +300,14 @@ export default function OurPartnersContent({
             <button
               type="button"
               onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-red-600 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-red-700 transition-colors shadow-lg cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[#A52B3A] text-white font-bold px-7 py-3.5 rounded-xl hover:bg-[#8C2030] transition-colors shadow-lg cursor-pointer"
             >
               <Handshake className="w-5 h-5" />
               Become a Partner
             </button>
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 border-2 border-gray-200 text-gray-900 font-bold px-7 py-3.5 rounded-xl hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 border-2 border-[#DDE5DD] text-[#202D28] font-bold px-7 py-3.5 rounded-xl hover:bg-[#F3F7F3] transition-colors"
             >
               Contact Our Team
               <ArrowRight className="w-4 h-4" />
@@ -318,10 +318,10 @@ export default function OurPartnersContent({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto py-2 pb-6">
             {stats.map((s, idx) => (
               <div key={idx} className="text-center">
-                <p className="text-4xl lg:text-5xl font-extrabold text-red-600 mb-1">
+                <p className="text-4xl lg:text-5xl font-extrabold text-[#A52B3A] mb-1">
                   {s.value}
                 </p>
-                <p className="text-slate-600 text-sm md:text-base font-medium tracking-wide">
+                <p className="text-[#5F6F67] text-sm md:text-base font-medium tracking-wide">
                   {s.label}
                 </p>
               </div>
@@ -332,47 +332,47 @@ export default function OurPartnersContent({
 
       {/* -- SEARCH & FILTER BAR -- */}
       <section className="max-w-7xl mx-auto px-4 -mt-8 relative z-10 mb-10">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col gap-6">
+        <div className="bg-white rounded-2xl shadow-sm border border-[#DDE5DD] p-6 flex flex-col gap-6">
           {/* Top row: Inputs */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
             {/* 1. Search */}
             <div className="md:col-span-3 flex flex-col gap-2">
-              <label className="text-sm font-semibold text-gray-700">
+              <label className="text-sm font-semibold text-[#5F6F67]">
                 Search Partners
               </label>
-              <div className="flex items-center gap-2 border border-gray-200 rounded-xl px-4 py-3 bg-white focus-within:ring-2 focus-within:ring-red-500/20 focus-within:border-gray-200 transition-all">
-                <Search className="w-5 h-5 text-gray-500 shrink-0" />
+              <div className="flex items-center gap-2 border border-[#DDE5DD] rounded-xl px-4 py-3 bg-white focus-within:ring-2 focus-within:ring-red-500/20 focus-within:border-[#DDE5DD] transition-all">
+                <Search className="w-5 h-5 text-[#7A877F] shrink-0" />
                 <input
                   type="text"
                   placeholder="Search by name, company, city..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-transparent border-none outline-none text-sm text-gray-800 placeholder:text-gray-500 w-full"
+                  className="bg-transparent border-none outline-none text-sm text-[#202D28] placeholder:text-[#7A877F] w-full"
                 />
               </div>
             </div>
 
             {/* 2. Country */}
             <div className="md:col-span-3 flex flex-col gap-2 relative">
-              <label className="text-sm font-semibold text-gray-700">
+              <label className="text-sm font-semibold text-[#5F6F67]">
                 Country
               </label>
               <div className="relative">
                 <select
                   value={selectedCountry}
                   onChange={(e) => setSelectedCountry(e.target.value)}
-                  className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 outline-none focus:ring-2 focus:ring-[#285BB5]/500/20 focus:border-gray-200 transition-all cursor-pointer"
+                  className="w-full appearance-none bg-white border border-[#DDE5DD] rounded-xl px-4 py-3 text-sm text-[#5F6F67] outline-none focus:ring-2 focus:ring-[#175747]/500/20 focus:border-[#DDE5DD] transition-all cursor-pointer"
                 >
                   <option value="All">All Countries</option>
                   <option value="India">India</option>
                 </select>
-                <ChevronDown className="w-4 h-4 text-gray-500 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <ChevronDown className="w-4 h-4 text-[#7A877F] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>
             </div>
 
             {/* 3. State */}
             <div className="md:col-span-3 flex flex-col gap-2 relative">
-              <label className="text-sm font-semibold text-gray-700">
+              <label className="text-sm font-semibold text-[#5F6F67]">
                 State
               </label>
               <div className="relative">
@@ -382,7 +382,7 @@ export default function OurPartnersContent({
                     setSelectedState(e.target.value);
                     setSelectedCity("All");
                   }}
-                  className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 outline-none focus:ring-2 focus:ring-[#285BB5]/500/20 focus:border-gray-200 transition-all cursor-pointer"
+                  className="w-full appearance-none bg-white border border-[#DDE5DD] rounded-xl px-4 py-3 text-sm text-[#5F6F67] outline-none focus:ring-2 focus:ring-[#175747]/500/20 focus:border-[#DDE5DD] transition-all cursor-pointer"
                 >
                   <option value="All">All States</option>
                   {availableStates.map((st) => (
@@ -391,13 +391,13 @@ export default function OurPartnersContent({
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="w-4 h-4 text-gray-500 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <ChevronDown className="w-4 h-4 text-[#7A877F] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>
             </div>
 
             {/* 4. City */}
             <div className="md:col-span-3 flex flex-col gap-2 relative">
-              <label className="text-sm font-semibold text-gray-700">
+              <label className="text-sm font-semibold text-[#5F6F67]">
                 City
               </label>
               <div className="relative">
@@ -407,7 +407,7 @@ export default function OurPartnersContent({
                   disabled={
                     selectedState === "All" || availableCities.length === 0
                   }
-                  className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 outline-none disabled:opacity-50 disabled:bg-gray-50 disabled:cursor-not-allowed focus:ring-2 focus:ring-[#285BB5]/500/20 focus:border-gray-200 transition-all cursor-pointer"
+                  className="w-full appearance-none bg-white border border-[#DDE5DD] rounded-xl px-4 py-3 text-sm text-[#5F6F67] outline-none disabled:opacity-50 disabled:bg-[#FBF8F0] disabled:cursor-not-allowed focus:ring-2 focus:ring-[#175747]/500/20 focus:border-[#DDE5DD] transition-all cursor-pointer"
                 >
                   <option value="All">All Cities</option>
                   {availableCities.map((c, i) => (
@@ -416,16 +416,16 @@ export default function OurPartnersContent({
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="w-4 h-4 text-gray-500 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <ChevronDown className="w-4 h-4 text-[#7A877F] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>
             </div>
           </div>
 
           {/* Bottom row: Showing text & view toggles */}
-          <div className="flex items-center justify-between pt-6 border-t border-gray-100">
-            <p className="text-sm text-gray-600">
+          <div className="flex items-center justify-between pt-6 border-t border-[#DDE5DD]">
+            <p className="text-sm text-[#5F6F67]">
               Showing{" "}
-              <span className="font-semibold text-red-600">
+              <span className="font-semibold text-[#A52B3A]">
                 {totalPartners}
               </span>{" "}
               partners
@@ -433,13 +433,13 @@ export default function OurPartnersContent({
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setViewMode("grid")}
-                className={`p-2 rounded-lg transition-colors ${viewMode === "grid" ? "bg-red-600 text-white" : "bg-gray-100 text-gray-500 hover:bg-gray-200"}`}
+                className={`p-2 rounded-lg transition-colors ${viewMode === "grid" ? "bg-[#A52B3A] text-white" : "bg-[#F3F7F3] text-[#7A877F] hover:bg-gray-200"}`}
               >
                 <LayoutGrid className="w-5 h-5" />
               </button>
               <button
                 onClick={() => setViewMode("list")}
-                className={`p-2 rounded-lg transition-colors ${viewMode === "list" ? "bg-red-600 text-white" : "bg-gray-100 text-gray-500 hover:bg-gray-200"}`}
+                className={`p-2 rounded-lg transition-colors ${viewMode === "list" ? "bg-[#A52B3A] text-white" : "bg-[#F3F7F3] text-[#7A877F] hover:bg-gray-200"}`}
               >
                 <List className="w-5 h-5" />
               </button>
@@ -454,13 +454,13 @@ export default function OurPartnersContent({
           <div key={group.region} className="mb-14">
             {/* region header */}
             <div className="flex items-center gap-3 mb-8">
-              <div className="p-2 bg-white text-red-600 rounded-lg">
+              <div className="p-2 bg-white text-[#A52B3A] rounded-lg">
                 <MapPin className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900">
+              <h2 className="text-2xl font-bold text-[#202D28]">
                 {group.region}
               </h2>
-              <span className="px-3 py-1 bg-[#EAF1FB] text-[#285BB5] text-sm font-semibold rounded-full">
+              <span className="px-3 py-1 bg-[#F3F7F3] text-[#175747] text-sm font-semibold rounded-full">
                 {group.partners.length} Partners
               </span>
             </div>
@@ -476,7 +476,7 @@ export default function OurPartnersContent({
               {group.partners.map((p, idx) => (
                 <div
                   key={`${p.name}-${idx}`}
-                  className={`group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all ${
+                  className={`group bg-white rounded-2xl shadow-sm border border-[#DDE5DD] overflow-hidden hover:shadow-md transition-all ${
                     viewMode === "list" ? "" : "flex flex-col"
                   }`}
                 >
@@ -491,10 +491,10 @@ export default function OurPartnersContent({
                         />
                         <div className="absolute top-3 inset-x-3 flex justify-between items-start pointer-events-none">
                           <div className="flex flex-col gap-2 pointer-events-auto">
-                            <span className="bg-emerald-500/90 text-gray-900 px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shadow-lg w-fit">
+                            <span className="bg-emerald-500/90 text-[#202D28] px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shadow-lg w-fit">
                               <CheckCircle className="w-3 h-3" /> Verified
                             </span>
-                            <span className="bg-red-600/90 text-gray-900 px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shadow-lg w-fit">
+                            <span className="bg-[#A52B3A]/90 text-[#202D28] px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shadow-lg w-fit">
                               <Star className="w-3 h-3 fill-current" />{" "}
                               {p.rating}
                             </span>
@@ -505,25 +505,25 @@ export default function OurPartnersContent({
                       {/* Content Area */}
                       <div className="p-6 flex-1 flex flex-col justify-between">
                         <div>
-                          <h3 className="text-xl font-bold text-gray-900 mb-0.5 truncate">
+                          <h3 className="text-xl font-bold text-[#202D28] mb-0.5 truncate">
                             {p.name}
                           </h3>
-                          <p className="text-base font-medium text-red-600 mb-0.5 truncate">
+                          <p className="text-base font-medium text-[#A52B3A] mb-0.5 truncate">
                             {p.designation}
                           </p>
-                          <p className="text-sm font-medium text-gray-500 mb-6 truncate">
+                          <p className="text-sm font-medium text-[#7A877F] mb-6 truncate">
                             {p.company}
                           </p>
 
                           {/* Contact & Stats Sections */}
                           <div className="space-y-4">
-                            <div className="flex flex-col gap-2 text-sm text-gray-600 mb-4">
+                            <div className="flex flex-col gap-2 text-sm text-[#5F6F67] mb-4">
                               <div className="flex items-center gap-2">
-                                <MapPin className="w-4 h-4 text-gray-500 shrink-0" />
+                                <MapPin className="w-4 h-4 text-[#7A877F] shrink-0" />
                                 <span className="truncate">{p.city}</span>
                               </div>
                               <div className="flex items-center gap-2">
-                                <Phone className="w-4 h-4 text-gray-500 shrink-0" />
+                                <Phone className="w-4 h-4 text-[#7A877F] shrink-0" />
                                 <span className="truncate">
                                   {revealedPartnerId === p.id
                                     ? p.phone
@@ -531,7 +531,7 @@ export default function OurPartnersContent({
                                 </span>
                               </div>
                               <div className="flex items-center gap-2">
-                                <Mail className="w-4 h-4 text-gray-500 shrink-0" />
+                                <Mail className="w-4 h-4 text-[#7A877F] shrink-0" />
                                 <span className="truncate">
                                   {revealedPartnerId === p.id
                                     ? p.email
@@ -549,7 +549,7 @@ export default function OurPartnersContent({
                                   });
                                   setLeadModalOpen(true);
                                 }}
-                                className="w-full bg-white text-red-600 py-2 rounded-xl text-sm font-bold hover:bg-[#EAF1FB] transition-colors border border-gray-200"
+                                className="w-full bg-white text-[#A52B3A] py-2 rounded-xl text-sm font-bold hover:bg-[#F3F7F3] transition-colors border border-[#DDE5DD]"
                               >
                                 Show Contact Details
                               </button>
@@ -557,10 +557,10 @@ export default function OurPartnersContent({
 
                             <div className="grid grid-cols-2 gap-4 pt-6">
                               <div className="bg-white/80 rounded-2xl p-4 text-center">
-                                <p className="text-2xl font-bold text-red-600">
+                                <p className="text-2xl font-bold text-[#A52B3A]">
                                   {p.studentsPlaced}+
                                 </p>
-                                <p className="text-[11px] font-medium text-gray-500">
+                                <p className="text-[11px] font-medium text-[#7A877F]">
                                   Students Placed
                                 </p>
                               </div>
@@ -568,7 +568,7 @@ export default function OurPartnersContent({
                                 <p className="text-2xl font-bold text-emerald-600">
                                   {p.experience} Years
                                 </p>
-                                <p className="text-[11px] font-medium text-gray-500">
+                                <p className="text-[11px] font-medium text-[#7A877F]">
                                   Experience
                                 </p>
                               </div>
@@ -576,7 +576,7 @@ export default function OurPartnersContent({
 
                             <Link
                               href="/contact-us"
-                              className="block text-center w-full mt-6 bg-red-600 text-white py-3 rounded-xl font-bold hover:bg-red-700 transition-colors"
+                              className="block text-center w-full mt-6 bg-[#A52B3A] text-white py-3 rounded-xl font-bold hover:bg-[#8C2030] transition-colors"
                             >
                               University Admission Inquiry
                             </Link>
@@ -585,9 +585,9 @@ export default function OurPartnersContent({
                       </div>
                     </>
                   ) : (
-                    <div className="flex flex-col md:flex-row items-start md:items-center w-full p-4 lg:p-5 gap-4 lg:gap-8 hover:bg-gray-50/50 transition-colors">
+                    <div className="flex flex-col md:flex-row items-start md:items-center w-full p-4 lg:p-5 gap-4 lg:gap-8 hover:bg-[#FBF8F0]/50 transition-colors">
                       {/* Image */}
-                      <div className="w-20 lg:w-24 h-20 lg:h-24 shrink-0 rounded-2xl overflow-hidden bg-gray-100">
+                      <div className="w-20 lg:w-24 h-20 lg:h-24 shrink-0 rounded-2xl overflow-hidden bg-[#F3F7F3]">
                         <img
                           src={p.image}
                           alt={p.name}
@@ -597,17 +597,17 @@ export default function OurPartnersContent({
 
                       {/* Info Column */}
                       <div className="flex-1 min-w-[200px]">
-                        <h3 className="text-lg font-bold text-gray-900 mb-0.5">
+                        <h3 className="text-lg font-bold text-[#202D28] mb-0.5">
                           {p.name}
                         </h3>
-                        <p className="text-sm font-medium text-red-600 mb-0.5">
+                        <p className="text-sm font-medium text-[#A52B3A] mb-0.5">
                           {p.designation}
                         </p>
-                        <p className="text-sm text-gray-500">{p.company}</p>
+                        <p className="text-sm text-[#7A877F]">{p.company}</p>
                       </div>
 
                       {/* Contact Column */}
-                      <div className="flex-[1.2] min-w-[200px] flex flex-col gap-1.5 text-sm text-gray-500">
+                      <div className="flex-[1.2] min-w-[200px] flex flex-col gap-1.5 text-sm text-[#7A877F]">
                         <div className="flex items-center gap-2">
                           <MapPin className="w-4 h-4 shrink-0" />
                           <span className="truncate">{p.city}</span>
@@ -632,14 +632,14 @@ export default function OurPartnersContent({
 
                       {/* Stats Column */}
                       <div className="flex-1 min-w-[120px] flex flex-col items-center md:items-center text-center">
-                        <p className="text-xl font-bold text-red-600">
+                        <p className="text-xl font-bold text-[#A52B3A]">
                           {p.studentsPlaced}
                         </p>
-                        <p className="text-[11px] text-gray-500 mt-0.5 mb-1">
+                        <p className="text-[11px] text-[#7A877F] mt-0.5 mb-1">
                           Students Placed
                         </p>
-                        <p className="text-sm font-semibold text-gray-900 flex items-center justify-center gap-1">
-                          <Star className="w-4 h-4 text-red-600 fill-current" />{" "}
+                        <p className="text-sm font-semibold text-[#202D28] flex items-center justify-center gap-1">
+                          <Star className="w-4 h-4 text-[#A52B3A] fill-current" />{" "}
                           {p.rating}
                         </p>
                       </div>
@@ -655,21 +655,21 @@ export default function OurPartnersContent({
                               });
                               setLeadModalOpen(true);
                             }}
-                            className="bg-white hover:bg-[#EAF1FB] text-red-600 text-sm font-bold px-6 py-2.5 rounded-lg border border-gray-200 shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
+                            className="bg-white hover:bg-[#F3F7F3] text-[#A52B3A] text-sm font-bold px-6 py-2.5 rounded-lg border border-[#DDE5DD] shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
                           >
                             Show Number
                           </button>
                         ) : (
                           <Link
                             href="/contact-us"
-                            className="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
+                            className="bg-[#A52B3A] hover:bg-[#8C2030] text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
                           >
                             Admission Inquiry
                           </Link>
                         )}
                         <Link
                           href="/contact-us"
-                          className="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
+                          className="bg-[#A52B3A] hover:bg-[#8C2030] text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-sm transition-colors whitespace-nowrap w-full md:w-auto text-center"
                         >
                           Contact Now
                         </Link>
@@ -686,13 +686,13 @@ export default function OurPartnersContent({
       {/* -- WHY PARTNER / BENEFITS -- */}
       <section className="bg-white/70 py-10">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-red-600 bg-[#EAF1FB] px-3 py-1 rounded-full mb-4">
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#A52B3A] bg-[#F3F7F3] px-3 py-1 rounded-full mb-4">
             Core Benefits
           </span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-[#202D28] mb-4">
             Why Partner With Us?
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-14">
+          <p className="text-[#5F6F67] max-w-2xl mx-auto mb-14">
             Join our growing network of education partners and help students
             achieve their dream of studying medicine abroad.
           </p>
@@ -711,17 +711,17 @@ export default function OurPartnersContent({
               return (
                 <div
                   key={b.title}
-                  className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                  className="bg-white rounded-2xl p-6 shadow-sm border border-[#DDE5DD] hover:shadow-md transition-shadow duration-300"
                 >
                   <div
                     className={`w-12 h-12 rounded-xl bg-gradient-to-br ${colorMap[b.color] || colorMap.red} shadow-md flex items-center justify-center mb-4`}
                   >
-                    <b.icon className="w-6 h-6 text-gray-900" />
+                    <b.icon className="w-6 h-6 text-[#202D28]" />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 text-left">
+                  <h3 className="text-lg font-bold text-[#202D28] mb-2 text-left">
                     {b.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed text-left">
+                  <p className="text-[#5F6F67] text-sm leading-relaxed text-left">
                     {b.desc}
                   </p>
                 </div>
@@ -732,30 +732,30 @@ export default function OurPartnersContent({
       </section>
 
       {/* -- BOTTOM CTA -- */}
-      <section className="relative overflow-hidden bg-white text-gray-900 py-16">
-        <div className="absolute -top-20 right-0 w-72 h-72 bg-[#EAF1FB]0/10 rounded-full hidden" />
-        <div className="absolute bottom-0 left-10 w-60 h-60 bg-[#EAF1FB]0/10 rounded-full hidden" />
+      <section className="relative overflow-hidden bg-white text-[#202D28] py-16">
+        <div className="absolute -top-20 right-0 w-72 h-72 bg-[#F3F7F3]/10 rounded-full hidden" />
+        <div className="absolute bottom-0 left-10 w-60 h-60 bg-[#F3F7F3]/10 rounded-full hidden" />
 
         <div className="relative max-w-3xl mx-auto px-4 text-center">
-          <Star className="w-10 h-10 text-red-600 mx-auto mb-5" />
+          <Star className="w-10 h-10 text-[#A52B3A] mx-auto mb-5" />
           <h2 className="text-3xl lg:text-4xl font-extrabold mb-4">
             Ready to Join Our Network?
           </h2>
-          <p className="text-gray-600 mb-10 text-lg">
+          <p className="text-[#5F6F67] mb-10 text-lg">
             Partner with us and be part of a trusted ecosystem that connects
-            aspiring medical students with world-class universities in Armenia.
+            aspiring medical students with world-class universities in Hungary.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-red-600 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-red-700 transition-colors shadow-lg cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[#A52B3A] text-white font-bold px-7 py-3.5 rounded-xl hover:bg-[#8C2030] transition-colors shadow-lg cursor-pointer"
             >
               <Handshake className="w-5 h-5" />
               Become a Partner
             </button>
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 border-2 border-gray-200 text-gray-900 font-bold px-7 py-3.5 rounded-xl hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 border-2 border-[#DDE5DD] text-[#202D28] font-bold px-7 py-3.5 rounded-xl hover:bg-[#F3F7F3] transition-colors"
             >
               <Users className="w-5 h-5" />
               Contact Our Team

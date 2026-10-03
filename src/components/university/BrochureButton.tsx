@@ -28,10 +28,10 @@ export default function BrochureButton({
 
   const btnCls =
     variant === "hero"
-      ? "border-2 border-white text-white px-6 py-2.5 rounded-lg font-semibold flex items-center gap-2 hover:bg-white hover:text-[#101B4D] transition-all duration-200 text-sm"
+      ? "border-2 border-white text-white px-6 py-2.5 rounded-lg font-semibold flex items-center gap-2 hover:bg-white hover:text-[#103D32] transition-all duration-200 text-sm"
       : variant === "download"
-        ? "shrink-0 inline-flex items-center gap-1.5 border-2 border-[#285BB5] text-[#285BB5] hover:bg-[#285BB5] hover:text-white text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200 whitespace-nowrap"
-        : "flex items-center gap-1.5 border-2 border-[#285BB5] text-[#285BB5] hover:bg-[#285BB5] hover:text-white text-xs font-semibold px-4 py-2 rounded-lg shadow transition-all duration-200 whitespace-nowrap";
+        ? "shrink-0 inline-flex items-center gap-1.5 border-2 border-[#175747] text-[#175747] hover:bg-[#175747] hover:text-white text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200 whitespace-nowrap"
+        : "flex items-center gap-1.5 border-2 border-[#175747] text-[#175747] hover:bg-[#175747] hover:text-white text-xs font-semibold px-4 py-2 rounded-lg shadow transition-all duration-200 whitespace-nowrap";
 
   const disabled = !effectiveBrochureUrl;
 

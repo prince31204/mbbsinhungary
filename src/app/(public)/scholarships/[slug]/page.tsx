@@ -52,13 +52,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch(() => null);
   if (!s) return { title: "Scholarship Not Found" };
   return buildMetadata({
-    title: s.metaTitle || `${s.title} — MBBS Scholarship Armenia`,
+    title: s.metaTitle || `${s.title} — MBBS Scholarship Hungary`,
     description:
       s.metaDescription ||
       s.shortnote ||
-      `Apply for ${s.title}. Scholarships for MBBS in Armenia.`,
+      `Apply for ${s.title}. Scholarships for MBBS in Hungary.`,
     entitySeo: {
-      metaKeyword: s.metaKeyword || `${s.title}, MBBS scholarship Armenia`,
+      metaKeyword: s.metaKeyword || `${s.title}, MBBS scholarship Hungary`,
     },
     path: `/scholarships/${slug}`,
   });
@@ -107,17 +107,17 @@ export default async function ScholarshipDetailPage({ params }: Props) {
       />
 
       {/* Breadcrumb */}
-      <nav className="bg-gray-50 border-b">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center space-x-2 text-sm text-gray-600">
-          <Link href="/" className="hover:text-[#285BB5]">
+      <nav className="bg-[#FBF8F0] border-b">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center space-x-2 text-sm text-[#5F6F67]">
+          <Link href="/" className="hover:text-[#175747]">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/scholarships" className="hover:text-[#285BB5]">
+          <Link href="/scholarships" className="hover:text-[#175747]">
             Scholarships
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-gray-800 font-medium truncate">
+          <span className="text-[#202D28] font-medium truncate">
             {scholarship.title}
           </span>
         </div>
@@ -129,7 +129,7 @@ export default async function ScholarshipDetailPage({ params }: Props) {
           <div className="grid lg:grid-cols-3 gap-8 items-start">
             <div className="lg:col-span-2">
               {scholarship.scholarshipType && (
-                <span className="inline-block bg-white/20 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
+                <span className="inline-block bg-white/20 text-[#202D28] text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
                   {scholarship.scholarshipType}
                 </span>
               )}
@@ -137,12 +137,12 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                 {scholarship.title}
               </h1>
               {scholarship.shortnote && (
-                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                <p className="text-lg text-[#5F6F67] mb-6 leading-relaxed">
                   {scholarship.shortnote}
                 </p>
               )}
               {scholarship.university && (
-                <div className="flex items-center gap-3 text-slate-600">
+                <div className="flex items-center gap-3 text-[#5F6F67]">
                   <Building2 className="w-4 h-4" />
                   <span>{scholarship.university.name}</span>
                   {scholarship.university.city && (
@@ -153,14 +153,14 @@ export default async function ScholarshipDetailPage({ params }: Props) {
             </div>
 
             {/* Quick Info Card */}
-            <div className="bg-white text-gray-800 rounded-2xl p-6 shadow-2xl">
-              <h3 className="font-bold text-lg mb-4 text-gray-900">
+            <div className="bg-white text-[#202D28] rounded-2xl p-6 shadow-2xl">
+              <h3 className="font-bold text-lg mb-4 text-[#202D28]">
                 Scholarship Overview
               </h3>
               <div className="space-y-3">
                 {(scholarship.amountMin || scholarship.amountMax) && (
                   <div className="flex justify-between">
-                    <span className="text-gray-500 flex items-center gap-1">
+                    <span className="text-[#7A877F] flex items-center gap-1">
                       <DollarSign className="w-4 h-4" />
                       Amount
                     </span>
@@ -180,15 +180,15 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                 )}
                 {scholarship.discountPercentage && (
                   <div className="flex justify-between">
-                    <span className="text-gray-500">Discount</span>
-                    <span className="font-semibold text-red-600">
+                    <span className="text-[#7A877F]">Discount</span>
+                    <span className="font-semibold text-[#A52B3A]">
                       {scholarship.discountPercentage}% off tuition
                     </span>
                   </div>
                 )}
                 {scholarship.availableSeats && (
                   <div className="flex justify-between">
-                    <span className="text-gray-500 flex items-center gap-1">
+                    <span className="text-[#7A877F] flex items-center gap-1">
                       <Users className="w-4 h-4" />
                       Seats
                     </span>
@@ -199,7 +199,7 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                 )}
                 {scholarship.program && (
                   <div className="flex justify-between">
-                    <span className="text-gray-500 flex items-center gap-1">
+                    <span className="text-[#7A877F] flex items-center gap-1">
                       <BookOpen className="w-4 h-4" />
                       Program
                     </span>
@@ -208,7 +208,7 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                 )}
                 {scholarship.applicationMode && (
                   <div className="flex justify-between">
-                    <span className="text-gray-500 flex items-center gap-1">
+                    <span className="text-[#7A877F] flex items-center gap-1">
                       <Clock className="w-4 h-4" />
                       Mode
                     </span>
@@ -220,7 +220,7 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                 {deadline && (
                   <div className="border-t pt-3 mt-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-500 flex items-center gap-1">
+                      <span className="text-[#7A877F] flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
                         Deadline
                       </span>
@@ -240,7 +240,7 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                       </div>
                     )}
                     {isExpired && (
-                      <div className="mt-2 bg-white text-red-600 rounded-lg px-3 py-2 text-sm font-medium text-center">
+                      <div className="mt-2 bg-white text-[#A52B3A] rounded-lg px-3 py-2 text-sm font-medium text-center">
                         Applications Closed
                       </div>
                     )}
@@ -249,7 +249,7 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                 {!isExpired && (
                   <Link
                     href="/contact-us"
-                    className="block w-full mt-4 bg-red-600 hover:bg-red-700 text-white text-center py-3 rounded-xl font-semibold transition-colors"
+                    className="block w-full mt-4 bg-[#A52B3A] hover:bg-[#8C2030] text-white text-center py-3 rounded-xl font-semibold transition-colors"
                   >
                     Apply Now <ArrowRight className="w-4 h-4 inline ml-1" />
                   </Link>
@@ -264,8 +264,8 @@ export default async function ScholarshipDetailPage({ params }: Props) {
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Eligibility / Features */}
-            <section className="bg-white rounded-2xl border border-gray-100 p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <section className="bg-white rounded-2xl border border-[#DDE5DD] p-8">
+              <h2 className="text-2xl font-bold text-[#202D28] mb-6 flex items-center gap-2">
                 <CheckCircle className="w-6 h-6 text-green-500" /> Scholarship
                 Highlights
               </h2>
@@ -292,12 +292,12 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                   .map((item) => (
                     <div
                       key={(item as { label: string }).label}
-                      className="bg-gray-50 rounded-xl p-4"
+                      className="bg-[#FBF8F0] rounded-xl p-4"
                     >
-                      <div className="text-xs text-gray-500 mb-1">
+                      <div className="text-xs text-[#7A877F] mb-1">
                         {(item as { label: string }).label}
                       </div>
-                      <div className="font-semibold text-gray-800">
+                      <div className="font-semibold text-[#202D28]">
                         {(item as { value: string }).value}
                       </div>
                     </div>
@@ -307,8 +307,8 @@ export default async function ScholarshipDetailPage({ params }: Props) {
 
             {/* FAQ Section */}
             {scholarship.faqs.length > 0 && (
-              <section className="bg-white rounded-2xl border border-gray-100 p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <section className="bg-white rounded-2xl border border-[#DDE5DD] p-8">
+                <h2 className="text-2xl font-bold text-[#202D28] mb-6 flex items-center gap-2">
                   <HelpCircle className="w-6 h-6 text-red-500" /> Frequently
                   Asked Questions
                 </h2>
@@ -316,13 +316,13 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                   {scholarship.faqs.map((faq) => (
                     <details
                       key={faq.id}
-                      className="group border border-gray-200 rounded-xl"
+                      className="group border border-[#DDE5DD] rounded-xl"
                     >
-                      <summary className="flex justify-between items-center p-5 cursor-pointer font-medium text-gray-800 hover:bg-gray-50 rounded-xl">
+                      <summary className="flex justify-between items-center p-5 cursor-pointer font-medium text-[#202D28] hover:bg-[#FBF8F0] rounded-xl">
                         {faq.question}
-                        <ChevronRight className="w-4 h-4 text-gray-500 group-open:rotate-90 transition-transform shrink-0 ml-3" />
+                        <ChevronRight className="w-4 h-4 text-[#7A877F] group-open:rotate-90 transition-transform shrink-0 ml-3" />
                       </summary>
-                      <div className="px-5 pb-5 text-gray-600 leading-relaxed">
+                      <div className="px-5 pb-5 text-[#5F6F67] leading-relaxed">
                         {faq.answer}
                       </div>
                     </details>
@@ -336,8 +336,8 @@ export default async function ScholarshipDetailPage({ params }: Props) {
           <div className="space-y-6">
             {/* University card */}
             {scholarship.university && (
-              <div className="bg-white rounded-2xl border border-gray-100 p-6">
-                <h3 className="font-bold text-gray-900 mb-4">Offered By</h3>
+              <div className="bg-white rounded-2xl border border-[#DDE5DD] p-6">
+                <h3 className="font-bold text-[#202D28] mb-4">Offered By</h3>
                 {scholarship.university.thumbnailPath && (
                   <div className="relative h-32 rounded-xl overflow-hidden mb-4">
                     <Image
@@ -349,17 +349,17 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                     />
                   </div>
                 )}
-                <h4 className="font-semibold text-gray-800">
+                <h4 className="font-semibold text-[#202D28]">
                   {scholarship.university.name}
                 </h4>
                 {scholarship.university.city && (
-                  <p className="text-sm text-gray-500 mt-1">
-                    {scholarship.university.city}, Armenia
+                  <p className="text-sm text-[#7A877F] mt-1">
+                    {scholarship.university.city}, Hungary
                   </p>
                 )}
                 <Link
                   href={`/universities/${scholarship.university.slug}`}
-                  className="mt-4 block text-center border border-gray-200 text-red-600 hover:bg-white py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="mt-4 block text-center border border-[#DDE5DD] text-[#A52B3A] hover:bg-white py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   View University →
                 </Link>
@@ -367,17 +367,17 @@ export default async function ScholarshipDetailPage({ params }: Props) {
             )}
 
             {/* CTA */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center">
+            <div className="bg-white border border-[#DDE5DD] rounded-2xl p-6 text-center">
               <Award className="w-10 h-10 text-red-500 mx-auto mb-3" />
-              <h3 className="font-bold text-gray-900 mb-2">
+              <h3 className="font-bold text-[#202D28] mb-2">
                 Interested in this scholarship?
               </h3>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-[#5F6F67] mb-4">
                 Our counsellors will guide you through the application process.
               </p>
               <Link
                 href="/contact-us?source=talk_to_counselor"
-                className="block w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold transition-colors text-sm"
+                className="block w-full bg-[#A52B3A] hover:bg-[#8C2030] text-white py-3 rounded-xl font-semibold transition-colors text-sm"
               >
                 Talk to a Counsellor
               </Link>

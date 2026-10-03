@@ -22,8 +22,8 @@ const columns: Column<Testimonial>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-gray-900 text-sm">{row.name}</p>
-        <p className="text-xs text-gray-500">{row.designation ?? "—"}</p>
+        <p className="font-medium text-[#202D28] text-sm">{row.name}</p>
+        <p className="text-xs text-[#7A877F]">{row.designation ?? "—"}</p>
       </div>
     ),
   },
@@ -38,7 +38,7 @@ const columns: Column<Testimonial>[] = [
     key: "createdAt",
     label: "Added",
     render: (row) => (
-      <span className="text-xs text-gray-500">
+      <span className="text-xs text-[#7A877F]">
         {new Date(row.createdAt).toLocaleDateString("en-IN")}
       </span>
     ),

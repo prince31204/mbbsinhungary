@@ -13,7 +13,7 @@ import { prisma } from "@/lib/prisma";
 
 const quickLinks = [
   { name: "Universities", path: "/universities" },
-  { name: "About Armenia", path: "/about-Armenia" },
+  { name: "About Hungary", path: "/about-Hungary" },
   { name: "Compare Universities", path: "/compare" },
   { name: "Education System", path: "/education-system" },
   { name: "Contact Us", path: "/contact-us" },
@@ -30,7 +30,7 @@ const services = [
 const resources = [
   { name: "Application Guide", href: "/apply" },
   { name: "Scholarship Guide", href: "/scholarships" },
-  { name: "Country Information", href: "/about-Armenia" },
+  { name: "Country Information", href: "/about-Hungary" },
   { name: "FMGE Pass Rates", href: "/fmge-rates" },
   { name: "Sitemap", href: "/sitemap.xml" },
 ];
@@ -52,34 +52,34 @@ export default async function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0B1235] text-white">
+    <footer className="bg-[#103D32] text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid lg:grid-cols-5 gap-4">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-[#D90012] rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#A52B3A] rounded-full flex items-center justify-center">
                 <GraduationCap className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">MBBS in Armenia</h3>
+                <h3 className="text-xl font-bold text-white">MBBS in Hungary</h3>
               </div>
             </div>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-[#F2A800] flex-shrink-0" />
-                <span className="text-[#B9C5D8] text-sm">+91 9667 667 331</span>
+                <Phone className="w-4 h-4 text-[#D5AE67] flex-shrink-0" />
+                <span className="text-[#7A877F] text-sm">+91 9667 667 331</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-[#F2A800] flex-shrink-0" />
-                <span className="text-[#B9C5D8] text-sm">
-                  info@mbbsinarmenia.com
+                <Mail className="w-4 h-4 text-[#D5AE67] flex-shrink-0" />
+                <span className="text-[#7A877F] text-sm">
+                  info@mbbsinhungary.com
                 </span>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-[#F2A800] flex-shrink-0 mt-0.5" />
-                <span className="text-[#B9C5D8] text-sm">
+                <MapPin className="w-4 h-4 text-[#D5AE67] flex-shrink-0 mt-0.5" />
+                <span className="text-[#7A877F] text-sm">
                   B-16 Ground Floor, Mayfield Garden, Sector 50, Gurugram,
                   Haryana 122018
                 </span>
@@ -91,22 +91,22 @@ export default async function Footer() {
                 {[
                   {
                     Icon: Facebook,
-                    href: "https://facebook.com/mbbsinArmenia",
+                    href: "https://facebook.com/mbbsinHungary",
                     label: "Facebook",
                   },
                   {
                     Icon: Twitter,
-                    href: "https://twitter.com/mbbsinArmenia",
+                    href: "https://twitter.com/mbbsinHungary",
                     label: "Twitter",
                   },
                   {
                     Icon: Instagram,
-                    href: "https://instagram.com/mbbsinArmenia",
+                    href: "https://instagram.com/mbbsinHungary",
                     label: "Instagram",
                   },
                   {
                     Icon: Youtube,
-                    href: "https://youtube.com/@mbbsinArmenia",
+                    href: "https://youtube.com/@mbbsinHungary",
                     label: "YouTube",
                   },
                 ].map(({ Icon, href, label }) => (
@@ -115,7 +115,7 @@ export default async function Footer() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-[#285BB5] text-white rounded-full flex items-center justify-center hover:bg-[#D90012] hover:text-white transition-colors"
+                    className="w-10 h-10 bg-[#175747] text-white rounded-full flex items-center justify-center hover:bg-[#A52B3A] hover:text-white transition-colors"
                     aria-label={label}
                   >
                     <Icon className="w-5 h-5" />
@@ -133,7 +133,7 @@ export default async function Footer() {
                 <li key={link.path}>
                   <Link
                     href={link.path}
-                    className="text-[#DCE6F5] hover:text-[#F2A800] transition-colors text-sm"
+                    className="text-[#DDE5DD] hover:text-[#D5AE67] transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -150,7 +150,7 @@ export default async function Footer() {
                 <li key={index}>
                   <Link
                     href={u.href}
-                    className="text-[#DCE6F5] hover:text-[#F2A800] transition-colors text-sm"
+                    className="text-[#DDE5DD] hover:text-[#D5AE67] transition-colors text-sm"
                   >
                     {u.name}
                   </Link>
@@ -167,7 +167,7 @@ export default async function Footer() {
                 <li key={s.name}>
                   <Link
                     href={s.href}
-                    className="text-[#DCE6F5] hover:text-[#F2A800] transition-colors text-sm"
+                    className="text-[#DDE5DD] hover:text-[#D5AE67] transition-colors text-sm"
                   >
                     {s.name}
                   </Link>
@@ -184,7 +184,7 @@ export default async function Footer() {
                 <li key={r.name}>
                   <Link
                     href={r.href}
-                    className="text-[#DCE6F5] hover:text-[#F2A800] transition-colors text-sm"
+                    className="text-[#DDE5DD] hover:text-[#D5AE67] transition-colors text-sm"
                   >
                     {r.name}
                   </Link>
@@ -199,26 +199,26 @@ export default async function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-[#B9C5D8] text-sm">
-              © {new Date().getFullYear()} MBBS in Armenia | Partner of Embassy
-              of Armenia
+            <div className="text-[#7A877F] text-sm">
+              © {new Date().getFullYear()} MBBS in Hungary | Partner of Embassy
+              of Hungary
             </div>
             <div className="flex space-x-6 text-sm">
               <Link
                 href="/privacy-policy"
-                className="text-[#DCE6F5] hover:text-[#F2A800] transition-colors"
+                className="text-[#DDE5DD] hover:text-[#D5AE67] transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms-of-service"
-                className="text-[#DCE6F5] hover:text-[#F2A800] transition-colors"
+                className="text-[#DDE5DD] hover:text-[#D5AE67] transition-colors"
               >
                 Terms of Service
               </Link>
               <Link
                 href="/cookie-policy"
-                className="text-[#DCE6F5] hover:text-[#F2A800] transition-colors"
+                className="text-[#DDE5DD] hover:text-[#D5AE67] transition-colors"
               >
                 Cookie Policy
               </Link>

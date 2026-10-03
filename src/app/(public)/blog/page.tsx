@@ -8,13 +8,13 @@ import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
   title:
-    "MBBS Armenia Blog — Medical Education Tips, University Reviews & More",
+    "MBBS Hungary Blog — Medical Education Tips, University Reviews & More",
   description:
-    "Read our expert blog on MBBS in Armenia. University reviews, student experiences, admission tips, and medical education guides.",
+    "Read our expert blog on MBBS in Hungary. University reviews, student experiences, admission tips, and medical education guides.",
   path: "/blog",
   entitySeo: {
     metaKeyword:
-      "MBBS Armenia blog, medical education Armenia, study abroad blog",
+      "MBBS Hungary blog, medical education Hungary, study abroad blog",
   },
   pageKey: "blog",
 });
@@ -49,19 +49,19 @@ export default async function BlogPage() {
   ]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#FBF8F0]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Header */}
-      <div className="bg-white text-gray-900 py-16">
+      <div className="bg-white text-[#202D28] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">
             Blog &amp; News
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Expert insights on MBBS in Armenia, admission tips, university
+          <p className="text-xl text-[#5F6F67] max-w-3xl mx-auto">
+            Expert insights on MBBS in Hungary, admission tips, university
             reviews, and student success stories.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default async function BlogPage() {
               <a
                 key={tab.href}
                 href={tab.href}
-                className="px-6 py-4 text-sm font-semibold text-gray-600 hover:text-[#285BB5] border-b-2 border-transparent hover:border-gray-200 transition-colors"
+                className="px-6 py-4 text-sm font-semibold text-[#5F6F67] hover:text-[#175747] border-b-2 border-transparent hover:border-[#DDE5DD] transition-colors"
               >
                 {tab.label}
               </a>
@@ -93,7 +93,7 @@ export default async function BlogPage() {
           {/* Main posts */}
           <div className="lg:col-span-3">
             {recentBlogs.length === 0 ? (
-              <div className="text-center py-16 text-gray-500">
+              <div className="text-center py-16 text-[#7A877F]">
                 <p>No blog posts available yet. Check back soon!</p>
               </div>
             ) : (
@@ -123,23 +123,23 @@ export default async function BlogPage() {
                       <div className="absolute top-3 left-3 z-20">
                         <Link
                           href={`/blog/${blog.category.slug}`}
-                          className="bg-red-600 text-white text-xs font-medium px-3 py-1 rounded-full hover:bg-red-700 relative z-20"
+                          className="bg-[#A52B3A] text-white text-xs font-medium px-3 py-1 rounded-full hover:bg-[#8C2030] relative z-20"
                         >
                           {blog.category.name}
                         </Link>
                       </div>
                     </div>
                     <div className="p-6 flex-1 flex flex-col">
-                      <h2 className="font-bold text-gray-800 text-lg mb-2 line-clamp-2 group-hover:text-[#285BB5] transition-colors relative z-0">
+                      <h2 className="font-bold text-[#202D28] text-lg mb-2 line-clamp-2 group-hover:text-[#175747] transition-colors relative z-0">
                         {blog.title}
                       </h2>
                       {blog.shortnote && (
                         <div
-                          className="text-gray-600 text-sm mb-4 line-clamp-2 prose prose-sm max-w-none prose-p:my-0 relative z-0"
+                          className="text-[#5F6F67] text-sm mb-4 line-clamp-2 prose prose-sm max-w-none prose-p:my-0 relative z-0"
                           dangerouslySetInnerHTML={{ __html: blog.shortnote }}
                         />
                       )}
-                      <div className="flex items-center justify-between text-sm text-gray-500 mt-auto relative z-0">
+                      <div className="flex items-center justify-between text-sm text-[#7A877F] mt-auto relative z-0">
                         <div className="flex items-center space-x-3">
                           {blog.author && (
                             <span className="flex items-center space-x-1">
@@ -161,7 +161,7 @@ export default async function BlogPage() {
                             </span>
                           </span>
                         </div>
-                        <span className="text-red-600 hover:text-[#285BB5] font-medium flex items-center space-x-1">
+                        <span className="text-[#A52B3A] hover:text-[#175747] font-medium flex items-center space-x-1">
                           <span>Read</span>
                           <ArrowRight className="w-3 h-3" />
                         </span>
@@ -175,17 +175,17 @@ export default async function BlogPage() {
 
           {/* Sidebar — categories */}
           <div className="space-y-6">
-            <div className="bg-white rounded-2xl border border-gray-200 p-6">
-              <h3 className="font-bold text-gray-800 mb-4">Categories</h3>
+            <div className="bg-white rounded-2xl border border-[#DDE5DD] p-6">
+              <h3 className="font-bold text-[#202D28] mb-4">Categories</h3>
               <ul className="space-y-2">
                 {categories.map((cat) => (
                   <li key={cat.id}>
                     <Link
                       href={`/blog/${cat.slug}`}
-                      className="flex items-center justify-between text-gray-600 hover:text-[#285BB5] py-2 border-b border-gray-50 last:border-0 transition-colors"
+                      className="flex items-center justify-between text-[#5F6F67] hover:text-[#175747] py-2 border-b border-gray-50 last:border-0 transition-colors"
                     >
                       <span className="text-sm">{cat.name}</span>
-                      <span className="text-xs bg-white text-red-600 px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-white text-[#A52B3A] px-2 py-0.5 rounded-full">
                         {cat._count.blogs}
                       </span>
                     </Link>

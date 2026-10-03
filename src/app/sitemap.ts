@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://mbbsinarmenia.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://mbbsinhungary.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
@@ -70,7 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.5,
     },
     {
-      url: `${SITE_URL}/about-Armenia`,
+      url: `${SITE_URL}/about-Hungary`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.6,

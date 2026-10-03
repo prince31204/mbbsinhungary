@@ -121,10 +121,10 @@ export default function ExpertTeamPage() {
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Users size={22} className="text-red-600" />
+          <Users size={22} className="text-[#A52B3A]" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Expert Team</h1>
-            <p className="text-sm text-gray-500">
+            <h1 className="text-2xl font-bold text-[#202D28]">Expert Team</h1>
+            <p className="text-sm text-[#7A877F]">
               Manage counsellors and team members shown on the website
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function ExpertTeamPage() {
             setEditId(null);
             setForm(blank);
           }}
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#175747] hover:bg-[#175747]"
         >
           {showForm ? (
             <>
@@ -152,13 +152,13 @@ export default function ExpertTeamPage() {
       </div>
 
       {showForm && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28]">
             {editId ? "Edit Member" : "New Team Member"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-1.5">
-              <label className="text-xs text-gray-500">Name *</label>
+              <label className="text-xs text-[#7A877F]">Name *</label>
               <Input
                 value={form.name}
                 onChange={(e) => set("name", e.target.value)}
@@ -166,7 +166,7 @@ export default function ExpertTeamPage() {
               />
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs text-gray-500">Designation</label>
+              <label className="text-xs text-[#7A877F]">Designation</label>
               <Input
                 value={form.designation || ""}
                 onChange={(e) => set("designation", e.target.value)}
@@ -174,7 +174,7 @@ export default function ExpertTeamPage() {
               />
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs text-gray-500">LinkedIn URL</label>
+              <label className="text-xs text-[#7A877F]">LinkedIn URL</label>
               <Input
                 value={form.linkedinUrl || ""}
                 onChange={(e) => set("linkedinUrl", e.target.value)}
@@ -182,7 +182,7 @@ export default function ExpertTeamPage() {
               />
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs text-gray-500">Position</label>
+              <label className="text-xs text-[#7A877F]">Position</label>
               <Input
                 type="number"
                 value={form.position}
@@ -190,13 +190,13 @@ export default function ExpertTeamPage() {
               />
             </div>
             <div className="md:col-span-2 space-y-1.5">
-              <label className="text-xs text-gray-500">Description</label>
+              <label className="text-xs text-[#7A877F]">Description</label>
               <textarea
                 value={form.description || ""}
                 onChange={(e) => set("description", e.target.value)}
                 rows={3}
                 placeholder="Brief bio or introduction..."
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
               />
             </div>
             <div className="md:col-span-2">
@@ -217,7 +217,7 @@ export default function ExpertTeamPage() {
               checked={form.status}
               onCheckedChange={(v) => set("status", v)}
             />
-            <label className="text-sm text-gray-600">
+            <label className="text-sm text-[#5F6F67]">
               Active (show on website)
             </label>
           </div>
@@ -228,7 +228,7 @@ export default function ExpertTeamPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#175747] hover:bg-[#175747]"
             >
               {saving ? (
                 <>
@@ -246,15 +246,15 @@ export default function ExpertTeamPage() {
         </div>
       )}
 
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : items.length === 0 ? (
           <div className="p-12 text-center">
-            <Users size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No team members added yet.</p>
+            <Users size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No team members added yet.</p>
           </div>
         ) : (
           <div className="divide-y divide-gray-100">
@@ -265,37 +265,37 @@ export default function ExpertTeamPage() {
                   <img
                     src={item.photoPath}
                     alt={item.name}
-                    className="w-12 h-12 rounded-full object-cover border border-gray-200 shrink-0"
+                    className="w-12 h-12 rounded-full object-cover border border-[#DDE5DD] shrink-0"
                   />
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-[#EAF1FB]0 flex items-center justify-center text-red-600 font-semibold text-lg shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#175747] flex items-center justify-center text-[#A52B3A] font-semibold text-lg shrink-0">
                     {item.name.charAt(0)}
                   </div>
                 )}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
-                    <p className="font-semibold text-gray-800">{item.name}</p>
+                    <p className="font-semibold text-[#202D28]">{item.name}</p>
                     {item.linkedinUrl && (
                       <a
                         href={item.linkedinUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-red-500 hover:text-[#285BB5]"
+                        className="text-red-500 hover:text-[#175747]"
                       >
                         <Linkedin size={14} />
                       </a>
                     )}
                     <span
-                      className={`text-xs px-1.5 py-0.5 rounded-full ${item.status ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-500"}`}
+                      className={`text-xs px-1.5 py-0.5 rounded-full ${item.status ? "bg-green-100 text-green-700" : "bg-[#F3F7F3] text-[#7A877F]"}`}
                     >
                       {item.status ? "Active" : "Hidden"}
                     </span>
                   </div>
                   {item.designation && (
-                    <p className="text-sm text-gray-500">{item.designation}</p>
+                    <p className="text-sm text-[#7A877F]">{item.designation}</p>
                   )}
                   {item.description && (
-                    <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">
+                    <p className="text-xs text-[#7A877F] mt-0.5 line-clamp-1">
                       {item.description}
                     </p>
                   )}
@@ -316,7 +316,7 @@ export default function ExpertTeamPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                    className="h-8 w-8 p-0 text-[#A52B3A] hover:bg-[#175747]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

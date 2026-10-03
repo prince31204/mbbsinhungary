@@ -63,23 +63,23 @@ export default function PartnerInquiryCreatePage() {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-lg bg-[#EAF1FB]0 flex items-center justify-center text-red-600">
+        <div className="w-10 h-10 rounded-lg bg-[#175747] flex items-center justify-center text-[#A52B3A]">
           <Building2 size={20} />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-800">Add New Partner</h1>
-          <p className="text-sm text-gray-500">
+          <h1 className="text-2xl font-bold text-[#202D28]">Add New Partner</h1>
+          <p className="text-sm text-[#7A877F]">
             Manually add a partner to the system
           </p>
         </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="space-y-1.5">
               <Label>
-                Contact Name <span className="text-red-600">*</span>
+                Contact Name <span className="text-[#A52B3A]">*</span>
               </Label>
               <Input
                 value={form.name}
@@ -90,7 +90,7 @@ export default function PartnerInquiryCreatePage() {
             </div>
             <div className="space-y-1.5">
               <Label>
-                Email Address <span className="text-red-600">*</span>
+                Email Address <span className="text-[#A52B3A]">*</span>
               </Label>
               <Input
                 type="email"
@@ -181,7 +181,7 @@ export default function PartnerInquiryCreatePage() {
             {/* Image Upload Section */}
             <div className="space-y-1.5 border-t pt-4 md:col-span-2">
               <Label>Partner Image / Logo</Label>
-              <p className="text-sm text-gray-500 mb-2">
+              <p className="text-sm text-[#7A877F] mb-2">
                 Upload a profile picture or company logo.
               </p>
               <ImageUpload
@@ -204,7 +204,7 @@ export default function PartnerInquiryCreatePage() {
             </div>
 
             <div className="space-y-1.5 pt-4 border-t md:col-span-2">
-              <Label className="font-semibold text-gray-800">
+              <Label className="font-semibold text-[#202D28]">
                 Initial Status
               </Label>
               <Select
@@ -224,7 +224,7 @@ export default function PartnerInquiryCreatePage() {
                   </SelectItem>
                 </SelectContent>
               </Select>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-[#7A877F] mt-1">
                 Partners marked as "Converted" will immediately appear on the
                 public partner page.
               </p>
@@ -236,7 +236,7 @@ export default function PartnerInquiryCreatePage() {
           <Button
             type="submit"
             disabled={loading}
-            className="w-40 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="w-40 bg-[#175747] hover:bg-[#175747]"
           >
             {loading ? "Saving…" : "Create Partner"}
           </Button>

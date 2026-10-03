@@ -53,18 +53,18 @@ export function OgImagePicker({
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <Label className="text-xs font-medium text-gray-500 uppercase tracking-wider">
+        <Label className="text-xs font-medium text-[#7A877F] uppercase tracking-wider">
           {label}
         </Label>
         {loading && (
-          <Loader2 size={12} className="animate-spin text-gray-500" />
+          <Loader2 size={12} className="animate-spin text-[#7A877F]" />
         )}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-3">
           <div className="space-y-1.5">
-            <label className="text-[10px] text-gray-500 font-medium">
+            <label className="text-[10px] text-[#7A877F] font-medium">
               Select from Gallery
             </label>
             <Select
@@ -90,7 +90,7 @@ export function OgImagePicker({
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-[10px] text-gray-500 font-medium">
+            <label className="text-[10px] text-[#7A877F] font-medium">
               Manual URL / Path
             </label>
             <Input
@@ -103,10 +103,10 @@ export function OgImagePicker({
         </div>
 
         <div className="space-y-1.5">
-          <label className="text-[10px] text-gray-500 font-medium">
+          <label className="text-[10px] text-[#7A877F] font-medium">
             Preview
           </label>
-          <div className="aspect-video bg-gray-50 border border-dashed border-gray-200 rounded-lg overflow-hidden flex items-center justify-center relative group">
+          <div className="aspect-video bg-[#FBF8F0] border border-dashed border-[#DDE5DD] rounded-lg overflow-hidden flex items-center justify-center relative group">
             {value ? (
               <img
                 src={cdn(value) || value}
@@ -118,14 +118,14 @@ export function OgImagePicker({
                 }}
               />
             ) : (
-              <div className="text-gray-600 flex flex-col items-center gap-1">
+              <div className="text-[#5F6F67] flex flex-col items-center gap-1">
                 <ImageIcon size={24} />
                 <span className="text-[10px]">No image selected</span>
               </div>
             )}
             {value && (
               <div className="absolute inset-x-0 bottom-0 bg-white/50 p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
-                <p className="text-[10px] text-gray-900 truncate text-center">
+                <p className="text-[10px] text-[#202D28] truncate text-center">
                   {value}
                 </p>
               </div>

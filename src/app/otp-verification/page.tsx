@@ -92,19 +92,19 @@ export default function OtpVerificationPage() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8 text-center">
-        <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 bg-[#A52B3A] rounded-full flex items-center justify-center mx-auto mb-4">
           <GraduationCap className="w-9 h-9 text-white" />
         </div>
-        <h1 className="text-2xl font-bold text-gray-800 mb-2">
+        <h1 className="text-2xl font-bold text-[#202D28] mb-2">
           Verify Your Email
         </h1>
-        <p className="text-gray-500 text-sm mb-2">
+        <p className="text-[#7A877F] text-sm mb-2">
           We&apos;ve sent a 6-digit verification code to
         </p>
-        <p className="font-semibold text-gray-800 mb-8">{email}</p>
+        <p className="font-semibold text-[#202D28] mb-8">{email}</p>
 
         {error && (
-          <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-lg mb-6 text-sm text-left">
+          <div className="bg-white border border-[#DDE5DD] text-[#175747] px-4 py-3 rounded-lg mb-6 text-sm text-left">
             {error}
           </div>
         )}
@@ -129,7 +129,7 @@ export default function OtpVerificationPage() {
                 value={digit}
                 onChange={(e) => handleOtpChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
-                className="w-12 h-14 text-center text-xl font-bold border-2 border-gray-300 rounded-xl focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/200 transition-colors"
+                className="w-12 h-14 text-center text-xl font-bold border-2 border-gray-300 rounded-xl focus:border-[#DDE5DD] focus:outline-none focus:ring-2 focus:ring-[#175747]/200 transition-colors"
               />
             ))}
           </div>
@@ -137,7 +137,7 @@ export default function OtpVerificationPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-red-600 text-white py-3.5 rounded-xl font-semibold hover:bg-red-700 disabled:opacity-60 transition-colors flex items-center justify-center space-x-2"
+            className="w-full bg-[#A52B3A] text-white py-3.5 rounded-xl font-semibold hover:bg-[#8C2030] disabled:opacity-60 transition-colors flex items-center justify-center space-x-2"
           >
             {loading ? (
               <>
@@ -152,12 +152,12 @@ export default function OtpVerificationPage() {
 
         <div className="mt-6">
           {countdown > 0 ? (
-            <p className="text-gray-500 text-sm">Resend OTP in {countdown}s</p>
+            <p className="text-[#7A877F] text-sm">Resend OTP in {countdown}s</p>
           ) : (
             <button
               onClick={handleResend}
               disabled={resending}
-              className="flex items-center justify-center space-x-1.5 text-red-600 hover:text-[#285BB5] font-medium text-sm mx-auto disabled:opacity-60"
+              className="flex items-center justify-center space-x-1.5 text-[#A52B3A] hover:text-[#175747] font-medium text-sm mx-auto disabled:opacity-60"
             >
               <RefreshCw
                 className={`w-4 h-4 ${resending ? "animate-spin" : ""}`}
@@ -170,7 +170,7 @@ export default function OtpVerificationPage() {
         <div className="mt-4">
           <Link
             href="/register"
-            className="text-gray-500 hover:text-gray-600 text-xs"
+            className="text-[#7A877F] hover:text-[#5F6F67] text-xs"
           >
             ← Back to Register
           </Link>

@@ -92,20 +92,20 @@ export function FaqsTab({ apiBase }: Props) {
   };
 
   if (loading)
-    return <div className="p-4 text-gray-500 text-sm">Loading FAQs...</div>;
+    return <div className="p-4 text-[#7A877F] text-sm">Loading FAQs...</div>;
 
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h3 className="font-semibold text-gray-900">FAQs ({items.length})</h3>
+        <h3 className="font-semibold text-[#202D28]">FAQs ({items.length})</h3>
         <Button size="sm" onClick={() => setAdding(!adding)}>
           <Plus className="w-4 h-4 mr-1" /> Add FAQ
         </Button>
       </div>
 
       {adding && (
-        <div className="border border-gray-200 rounded-xl p-4 bg-white space-y-3">
-          <h4 className="font-medium text-[#101B4D]">New FAQ</h4>
+        <div className="border border-[#DDE5DD] rounded-xl p-4 bg-white space-y-3">
+          <h4 className="font-medium text-[#103D32]">New FAQ</h4>
           <div>
             <Label>Question *</Label>
             <Input
@@ -140,14 +140,14 @@ export function FaqsTab({ apiBase }: Props) {
 
       <div className="space-y-3">
         {items.length === 0 ? (
-          <p className="text-gray-500 text-sm text-center py-8">
+          <p className="text-[#7A877F] text-sm text-center py-8">
             No FAQs yet. Add your first FAQ above.
           </p>
         ) : (
           items.map((faq, idx) => (
             <div
               key={faq.id}
-              className="border border-gray-200 rounded-xl overflow-hidden"
+              className="border border-[#DDE5DD] rounded-xl overflow-hidden"
             >
               {editingId === faq.id ? (
                 <div className="p-4 bg-red-400 space-y-3">
@@ -186,11 +186,11 @@ export function FaqsTab({ apiBase }: Props) {
               ) : (
                 <div className="p-4 flex items-start justify-between gap-3">
                   <div className="flex-1 min-w-0">
-                    <p className="font-medium text-gray-900 text-sm">
+                    <p className="font-medium text-[#202D28] text-sm">
                       Q{idx + 1}: {faq.question}
                     </p>
                     {faq.answer && (
-                      <p className="text-sm text-gray-500 mt-1 line-clamp-2">
+                      <p className="text-sm text-[#7A877F] mt-1 line-clamp-2">
                         {faq.answer}
                       </p>
                     )}
@@ -213,7 +213,7 @@ export function FaqsTab({ apiBase }: Props) {
                       size="sm"
                       variant="ghost"
                       onClick={() => handleDelete(faq.id)}
-                      className="text-red-600 hover:text-[#285BB5]"
+                      className="text-[#A52B3A] hover:text-[#175747]"
                     >
                       <Trash2 className="w-4 h-4" />
                     </Button>

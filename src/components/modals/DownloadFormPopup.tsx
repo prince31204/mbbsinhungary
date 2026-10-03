@@ -25,7 +25,7 @@ interface Props {
 
 const PHONE_CODES = [
   { code: "+91", country: "India" },
-  { code: "+996", country: "Armenia" },
+  { code: "+996", country: "Hungary" },
   { code: "+1", country: "USA/Canada" },
   { code: "+44", country: "UK" },
   { code: "+92", country: "Pakistan" },
@@ -136,7 +136,7 @@ export default function DownloadFormPopup({
   };
 
   const inputCls =
-    "w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white";
+    "w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent transition text-sm outline-none text-[#202D28] placeholder:text-[#7A877F] bg-white";
 
   return (
     <div
@@ -149,7 +149,7 @@ export default function DownloadFormPopup({
       >
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-600 transition-colors"
+          className="absolute top-4 right-4 text-[#7A877F] hover:text-[#5F6F67] transition-colors"
         >
           <X size={20} />
         </button>
@@ -159,15 +159,15 @@ export default function DownloadFormPopup({
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
               <CheckCircle size={40} className="text-green-600" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Thank You!</h3>
-            <p className="text-gray-600 mb-6">
+            <h3 className="text-xl font-bold text-[#202D28] mb-2">Thank You!</h3>
+            <p className="text-[#5F6F67] mb-6">
               {brochureUrl
                 ? "Your brochure download has started. Our counsellors will get in touch shortly."
                 : "Your request has been received. Our counsellors will send the brochure to your email shortly."}
             </p>
             <button
               onClick={handleClose}
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-xl text-sm font-medium transition"
+              className="bg-[#A52B3A] hover:bg-[#8C2030] text-white px-6 py-2.5 rounded-xl text-sm font-medium transition"
             >
               Close
             </button>
@@ -175,22 +175,22 @@ export default function DownloadFormPopup({
         ) : (
           <>
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-[#EAF1FB] p-3 rounded-xl">
-                <Download className="w-6 h-6 text-red-600" />
+              <div className="bg-[#F3F7F3] p-3 rounded-xl">
+                <Download className="w-6 h-6 text-[#A52B3A]" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-900">
+                <h3 className="text-lg font-bold text-[#202D28]">
                   {title || "Download Brochure"}
                 </h3>
                 {description ? (
-                  <p className="text-sm text-gray-500">{description}</p>
+                  <p className="text-sm text-[#7A877F]">{description}</p>
                 ) : universityName && !title ? (
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-[#7A877F]">
                     Fill in the details to download the brochure for{" "}
                     {universityName}.
                   </p>
                 ) : (
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-[#7A877F]">
                     Fill in the details to download the requested document.
                   </p>
                 )}
@@ -202,7 +202,7 @@ export default function DownloadFormPopup({
               <div className="relative">
                 <User
                   size={16}
-                  className="absolute left-3.5 top-3.5 text-gray-500"
+                  className="absolute left-3.5 top-3.5 text-[#7A877F]"
                 />
                 <input
                   required
@@ -210,7 +210,7 @@ export default function DownloadFormPopup({
                   value={form.name}
                   onChange={(e) => set("name", e.target.value)}
                   placeholder="Your Name"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent transition text-sm outline-none text-[#202D28] placeholder:text-[#7A877F] bg-white"
                 />
               </div>
 
@@ -218,7 +218,7 @@ export default function DownloadFormPopup({
               <div className="relative">
                 <Mail
                   size={16}
-                  className="absolute left-3.5 top-3.5 text-gray-500"
+                  className="absolute left-3.5 top-3.5 text-[#7A877F]"
                 />
                 <input
                   required
@@ -226,7 +226,7 @@ export default function DownloadFormPopup({
                   value={form.email}
                   onChange={(e) => set("email", e.target.value)}
                   placeholder="your.email@example.com"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent transition text-sm outline-none text-[#202D28] placeholder:text-[#7A877F] bg-white"
                 />
               </div>
 
@@ -235,12 +235,12 @@ export default function DownloadFormPopup({
                 <div className="relative">
                   <Phone
                     size={16}
-                    className="absolute left-3 top-3.5 text-gray-500"
+                    className="absolute left-3 top-3.5 text-[#7A877F]"
                   />
                   <select
                     value={form.countryCode}
                     onChange={(e) => set("countryCode", e.target.value)}
-                    className="pl-9 pr-2 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 text-sm outline-none w-28 bg-white text-gray-900"
+                    className="pl-9 pr-2 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#175747]/500 text-sm outline-none w-28 bg-white text-[#202D28]"
                   >
                     {PHONE_CODES.map((c) => (
                       <option key={c.code} value={c.code}>
@@ -263,19 +263,19 @@ export default function DownloadFormPopup({
               <div className="relative">
                 <Globe
                   size={16}
-                  className="absolute left-3.5 top-3.5 text-gray-500"
+                  className="absolute left-3.5 top-3.5 text-[#7A877F]"
                 />
                 <input
                   type="text"
                   value={form.nationality}
                   onChange={(e) => set("nationality", e.target.value)}
                   placeholder="Your Nationality"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent transition text-sm outline-none text-[#202D28] placeholder:text-[#7A877F] bg-white"
                 />
               </div>
 
               {error && (
-                <div className="rounded-xl bg-white border border-gray-200 px-4 py-3 text-sm text-[#285BB5]">
+                <div className="rounded-xl bg-white border border-[#DDE5DD] px-4 py-3 text-sm text-[#175747]">
                   {error}
                 </div>
               )}
@@ -283,7 +283,7 @@ export default function DownloadFormPopup({
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-3.5 rounded-xl shadow-lg transition disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full flex items-center justify-center gap-2 bg-[#A52B3A] hover:bg-[#8C2030] text-white font-semibold py-3.5 rounded-xl shadow-lg transition disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {submitting ? (
                   <>
@@ -296,7 +296,7 @@ export default function DownloadFormPopup({
                 )}
               </button>
 
-              <p className="text-center text-xs text-gray-500">
+              <p className="text-center text-xs text-[#7A877F]">
                 By submitting, you agree to be contacted by our counsellors.
               </p>
             </form>

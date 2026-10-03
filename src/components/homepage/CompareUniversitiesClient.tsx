@@ -141,13 +141,13 @@ export default function CompareUniversitiesClient({
   };
 
   return (
-    <section id="compare" className="py-16 bg-gray-50">
+    <section id="compare" className="py-16 bg-[#FBF8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-[#202D28] mb-4">
             Compare Universities
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[#5F6F67] max-w-3xl mx-auto">
             Compare top medical universities side-by-side to find the right fit
             for you.
           </p>
@@ -157,13 +157,13 @@ export default function CompareUniversitiesClient({
         <div className="grid grid-cols-3 gap-4 mb-6">
           {[0, 1, 2].map((slot) => (
             <div key={slot}>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-[#5F6F67] mb-1">
                 University {slot + 1}
               </label>
               <select
                 value={selectedIds[slot] ?? ""}
                 onChange={(e) => handleSelect(slot, Number(e.target.value))}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
                 suppressHydrationWarning={true}
               >
                 {allUniversities.map((u) => (
@@ -180,7 +180,7 @@ export default function CompareUniversitiesClient({
           <div className="overflow-x-auto">
             <table className="w-full min-w-[640px]">
               <thead>
-                <tr className="bg-red-600 text-white">
+                <tr className="bg-[#A52B3A] text-white">
                   <th className="text-left p-4 font-semibold w-40">Features</th>
                   {universities.map((u, idx) => (
                     <th
@@ -188,7 +188,7 @@ export default function CompareUniversitiesClient({
                       className="text-center p-4 font-semibold min-w-48"
                     >
                       <div className="flex flex-col items-center gap-2">
-                        <div className="w-14 h-14 rounded-full overflow-hidden bg-white border-2 border-gray-200">
+                        <div className="w-14 h-14 rounded-full overflow-hidden bg-white border-2 border-[#DDE5DD]">
                           {u.thumbnailPath ? (
                             <Image
                               src={cdn(u.thumbnailPath)}
@@ -198,7 +198,7 @@ export default function CompareUniversitiesClient({
                               className="object-cover w-full h-full"
                             />
                           ) : (
-                            <div className="w-full h-full bg-blue-200 flex items-center justify-center text-[#285BB5] font-bold text-lg">
+                            <div className="w-full h-full bg-blue-200 flex items-center justify-center text-[#175747] font-bold text-lg">
                               {u.name[0]}
                             </div>
                           )}
@@ -215,9 +215,9 @@ export default function CompareUniversitiesClient({
                 {visibleFeatures.map((feature, idx) => (
                   <tr
                     key={feature.key}
-                    className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                    className={idx % 2 === 0 ? "bg-white" : "bg-[#FBF8F0]"}
                   >
-                    <td className="p-3 font-medium text-gray-800 text-sm whitespace-nowrap">
+                    <td className="p-3 font-medium text-[#202D28] text-sm whitespace-nowrap">
                       {feature.label}
                     </td>
                     {universities.map((u, idx) => {
@@ -227,7 +227,7 @@ export default function CompareUniversitiesClient({
                       return (
                         <td
                           key={`${u.id}-${idx}`}
-                          className="p-3 text-center text-gray-700 text-sm"
+                          className="p-3 text-center text-[#5F6F67] text-sm"
                         >
                           {isRecognition && isGood ? (
                             <div className="flex flex-wrap gap-1 justify-center">
@@ -244,7 +244,7 @@ export default function CompareUniversitiesClient({
                             <span
                               className={
                                 !isGood
-                                  ? "text-gray-500"
+                                  ? "text-[#7A877F]"
                                   : feature.key === "fee"
                                     ? "text-green-600 font-semibold"
                                     : ""
@@ -259,15 +259,15 @@ export default function CompareUniversitiesClient({
                   </tr>
                 ))}
                 {/* CTA row */}
-                <tr className="bg-gray-100">
-                  <td className="p-3 font-medium text-gray-800 text-sm">
+                <tr className="bg-[#F3F7F3]">
+                  <td className="p-3 font-medium text-[#202D28] text-sm">
                     View Details
                   </td>
                   {universities.map((u, idx) => (
                     <td key={`${u.id}-${idx}`} className="p-3 text-center">
                       <Link
                         href={`/universities/${u.slug}`}
-                        className="inline-block bg-red-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium"
+                        className="inline-block bg-[#A52B3A] text-white text-sm px-4 py-2 rounded-lg hover:bg-[#8C2030] transition-colors font-medium"
                       >
                         View →
                       </Link>
@@ -282,7 +282,7 @@ export default function CompareUniversitiesClient({
         <div className="text-center">
           <Link
             href="/compare"
-            className="inline-block bg-white text-red-600 border-2 border-gray-200 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-gray-900 transition-colors"
+            className="inline-block bg-white text-[#A52B3A] border-2 border-[#DDE5DD] px-8 py-3 rounded-lg font-semibold hover:bg-[#A52B3A] hover:text-[#202D28] transition-colors"
           >
             Compare All Universities →
           </Link>

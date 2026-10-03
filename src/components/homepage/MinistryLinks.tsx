@@ -23,8 +23,8 @@ type MinistryCard = {
 };
 
 const EMBASSY_INFO = {
-  name: "Armenia High Commission in New Delhi, India",
-  address: "Armenia Street, D-133, Anand Niketan, New Delhi – 110021.",
+  name: "Hungary High Commission in New Delhi, India",
+  address: "Hungary Street, D-133, Anand Niketan, New Delhi – 110021.",
   phone: "+91 11 2411 2851",
   email: "armindiaembassy@mfa.am",
   website: "https://india.mfa.am/en/",
@@ -57,10 +57,10 @@ function normalizeWebsite(url: string): string {
 const FALLBACK_MINISTRIES: MinistryCard[] = [
   {
     id: 1,
-    name: "Ministry of Health and Wellness Armenia",
+    name: "Ministry of Health and Wellness Hungary",
     subtitle: "National Regulator",
     description:
-      "Primary public authority overseeing healthcare services, medical education standards, and national health policies in Armenia.",
+      "Primary public authority overseeing healthcare services, medical education standards, and national health policies in Hungary.",
     website: "https://health.govmu.org",
     services: [
       "Medical education oversight",
@@ -181,35 +181,35 @@ export default async function MinistryLinks() {
     <section className="py-8 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-[#202D28] mb-4">
             Official Government Links
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[#5F6F67] max-w-3xl mx-auto">
             Direct access to official organizations that matter for MBBS
             admissions, compliance, and student support.
           </p>
         </div>
 
-        <div className="bg-[#101B4D] rounded-3xl p-8 mb-8 text-white">
+        <div className="bg-[#103D32] rounded-3xl p-8 mb-8 text-white">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold mb-4">{EMBASSY_INFO.name}</h3>
-              <p className="text-blue-100 mb-6">
+              <p className="text-[#DCE8E2] mb-6">
                 Contact the embassy for official visa, documentation, and
                 consular guidance before your travel.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <Building2 className="w-5 h-5 mt-1 flex-shrink-0" />
-                  <span className="text-blue-100">{EMBASSY_INFO.address}</span>
+                  <span className="text-[#DCE8E2]">{EMBASSY_INFO.address}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 flex-shrink-0" />
-                  <span className="text-blue-100">{EMBASSY_INFO.phone}</span>
+                  <span className="text-[#DCE8E2]">{EMBASSY_INFO.phone}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span className="text-blue-100">{EMBASSY_INFO.email}</span>
+                  <span className="text-[#DCE8E2]">{EMBASSY_INFO.email}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Globe className="w-5 h-5 flex-shrink-0" />
@@ -217,7 +217,7 @@ export default async function MinistryLinks() {
                     href={EMBASSY_INFO.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-blue-200 transition-colors"
+                    className="text-white hover:text-[#E5EFEA] transition-colors"
                   >
                     {EMBASSY_INFO.website}
                   </a>
@@ -225,16 +225,16 @@ export default async function MinistryLinks() {
               </div>
             </div>
 
-            <div className="bg-gray-100 rounded-2xl p-6">
-              <h4 className="text-xl font-semibold mb-4 text-gray-900">Office Hours</h4>
-              <p className="text-slate-600 mb-4">{EMBASSY_INFO.hours}</p>
-              <h4 className="text-xl font-semibold mb-2 text-gray-900">Consular Services</h4>
-              <p className="text-slate-600 mb-4">{EMBASSY_INFO.consular}</p>
+            <div className="bg-[#F3F7F3] rounded-2xl p-6">
+              <h4 className="text-xl font-semibold mb-4 text-[#202D28]">Office Hours</h4>
+              <p className="text-[#5F6F67] mb-4">{EMBASSY_INFO.hours}</p>
+              <h4 className="text-xl font-semibold mb-2 text-[#202D28]">Consular Services</h4>
+              <p className="text-[#5F6F67] mb-4">{EMBASSY_INFO.consular}</p>
               <a
                 href={EMBASSY_INFO.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-white transition-colors text-center"
+                className="block bg-white text-[#A52B3A] px-6 py-3 rounded-lg font-semibold hover:bg-white transition-colors text-center"
               >
                 Contact Embassy
               </a>
@@ -246,55 +246,55 @@ export default async function MinistryLinks() {
           {ministries.map((ministry) => (
             <div
               key={ministry.id}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-gray-200 hover:shadow-2xl hover:"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-[#DDE5DD] bg-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-[#DDE5DD] hover:shadow-2xl"
             >
-              <div className="border-b bg-gray-50 p-6 transition-colors duration-300 group-hover: group-hover:">
+              <div className="border-b bg-[#FBF8F0] p-6 transition-colors duration-300">
                 <div className="flex items-start space-x-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#EAF1FB] text-red-600 transition-all duration-300 group-hover:bg-red-600 group-hover:text-white">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#F3F7F3] text-[#A52B3A] transition-all duration-300 group-hover:bg-[#A52B3A] group-hover:text-white">
                     <Building2 className="w-8 h-8" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="mb-1 text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-[#285BB5]">
+                    <h3 className="mb-1 text-xl font-bold text-[#202D28] transition-colors duration-300 group-hover:text-[#175747]">
                       {ministry.name}
                     </h3>
-                    <p className="text-sm text-gray-500 mb-2">
+                    <p className="text-sm text-[#7A877F] mb-2">
                       {ministry.subtitle}
                     </p>
-                    <p className="text-gray-600">{ministry.description}</p>
+                    <p className="text-[#5F6F67]">{ministry.description}</p>
                   </div>
                 </div>
               </div>
 
               <div className="p-6 flex flex-col flex-grow">
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-800 mb-3">
+                  <h4 className="font-semibold text-[#202D28] mb-3">
                     Contact Information
                   </h4>
                   <div className="space-y-2">
                     <div className="flex items-center space-x-3">
-                      <Globe className="w-4 h-4 text-red-600 flex-shrink-0" />
+                      <Globe className="w-4 h-4 text-[#A52B3A] flex-shrink-0" />
                       <a
                         href={ministry.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-red-600 hover:text-[#285BB5] transition-colors text-sm"
+                        className="text-[#A52B3A] hover:text-[#175747] transition-colors text-sm"
                       >
                         {ministry.website}
                       </a>
-                      <ExternalLink className="w-3 h-3 text-gray-500" />
+                      <ExternalLink className="w-3 h-3 text-[#7A877F]" />
                     </div>
                     {ministry.phone ? (
                       <div className="flex items-center space-x-3">
-                        <Phone className="w-4 h-4 text-red-600 flex-shrink-0" />
-                        <span className="text-gray-600 text-sm">
+                        <Phone className="w-4 h-4 text-[#A52B3A] flex-shrink-0" />
+                        <span className="text-[#5F6F67] text-sm">
                           {ministry.phone}
                         </span>
                       </div>
                     ) : null}
                     {ministry.email ? (
                       <div className="flex items-center space-x-3">
-                        <Mail className="w-4 h-4 text-red-600 flex-shrink-0" />
-                        <span className="text-gray-600 text-sm">
+                        <Mail className="w-4 h-4 text-[#A52B3A] flex-shrink-0" />
+                        <span className="text-[#5F6F67] text-sm">
                           {ministry.email}
                         </span>
                       </div>
@@ -303,7 +303,7 @@ export default async function MinistryLinks() {
                 </div>
 
                 <div className="mb-6 flex-grow">
-                  <h4 className="font-semibold text-gray-800 mb-3">
+                  <h4 className="font-semibold text-[#202D28] mb-3">
                     Key Services
                   </h4>
                   <div className="grid grid-cols-2 gap-2">
@@ -312,8 +312,8 @@ export default async function MinistryLinks() {
                         key={service}
                         className="flex items-center space-x-2"
                       >
-                        <div className="w-2 h-2 bg-red-600 rounded-full flex-shrink-0" />
-                        <span className="text-gray-600 text-sm">{service}</span>
+                        <div className="w-2 h-2 bg-[#A52B3A] rounded-full flex-shrink-0" />
+                        <span className="text-[#5F6F67] text-sm">{service}</span>
                       </div>
                     ))}
                   </div>
@@ -324,7 +324,7 @@ export default async function MinistryLinks() {
                     href={ministry.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-center space-x-2 rounded-lg bg-red-600 py-3 font-medium text-white transition-all duration-300 hover: hover:"
+                    className="flex w-full items-center justify-center space-x-2 rounded-lg bg-[#A52B3A] py-3 font-medium text-white transition-all duration-300"
                   >
                     <span>Visit Official Website</span>
                     <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -335,25 +335,25 @@ export default async function MinistryLinks() {
           ))}
         </div>
 
-        <div className="bg-[#EAF1FB] border border-[#DCE3EF] rounded-2xl p-8">
+        <div className="bg-[#F3F7F3] border border-[#DDE5DD] rounded-2xl p-8">
           <div className="flex items-start space-x-4">
-            <div className="w-8 h-8 bg-[#EAF1FB] rounded-full flex items-center justify-center flex-shrink-0">
-              <FileText className="w-5 h-5 text-red-600" />
+            <div className="w-10 h-10 bg-white border border-[#DDE5DD] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+              <FileText className="w-5 h-5 text-[#A52B3A]" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-red-600 mb-3">
+              <h3 className="text-xl font-bold text-[#202D28] mb-3">
                 Important Notice
               </h3>
-              <p className="text-red-600 mb-4">
+              <p className="text-[#5F6F67] mb-4">
                 Always verify requirements directly on official government
                 portals before filing applications, visas, or equivalency
                 documents.
               </p>
-              <ul className="space-y-2 text-red-600">
+              <ul className="space-y-2">
                 {IMPORTANT_NOTES.map((item) => (
                   <li key={item} className="flex items-start space-x-2">
-                    <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-2 flex-shrink-0" />
-                    <span>{item}</span>
+                    <div className="w-1.5 h-1.5 bg-[#A52B3A] rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-[#5F6F67]">{item}</span>
                   </li>
                 ))}
               </ul>

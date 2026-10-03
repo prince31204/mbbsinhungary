@@ -1,4 +1,4 @@
-# MBBS in Armenia — Testing Checklist
+# MBBS in Hungary — Testing Checklist
 
 > **Last Updated:** 2026-04-18
 > **Status:** 🔴 Not Started
@@ -431,7 +431,7 @@
 ### B1. Public-Facing Pages
 
 - [ ] **Homepage** (`/`) — Hero loads, CTA buttons work, university cards render, testimonials carousel, lead form submits
-- [ ] **About Armenia** (`/about-Armenia`) — Content renders, images load, meta tags present
+- [ ] **About Hungary** (`/about-Hungary`) — Content renders, images load, meta tags present
 - [ ] **About Us** (`/about-us`) — Team section, company info
 - [ ] **Universities List** (`/universities`) — Cards display, search/filter works, links to detail
 - [ ] **University Detail** (`/universities/[slug]`) — Overview, programs, facilities, rankings, FAQs, photos, reviews, FMGE rates tabs all load

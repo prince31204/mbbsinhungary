@@ -21,10 +21,10 @@ const columns: Column<FAQ>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-gray-900 text-sm line-clamp-2">
+        <p className="font-medium text-[#202D28] text-sm line-clamp-2">
           {row.question}
         </p>
-        <p className="text-xs text-gray-500">
+        <p className="text-xs text-[#7A877F]">
           {row.category?.name ?? "General"}
         </p>
       </div>
@@ -34,7 +34,7 @@ const columns: Column<FAQ>[] = [
     key: "createdAt",
     label: "Created",
     render: (row) => (
-      <span className="text-xs text-gray-500">
+      <span className="text-xs text-[#7A877F]">
         {new Date(row.createdAt).toLocaleDateString("en-IN")}
       </span>
     ),

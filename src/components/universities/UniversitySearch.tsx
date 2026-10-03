@@ -66,9 +66,9 @@ function getTypeColor(type: string | null): string {
     case "private":
       return "bg-purple-100 text-purple-800";
     case "public":
-      return "bg-[#EAF1FB] text-[#101B4D]";
+      return "bg-[#F3F7F3] text-[#103D32]";
     default:
-      return "bg-gray-100 text-gray-800";
+      return "bg-[#F3F7F3] text-[#202D28]";
   }
 }
 
@@ -137,23 +137,23 @@ export default function UniversitySearch({ universities }: Props) {
       <div className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row gap-3 items-center">
           <div className="relative flex-1 w-full">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#7A877F]" />
             <input
               type="text"
               value={query}
               suppressHydrationWarning
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search universities by name or city..."
-              className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+              className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
             />
           </div>
           <div className="flex items-center gap-2 shrink-0">
-            <Filter className="w-4 h-4 text-gray-500" />
+            <Filter className="w-4 h-4 text-[#7A877F]" />
             <select
               value={typeFilter}
               suppressHydrationWarning
               onChange={(e) => setTypeFilter(e.target.value)}
-              className="border border-gray-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 bg-white"
+              className="border border-gray-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500 bg-white"
             >
               <option value="all">All Types</option>
               {types.map((t) => (
@@ -162,7 +162,7 @@ export default function UniversitySearch({ universities }: Props) {
                 </option>
               ))}
             </select>
-            <span className="text-sm text-gray-500 whitespace-nowrap font-medium">
+            <span className="text-sm text-[#7A877F] whitespace-nowrap font-medium">
               {filtered.length} found
             </span>
           </div>
@@ -172,8 +172,8 @@ export default function UniversitySearch({ universities }: Props) {
       {/* Grid */}
       <div className="max-w-7xl mx-auto px-4 py-10">
         {filtered.length === 0 ? (
-          <div className="text-center py-20 text-gray-500">
-            <Search className="w-12 h-12 mx-auto mb-3 text-gray-600" />
+          <div className="text-center py-20 text-[#7A877F]">
+            <Search className="w-12 h-12 mx-auto mb-3 text-[#5F6F67]" />
             <p className="text-lg font-medium">
               No universities found for &ldquo;{query}&rdquo;
             </p>
@@ -197,7 +197,7 @@ export default function UniversitySearch({ universities }: Props) {
                 <Link
                   key={u.id}
                   href={`/universities/${u.slug}`}
-                  className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group flex flex-col border border-gray-100 cursor-pointer ${filtered.length < 3 ? "w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] max-w-md" : ""}`}
+                  className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group flex flex-col border border-[#DDE5DD] cursor-pointer ${filtered.length < 3 ? "w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] max-w-md" : ""}`}
                 >
                   {/* Image */}
                   <div className="relative h-52 overflow-hidden">
@@ -233,8 +233,8 @@ export default function UniversitySearch({ universities }: Props) {
                     {/* Rating */}
                     {u.rating != null && (
                       <div className="absolute top-4 right-4 bg-white/95 rounded-lg px-2.5 py-1 flex items-center gap-1 shadow">
-                        <Star className="w-3.5 h-3.5 text-red-600 fill-current" />
-                        <span className="text-sm font-bold text-gray-800">
+                        <Star className="w-3.5 h-3.5 text-[#A52B3A] fill-current" />
+                        <span className="text-sm font-bold text-[#202D28]">
                           {Number(u.rating).toFixed(1)}
                         </span>
                       </div>
@@ -242,7 +242,7 @@ export default function UniversitySearch({ universities }: Props) {
 
                     {/* Global Ranking badge */}
                     {u.globalRanking && (
-                      <div className="absolute bottom-3 left-4 bg-red-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                      <div className="absolute bottom-3 left-4 bg-[#A52B3A] text-white text-xs font-semibold px-2.5 py-1 rounded-full">
                         Rank #{u.globalRanking}
                       </div>
                     )}
@@ -252,12 +252,12 @@ export default function UniversitySearch({ universities }: Props) {
                   <div className="p-5 flex flex-col flex-grow">
                     {/* Title + Location */}
                     <div className="mb-3">
-                      <h3 className="text-lg font-bold text-gray-800 mb-1.5 group-hover:text-[#285BB5] transition-colors leading-tight">
+                      <h3 className="text-lg font-bold text-[#202D28] mb-1.5 group-hover:text-[#175747] transition-colors leading-tight">
                         {u.name}
                       </h3>
-                      <div className="flex items-center text-gray-500 text-sm gap-1">
+                      <div className="flex items-center text-[#7A877F] text-sm gap-1">
                         <MapPin className="w-3.5 h-3.5 flex-shrink-0 text-red-500" />
-                        <span>{location || "Armenia"}</span>
+                        <span>{location || "Hungary"}</span>
                         {u.establishedYear && (
                           <>
                             <span className="mx-1">•</span>
@@ -270,42 +270,42 @@ export default function UniversitySearch({ universities }: Props) {
                     {/* 4-stat grid */}
                     <div className="grid grid-cols-2 gap-2.5 mb-4">
                       <div className="text-center p-3 bg-white rounded-xl">
-                        <DollarSign className="w-4 h-4 text-red-600 mx-auto mb-1" />
-                        <div className="text-sm font-semibold text-gray-800 leading-tight">
+                        <DollarSign className="w-4 h-4 text-[#A52B3A] mx-auto mb-1" />
+                        <div className="text-sm font-semibold text-[#202D28] leading-tight">
                           {u.tuitionFee
                             ? /[a-zA-Z]/.test(String(u.tuitionFee))
                               ? String(u.tuitionFee)
                               : `${String(u.tuitionFee)} USD`
                             : "Contact for fees"}
                         </div>
-                        <div className="text-xs text-gray-500 mt-0.5">
+                        <div className="text-xs text-[#7A877F] mt-0.5">
                           Annual Fees
                         </div>
                       </div>
                       <div className="text-center p-3 bg-white rounded-xl">
-                        <Users className="w-4 h-4 text-red-600 mx-auto mb-1" />
-                        <div className="text-sm font-semibold text-gray-800">
+                        <Users className="w-4 h-4 text-[#A52B3A] mx-auto mb-1" />
+                        <div className="text-sm font-semibold text-[#202D28]">
                           {formatStudents(u.students)}
                         </div>
-                        <div className="text-xs text-gray-500 mt-0.5">
+                        <div className="text-xs text-[#7A877F] mt-0.5">
                           Students
                         </div>
                       </div>
                       <div className="text-center p-3 bg-green-50 rounded-xl">
                         <Clock className="w-4 h-4 text-green-600 mx-auto mb-1" />
-                        <div className="text-sm font-semibold text-gray-800">
+                        <div className="text-sm font-semibold text-[#202D28]">
                           {u.courseDuration || "6 Years"}
                         </div>
-                        <div className="text-xs text-gray-500 mt-0.5">
+                        <div className="text-xs text-[#7A877F] mt-0.5">
                           Duration
                         </div>
                       </div>
                       <div className="text-center p-3 bg-purple-50 rounded-xl">
                         <TrendingUp className="w-4 h-4 text-purple-600 mx-auto mb-1" />
-                        <div className="text-sm font-semibold text-gray-800">
+                        <div className="text-sm font-semibold text-[#202D28]">
                           {fmgeRate != null ? `${fmgeRate}%` : "N/A"}
                         </div>
-                        <div className="text-xs text-gray-500 mt-0.5">
+                        <div className="text-xs text-[#7A877F] mt-0.5">
                           FMGE Rate
                         </div>
                       </div>
@@ -314,19 +314,19 @@ export default function UniversitySearch({ universities }: Props) {
                     {/* Medium + NEET */}
                     <div className="flex flex-wrap gap-2 mb-3">
                       {u.mediumOfInstruction && (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-red-400 text-red-600 text-xs rounded-lg font-medium">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-red-400 text-[#A52B3A] text-xs rounded-lg font-medium">
                           <BookOpen className="w-3 h-3" />
                           {u.mediumOfInstruction}
                         </span>
                       )}
                       {u.neetRequirement && (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#F3F7F3] text-[#5F6F67] text-xs rounded-lg font-medium">
                           <Award className="w-3 h-3" />
                           NEET Required
                         </span>
                       )}
                       {u.scholarships.length > 0 && (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-white text-red-600 text-xs rounded-lg font-medium">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-white text-[#A52B3A] text-xs rounded-lg font-medium">
                           🎓 Scholarship Available
                         </span>
                       )}
@@ -336,8 +336,8 @@ export default function UniversitySearch({ universities }: Props) {
                     {recognitionBadges.length > 0 && (
                       <div className="mb-4">
                         <div className="flex items-center gap-1.5 mb-1.5">
-                          <Globe className="w-3.5 h-3.5 text-gray-500" />
-                          <span className="text-xs text-gray-500 font-medium">
+                          <Globe className="w-3.5 h-3.5 text-[#7A877F]" />
+                          <span className="text-xs text-[#7A877F] font-medium">
                             Recognized by:
                           </span>
                         </div>
@@ -357,7 +357,7 @@ export default function UniversitySearch({ universities }: Props) {
 
                     {/* CTA */}
                     <div className="mt-auto pt-2">
-                      <div className="w-full bg-red-600 text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition-colors flex items-center justify-center gap-2 text-sm group/btn">
+                      <div className="w-full bg-[#A52B3A] text-white py-3 rounded-xl font-semibold hover:bg-[#8C2030] transition-colors flex items-center justify-center gap-2 text-sm group/btn">
                         <span>View Details</span>
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                       </div>

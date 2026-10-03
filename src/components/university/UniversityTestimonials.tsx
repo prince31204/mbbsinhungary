@@ -26,13 +26,13 @@ export default function UniversityTestimonials({
 }: Props) {
   if (testimonials.length === 0 && !rating && !parentSatisfaction) return null;
   return (
-    <section className="py-10 bg-[#EAF1FB]">
+    <section className="py-10 bg-[#F3F7F3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-2">
+          <h2 className="text-4xl font-bold text-[#202D28] mb-2">
             What Parents Say About Us
           </h2>
-          <p className="text-base text-gray-500">
+          <p className="text-base text-[#7A877F]">
             Hear from parents of our international students about their
             experience.
           </p>
@@ -43,7 +43,7 @@ export default function UniversityTestimonials({
             {testimonials.map((t) => (
               <div
                 key={t.id}
-                className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+                className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-[#DDE5DD]"
               >
                 <div className="flex items-center space-x-3 mb-3">
                   {t.imagePath ? (
@@ -52,37 +52,37 @@ export default function UniversityTestimonials({
                       alt={t.name || "Parent"}
                       width={40}
                       height={40}
-                      className="rounded-full object-cover w-10 h-10 border-2 border-gray-200 shadow"
+                      className="rounded-full object-cover w-10 h-10 border-2 border-[#DDE5DD] shadow"
                     />
                   ) : (
-                    <div className="w-10 h-10 rounded-full bg-[#EAF1FB] flex items-center justify-center text-red-600 font-bold text-base border-2 border-gray-200 shadow">
+                    <div className="w-10 h-10 rounded-full bg-[#F3F7F3] flex items-center justify-center text-[#A52B3A] font-bold text-base border-2 border-[#DDE5DD] shadow">
                       {(t.name || "P")[0]}
                     </div>
                   )}
                   <div>
-                    <p className="font-semibold text-gray-900 text-sm">
+                    <p className="font-semibold text-[#202D28] text-sm">
                       {t.name || "Anonymous"}
                     </p>
                     {t.designation && (
-                      <p className="text-xs text-red-600 font-medium">
+                      <p className="text-xs text-[#A52B3A] font-medium">
                         {t.designation}
                       </p>
                     )}
                     {t.course && (
-                      <p className="text-xs text-gray-500">{t.course}</p>
+                      <p className="text-xs text-[#7A877F]">{t.course}</p>
                     )}
                   </div>
                 </div>
                 <Quote className="w-5 h-5 text-red-300 mb-2" />
-                <p className="text-gray-700 leading-relaxed italic text-sm">
+                <p className="text-[#5F6F67] leading-relaxed italic text-sm">
                   &ldquo;{t.description}&rdquo;
                 </p>
                 {t.rating != null && (
-                  <div className="flex items-center gap-0.5 mt-3 pt-3 border-t border-gray-200">
+                  <div className="flex items-center gap-0.5 mt-3 pt-3 border-t border-[#DDE5DD]">
                     {[...Array(Math.round(Number(t.rating)))].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-3.5 h-3.5 text-red-600 fill-current"
+                        className="w-3.5 h-3.5 text-[#A52B3A] fill-current"
                       />
                     ))}
                   </div>
@@ -93,7 +93,7 @@ export default function UniversityTestimonials({
         )}
 
         {(parentSatisfaction || rating) && (
-          <div className="mt-12 bg-[#101B4D] rounded-2xl p-8 text-white text-center">
+          <div className="mt-12 bg-[#103D32] rounded-2xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">
               Join Our Family of Satisfied Parents
             </h3>
@@ -101,11 +101,11 @@ export default function UniversityTestimonials({
               {parentSatisfaction && (
                 <div className="flex items-center space-x-3">
                   <div className="bg-white p-2 rounded-full">
-                    <Users className="h-5 w-5 text-red-600" />
+                    <Users className="h-5 w-5 text-[#A52B3A]" />
                   </div>
                   <div className="text-left">
-                    <p className="font-semibold text-gray-900">Parent Satisfaction</p>
-                    <p className="text-gray-600">
+                    <p className="font-semibold text-[#202D28]">Parent Satisfaction</p>
+                    <p className="text-[#5F6F67]">
                       {Number(parentSatisfaction)}% Positive Feedback
                     </p>
                   </div>
@@ -114,11 +114,11 @@ export default function UniversityTestimonials({
               {rating && (
                 <div className="flex items-center space-x-3">
                   <div className="bg-white p-2 rounded-full">
-                    <Star className="h-5 w-5 text-red-600" />
+                    <Star className="h-5 w-5 text-[#A52B3A]" />
                   </div>
                   <div className="text-left">
-                    <p className="font-semibold text-gray-900">Average Rating</p>
-                    <p className="text-gray-600">{Number(rating)}/5 Stars</p>
+                    <p className="font-semibold text-[#202D28]">Average Rating</p>
+                    <p className="text-[#5F6F67]">{Number(rating)}/5 Stars</p>
                   </div>
                 </div>
               )}

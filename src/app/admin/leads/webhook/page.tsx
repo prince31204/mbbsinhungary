@@ -127,7 +127,7 @@ export default function LeadWebhookSettingsPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="animate-spin text-gray-500" size={32} />
+        <Loader2 className="animate-spin text-[#7A877F]" size={32} />
       </div>
     );
   }
@@ -135,20 +135,20 @@ export default function LeadWebhookSettingsPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex items-center gap-3">
-        <Webhook size={24} className="text-gray-500" />
-        <h1 className="text-2xl font-bold text-gray-900">
+        <Webhook size={24} className="text-[#7A877F]" />
+        <h1 className="text-2xl font-bold text-[#202D28]">
           Lead Export / Webhook
         </h1>
       </div>
-      <p className="text-sm text-gray-500 -mt-4">
+      <p className="text-sm text-[#7A877F] -mt-4">
         Every new lead is automatically sent to this URL as JSON, along with the
         API key in the request so the receiving site can verify it came from us.
         Leave the URL blank to stop sending leads.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-5">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-5">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Connection
           </h2>
 
@@ -180,7 +180,7 @@ export default function LeadWebhookSettingsPage() {
               <button
                 type="button"
                 onClick={handleClearSecret}
-                className="text-xs text-red-600 hover:underline"
+                className="text-xs text-[#A52B3A] hover:underline"
               >
                 Remove saved key
               </button>
@@ -188,27 +188,27 @@ export default function LeadWebhookSettingsPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
           <div className="flex items-center justify-between border-b pb-3">
-            <h2 className="font-semibold text-gray-900">Fields to Send</h2>
+            <h2 className="font-semibold text-[#202D28]">Fields to Send</h2>
             <div className="flex gap-3 text-xs">
               <button
                 type="button"
                 onClick={() => setAllFields(true)}
-                className="text-red-600 hover:underline"
+                className="text-[#A52B3A] hover:underline"
               >
                 Select all
               </button>
               <button
                 type="button"
                 onClick={() => setAllFields(false)}
-                className="text-gray-500 hover:underline"
+                className="text-[#7A877F] hover:underline"
               >
                 Select none
               </button>
             </div>
           </div>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-[#7A877F]">
             Only the checked fields are included in the JSON sent to the
             webhook. The lead ID and created date are always included.
           </p>
@@ -216,7 +216,7 @@ export default function LeadWebhookSettingsPage() {
             {fields.map((f) => (
               <label
                 key={f.key}
-                className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer"
+                className="flex items-center gap-2 text-sm text-[#5F6F67] cursor-pointer"
               >
                 <Checkbox
                   checked={f.enabled}
@@ -230,18 +230,18 @@ export default function LeadWebhookSettingsPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Selected Fields — Outgoing Names
           </h2>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-[#7A877F]">
             This is the JSON key each selected field is sent under. Set it to
             match whatever field name the receiving website expects — leave
             blank to send it under our own field name (shown as the
             placeholder).
           </p>
           {fields.filter((f) => f.enabled).length === 0 ? (
-            <p className="text-sm text-gray-500 italic">
+            <p className="text-sm text-[#7A877F] italic">
               No fields selected above.
             </p>
           ) : (
@@ -253,7 +253,7 @@ export default function LeadWebhookSettingsPage() {
                     key={f.key}
                     className="grid grid-cols-[1fr_1fr] gap-3 items-center"
                   >
-                    <Label className="text-gray-600">{f.label}</Label>
+                    <Label className="text-[#5F6F67]">{f.label}</Label>
                     <Input
                       value={f.outgoingName}
                       onChange={(e) =>
@@ -271,7 +271,7 @@ export default function LeadWebhookSettingsPage() {
         <div className="flex justify-end pb-8">
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
             disabled={saving}
           >
             {saving ? (

@@ -3,7 +3,7 @@ import { AdminShell } from "@/components/admin/AdminShell";
 import { Toaster } from "sonner";
 
 export const metadata = {
-  title: { default: "Admin Panel | MBBS Armenia", template: "%s | Admin" },
+  title: { default: "Admin Panel | MBBS Hungary", template: "%s | Admin" },
 };
 
 export default async function AdminLayout({

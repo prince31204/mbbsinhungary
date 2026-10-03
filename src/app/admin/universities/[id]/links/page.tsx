@@ -141,23 +141,23 @@ export default function UniversityLinksPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-gray-900">
+            <h2 className="text-xl font-bold text-[#202D28]">
               University Links
             </h2>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-[#7A877F]">
               {items.length} link{items.length !== 1 ? "s" : ""} — brochures,
               websites, forms, videos
             </p>
           </div>
-          <Button onClick={openAdd} className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0">
+          <Button onClick={openAdd} className="bg-[#175747] hover:bg-[#175747]">
             <Plus size={16} className="mr-2" />
             Add Link
           </Button>
         </div>
 
         {showForm && (
-          <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
-            <h3 className="font-semibold text-gray-800">
+          <div className="bg-white border border-[#DDE5DD] rounded-xl p-5 space-y-4">
+            <h3 className="font-semibold text-[#202D28]">
               {editId ? "Edit Link" : "Add New Link"}
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -216,7 +216,7 @@ export default function UniversityLinksPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#175747] hover:bg-[#175747]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -238,13 +238,13 @@ export default function UniversityLinksPage() {
 
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : items.length === 0 ? (
           <div className="p-12 text-center border border-dashed border-gray-300 rounded-xl">
-            <Link2 size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500 font-medium">No links yet</p>
-            <p className="text-gray-500 text-sm">
+            <Link2 size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F] font-medium">No links yet</p>
+            <p className="text-[#7A877F] text-sm">
               Add website, brochure, admission form links
             </p>
           </div>
@@ -253,23 +253,23 @@ export default function UniversityLinksPage() {
             {items.map((item) => (
               <div
                 key={item.id}
-                className="bg-white border border-gray-200 rounded-xl p-4 flex items-center gap-4"
+                className="bg-white border border-[#DDE5DD] rounded-xl p-4 flex items-center gap-4"
               >
                 <div className="w-9 h-9 bg-white rounded-lg flex items-center justify-center shrink-0">
-                  <Link2 size={16} className="text-red-600" />
+                  <Link2 size={16} className="text-[#A52B3A]" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <p className="font-semibold text-gray-900 text-sm">
+                    <p className="font-semibold text-[#202D28] text-sm">
                       {item.title}
                     </p>
                     {item.type && (
-                      <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-[#F3F7F3] text-[#5F6F67] px-2 py-0.5 rounded-full">
                         {item.type}
                       </span>
                     )}
                     {!item.status && (
-                      <span className="text-xs bg-[#EAF1FB]0 text-red-600 px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-[#175747] text-[#A52B3A] px-2 py-0.5 rounded-full">
                         Inactive
                       </span>
                     )}
@@ -298,7 +298,7 @@ export default function UniversityLinksPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-red-600 hover:text-[#285BB5]"
+                    className="h-8 w-8 p-0 text-[#A52B3A] hover:text-[#175747]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

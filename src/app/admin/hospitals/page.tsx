@@ -58,15 +58,15 @@ export default function HospitalsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Hospital size={22} className="text-red-600" />
+          <Hospital size={22} className="text-[#A52B3A]" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Hospitals</h1>
-            <p className="text-sm text-gray-500">
+            <h1 className="text-2xl font-bold text-[#202D28]">Hospitals</h1>
+            <p className="text-sm text-[#7A877F]">
               {items.length} hospital{items.length !== 1 ? "s" : ""} registered
             </p>
           </div>
         </div>
-        <Button asChild className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0">
+        <Button asChild className="bg-[#175747] hover:bg-[#175747]">
           <Link href="/admin/hospitals/create">
             <Plus size={16} className="mr-2" />
             Add Hospital
@@ -78,7 +78,7 @@ export default function HospitalsPage() {
       <div className="relative">
         <Search
           size={16}
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+          className="absolute left-3 top-1/2 -translate-y-1/2 text-[#7A877F]"
         />
         <Input
           placeholder="Search hospitals..."
@@ -88,15 +88,15 @@ export default function HospitalsPage() {
         />
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : items.length === 0 ? (
           <div className="p-12 text-center">
-            <Hospital size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No hospitals found.</p>
+            <Hospital size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No hospitals found.</p>
             <Button asChild variant="outline" className="mt-4">
               <Link href="/admin/hospitals/create">
                 <Plus size={14} className="mr-1" />
@@ -107,7 +107,7 @@ export default function HospitalsPage() {
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-gray-100 bg-gray-50 text-left text-gray-500">
+              <tr className="border-b border-[#DDE5DD] bg-[#FBF8F0] text-left text-[#7A877F]">
                 <th className="px-4 py-3 font-medium">Name</th>
                 <th className="px-4 py-3 font-medium">City</th>
                 <th className="px-4 py-3 font-medium">Beds</th>
@@ -119,15 +119,15 @@ export default function HospitalsPage() {
               {items.map((item) => (
                 <tr
                   key={item.id}
-                  className="border-b border-gray-50 hover:bg-gray-50"
+                  className="border-b border-gray-50 hover:bg-[#FBF8F0]"
                 >
-                  <td className="px-4 py-3 font-medium text-gray-800">
+                  <td className="px-4 py-3 font-medium text-[#202D28]">
                     {item.name}
                   </td>
-                  <td className="px-4 py-3 text-gray-500">
+                  <td className="px-4 py-3 text-[#7A877F]">
                     {[item.city, item.state].filter(Boolean).join(", ") || "—"}
                   </td>
-                  <td className="px-4 py-3 text-gray-500">
+                  <td className="px-4 py-3 text-[#7A877F]">
                     {item.beds ?? "—"}
                   </td>
                   <td className="px-4 py-3 text-center">
@@ -151,7 +151,7 @@ export default function HospitalsPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                        className="h-8 w-8 p-0 text-[#A52B3A] hover:bg-[#175747]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={14} />

@@ -122,7 +122,7 @@ export default function ScholarshipEditPage() {
   return (
     <div className="max-w-3xl mx-auto p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">Edit Scholarship</h1>
+        <h1 className="text-2xl font-bold text-[#202D28]">Edit Scholarship</h1>
         <Button variant="outline" size="sm" asChild>
           <Link href={`/admin/scholarships/${id}/faqs`}>
             <HelpCircle size={14} className="mr-1" /> Manage FAQs
@@ -130,8 +130,8 @@ export default function ScholarshipEditPage() {
         </Button>
       </div>
       <form onSubmit={handleSubmit} className="space-y-5">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-700 border-b pb-2">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#5F6F67] border-b pb-2">
             Basic Details
           </h2>
           <div className="grid grid-cols-2 gap-4">
@@ -166,8 +166,8 @@ export default function ScholarshipEditPage() {
             </div>
           </div>
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-700 border-b pb-2">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#5F6F67] border-b pb-2">
             Financial Details
           </h2>
           <div className="grid grid-cols-3 gap-4">
@@ -222,7 +222,7 @@ export default function ScholarshipEditPage() {
             </div>
           </div>
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
           <div className="space-y-1.5">
             <Label>Short Note</Label>
             <Textarea
@@ -239,7 +239,7 @@ export default function ScholarshipEditPage() {
             />
           </div>
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
           <SeoFields
             values={{
               metaTitle: form.metaTitle,
@@ -256,7 +256,7 @@ export default function ScholarshipEditPage() {
           <Button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="flex-1 bg-[#175747] hover:bg-[#175747]"
           >
             {loading ? "Saving…" : "Save Changes"}
           </Button>

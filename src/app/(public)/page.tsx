@@ -4,7 +4,7 @@ import { prisma } from "@/lib/prisma";
 import HeroSection from "@/components/homepage/HeroSection";
 import UniversityGrid from "@/components/homepage/UniversityGrid";
 import UniversityMapSection from "@/components/homepage/UniversityMapSection";
-import AboutArmenia from "@/components/homepage/AboutArmenia";
+import AboutHungary from "@/components/homepage/AboutHungary";
 import ScholarshipsSection from "@/components/homepage/ScholarshipsSection";
 import EducationSystem from "@/components/homepage/EducationSystem";
 import MinistryLinks from "@/components/homepage/MinistryLinks";
@@ -22,17 +22,17 @@ import {
 import { getHomepageStats, getHomepageFaqs } from "@/lib/public-page-content";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: `MBBS in Armenia ${APP_YEAR} | NMC Recognised Universities | Fees & Admission for Indian Students`,
-  description: `Explore top NMC-recognised medical universities in Armenia. Compare fees, FMGE rates, and apply for MBBS ${APP_YEAR} admission. Free counselling for Indian students.`,
+  title: `MBBS in Hungary ${APP_YEAR} | NMC Recognised Universities | Fees & Admission for Indian Students`,
+  description: `Explore top NMC-recognised medical universities in Hungary. Compare fees, FMGE rates, and apply for MBBS ${APP_YEAR} admission. Free counselling for Indian students.`,
   path: "/",
   pageKey: "home",
   entitySeo: {
-    metaKeyword: `MBBS in Armenia, study MBBS Armenia, medical university Armenia, NMC recognized Armenia, MBBS admission ${APP_YEAR}, low fee MBBS abroad`,
+    metaKeyword: `MBBS in Hungary, study MBBS Hungary, medical university Hungary, NMC recognized Hungary, MBBS admission ${APP_YEAR}, low fee MBBS abroad`,
   },
 });
 
 const UniversityGridFallback = () => (
-  <section className="py-8 bg-gray-50">
+  <section className="py-8 bg-[#FBF8F0]">
     <div className="max-w-7xl mx-auto px-4">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[...Array(6)].map((_, i) => (
@@ -88,9 +88,9 @@ export default async function HomePage() {
         <UniversityMapSection />
       </Suspense>
 
-      <AboutArmenia />
+      <AboutHungary />
 
-      <Suspense fallback={<div className="py-16 bg-gray-50" />}>
+      <Suspense fallback={<div className="py-16 bg-[#FBF8F0]" />}>
         <CompareUniversities />
       </Suspense>
 

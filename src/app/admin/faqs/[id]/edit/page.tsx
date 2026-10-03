@@ -120,26 +120,26 @@ export default function EditFaqPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Edit FAQ</h1>
-          <p className="text-sm text-gray-500">Update question and answer</p>
+          <h1 className="text-2xl font-bold text-[#202D28]">Edit FAQ</h1>
+          <p className="text-sm text-[#7A877F]">Update question and answer</p>
         </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
           <div className="space-y-1.5">
             <Label>
-              Question <span className="text-red-600">*</span>
+              Question <span className="text-[#A52B3A]">*</span>
             </Label>
             <Input
               value={form.question}
               onChange={(e) => set("question", e.target.value)}
-              placeholder="What is the eligibility for MBBS in Armenia?"
+              placeholder="What is the eligibility for MBBS in Hungary?"
             />
           </div>
           <div className="space-y-1.5">
             <Label>
-              Answer <span className="text-red-600">*</span>
+              Answer <span className="text-[#A52B3A]">*</span>
             </Label>
             <Textarea
               value={form.answer}
@@ -199,7 +199,7 @@ export default function EditFaqPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
             disabled={loading}
           >
             {loading ? (

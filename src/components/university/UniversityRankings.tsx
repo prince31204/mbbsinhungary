@@ -30,7 +30,7 @@ export default function UniversityRankings({ rankings }: Props) {
     {
       icon: Shield,
       title: "Ministry Recognition",
-      desc: "Recognized by Ministry of Education, Armenia",
+      desc: "Recognized by Ministry of Education, Hungary",
       status: "Licensed",
     },
     {
@@ -45,17 +45,17 @@ export default function UniversityRankings({ rankings }: Props) {
     <section id="rankings" className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-[#202D28] mb-4">
             Rankings &amp; Accreditation
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[#5F6F67] max-w-3xl mx-auto">
             Our commitment to excellence is reflected in our international
             rankings and comprehensive accreditations.
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-8">
+            <h3 className="text-3xl font-bold text-[#202D28] mb-8">
               Official Accreditations
             </h3>
             <div className="space-y-6">
@@ -70,13 +70,13 @@ export default function UniversityRankings({ rankings }: Props) {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-2">
-                        <h4 className="text-lg font-semibold text-gray-900">
+                        <h4 className="text-lg font-semibold text-[#202D28]">
                           {accred.href ? (
                             <a
                               href={accred.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="hover:text-[#285BB5] hover:underline transition-colors"
+                              className="hover:text-[#175747] hover:underline transition-colors"
                             >
                               {accred.title}
                             </a>
@@ -88,7 +88,7 @@ export default function UniversityRankings({ rankings }: Props) {
                           {accred.status}
                         </span>
                       </div>
-                      <p className="text-gray-600">{accred.desc}</p>
+                      <p className="text-[#5F6F67]">{accred.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export default function UniversityRankings({ rankings }: Props) {
           </div>
           {rankings.length > 0 && (
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-8">
+              <h3 className="text-3xl font-bold text-[#202D28] mb-8">
                 Global Rankings
               </h3>
               <div className="bg-white p-8 rounded-2xl min-h-[200px]">
@@ -108,20 +108,20 @@ export default function UniversityRankings({ rankings }: Props) {
                       className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
                     >
                       <div>
-                        <h4 className="font-semibold text-gray-900">
+                        <h4 className="font-semibold text-[#202D28]">
                           {r.rankingBody}
                         </h4>
                         {r.category && (
-                          <p className="text-sm text-gray-600">{r.category}</p>
+                          <p className="text-sm text-[#5F6F67]">{r.category}</p>
                         )}
                         {r.year && (
-                          <p className="text-xs text-gray-500 mt-0.5">
+                          <p className="text-xs text-[#7A877F] mt-0.5">
                             {r.year}
                           </p>
                         )}
                       </div>
                       {r.rank && (
-                        <span className="text-2xl font-bold text-red-600">
+                        <span className="text-2xl font-bold text-[#A52B3A]">
                           #{r.rank}
                         </span>
                       )}

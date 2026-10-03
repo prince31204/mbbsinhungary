@@ -88,7 +88,7 @@ export default async function AdminDashboardPage() {
       label: "Universities",
       value: stats.universities,
       icon: GraduationCap,
-      color: "bg-[#EAF1FB]0",
+      color: "bg-[#175747]",
       href: "/admin/universities",
     },
     {
@@ -123,7 +123,7 @@ export default async function AdminDashboardPage() {
       label: "Admin Users",
       value: stats.users,
       icon: Users,
-      color: "bg-[#EAF1FB]0",
+      color: "bg-[#175747]",
       href: "/admin/users",
     },
   ];
@@ -131,8 +131,8 @@ export default async function AdminDashboardPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-        <p className="text-sm text-gray-500 mt-1">
+        <h1 className="text-2xl font-bold text-[#202D28]">Dashboard</h1>
+        <p className="text-sm text-[#7A877F] mt-1">
           Welcome back, {session?.user?.name}. Here&apos;s what&apos;s
           happening.
         </p>
@@ -144,17 +144,17 @@ export default async function AdminDashboardPage() {
           <Link
             key={card.label}
             href={card.href}
-            className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-shadow group"
+            className="bg-white rounded-xl border border-[#DDE5DD] p-5 hover:shadow-md transition-shadow group"
           >
             <div
               className={`w-10 h-10 ${card.color} rounded-lg flex items-center justify-center mb-3`}
             >
-              <card.icon size={20} className="text-gray-900" />
+              <card.icon size={20} className="text-[#202D28]" />
             </div>
-            <p className="text-2xl font-bold text-gray-900">
+            <p className="text-2xl font-bold text-[#202D28]">
               {card.value.toLocaleString()}
             </p>
-            <p className="text-sm text-gray-500 mt-0.5 group-hover:text-gray-700">
+            <p className="text-sm text-[#7A877F] mt-0.5 group-hover:text-[#5F6F67]">
               {card.label}
             </p>
           </Link>
@@ -162,9 +162,9 @@ export default async function AdminDashboardPage() {
       </div>
 
       {/* Registered Users Table */}
-      <div className="bg-white rounded-xl border border-gray-200 p-5">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] p-5">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-semibold text-gray-900 flex items-center gap-2">
+          <h2 className="font-semibold text-[#202D28] flex items-center gap-2">
             <TrendingUp size={16} className="text-indigo-500" /> Registered
             Users
             <span className="ml-1 text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-medium">
@@ -173,45 +173,45 @@ export default async function AdminDashboardPage() {
           </h2>
           <Link
             href="/admin/registered-users"
-            className="text-xs text-red-600 hover:underline"
+            className="text-xs text-[#A52B3A] hover:underline"
           >
             View all →
           </Link>
         </div>
         {stats.recentVerifiedLeads.length === 0 ? (
-          <p className="text-sm text-gray-500 py-4 text-center">
+          <p className="text-sm text-[#7A877F] py-4 text-center">
             No registered users yet.
           </p>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-gray-100">
-                  <th className="text-left text-xs font-semibold text-gray-500 pb-2 pr-4">
+                <tr className="border-b border-[#DDE5DD]">
+                  <th className="text-left text-xs font-semibold text-[#7A877F] pb-2 pr-4">
                     Name
                   </th>
-                  <th className="text-left text-xs font-semibold text-gray-500 pb-2 pr-4">
+                  <th className="text-left text-xs font-semibold text-[#7A877F] pb-2 pr-4">
                     Email
                   </th>
-                  <th className="text-left text-xs font-semibold text-gray-500 pb-2 pr-4">
+                  <th className="text-left text-xs font-semibold text-[#7A877F] pb-2 pr-4">
                     Phone
                   </th>
-                  <th className="text-left text-xs font-semibold text-gray-500 pb-2">
+                  <th className="text-left text-xs font-semibold text-[#7A877F] pb-2">
                     Verified On
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-50">
                 {stats.recentVerifiedLeads.map((u) => (
-                  <tr key={u.id} className="hover:bg-gray-50 transition-colors">
-                    <td className="py-2.5 pr-4 font-medium text-gray-800">
+                  <tr key={u.id} className="hover:bg-[#FBF8F0] transition-colors">
+                    <td className="py-2.5 pr-4 font-medium text-[#202D28]">
                       {u.name}
                     </td>
-                    <td className="py-2.5 pr-4 text-gray-500">{u.email}</td>
-                    <td className="py-2.5 pr-4 text-gray-500">
+                    <td className="py-2.5 pr-4 text-[#7A877F]">{u.email}</td>
+                    <td className="py-2.5 pr-4 text-[#7A877F]">
                       {u.phone || "—"}
                     </td>
-                    <td className="py-2.5 text-gray-500 text-xs">
+                    <td className="py-2.5 text-[#7A877F] text-xs">
                       {u.emailVerifiedAt
                         ? new Date(u.emailVerifiedAt).toLocaleDateString(
                             "en-IN",
@@ -229,21 +229,21 @@ export default async function AdminDashboardPage() {
       {/* Recent Activity */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Recent Leads */}
-        <div className="bg-white rounded-xl border border-gray-200 p-5">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-5">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-semibold text-gray-900 flex items-center gap-2">
+            <h2 className="font-semibold text-[#202D28] flex items-center gap-2">
               <MessageSquare size={16} className="text-green-500" /> Recent
               Leads
             </h2>
             <Link
               href="/admin/leads"
-              className="text-xs text-red-600 hover:underline"
+              className="text-xs text-[#A52B3A] hover:underline"
             >
               View all →
             </Link>
           </div>
           {stats.recentLeads.length === 0 ? (
-            <p className="text-sm text-gray-500 py-4 text-center">
+            <p className="text-sm text-[#7A877F] py-4 text-center">
               No leads yet.
             </p>
           ) : (
@@ -254,12 +254,12 @@ export default async function AdminDashboardPage() {
                   className="flex items-center justify-between py-2 border-b border-gray-50 last:border-0"
                 >
                   <div>
-                    <p className="text-sm font-medium text-gray-800">
+                    <p className="text-sm font-medium text-[#202D28]">
                       {lead.name}
                     </p>
-                    <p className="text-xs text-gray-500">{lead.email}</p>
+                    <p className="text-xs text-[#7A877F]">{lead.email}</p>
                   </div>
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-[#7A877F]">
                     {new Date(lead.createdAt).toLocaleDateString("en-IN")}
                   </span>
                 </div>
@@ -269,21 +269,21 @@ export default async function AdminDashboardPage() {
         </div>
 
         {/* Recent Blogs */}
-        <div className="bg-white rounded-xl border border-gray-200 p-5">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-5">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-semibold text-gray-900 flex items-center gap-2">
+            <h2 className="font-semibold text-[#202D28] flex items-center gap-2">
               <FileText size={16} className="text-purple-500" /> Recent Blog
               Posts
             </h2>
             <Link
               href="/admin/blogs"
-              className="text-xs text-red-600 hover:underline"
+              className="text-xs text-[#A52B3A] hover:underline"
             >
               View all →
             </Link>
           </div>
           {stats.recentBlogs.length === 0 ? (
-            <p className="text-sm text-gray-500 py-4 text-center">
+            <p className="text-sm text-[#7A877F] py-4 text-center">
               No posts yet.
             </p>
           ) : (
@@ -294,12 +294,12 @@ export default async function AdminDashboardPage() {
                   className="flex items-center justify-between py-2 border-b border-gray-50 last:border-0"
                 >
                   <div className="min-w-0 flex-1 pr-3">
-                    <p className="text-sm font-medium text-gray-800 truncate">
+                    <p className="text-sm font-medium text-[#202D28] truncate">
                       {blog.title}
                     </p>
-                    <p className="text-xs text-gray-500">/{blog.slug}</p>
+                    <p className="text-xs text-[#7A877F]">/{blog.slug}</p>
                   </div>
-                  <span className="text-xs text-gray-500 shrink-0">
+                  <span className="text-xs text-[#7A877F] shrink-0">
                     {new Date(blog.createdAt).toLocaleDateString("en-IN")}
                   </span>
                 </div>
@@ -310,8 +310,8 @@ export default async function AdminDashboardPage() {
       </div>
 
       {/* Quick Actions */}
-      <div className="bg-white rounded-xl border border-gray-200 p-5">
-        <h2 className="font-semibold text-gray-900 mb-4">Quick Actions</h2>
+      <div className="bg-white rounded-xl border border-[#DDE5DD] p-5">
+        <h2 className="font-semibold text-[#202D28] mb-4">Quick Actions</h2>
         <div className="flex flex-wrap gap-3">
           {[
             { label: "Add University", href: "/admin/universities/create" },
@@ -324,7 +324,7 @@ export default async function AdminDashboardPage() {
             <Link
               key={action.href}
               href={action.href}
-              className="px-4 py-2 bg-gray-100 hover:bg-[#EAF1FB]0 hover:text-[#285BB5] rounded-lg text-sm text-gray-700 transition-colors"
+              className="px-4 py-2 bg-[#F3F7F3] hover:bg-[#175747] hover:text-[#175747] rounded-lg text-sm text-[#5F6F67] transition-colors"
             >
               {action.label}
             </Link>

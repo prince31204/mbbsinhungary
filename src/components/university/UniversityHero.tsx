@@ -47,11 +47,11 @@ export default function UniversityHero({ university }: Props) {
               priority
             />
           </div>
-          <div className="absolute inset-0 z-0 bg-[#101B4D]/70 mix-blend-multiply" />
-          <div className="absolute inset-0 z-0 bg-[#173A7A]/30 mix-blend-multiply" />
+          <div className="absolute inset-0 z-0 bg-[#103D32]/70 mix-blend-multiply" />
+          <div className="absolute inset-0 z-0 bg-[#103D32]/30 mix-blend-multiply" />
         </>
       ) : (
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#101B4D] via-[#173A7A] to-[#285BB5]" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0B2A23] via-[#103D32] to-[#247660]" />
       )}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +65,7 @@ export default function UniversityHero({ university }: Props) {
                 </span>
               )}
               {university.nmcApproved && (
-                <span className="bg-[#D90012] text-white text-xs font-bold px-3 py-1 rounded-full">
+                <span className="bg-[#A52B3A] text-white text-xs font-bold px-3 py-1 rounded-full">
                   NMC Approved
                 </span>
               )}
@@ -73,20 +73,20 @@ export default function UniversityHero({ university }: Props) {
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight drop-shadow-md">
               {university.name}
             </h1>
-            <p className="text-red-100 text-lg leading-relaxed mb-8">
+            <p className="text-[#F8E9EB] text-lg leading-relaxed mb-8">
               {university.shortnote ||
                 university.aboutNote ||
                 "Join one of Central Asia's leading medical institutions. World-class education, international recognition, and affordable fees await you."}
             </p>
             <div className="grid grid-cols-2 gap-5 mb-8">
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-[#F2A800] shrink-0" />
+                <MapPin className="h-5 w-5 text-[#D5AE67] shrink-0" />
                 <div>
                   <p className="font-semibold text-sm">Location</p>
-                  <p className="text-red-100 text-sm">
+                  <p className="text-[#F8E9EB] text-sm">
                     {university.cityRelation?.name ||
                       university.city ||
-                      "Armenia"}
+                      "Hungary"}
                     {university.province?.name
                       ? `, ${university.province.name}`
                       : ""}
@@ -95,37 +95,37 @@ export default function UniversityHero({ university }: Props) {
               </div>
               {university.students && (
                 <div className="flex items-center space-x-3">
-                  <Users className="h-5 w-5 text-[#F2A800] shrink-0" />
+                  <Users className="h-5 w-5 text-[#D5AE67] shrink-0" />
                   <div>
                     <p className="font-semibold text-sm">Students</p>
-                    <p className="text-red-100 text-sm">
+                    <p className="text-[#F8E9EB] text-sm">
                       {university.students} International
                     </p>
                   </div>
                 </div>
               )}
               <div className="flex items-center space-x-3">
-                <Award className="h-5 w-5 text-[#F2A800] shrink-0" />
+                <Award className="h-5 w-5 text-[#D5AE67] shrink-0" />
                 <div>
                   <a
                     href="https://www.who.int/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-sm hover:underline hover:text-[#F2A800] transition-colors"
+                    className="font-semibold text-sm hover:underline hover:text-[#D5AE67] transition-colors"
                   >
                     WHO Listed
                   </a>
-                  <p className="text-red-100 text-sm">
+                  <p className="text-[#F8E9EB] text-sm">
                     {university.whoListed ? "Yes" : "No"}
                   </p>
                 </div>
               </div>
               {university.fmgePassRate && (
                 <div className="flex items-center space-x-3">
-                  <Star className="h-5 w-5 text-[#F2A800] fill-current shrink-0" />
+                  <Star className="h-5 w-5 text-[#D5AE67] fill-current shrink-0" />
                   <div>
                     <p className="font-semibold text-sm">FMGE Pass Rate</p>
-                    <p className="text-red-100 text-sm">
+                    <p className="text-[#F8E9EB] text-sm">
                       {Number(university.fmgePassRate)}% Success
                     </p>
                   </div>
@@ -137,7 +137,7 @@ export default function UniversityHero({ university }: Props) {
                 href={university.applyNowUrl || "/apply"}
                 target={university.applyNowUrl ? "_blank" : undefined}
                 rel={university.applyNowUrl ? "noopener noreferrer" : undefined}
-                className="bg-[#D90012] text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#B8000F] transition-all duration-200 hover:scale-105"
+                className="bg-[#A52B3A] text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#8C2030] transition-all duration-200 hover:scale-105"
               >
                 <span>Apply Now</span>
                 <ArrowRight className="h-5 w-5" />
@@ -196,7 +196,7 @@ export default function UniversityHero({ university }: Props) {
                         key={f.label}
                         className="flex justify-between py-3 border-b border-white/20 last:border-0"
                       >
-                        <span className="text-red-100 text-sm">
+                        <span className="text-[#F8E9EB] text-sm">
                           {f.label}
                         </span>
                         <span className="font-semibold text-sm text-right text-white max-w-[55%]">

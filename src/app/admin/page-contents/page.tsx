@@ -19,8 +19,8 @@ const pages = [
     ],
   },
   {
-    title: "About Armenia",
-    route: "/about-Armenia",
+    title: "About Hungary",
+    route: "/about-Hungary",
     icon: "🇻🇳",
     desc: "Country info, lifestyle, cuisine, tourist spots",
     managedBy: "About Country module",
@@ -59,10 +59,10 @@ export default function PageContentsPage() {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
-        <BookOpen size={22} className="text-red-600" />
+        <BookOpen size={22} className="text-[#A52B3A]" />
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Page Contents</h1>
-          <p className="text-sm text-gray-500">
+          <h1 className="text-2xl font-bold text-[#202D28]">Page Contents</h1>
+          <p className="text-sm text-[#7A877F]">
             Manage public-facing static pages
           </p>
         </div>
@@ -72,24 +72,24 @@ export default function PageContentsPage() {
         {pages.map((p) => (
           <div
             key={p.route}
-            className="bg-white rounded-xl border border-gray-200 p-5"
+            className="bg-white rounded-xl border border-[#DDE5DD] p-5"
           >
             <div className="flex items-start justify-between gap-4 flex-wrap">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">{p.icon}</span>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h2 className="font-semibold text-gray-900">{p.title}</h2>
+                    <h2 className="font-semibold text-[#202D28]">{p.title}</h2>
                     <Link
                       href={p.route}
                       target="_blank"
-                      className="text-gray-500 hover:text-[#285BB5] transition-colors"
+                      className="text-[#7A877F] hover:text-[#175747] transition-colors"
                     >
                       <ExternalLink size={14} />
                     </Link>
                   </div>
-                  <p className="text-sm text-gray-500 mt-0.5">{p.desc}</p>
-                  <p className="text-xs text-gray-500 mt-1">
+                  <p className="text-sm text-[#7A877F] mt-0.5">{p.desc}</p>
+                  <p className="text-xs text-[#7A877F] mt-1">
                     Managed via: {p.managedBy}
                   </p>
                 </div>
@@ -99,7 +99,7 @@ export default function PageContentsPage() {
                   <Link
                     key={l.href}
                     href={l.href}
-                    className="text-xs border border-gray-200 rounded-lg px-3 py-1.5 text-gray-600 hover:bg-gray-50 hover:text-[#285BB5] transition-colors"
+                    className="text-xs border border-[#DDE5DD] rounded-lg px-3 py-1.5 text-[#5F6F67] hover:bg-[#FBF8F0] hover:text-[#175747] transition-colors"
                   >
                     {l.label} →
                   </Link>

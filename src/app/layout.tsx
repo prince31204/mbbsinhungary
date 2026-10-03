@@ -4,17 +4,17 @@ import { Providers } from "@/components/Providers";
 import { APP_YEAR, ADMISSION_YEAR } from "@/lib/seo";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://mbbsinarmenia.com";
-const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Armenia";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://mbbsinhungary.com";
+const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Hungary";
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_NAME} — Study MBBS in Armenia ${APP_YEAR}`,
+    default: `${SITE_NAME} — Study MBBS in Hungary ${APP_YEAR}`,
     template: `%s | ${SITE_NAME}`,
   },
-  description: `Study MBBS in Armenia at top MCI-recognized medical universities. Low tuition fees, English-medium programs, high FMGE pass rates. Apply for ${ADMISSION_YEAR} admissions.`,
+  description: `Study MBBS in Hungary at top MCI-recognized medical universities. Low tuition fees, English-medium programs, high FMGE pass rates. Apply for ${ADMISSION_YEAR} admissions.`,
   keywords:
-    "MBBS in Armenia, study MBBS Armenia, medical university Armenia, MCI recognized Armenia",
+    "MBBS in Hungary, study MBBS Hungary, medical university Hungary, MCI recognized Hungary",
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: SITE_URL },
   openGraph: {
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Study MBBS in Armenia ${APP_YEAR}`,
+    title: `${SITE_NAME} — Study MBBS in Hungary ${APP_YEAR}`,
     description:
-      "Study MBBS in Armenia at top MCI-recognized medical universities.",
+      "Study MBBS in Hungary at top MCI-recognized medical universities.",
     images: [
       {
         url: `${SITE_URL}/og-default.jpg`,
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Study MBBS in Armenia ${APP_YEAR}`,
+    title: `${SITE_NAME} — Study MBBS in Hungary ${APP_YEAR}`,
     description:
-      "Study MBBS in Armenia at top MCI-recognized medical universities.",
+      "Study MBBS in Hungary at top MCI-recognized medical universities.",
     images: [`${SITE_URL}/og-default.jpg`],
   },
   robots: {
@@ -80,7 +80,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </head>
-      <body className="min-h-screen bg-white text-gray-900 antialiased font-sans overflow-x-hidden">
+      <body className="min-h-screen bg-white text-[#202D28] antialiased font-sans overflow-x-hidden">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

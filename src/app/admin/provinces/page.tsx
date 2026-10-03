@@ -19,21 +19,21 @@ const columns: Column<Province>[] = [
     label: "Province Name",
     sortable: true,
     render: (row) => (
-      <span className="font-medium text-gray-900">{row.name}</span>
+      <span className="font-medium text-[#202D28]">{row.name}</span>
     ),
   },
   {
     key: "slug",
     label: "Slug",
     render: (row) => (
-      <span className="text-xs font-mono text-gray-500">{row.slug}</span>
+      <span className="text-xs font-mono text-[#7A877F]">{row.slug}</span>
     ),
   },
   {
     key: "createdAt",
     label: "Created",
     render: (row) => (
-      <span className="text-xs text-gray-500">
+      <span className="text-xs text-[#7A877F]">
         {new Date(row.createdAt).toLocaleDateString("en-IN")}
       </span>
     ),

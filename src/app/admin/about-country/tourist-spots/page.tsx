@@ -95,21 +95,21 @@ export default function TouristSpotsAdminPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold text-[#202D28]">
             🗺️ Tourist Attractions
           </h1>
-          <p className="text-sm text-gray-500">{items.length} places</p>
+          <p className="text-sm text-[#7A877F]">{items.length} places</p>
         </div>
         <Button
           onClick={() => setShowAdd(true)}
-          className="ml-auto bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="ml-auto bg-[#175747] hover:bg-[#175747]"
         >
           <Plus size={14} className="mr-1" /> Add Place
         </Button>
       </div>
 
       {showAdd && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <Label>Attraction Name *</Label>
@@ -181,16 +181,16 @@ export default function TouristSpotsAdminPage() {
 
       <div className="space-y-3">
         {loading ? (
-          <div className="p-8 text-center text-gray-500">Loading...</div>
+          <div className="p-8 text-center text-[#7A877F]">Loading...</div>
         ) : items.length === 0 ? (
-          <div className="p-8 text-center text-gray-500">
+          <div className="p-8 text-center text-[#7A877F]">
             No attractions added yet.
           </div>
         ) : (
           items.map((item) => (
             <div
               key={item.id}
-              className={`bg-white rounded-xl border p-4 ${item.isActive ? "border-gray-200" : "border-gray-200 opacity-70"}`}
+              className={`bg-white rounded-xl border p-4 ${item.isActive ? "border-[#DDE5DD]" : "border-[#DDE5DD] opacity-70"}`}
             >
               {editId === item.id ? (
                 <div className="space-y-3">
@@ -283,17 +283,17 @@ export default function TouristSpotsAdminPage() {
                       {item.iconClass && (
                         <span className="text-lg">{item.iconClass}</span>
                       )}
-                      <p className="font-semibold text-gray-900">
+                      <p className="font-semibold text-[#202D28]">
                         {item.attractionName}
                       </p>
                       {!item.isActive && (
-                        <span className="text-xs bg-[#EAF1FB]0 text-red-600 px-2 py-0.5 rounded-full">
+                        <span className="text-xs bg-[#175747] text-[#A52B3A] px-2 py-0.5 rounded-full">
                           Hidden
                         </span>
                       )}
                     </div>
                     {item.description && (
-                      <p className="text-sm text-gray-500 mt-1 line-clamp-2">
+                      <p className="text-sm text-[#7A877F] mt-1 line-clamp-2">
                         {item.description}
                       </p>
                     )}
@@ -320,7 +320,7 @@ export default function TouristSpotsAdminPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="text-red-600"
+                      className="text-[#A52B3A]"
                       onClick={() => handleDelete(item.id)}
                     >
                       <Trash2 size={14} />

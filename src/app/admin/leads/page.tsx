@@ -23,8 +23,8 @@ const columns: Column<Lead>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-gray-900 text-sm">{row.name}</p>
-        <p className="text-xs text-gray-500">{row.email}</p>
+        <p className="font-medium text-[#202D28] text-sm">{row.name}</p>
+        <p className="text-xs text-[#7A877F]">{row.email}</p>
       </div>
     ),
   },
@@ -32,14 +32,14 @@ const columns: Column<Lead>[] = [
     key: "phone",
     label: "Phone",
     render: (row) => (
-      <span className="text-sm text-gray-600">{row.phone ?? "—"}</span>
+      <span className="text-sm text-[#5F6F67]">{row.phone ?? "—"}</span>
     ),
   },
   {
     key: "interestedIn",
     label: "Interested In",
     render: (row) => (
-      <span className="text-sm text-gray-600">{row.interestedIn ?? "—"}</span>
+      <span className="text-sm text-[#5F6F67]">{row.interestedIn ?? "—"}</span>
     ),
   },
   {
@@ -51,8 +51,8 @@ const columns: Column<Lead>[] = [
           row.status === "active"
             ? "bg-green-100 text-green-700"
             : row.status === "converted"
-              ? "bg-[#EAF1FB] text-[#285BB5]"
-              : "bg-gray-100 text-gray-600"
+              ? "bg-[#F3F7F3] text-[#175747]"
+              : "bg-[#F3F7F3] text-[#5F6F67]"
         }
       >
         {row.status}
@@ -64,7 +64,7 @@ const columns: Column<Lead>[] = [
     label: "Date",
     sortable: true,
     render: (row) => (
-      <span className="text-xs text-gray-500">
+      <span className="text-xs text-[#7A877F]">
         {new Date(row.createdAt).toLocaleDateString("en-IN")}
       </span>
     ),

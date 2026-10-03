@@ -91,15 +91,15 @@ export default function UniversityPhotosPage() {
 
       <div className="space-y-5">
         <div>
-          <h2 className="text-xl font-bold text-gray-900">Campus Photos</h2>
-          <p className="text-sm text-gray-500">
+          <h2 className="text-xl font-bold text-[#202D28]">Campus Photos</h2>
+          <p className="text-sm text-[#7A877F]">
             {photos.length} photo{photos.length !== 1 ? "s" : ""} uploaded
           </p>
         </div>
 
         {/* Add Photo */}
-        <div className="bg-white rounded-xl border border-gray-200 p-5 space-y-4">
-          <h3 className="font-semibold text-gray-900">Add New Photo</h3>
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-5 space-y-4">
+          <h3 className="font-semibold text-[#202D28]">Add New Photo</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <ImageUpload
               label="Campus Photo"
@@ -119,7 +119,7 @@ export default function UniversityPhotosPage() {
               <Button
                 onClick={handleAdd}
                 disabled={adding || !imagePath}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 w-full"
+                className="bg-[#175747] hover:bg-[#175747] w-full"
               >
                 {adding ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -135,12 +135,12 @@ export default function UniversityPhotosPage() {
         {/* Photo Grid */}
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : photos.length === 0 ? (
           <div className="p-12 text-center border border-dashed border-gray-300 rounded-xl">
-            <ImageIcon size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">
+            <ImageIcon size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">
               No photos yet. Upload campus images above.
             </p>
           </div>
@@ -149,9 +149,9 @@ export default function UniversityPhotosPage() {
             {photos.map((p) => (
               <div
                 key={p.id}
-                className="group relative bg-white rounded-xl overflow-hidden border border-gray-200"
+                className="group relative bg-white rounded-xl overflow-hidden border border-[#DDE5DD]"
               >
-                <div className="aspect-video relative bg-gray-100">
+                <div className="aspect-video relative bg-[#F3F7F3]">
                   {p.imagePath ? (
                     <Image
                       src={cdn(p.imagePath) || ""}
@@ -162,18 +162,18 @@ export default function UniversityPhotosPage() {
                     />
                   ) : (
                     <div className="flex items-center justify-center h-full">
-                      <ImageIcon size={24} className="text-gray-600" />
+                      <ImageIcon size={24} className="text-[#5F6F67]" />
                     </div>
                   )}
                 </div>
                 {p.title && (
-                  <p className="text-xs text-gray-600 p-2 truncate">
+                  <p className="text-xs text-[#5F6F67] p-2 truncate">
                     {p.title}
                   </p>
                 )}
                 <button
                   onClick={() => handleDelete(p.id)}
-                  className="absolute top-2 right-2 w-7 h-7 bg-[#EAF1FB]0 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute top-2 right-2 w-7 h-7 bg-[#175747] text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <Trash2 size={12} />
                 </button>

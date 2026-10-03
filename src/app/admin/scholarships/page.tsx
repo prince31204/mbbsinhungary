@@ -26,8 +26,8 @@ const columns: Column<Scholarship>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-gray-900 text-sm">{row.title}</p>
-        <p className="text-xs text-gray-500">
+        <p className="font-medium text-[#202D28] text-sm">{row.title}</p>
+        <p className="text-xs text-[#7A877F]">
           {row.university?.name ?? "General"}
         </p>
       </div>
@@ -42,7 +42,7 @@ const columns: Column<Scholarship>[] = [
     key: "deadline",
     label: "Deadline",
     render: (row) => (
-      <span className="text-sm text-gray-600">
+      <span className="text-sm text-[#5F6F67]">
         {row.deadline
           ? new Date(row.deadline).toLocaleDateString("en-IN")
           : "—"}
@@ -54,7 +54,7 @@ const columns: Column<Scholarship>[] = [
     label: "Created",
     sortable: true,
     render: (row) => (
-      <span className="text-xs text-gray-500">
+      <span className="text-xs text-[#7A877F]">
         {new Date(row.createdAt).toLocaleDateString("en-IN")}
       </span>
     ),
@@ -145,11 +145,11 @@ export default function AdminScholarshipsPage() {
       createHref="/admin/scholarships/create"
       createLabel="Add Scholarship"
       extraHeaderActions={
-        <div className="flex items-center gap-3 bg-white border border-gray-200 px-3 h-9 rounded-lg shadow-sm mr-2">
+        <div className="flex items-center gap-3 bg-white border border-[#DDE5DD] px-3 h-9 rounded-lg shadow-sm mr-2">
           <div className="flex flex-col justify-center">
             <Label
               htmlFor="scholarship-visibility"
-              className="text-sm uppercase tracking-wider text-gray-500 font-semibold leading-none mb-1"
+              className="text-sm uppercase tracking-wider text-[#7A877F] font-semibold leading-none mb-1"
             >
               Public Visibility
             </Label>

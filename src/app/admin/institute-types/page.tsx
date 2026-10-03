@@ -83,18 +83,18 @@ export default function InstituteTypesPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex items-center gap-3">
-        <Building2 size={22} className="text-red-600" />
+        <Building2 size={22} className="text-[#A52B3A]" />
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Institute Types</h1>
-          <p className="text-sm text-gray-500">
+          <h1 className="text-2xl font-bold text-[#202D28]">Institute Types</h1>
+          <p className="text-sm text-[#7A877F]">
             Manage university classification types (e.g. Government, Private,
             Deemed)
           </p>
         </div>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-        <div className="p-4 border-b border-gray-100 bg-gray-50 flex gap-3">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
+        <div className="p-4 border-b border-[#DDE5DD] bg-[#FBF8F0] flex gap-3">
           <Input
             placeholder="New institute type name..."
             value={newName}
@@ -105,7 +105,7 @@ export default function InstituteTypesPage() {
           <Button
             onClick={handleAdd}
             disabled={adding || !newName.trim()}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 shrink-0"
+            className="bg-[#175747] hover:bg-[#175747] shrink-0"
           >
             {adding ? (
               <Loader2 size={14} className="animate-spin mr-1" />
@@ -117,17 +117,17 @@ export default function InstituteTypesPage() {
         </div>
 
         {loading ? (
-          <div className="p-8 text-center text-gray-500">
+          <div className="p-8 text-center text-[#7A877F]">
             <Loader2 size={20} className="animate-spin mx-auto" />
           </div>
         ) : items.length === 0 ? (
-          <div className="p-8 text-center text-gray-500">
+          <div className="p-8 text-center text-[#7A877F]">
             No institute types yet.
           </div>
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-gray-100 text-left text-gray-500">
+              <tr className="border-b border-[#DDE5DD] text-left text-[#7A877F]">
                 <th className="px-4 py-3 font-medium">#</th>
                 <th className="px-4 py-3 font-medium">Name</th>
                 <th className="px-4 py-3 font-medium text-center">Active</th>
@@ -138,9 +138,9 @@ export default function InstituteTypesPage() {
               {items.map((item, i) => (
                 <tr
                   key={item.id}
-                  className="border-b border-gray-50 hover:bg-gray-50 transition-colors"
+                  className="border-b border-gray-50 hover:bg-[#FBF8F0] transition-colors"
                 >
-                  <td className="px-4 py-3 text-gray-500">{i + 1}</td>
+                  <td className="px-4 py-3 text-[#7A877F]">{i + 1}</td>
                   <td className="px-4 py-3">
                     {editId === item.id ? (
                       <Input
@@ -154,7 +154,7 @@ export default function InstituteTypesPage() {
                       />
                     ) : (
                       <span
-                        className="cursor-pointer hover:text-[#285BB5]"
+                        className="cursor-pointer hover:text-[#175747]"
                         onClick={() => {
                           setEditId(item.id);
                           setEditName(item.name);
@@ -185,7 +185,7 @@ export default function InstituteTypesPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-7 w-7 p-0 text-red-600 hover:text-[#285BB5] hover:bg-[#EAF1FB]0"
+                        className="h-7 w-7 p-0 text-[#A52B3A] hover:text-[#175747] hover:bg-[#175747]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={13} />

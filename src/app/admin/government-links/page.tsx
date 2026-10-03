@@ -113,12 +113,12 @@ export default function GovernmentLinksPage() {
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Link2 size={22} className="text-red-600" />
+          <Link2 size={22} className="text-[#A52B3A]" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">
+            <h1 className="text-2xl font-bold text-[#202D28]">
               Government Links
             </h1>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-[#7A877F]">
               Official recognition & accreditation links
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function GovernmentLinksPage() {
             setEditId(null);
             setForm(blank);
           }}
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#175747] hover:bg-[#175747]"
         >
           {showForm ? (
             <>
@@ -146,8 +146,8 @@ export default function GovernmentLinksPage() {
       </div>
 
       {showForm && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28]">
             {editId ? "Edit Link" : "New Government Link"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -206,7 +206,7 @@ export default function GovernmentLinksPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#175747] hover:bg-[#175747]"
             >
               {saving ? (
                 <>
@@ -224,20 +224,20 @@ export default function GovernmentLinksPage() {
         </div>
       )}
 
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : items.length === 0 ? (
           <div className="p-12 text-center">
-            <Link2 size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No government links added yet.</p>
+            <Link2 size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No government links added yet.</p>
           </div>
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-gray-100 bg-gray-50 text-left text-gray-500">
+              <tr className="border-b border-[#DDE5DD] bg-[#FBF8F0] text-left text-[#7A877F]">
                 <th className="px-4 py-3 font-medium">Name</th>
                 <th className="px-4 py-3 font-medium">Category</th>
                 <th className="px-4 py-3 font-medium">URL</th>
@@ -249,12 +249,12 @@ export default function GovernmentLinksPage() {
               {items.map((item) => (
                 <tr
                   key={item.id}
-                  className="border-b border-gray-50 hover:bg-gray-50"
+                  className="border-b border-gray-50 hover:bg-[#FBF8F0]"
                 >
-                  <td className="px-4 py-3 font-medium text-gray-800">
+                  <td className="px-4 py-3 font-medium text-[#202D28]">
                     {item.name}
                   </td>
-                  <td className="px-4 py-3 text-gray-500 text-xs">
+                  <td className="px-4 py-3 text-[#7A877F] text-xs">
                     {item.category || "—"}
                   </td>
                   <td className="px-4 py-3">
@@ -262,7 +262,7 @@ export default function GovernmentLinksPage() {
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-red-600 hover:underline flex items-center gap-1 text-xs"
+                      className="text-[#A52B3A] hover:underline flex items-center gap-1 text-xs"
                     >
                       <ExternalLink size={11} />
                       {item.url.replace(/^https?:\/\//, "").slice(0, 40)}
@@ -294,7 +294,7 @@ export default function GovernmentLinksPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                        className="h-8 w-8 p-0 text-[#A52B3A] hover:bg-[#175747]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={14} />

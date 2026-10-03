@@ -188,10 +188,10 @@ export default function UniversityProgramsPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-gray-900">
+            <h2 className="text-xl font-bold text-[#202D28]">
               Programs / Courses
             </h2>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-[#7A877F]">
               {programs.length} program{programs.length !== 1 ? "s" : ""}
             </p>
           </div>
@@ -201,7 +201,7 @@ export default function UniversityProgramsPage() {
               setEditId(null);
               setForm(blankForm());
             }}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
           >
             <Plus size={16} className="mr-2" />
             Add Program
@@ -210,8 +210,8 @@ export default function UniversityProgramsPage() {
 
         {/* Form */}
         {showForm && (
-          <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-5">
-            <h3 className="font-semibold text-gray-800">
+          <div className="bg-white border border-[#DDE5DD] rounded-xl p-5 space-y-5">
+            <h3 className="font-semibold text-[#202D28]">
               {editId ? "Edit Program" : "Add New Program"}
             </h3>
 
@@ -223,7 +223,7 @@ export default function UniversityProgramsPage() {
               <>
                 {/* Basic */}
                 <div>
-                  <p className="text-xs font-semibold text-[#285BB5] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#175747] uppercase tracking-wider mb-2">
                     Basic Info
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -315,7 +315,7 @@ export default function UniversityProgramsPage() {
 
                 {/* Fees */}
                 <div>
-                  <p className="text-xs font-semibold text-[#285BB5] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#175747] uppercase tracking-wider mb-2">
                     Fees
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -353,7 +353,7 @@ export default function UniversityProgramsPage() {
 
                 {/* Content */}
                 <div>
-                  <p className="text-xs font-semibold text-[#285BB5] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#175747] uppercase tracking-wider mb-2">
                     Program Content
                   </p>
                   <div className="grid grid-cols-1 gap-3">
@@ -374,14 +374,14 @@ export default function UniversityProgramsPage() {
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <Label>Why Choose Armenia</Label>
+                      <Label>Why Choose Hungary</Label>
                       <Textarea
                         value={form.whyChooseVietnam}
                         onChange={(e) =>
                           set("whyChooseVietnam", e.target.value)
                         }
                         rows={3}
-                        placeholder="Reasons why students should choose Armenia for MBBS..."
+                        placeholder="Reasons why students should choose Hungary for MBBS..."
                       />
                     </div>
                     <div className="space-y-1.5">
@@ -400,7 +400,7 @@ export default function UniversityProgramsPage() {
 
                 {/* Syllabus */}
                 <div>
-                  <p className="text-xs font-semibold text-[#285BB5] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#175747] uppercase tracking-wider mb-2">
                     Year-wise Syllabus
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -426,7 +426,7 @@ export default function UniversityProgramsPage() {
 
                 {/* SEO */}
                 <div>
-                  <p className="text-xs font-semibold text-[#285BB5] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#175747] uppercase tracking-wider mb-2">
                     SEO
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -468,7 +468,7 @@ export default function UniversityProgramsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving || loadingEdit}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#175747] hover:bg-[#175747]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -489,25 +489,25 @@ export default function UniversityProgramsPage() {
         )}
 
         {/* List */}
-        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
           {loading ? (
             <div className="p-12 text-center">
               <Loader2
                 size={20}
-                className="animate-spin mx-auto text-gray-500"
+                className="animate-spin mx-auto text-[#7A877F]"
               />
             </div>
           ) : programs.length === 0 ? (
             <div className="p-12 text-center">
-              <BookOpen size={36} className="mx-auto mb-3 text-gray-600" />
-              <p className="text-gray-500">
+              <BookOpen size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+              <p className="text-[#7A877F]">
                 No programs yet. Add MBBS or other courses above.
               </p>
             </div>
           ) : (
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-gray-100 bg-gray-50 text-left text-gray-500">
+                <tr className="border-b border-[#DDE5DD] bg-[#FBF8F0] text-left text-[#7A877F]">
                   <th className="px-4 py-3 font-medium">Program</th>
                   <th className="px-4 py-3 font-medium">Level</th>
                   <th className="px-4 py-3 font-medium">Duration</th>
@@ -520,28 +520,28 @@ export default function UniversityProgramsPage() {
                 {programs.map((p) => (
                   <tr
                     key={p.id}
-                    className="border-b border-gray-50 hover:bg-gray-50"
+                    className="border-b border-gray-50 hover:bg-[#FBF8F0]"
                   >
                     <td className="px-4 py-3">
-                      <div className="font-medium text-gray-900">
+                      <div className="font-medium text-[#202D28]">
                         {p.programName}
                       </div>
-                      <div className="text-xs text-gray-500 font-mono">
+                      <div className="text-xs text-[#7A877F] font-mono">
                         {p.programSlug}
                       </div>
                     </td>
-                    <td className="px-4 py-3 text-gray-500">
+                    <td className="px-4 py-3 text-[#7A877F]">
                       {p.level?.name ?? "—"}
                     </td>
-                    <td className="px-4 py-3 text-gray-500">
+                    <td className="px-4 py-3 text-[#7A877F]">
                       {p.duration ?? "—"}
                     </td>
-                    <td className="px-4 py-3 text-gray-500">
+                    <td className="px-4 py-3 text-[#7A877F]">
                       {p.annualTuitionFee ? String(p.annualTuitionFee) : "—"}
                     </td>
                     <td className="px-4 py-3 text-center">
                       <span
-                        className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${p.isActive ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-500"}`}
+                        className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${p.isActive ? "bg-green-100 text-green-700" : "bg-[#F3F7F3] text-[#7A877F]"}`}
                       >
                         {p.isActive ? "Active" : "Inactive"}
                       </span>
@@ -574,7 +574,7 @@ export default function UniversityProgramsPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                          className="h-8 w-8 p-0 text-[#A52B3A] hover:bg-[#175747]"
                           onClick={() => handleDelete(p.id)}
                         >
                           <Trash2 size={14} />

@@ -49,11 +49,11 @@ export default function ChangePasswordPage() {
   return (
     <div>
       <div className="flex items-center gap-3 mb-6">
-        <Lock className="w-6 h-6 text-red-600" />
-        <h1 className="text-2xl font-bold text-gray-900">Change Password</h1>
+        <Lock className="w-6 h-6 text-[#A52B3A]" />
+        <h1 className="text-2xl font-bold text-[#202D28]">Change Password</h1>
       </div>
 
-      <div className="bg-white rounded-2xl border border-gray-200 p-7 max-w-lg">
+      <div className="bg-white rounded-2xl border border-[#DDE5DD] p-7 max-w-lg">
         {success && (
           <div className="flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-xl mb-5 text-sm">
             <CheckCircle className="w-4 h-4 shrink-0" /> Password changed
@@ -61,14 +61,14 @@ export default function ChangePasswordPage() {
           </div>
         )}
         {error && (
-          <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-xl mb-5 text-sm">
+          <div className="bg-white border border-[#DDE5DD] text-[#175747] px-4 py-3 rounded-xl mb-5 text-sm">
             {error}
           </div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
               Current Password
             </label>
             <div className="relative">
@@ -80,12 +80,12 @@ export default function ChangePasswordPage() {
                   setForm({ ...form, currentPassword: e.target.value })
                 }
                 placeholder="Enter current password"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 pr-12 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-[#DDE5DD] rounded-xl px-4 py-3 pr-12 text-[#202D28] text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
               />
               <button
                 type="button"
                 onClick={() => setShowCurrent(!showCurrent)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-600"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-[#7A877F] hover:text-[#5F6F67]"
               >
                 {showCurrent ? (
                   <EyeOff className="w-4 h-4" />
@@ -97,7 +97,7 @@ export default function ChangePasswordPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
               New Password
             </label>
             <div className="relative">
@@ -109,12 +109,12 @@ export default function ChangePasswordPage() {
                   setForm({ ...form, newPassword: e.target.value })
                 }
                 placeholder="At least 8 characters"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 pr-12 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-[#DDE5DD] rounded-xl px-4 py-3 pr-12 text-[#202D28] text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
               />
               <button
                 type="button"
                 onClick={() => setShowNew(!showNew)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-600"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-[#7A877F] hover:text-[#5F6F67]"
               >
                 {showNew ? (
                   <EyeOff className="w-4 h-4" />
@@ -124,14 +124,14 @@ export default function ChangePasswordPage() {
               </button>
             </div>
             {form.newPassword && form.newPassword.length < 8 && (
-              <p className="text-xs text-red-600 mt-1">
+              <p className="text-xs text-[#A52B3A] mt-1">
                 Password must be at least 8 characters
               </p>
             )}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
               Confirm New Password
             </label>
             <input
@@ -140,10 +140,10 @@ export default function ChangePasswordPage() {
               value={form.confirm}
               onChange={(e) => setForm({ ...form, confirm: e.target.value })}
               placeholder="Repeat new password"
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+              className="w-full border border-[#DDE5DD] rounded-xl px-4 py-3 text-[#202D28] text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
             />
             {form.confirm && form.confirm !== form.newPassword && (
-              <p className="text-xs text-red-600 mt-1">
+              <p className="text-xs text-[#A52B3A] mt-1">
                 Passwords do not match
               </p>
             )}
@@ -153,7 +153,7 @@ export default function ChangePasswordPage() {
             <button
               type="submit"
               disabled={loading}
-              className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-xl font-semibold disabled:opacity-60 transition-colors"
+              className="flex items-center gap-2 bg-[#A52B3A] hover:bg-[#8C2030] text-white px-8 py-3 rounded-xl font-semibold disabled:opacity-60 transition-colors"
             >
               {loading ? (
                 <>

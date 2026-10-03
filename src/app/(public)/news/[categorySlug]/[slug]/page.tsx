@@ -120,26 +120,26 @@ export default async function NewsDetailPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-[#FBF8F0]">
         {/* Breadcrumb */}
         <div className="bg-white border-b">
-          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-gray-500 flex-wrap">
-            <Link href="/" className="hover:text-[#285BB5]">
+          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-[#7A877F] flex-wrap">
+            <Link href="/" className="hover:text-[#175747]">
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/news" className="hover:text-[#285BB5]">
+            <Link href="/news" className="hover:text-[#175747]">
               News
             </Link>
             <ChevronRight className="w-4 h-4" />
             <Link
               href={`/news/${item.category.slug}`}
-              className="hover:text-[#285BB5]"
+              className="hover:text-[#175747]"
             >
               {item.category.name}
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900 line-clamp-1">{item.title}</span>
+            <span className="text-[#202D28] line-clamp-1">{item.title}</span>
           </div>
         </div>
 
@@ -147,7 +147,7 @@ export default async function NewsDetailPage({ params }: Props) {
           <div className="grid lg:grid-cols-4 gap-10">
             {/* Article */}
             <article className="lg:col-span-3">
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DDE5DD]">
                 {/* Hero image */}
                 {item.thumbnailPath && (
                   <div className="relative h-72 lg:h-96">
@@ -166,11 +166,11 @@ export default async function NewsDetailPage({ params }: Props) {
                   <div className="flex flex-wrap items-center gap-3 mb-4">
                     <Link
                       href={`/news/${item.category.slug}`}
-                      className="bg-white text-[#285BB5] text-xs font-semibold px-3 py-1 rounded-full"
+                      className="bg-white text-[#175747] text-xs font-semibold px-3 py-1 rounded-full"
                     >
                       {item.category.name}
                     </Link>
-                    <span className="text-gray-500 text-xs flex items-center gap-1">
+                    <span className="text-[#7A877F] text-xs flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
                       {new Date(item.createdAt).toLocaleDateString("en-US", {
                         year: "numeric",
@@ -179,20 +179,20 @@ export default async function NewsDetailPage({ params }: Props) {
                       })}
                     </span>
                     {item.author?.name && (
-                      <span className="text-gray-500 text-xs flex items-center gap-1">
+                      <span className="text-[#7A877F] text-xs flex items-center gap-1">
                         <User className="w-3 h-3" />
                         {item.author.name}
                       </span>
                     )}
                   </div>
 
-                  <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                  <h1 className="text-2xl lg:text-3xl font-bold text-[#202D28] mb-4">
                     {item.title}
                   </h1>
                   {item.shortnote && (
-                    <div className="border-l-4 border-gray-200 pl-4 mb-6">
+                    <div className="border-l-4 border-[#DDE5DD] pl-4 mb-6">
                       <div
-                        className="text-lg text-gray-500 italic prose prose-sm max-w-none prose-p:my-0"
+                        className="text-lg text-[#7A877F] italic prose prose-sm max-w-none prose-p:my-0"
                         dangerouslySetInnerHTML={{ __html: item.shortnote }}
                       />
                     </div>
@@ -207,7 +207,7 @@ export default async function NewsDetailPage({ params }: Props) {
                   {/* Content sections */}
                   {topLevel.map((section) => (
                     <div key={section.id} className="mb-8">
-                      <h2 className="text-xl font-bold text-gray-900 mb-3">
+                      <h2 className="text-xl font-bold text-[#202D28] mb-3">
                         {section.title}
                       </h2>
                       <div
@@ -230,9 +230,9 @@ export default async function NewsDetailPage({ params }: Props) {
                       {childrenOf(section.id).map((child) => (
                         <div
                           key={child.id}
-                          className="ml-4 mt-4 pl-4 border-l-2 border-gray-200"
+                          className="ml-4 mt-4 pl-4 border-l-2 border-[#DDE5DD]"
                         >
-                          <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                          <h3 className="text-lg font-semibold text-[#202D28] mb-2">
                             {child.title}
                           </h3>
                           <div
@@ -249,7 +249,7 @@ export default async function NewsDetailPage({ params }: Props) {
                   {/* FAQs */}
                   {item.faqs.length > 0 && (
                     <div className="mt-10">
-                      <h2 className="text-xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-xl font-bold text-[#202D28] mb-4">
                         Frequently Asked Questions
                       </h2>
                       <div className="space-y-4">
@@ -258,14 +258,14 @@ export default async function NewsDetailPage({ params }: Props) {
                             key={faq.id}
                             className="bg-white rounded-xl p-4 group"
                           >
-                            <summary className="font-semibold text-gray-900 cursor-pointer list-none flex justify-between items-center">
+                            <summary className="font-semibold text-[#202D28] cursor-pointer list-none flex justify-between items-center">
                               {faq.question}
-                              <span className="text-red-600 ml-2 shrink-0 transition-transform group-open:rotate-45">
+                              <span className="text-[#A52B3A] ml-2 shrink-0 transition-transform group-open:rotate-45">
                                 +
                               </span>
                             </summary>
                             <div
-                              className="mt-3 text-gray-600 text-sm"
+                              className="mt-3 text-[#5F6F67] text-sm"
                               dangerouslySetInnerHTML={{ __html: faq.answer }}
                             />
                           </details>
@@ -275,10 +275,10 @@ export default async function NewsDetailPage({ params }: Props) {
                   )}
 
                   {/* Navigation */}
-                  <div className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
+                  <div className="mt-8 pt-6 border-t border-[#DDE5DD] flex items-center justify-between">
                     <Link
                       href={`/news/${item.category.slug}`}
-                      className="flex items-center gap-2 text-red-600 hover:text-[#285BB5] font-medium transition-colors"
+                      className="flex items-center gap-2 text-[#A52B3A] hover:text-[#175747] font-medium transition-colors"
                     >
                       <ArrowLeft className="w-4 h-4" /> Back to{" "}
                       {item.category.name}
@@ -290,7 +290,7 @@ export default async function NewsDetailPage({ params }: Props) {
               {/* Related news */}
               {relatedNews.length > 0 && (
                 <div className="mt-8">
-                  <h2 className="text-xl font-bold text-gray-900 mb-4">
+                  <h2 className="text-xl font-bold text-[#202D28] mb-4">
                     Related News
                   </h2>
                   <div className="grid sm:grid-cols-3 gap-4">
@@ -298,7 +298,7 @@ export default async function NewsDetailPage({ params }: Props) {
                       <Link
                         key={r.title}
                         href={`/news/${r.category?.slug ?? ""}/${r.slug ?? ""}`}
-                        className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow group"
+                        className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden hover:shadow-md transition-shadow group"
                       >
                         <div className="relative h-36 bg-white">
                           {r.thumbnailPath ? (
@@ -314,7 +314,7 @@ export default async function NewsDetailPage({ params }: Props) {
                           )}
                         </div>
                         <div className="p-3">
-                          <p className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-[#285BB5] transition-colors">
+                          <p className="text-sm font-semibold text-[#202D28] line-clamp-2 group-hover:text-[#175747] transition-colors">
                             {r.title}
                           </p>
                         </div>
@@ -327,8 +327,8 @@ export default async function NewsDetailPage({ params }: Props) {
 
             {/* Sidebar */}
             <aside className="space-y-6">
-              <div className="bg-white rounded-2xl border border-gray-100 p-5">
-                <h3 className="font-bold text-gray-900 mb-4">
+              <div className="bg-white rounded-2xl border border-[#DDE5DD] p-5">
+                <h3 className="font-bold text-[#202D28] mb-4">
                   News Categories
                 </h3>
                 <ul className="space-y-2">
@@ -336,7 +336,7 @@ export default async function NewsDetailPage({ params }: Props) {
                     <li key={cat.name}>
                       <Link
                         href={`/news/${cat.slug}`}
-                        className={`flex items-center gap-2 text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-red-600 font-semibold" : "text-gray-600 hover:text-[#285BB5]"}`}
+                        className={`flex items-center gap-2 text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-[#A52B3A] font-semibold" : "text-[#5F6F67] hover:text-[#175747]"}`}
                       >
                         <ArrowRight className="w-3 h-3 shrink-0" /> {cat.name}
                       </Link>
@@ -344,14 +344,14 @@ export default async function NewsDetailPage({ params }: Props) {
                   ))}
                 </ul>
               </div>
-              <div className="bg-red-600 rounded-2xl p-6 text-gray-900 text-center">
+              <div className="bg-[#A52B3A] rounded-2xl p-6 text-[#202D28] text-center">
                 <h3 className="font-bold text-lg mb-2">Apply for MBBS</h3>
-                <p className="text-slate-600 text-sm mb-4">
+                <p className="text-[#5F6F67] text-sm mb-4">
                   Get expert guidance for free
                 </p>
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 bg-white text-[#285BB5] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
+                  className="inline-flex items-center gap-2 bg-white text-[#175747] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
                 >
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>

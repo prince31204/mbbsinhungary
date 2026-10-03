@@ -223,10 +223,10 @@ Changed the save button label from "Save Article Changes" to "Save Changes" sinc
 
 **File**: `src/app/admin/blogs/[id]/edit/page.tsx`
 
-### 6. About Armenia — Display More Items
+### 6. About Hungary — Display More Items
 Increased the `slice` limit for attractions and cuisines from 3 to 5 items.
 
-**File**: `src/app/(public)/about-Armenia/page.tsx`
+**File**: `src/app/(public)/about-Hungary/page.tsx`
 ```typescript
 // Before
 const attractions = content.attractions.slice(0, 3).map(...)

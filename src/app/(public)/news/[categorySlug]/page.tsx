@@ -44,11 +44,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch(() => null);
   if (!cat) return { title: "News Category Not Found" };
   return buildMetadata({
-    title: cat.metaTitle || `${cat.name} — MBBS Armenia News`,
+    title: cat.metaTitle || `${cat.name} — MBBS Hungary News`,
     description:
       cat.metaDescription ||
       cat.description ||
-      `Latest news about ${cat.name} — MBBS in Armenia.`,
+      `Latest news about ${cat.name} — MBBS in Hungary.`,
     path: `/news/${categorySlug}`,
   });
 }
@@ -105,34 +105,34 @@ export default async function NewsCategoryPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-[#FBF8F0]">
         {/* Breadcrumb */}
         <div className="bg-white border-b">
-          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-[#285BB5]">
+          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-[#7A877F]">
+            <Link href="/" className="hover:text-[#175747]">
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/news" className="hover:text-[#285BB5]">
+            <Link href="/news" className="hover:text-[#175747]">
               News
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900 font-medium">{category.name}</span>
+            <span className="text-[#202D28] font-medium">{category.name}</span>
           </div>
         </div>
 
         {/* Hero */}
-        <div className="bg-white text-gray-900 py-12">
+        <div className="bg-white text-[#202D28] py-12">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <h1 className="text-3xl lg:text-4xl font-bold mb-3">
               {category.name}
             </h1>
             {category.description && (
-              <p className="text-slate-600 max-w-2xl mx-auto">
+              <p className="text-[#5F6F67] max-w-2xl mx-auto">
                 {category.description}
               </p>
             )}
-            <p className="text-slate-600 text-sm mt-2">
+            <p className="text-[#5F6F67] text-sm mt-2">
               {category.news.length} article
               {category.news.length !== 1 ? "s" : ""}
             </p>
@@ -143,8 +143,8 @@ export default async function NewsCategoryPage({ params }: Props) {
           <div className="grid lg:grid-cols-4 gap-8">
             <div className="lg:col-span-3">
               {category.news.length === 0 ? (
-                <div className="text-center py-16 text-gray-500">
-                  <Newspaper className="w-12 h-12 mx-auto mb-3 text-gray-600" />
+                <div className="text-center py-16 text-[#7A877F]">
+                  <Newspaper className="w-12 h-12 mx-auto mb-3 text-[#5F6F67]" />
                   <p>No news in this category yet.</p>
                 </div>
               ) : (
@@ -153,7 +153,7 @@ export default async function NewsCategoryPage({ params }: Props) {
                     <Link
                       key={item.id}
                       href={`/news/${category.slug}/${item.slug ?? ""}`}
-                      className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                      className="group bg-white rounded-2xl border border-[#DDE5DD] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                     >
                       <div className="relative h-48 bg-white">
                         {item.thumbnailPath ? (
@@ -173,16 +173,16 @@ export default async function NewsCategoryPage({ params }: Props) {
                         )}
                       </div>
                       <div className="p-5">
-                        <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#285BB5] transition-colors">
+                        <h2 className="font-bold text-[#202D28] mb-2 line-clamp-2 group-hover:text-[#175747] transition-colors">
                           {item.title}
                         </h2>
                         {item.shortnote && (
                           <div
-                            className="text-sm text-gray-500 line-clamp-2 mb-3 prose prose-sm max-w-none prose-p:my-0"
+                            className="text-sm text-[#7A877F] line-clamp-2 mb-3 prose prose-sm max-w-none prose-p:my-0"
                             dangerouslySetInnerHTML={{ __html: item.shortnote }}
                           />
                         )}
-                        <div className="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-50">
+                        <div className="flex items-center justify-between text-xs text-[#7A877F] pt-3 border-t border-gray-50">
                           <div className="flex items-center gap-1">
                             <User className="w-3 h-3" />
                             <span>{item.author?.name ?? "Admin"}</span>
@@ -210,17 +210,17 @@ export default async function NewsCategoryPage({ params }: Props) {
 
             {/* Sidebar */}
             <div className="space-y-6">
-              <div className="bg-white rounded-2xl border border-gray-100 p-5">
-                <h3 className="font-bold text-gray-900 mb-4">All Categories</h3>
+              <div className="bg-white rounded-2xl border border-[#DDE5DD] p-5">
+                <h3 className="font-bold text-[#202D28] mb-4">All Categories</h3>
                 <ul className="space-y-2">
                   {categories.map((cat) => (
                     <li key={cat.id}>
                       <Link
                         href={`/news/${cat.slug}`}
-                        className={`flex items-center justify-between text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-red-600 font-semibold" : "text-gray-600 hover:text-[#285BB5]"}`}
+                        className={`flex items-center justify-between text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-[#A52B3A] font-semibold" : "text-[#5F6F67] hover:text-[#175747]"}`}
                       >
                         <span>{cat.name}</span>
-                        <span className="bg-white text-red-600 text-xs px-2 py-0.5 rounded-full">
+                        <span className="bg-white text-[#A52B3A] text-xs px-2 py-0.5 rounded-full">
                           {cat._count.news}
                         </span>
                       </Link>
@@ -228,16 +228,16 @@ export default async function NewsCategoryPage({ params }: Props) {
                   ))}
                 </ul>
               </div>
-              <div className="bg-red-600 rounded-2xl p-6 text-gray-900 text-center">
+              <div className="bg-[#A52B3A] rounded-2xl p-6 text-[#202D28] text-center">
                 <h3 className="font-bold text-lg mb-2">
-                  Study MBBS in Armenia
+                  Study MBBS in Hungary
                 </h3>
-                <p className="text-slate-600 text-sm mb-4">
+                <p className="text-[#5F6F67] text-sm mb-4">
                   Get free expert counseling today
                 </p>
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 bg-white text-[#285BB5] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
+                  className="inline-flex items-center gap-2 bg-white text-[#175747] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
                 >
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>

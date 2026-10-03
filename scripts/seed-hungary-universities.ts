@@ -1,44 +1,44 @@
 import { prisma } from '../src/lib/prisma';
 
 async function main() {
-  console.log('🌱 Seeding 5 Armenian Universities and Related Data with Coordinates...');
+  console.log('🌱 Seeding 5 Hungaryn Universities and Related Data with Coordinates...');
 
   const slugify = (text: string) => text.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
 
   const universities = [
     {
-      name: 'SSR Medical College (SSRMC)',
+      name: 'Semmelweis University',
       uniqueId: 'MAU-SSR-001',
-      city: 'Belle Rive',
+      city: 'Budapest',
       establishedYear: 1999,
       students: '1200+',
       tuitionFee: '$7,500',
       globalRanking: 'Top 500 in Clinical Medicine',
       nationalRanking: '1',
-      shortnote: 'The first medical college in Armenia, established to provide high-quality medical education to local and international students.',
-      aboutNote: 'SSR Medical College is affiliated with the University of Armenia and is recognized by the Medical Council of Armenia and the WHO. It offers a comprehensive MBBS program with clinical training in leading government hospitals.',
+      shortnote: 'The first medical college in Hungary, established to provide high-quality medical education to local and international students.',
+      aboutNote: 'SSR Medical College is affiliated with the University of Hungary and is recognized by the Medical Council of Hungary and the WHO. It offers a comprehensive MBBS program with clinical training in leading government hospitals.',
       tuitionFeeAnnual: '$7,500',
       courseDuration: '5 Years + 1 Year Internship',
       mediumOfInstruction: 'English',
       eligibility: '12th Grade with PCB (50%+), NEET Qualified (for Indian students)',
       status: true,
       isFeatured: true,
-      provinceId: 4, // Moka
-      cityId: 9, // Saint Pierre (near Belle Rive)
+      provinceId: 1, // Moka
+      cityId: 1, // Saint Pierre (near Budapest)
       instituteTypeId: 2, // Private
       latitude: -20.300,
       longitude: 57.530,
     },
     {
-      name: 'Anna Medical College (AMC)',
+      name: 'University of Debrecen',
       uniqueId: 'MAU-AMC-002',
-      city: 'Montagne Blanche',
+      city: 'Debrecen',
       establishedYear: 2012,
       students: '800+',
       tuitionFee: '$8,000',
       globalRanking: 'Recognized for Clinical Excellence',
       nationalRanking: '2',
-      shortnote: 'A leading private medical college affiliated with the University of Technology, Armenia (UTM).',
+      shortnote: 'A leading private medical college affiliated with the University of Technology, Hungary (UTM).',
       aboutNote: 'Anna Medical College provides a modern learning environment with advanced simulation labs and multimedia classrooms. It focuses on student-centered learning and early clinical exposure.',
       tuitionFeeAnnual: '$8,000',
       courseDuration: '5 Years + 1 Year Internship',
@@ -46,31 +46,31 @@ async function main() {
       eligibility: '12th Grade with PCB (50%+), NEET Qualified',
       status: true,
       isFeatured: true,
-      provinceId: 2, // Flacq
-      cityId: 8, // Bel Air (near Montagne Blanche)
+      provinceId: 1, // Flacq
+      cityId: 1, // Bel Air (near Debrecen)
       instituteTypeId: 2, // Private
       latitude: -20.280,
       longitude: 57.650,
     },
     {
-      name: 'University of Armenia - Faculty of Medicine',
+      name: 'Budapest Metropolitan University',
       uniqueId: 'MAU-UOM-003',
-      city: 'Yerevan',
+      city: 'Budapest',
       establishedYear: 1920,
       students: '12,000+ (Total)',
       tuitionFee: '$6,500',
       globalRanking: 'Top 1000 Global Universities',
       nationalRanking: 'Special Recognition',
-      shortnote: 'The oldest and most prestigious university in Armenia, offering a well-established medical curriculum.',
-      aboutNote: 'The Faculty of Medicine at the University of Armenia is known for its rigorous academic standards and research contributions. It collaborates with international medical bodies for curriculum development.',
+      shortnote: 'The oldest and most prestigious university in Hungary, offering a well-established medical curriculum.',
+      aboutNote: 'The Faculty of Medicine at the University of Hungary is known for its rigorous academic standards and research contributions. It collaborates with international medical bodies for curriculum development.',
       tuitionFeeAnnual: '$6,500',
       courseDuration: '5 Years + 1 Year Internship',
       mediumOfInstruction: 'English',
       eligibility: 'High academic standing in 12th Grade (PCB), English proficiency',
       status: true,
       isFeatured: false,
-      provinceId: 10, // Yerevan
-      cityId: 13, // Yerevan
+      provinceId: 1, // Budapest
+      cityId: 1, // Budapest
       instituteTypeId: 1, // Public
       latitude: 40.181,
       longitude: 44.513,
@@ -85,21 +85,21 @@ async function main() {
       globalRanking: 'Premier Health Science Institution',
       nationalRanking: '3',
       shortnote: 'Part of the JSS Mahavidyapeetha group, focusing on health sciences and medical education.',
-      aboutNote: 'JSS Academy in Armenia offers specialized health science programs and is developing its medical faculty to meet international standards. It has a strong focus on pharmacy and clinical research.',
+      aboutNote: 'JSS Academy in Hungary offers specialized health science programs and is developing its medical faculty to meet international standards. It has a strong focus on pharmacy and clinical research.',
       tuitionFeeAnnual: '$7,000',
       courseDuration: '5 Years',
       mediumOfInstruction: 'English',
       eligibility: '12th Grade with PCB, NEET Qualified',
       status: true,
       isFeatured: false,
-      provinceId: 6, // Plaines Wilhems
-      cityId: 3, // Vacoas
+      provinceId: 1, // Plaines Wilhems
+      cityId: 1, // Vacoas
       instituteTypeId: 2, // Private
       latitude: -20.289,
       longitude: 57.487,
     },
     {
-      name: 'Middlesex University Armenia',
+      name: 'Middlesex University Hungary',
       uniqueId: 'MAU-MDX-005',
       city: 'Cascavelle',
       establishedYear: 2009,
@@ -107,8 +107,8 @@ async function main() {
       tuitionFee: '$9,000',
       globalRanking: 'Top 500 World University Rankings',
       nationalRanking: '4',
-      shortnote: 'A branch of Middlesex University London, offering high-standard British education in Armenia.',
-      aboutNote: 'Middlesex University Armenia provides a global learning environment with a focus on health and science programs that are aligned with the UK education framework.',
+      shortnote: 'A branch of Middlesex University London, offering high-standard British education in Hungary.',
+      aboutNote: 'Middlesex University Hungary provides a global learning environment with a focus on health and science programs that are aligned with the UK education framework.',
       tuitionFeeAnnual: '$9,000',
       courseDuration: '3-5 Years (Depending on program)',
       mediumOfInstruction: 'English',
@@ -116,7 +116,7 @@ async function main() {
       status: true,
       isFeatured: false,
       provinceId: 1, // Black River
-      cityId: 12, // Bambous (near Cascavelle)
+      cityId: 1, // Bambous (near Cascavelle)
       instituteTypeId: 2, // Private
       latitude: -20.287,
       longitude: 57.407,
@@ -221,12 +221,12 @@ async function main() {
       data: [
         {
           question: 'Is the degree recognized in India?',
-          answer: 'Yes, the degree is recognized by the Medical Council of Armenia and the National Medical Commission (NMC) in India, provided the student clears the FMGE/NExT exam.',
+          answer: 'Yes, the degree is recognized by the Medical Council of Hungary and the National Medical Commission (NMC) in India, provided the student clears the FMGE/NExT exam.',
           universityId: university.id,
         },
         {
           question: 'What is the medium of instruction?',
-          answer: 'All medical programs in Armenia are taught exclusively in English, making it accessible for Indian and international students.',
+          answer: 'All medical programs in Hungary are taught exclusively in English, making it accessible for Indian and international students.',
           universityId: university.id,
         },
       ]
@@ -258,7 +258,7 @@ async function main() {
   // 8. Seed Hospitals
   const hospitals = [
     { name: 'Victoria Hospital (Candos)', slug: 'victoria-hospital', city: 'Quatre Bornes' },
-    { name: 'SSR National Hospital', slug: 'ssr-national-hospital', city: 'Pamplemousses' },
+    { name: 'SSR National Hospital', slug: 'ssr-national-hospital', city: 'Szeged' },
     { name: 'Jawaharlal Nehru Hospital', slug: 'j-nehru-hospital', city: 'Rose Belle' },
   ];
 

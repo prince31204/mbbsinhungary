@@ -1,27 +1,27 @@
 export const homepageFaqs = [
   {
-    question: "Is MBBS in Armenia valid in India?",
+    question: "Is MBBS in Hungary valid in India?",
     answer:
-      "Yes, MBBS degrees from Armenia are valid in India if the university is recognized by NMC. Graduates must clear FMGE or NEXT exam to practice medicine in India.",
+      "Yes, MBBS degrees from Hungary are valid in India if the university is recognized by NMC. Graduates must clear FMGE or NEXT exam to practice medicine in India.",
   },
   {
-    question: "What is the total cost of studying MBBS in Armenia?",
+    question: "What is the total cost of studying MBBS in Hungary?",
     answer:
-      "The total cost of studying MBBS in Armenia is relatively affordable compared to many countries, including tuition fees, hostel accommodation, and monthly living expenses for international students.",
+      "The total cost of studying MBBS in Hungary is relatively affordable compared to many countries, including tuition fees, hostel accommodation, and monthly living expenses for international students.",
   },
   {
-    question: "Is the NEET exam required for MBBS in Armenia?",
+    question: "Is the NEET exam required for MBBS in Hungary?",
     answer:
-      "Yes, NEET qualification is mandatory for Indian students who wish to pursue MBBS in Armenia, as per National Medical Commission guidelines for studying medicine abroad.",
+      "Yes, NEET qualification is mandatory for Indian students who wish to pursue MBBS in Hungary, as per National Medical Commission guidelines for studying medicine abroad.",
   },
   {
     question: "What is the medium of instruction for international students?",
     answer:
-      "The medium of instruction for MBBS in Armenia is English, allowing international students to easily understand lectures, participate in clinical training, and communicate effectively during their studies.",
+      "The medium of instruction for MBBS in Hungary is English, allowing international students to easily understand lectures, participate in clinical training, and communicate effectively during their studies.",
   },
   {
-    question: "What is the duration of the MBBS course in Armenia?",
+    question: "What is the duration of the MBBS course in Hungary?",
     answer:
-      "The MBBS course in Armenia generally lasts 5 to 6 years, which includes academic education along with clinical training and internship in affiliated hospitals.",
+      "The MBBS course in Hungary generally lasts 5 to 6 years, which includes academic education along with clinical training and internship in affiliated hospitals.",
   },
 ];

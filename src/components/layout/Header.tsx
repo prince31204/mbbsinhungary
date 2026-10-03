@@ -8,7 +8,7 @@ import { Menu, X, ChevronDown, GraduationCap, User } from "lucide-react";
 const resourcesMenu = [
   { name: "About Us", path: "/about-us" },
   { name: "Contact Us", path: "/contact-us" },
-  { name: "About Armenia", path: "/about-Armenia" },
+  { name: "About Hungary", path: "/about-Hungary" },
   { name: "Education System", path: "/education-system" },
   { name: "View Our Partners", path: "/our-partners" },
   { name: "Blog & News", path: "/blog" },
@@ -62,12 +62,12 @@ export default function Header({
             href="/"
             className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity"
           >
-            <div className="w-12 h-12 bg-[#101B4D] rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-[#103D32] rounded-full flex items-center justify-center">
               <GraduationCap className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-[#17213D]">
-                MBBS in Armenia
+              <h1 className="text-2xl font-bold text-[#202D28]">
+                MBBS in Hungary
               </h1>
             </div>
           </Link>
@@ -76,26 +76,26 @@ export default function Header({
           <nav className="hidden lg:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-[#17213D] hover:text-[#285BB5] font-medium transition-colors"
+              className="text-[#202D28] hover:text-[#175747] font-medium transition-colors"
             >
               Home
             </Link>
             <Link
               href="/universities"
-              className="text-[#17213D] hover:text-[#285BB5] font-medium transition-colors"
+              className="text-[#202D28] hover:text-[#175747] font-medium transition-colors"
             >
               Universities
             </Link>
             <Link
               href="/compare"
-              className="text-[#17213D] hover:text-[#285BB5] font-medium transition-colors"
+              className="text-[#202D28] hover:text-[#175747] font-medium transition-colors"
             >
               Compare Universities
             </Link>
             {showScholarship && (
               <Link
                 href="/scholarships"
-                className="text-[#17213D] hover:text-[#285BB5] font-medium transition-colors"
+                className="text-[#202D28] hover:text-[#175747] font-medium transition-colors"
               >
                 Scholarships
               </Link>
@@ -108,20 +108,20 @@ export default function Header({
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button
-                className="flex items-center space-x-1 text-[#17213D] hover:text-[#285BB5] font-medium transition-colors"
+                className="flex items-center space-x-1 text-[#202D28] hover:text-[#175747] font-medium transition-colors"
                 suppressHydrationWarning={true}
               >
                 <span>Resources</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
               {activeDropdown === "resources" && (
-                <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-lg mt-0 p-4 border border-[#DCE3EF]">
+                <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-lg mt-0 p-4 border border-[#DDE5DD]">
                   <ul className="space-y-2">
                     {resourcesMenu.map((item) => (
                       <li key={item.path}>
                         <Link
                           href={item.path}
-                          className="block text-[#52627A] hover:text-[#285BB5] text-sm transition-colors"
+                          className="block text-[#5F6F67] hover:text-[#175747] text-sm transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -136,7 +136,7 @@ export default function Header({
               <div className="relative group">
                 <Link
                   href="/student"
-                  className="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-semibold hover:bg-red-700 transition-colors"
+                  className="w-10 h-10 bg-[#A52B3A] text-white rounded-full flex items-center justify-center font-semibold hover:bg-[#8C2030] transition-colors"
                   aria-label="Go to dashboard"
                 >
                   {userInitials || <User className="w-5 h-5" />}
@@ -145,13 +145,13 @@ export default function Header({
                   <div className="bg-white border shadow-xl rounded-lg p-3 min-w-[150px]">
                     <Link
                       href="/student"
-                      className="block py-1.5 px-2 text-sm text-gray-700 hover:text-[#285BB5] hover:bg-white rounded"
+                      className="block py-1.5 px-2 text-sm text-[#5F6F67] hover:text-[#175747] hover:bg-white rounded"
                     >
                       Dashboard
                     </Link>
                     <button
                       onClick={() => signOut({ callbackUrl: "/" })}
-                      className="w-full text-left py-1.5 px-2 text-sm text-gray-700 hover:text-[#285BB5] hover:bg-white rounded"
+                      className="w-full text-left py-1.5 px-2 text-sm text-[#5F6F67] hover:text-[#175747] hover:bg-white rounded"
                       suppressHydrationWarning={true}
                     >
                       Sign Out
@@ -163,13 +163,13 @@ export default function Header({
               <div className="flex items-center gap-3">
                 <Link
                   href="/apply"
-                  className="bg-[#D90012] text-white px-5 py-2 rounded-lg hover:bg-[#B8000F] transition-colors text-sm font-medium"
+                  className="bg-[#A52B3A] text-white px-5 py-2 rounded-lg hover:bg-[#8C2030] transition-colors text-sm font-medium"
                 >
                   Apply Now
                 </Link>
                 <Link
                   href="/register"
-                  className="border border-[#285BB5] text-[#285BB5] px-5 py-2 rounded-lg hover:bg-[#285BB5] hover:text-white transition-colors text-sm font-medium"
+                  className="border border-[#175747] text-[#175747] px-5 py-2 rounded-lg hover:bg-[#175747] hover:text-white transition-colors text-sm font-medium"
                 >
                   Sign-Up
                 </Link>
@@ -200,21 +200,21 @@ export default function Header({
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="block text-gray-700 hover:text-[#285BB5] font-medium"
+                className="block text-[#5F6F67] hover:text-[#175747] font-medium"
               >
                 Home
               </Link>
               <Link
                 href="/universities"
                 onClick={closeMenu}
-                className="block text-gray-700 hover:text-[#285BB5] font-medium"
+                className="block text-[#5F6F67] hover:text-[#175747] font-medium"
               >
                 Universities
               </Link>
               <Link
                 href="/compare"
                 onClick={closeMenu}
-                className="block text-gray-700 hover:text-[#285BB5] font-medium"
+                className="block text-[#5F6F67] hover:text-[#175747] font-medium"
               >
                 Compare Universities
               </Link>
@@ -222,7 +222,7 @@ export default function Header({
                 <Link
                   href="/scholarships"
                   onClick={closeMenu}
-                  className="block text-gray-700 hover:text-[#285BB5] font-medium"
+                  className="block text-[#5F6F67] hover:text-[#175747] font-medium"
                 >
                   Scholarships
                 </Link>
@@ -231,7 +231,7 @@ export default function Header({
               {/* Mobile Resources */}
               <div>
                 <button
-                  className="flex items-center justify-between w-full text-gray-700 hover:text-[#285BB5] font-medium"
+                  className="flex items-center justify-between w-full text-[#5F6F67] hover:text-[#175747] font-medium"
                   onClick={() =>
                     setActiveDropdown(
                       activeDropdown === "resources" ? null : "resources",
@@ -249,7 +249,7 @@ export default function Header({
                         key={item.path}
                         href={item.path}
                         onClick={closeMenu}
-                        className="block text-gray-600 hover:text-[#285BB5] text-sm transition-colors"
+                        className="block text-[#5F6F67] hover:text-[#175747] text-sm transition-colors"
                       >
                         {item.name}
                       </Link>
@@ -263,7 +263,7 @@ export default function Header({
                   <Link
                     href="/student"
                     onClick={closeMenu}
-                    className="block bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-center hover:bg-gray-200 transition-colors"
+                    className="block bg-[#F3F7F3] text-[#5F6F67] px-4 py-2 rounded-lg text-center hover:bg-gray-200 transition-colors"
                   >
                     Dashboard
                   </Link>
@@ -272,7 +272,7 @@ export default function Header({
                       closeMenu();
                       signOut({ callbackUrl: "/" });
                     }}
-                    className="w-full block bg-white text-red-600 px-4 py-2 rounded-lg text-center"
+                    className="w-full block bg-white text-[#A52B3A] px-4 py-2 rounded-lg text-center"
                     suppressHydrationWarning={true}
                   >
                     Sign Out
@@ -283,14 +283,14 @@ export default function Header({
                   <Link
                     href="/apply"
                     onClick={closeMenu}
-                    className="block bg-[#D90012] text-white px-4 py-2 rounded-lg text-center font-medium"
+                    className="block bg-[#A52B3A] text-white px-4 py-2 rounded-lg text-center font-medium"
                   >
                     Apply Now
                   </Link>
                   <Link
                     href="/register"
                     onClick={closeMenu}
-                    className="block border border-[#285BB5] text-[#285BB5] px-4 py-2 rounded-lg text-center"
+                    className="block border border-[#175747] text-[#175747] px-4 py-2 rounded-lg text-center"
                   >
                     Sign-Up
                   </Link>

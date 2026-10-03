@@ -43,7 +43,7 @@ export default async function FmgeSection() {
     }));
 
   return (
-    <section className="bg-[linear-gradient(180deg,#eff6ff_0%,#ffffff_42%,#f0fdf4_100%)] py-16">
+    <section className="bg-[linear-gradient(180deg,#F3F7F3_0%,#ffffff_42%,#FBF8F0_100%)] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FmgeRatesTable data={data} />
 
@@ -53,36 +53,36 @@ export default async function FmgeSection() {
             {yearOverviews.map(({ year, total, accepted, rate }) => (
               <div
                 key={year}
-                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/60 p-6 shadow-[0_12px_40px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-gray-200 hover:bg-white/72 hover:shadow-2xl hover:"
+                className="group relative overflow-hidden rounded-2xl border border-[#DDE5DD] bg-white/60 p-6 shadow-[0_12px_40px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-[#DDE5DD] hover:bg-white/72 hover:shadow-2xl"
               >
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/65 via-white/10 opacity-100" />
-                <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 bg-[#F3F7F3]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="relative">
-                  <h3 className="mb-4 text-lg font-semibold text-gray-900 transition-colors duration-300 group-hover:text-[#285BB5]">
+                  <h3 className="mb-4 text-lg font-semibold text-[#202D28] transition-colors duration-300 group-hover:text-[#175747]">
                     {year} Overview
                   </h3>
                   <div className="space-y-3">
-                    <div className="flex justify-between rounded-lg border border-gray-200 bg-white/40 px-3 py-2 shadow-sm transition-colors duration-300 group-hover:bg-white/60">
-                      <span className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                    <div className="flex justify-between rounded-lg border border-[#DDE5DD] bg-white/40 px-3 py-2 shadow-sm transition-colors duration-300 group-hover:bg-white/60">
+                      <span className="text-sm text-[#5F6F67] transition-colors duration-300 group-hover:text-[#5F6F67]">
                         Applications:
                       </span>
-                      <span className="font-semibold text-gray-900 transition-transform duration-300 group-hover:translate-x-0.5">
+                      <span className="font-semibold text-[#202D28] transition-transform duration-300 group-hover:translate-x-0.5">
                         {total.toLocaleString()}
                       </span>
                     </div>
-                    <div className="flex justify-between rounded-lg border border-gray-200 bg-white/40 px-3 py-2 shadow-sm transition-colors duration-300 group-hover:bg-white/60">
-                      <span className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                    <div className="flex justify-between rounded-lg border border-[#DDE5DD] bg-white/40 px-3 py-2 shadow-sm transition-colors duration-300 group-hover:bg-white/60">
+                      <span className="text-sm text-[#5F6F67] transition-colors duration-300 group-hover:text-[#5F6F67]">
                         Accepted:
                       </span>
-                      <span className="font-semibold text-gray-900 transition-transform duration-300 group-hover:translate-x-0.5">
+                      <span className="font-semibold text-[#202D28] transition-transform duration-300 group-hover:translate-x-0.5">
                         {accepted.toLocaleString()}
                       </span>
                     </div>
-                    <div className="flex justify-between rounded-lg border border-gray-200 bg-white/40 px-3 py-2 shadow-sm transition-colors duration-300 group-hover:bg-white/60">
-                      <span className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                    <div className="flex justify-between rounded-lg border border-[#DDE5DD] bg-white/40 px-3 py-2 shadow-sm transition-colors duration-300 group-hover:bg-white/60">
+                      <span className="text-sm text-[#5F6F67] transition-colors duration-300 group-hover:text-[#5F6F67]">
                         Rate:
                       </span>
-                      <span className="font-semibold text-red-600 transition-colors duration-300 group-hover:text-[#285BB5]">
+                      <span className="font-semibold text-[#A52B3A] transition-colors duration-300 group-hover:text-[#175747]">
                         {rate.toFixed(2)}%
                       </span>
                     </div>
@@ -93,10 +93,10 @@ export default async function FmgeSection() {
           </div>
         )}
 
-        <div className="text-center mt-8">
+        <div className="text-center mt-6">
           <Link
             href="/fmge-rates"
-            className="inline-block bg-white text-red-600 border-2 border-gray-200 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-gray-900 transition-colors"
+            className="inline-block bg-white text-[#A52B3A] border-2 border-[#A52B3A] px-8 py-3 rounded-lg font-semibold hover:bg-[#A52B3A] hover:text-white transition-colors"
           >
             View Full FMGE Data →
           </Link>

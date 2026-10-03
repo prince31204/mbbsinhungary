@@ -52,11 +52,11 @@ export function AdminTopBar() {
   );
 
   return (
-    <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 sticky top-0 z-10">
+    <header className="h-16 bg-white border-b border-[#DDE5DD] flex items-center justify-between px-6 sticky top-0 z-10">
       {/* Left: breadcrumb placeholder */}
-      <div className="text-sm text-gray-500">
+      <div className="text-sm text-[#7A877F]">
         Welcome back,{" "}
-        <span className="font-medium text-gray-800">{displayName}</span>
+        <span className="font-medium text-[#202D28]">{displayName}</span>
       </div>
 
       {/* Right: actions */}
@@ -65,7 +65,7 @@ export function AdminTopBar() {
         <Button
           variant="ghost"
           size="icon"
-          className="relative text-gray-500 hover:text-gray-800"
+          className="relative text-[#7A877F] hover:text-[#202D28]"
         >
           <Bell size={18} />
         </Button>
@@ -75,9 +75,9 @@ export function AdminTopBar() {
           <DropdownMenuTrigger asChild>
             <Button
               variant="ghost"
-              className="flex items-center gap-2 text-sm text-gray-700 hover:text-gray-900 px-2"
+              className="flex items-center gap-2 text-sm text-[#5F6F67] hover:text-[#202D28] px-2"
             >
-              <div className="w-8 h-8 rounded-full bg-[#EAF1FB]0 flex items-center justify-center text-gray-900 text-xs font-semibold">
+              <div className="w-8 h-8 rounded-full bg-[#175747] flex items-center justify-center text-[#202D28] text-xs font-semibold">
                 {displayName?.charAt(0)?.toUpperCase() || "A"}
               </div>
               <span className="hidden md:block max-w-[120px] truncate">
@@ -89,7 +89,7 @@ export function AdminTopBar() {
           <DropdownMenuContent align="end" className="w-48">
             <DropdownMenuLabel>
               <div className="font-medium truncate">{displayName}</div>
-              <div className="text-xs text-gray-500 truncate">
+              <div className="text-xs text-[#7A877F] truncate">
                 {displayEmail}
               </div>
             </DropdownMenuLabel>
@@ -106,7 +106,7 @@ export function AdminTopBar() {
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem
-              className="text-red-600 cursor-pointer"
+              className="text-[#A52B3A] cursor-pointer"
               onClick={() => signOut({ callbackUrl: "/admin/login" })}
             >
               <LogOut size={14} className="mr-2" /> Sign Out

@@ -31,7 +31,7 @@ interface Props {
 
 const PHONE_CODES = [
   { code: "+91", country: "India" },
-  { code: "+996", country: "Armenia" },
+  { code: "+996", country: "Hungary" },
   { code: "+1", country: "USA/Canada" },
   { code: "+44", country: "UK" },
   { code: "+92", country: "Pakistan" },
@@ -55,7 +55,7 @@ const COUNTRIES = [
   "Nigeria",
   "Kenya",
   "Ghana",
-  "Armenia",
+  "Hungary",
   "China",
   "USA",
   "Canada",
@@ -126,7 +126,7 @@ function Card({
     <div className="mb-6">
       <div className="flex items-center gap-3 mb-4">
         <div className={`${bg} p-2 rounded-lg`}>{icon}</div>
-        <h3 className="text-lg font-bold text-gray-900">{title}</h3>
+        <h3 className="text-lg font-bold text-[#202D28]">{title}</h3>
       </div>
       <div className="grid md:grid-cols-2 gap-4">{children}</div>
     </div>
@@ -223,8 +223,8 @@ export default function InlineApplyForm({
   };
 
   const inp =
-    "w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent transition text-sm outline-none bg-white text-gray-900 placeholder:text-gray-500";
-  const lbl = "block text-sm font-semibold text-gray-700 mb-1.5";
+    "w-full px-4 py-3 border border-[#DDE5DD] rounded-xl focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent transition text-sm outline-none bg-white text-[#202D28] placeholder:text-[#7A877F]";
+  const lbl = "block text-sm font-semibold text-[#5F6F67] mb-1.5";
   const req = <span className="text-red-500">*</span>;
 
   if (!mounted) return null;
@@ -232,18 +232,18 @@ export default function InlineApplyForm({
   if (success) {
     return (
       <div className="text-center py-12">
-        <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg ">
+        <div className="w-20 h-20 bg-[#A52B3A] rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg ">
           <CheckCircle size={40} className="text-white" />
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+        <h3 className="text-2xl font-bold text-[#202D28] mb-2">
           Application Submitted!
         </h3>
-        <p className="text-gray-600 mb-6">
+        <p className="text-[#5F6F67] mb-6">
           Our counsellors will contact you within 24 hours.
         </p>
         <button
           onClick={() => setSuccess(false)}
-          className="text-red-600 hover:underline text-sm"
+          className="text-[#A52B3A] hover:underline text-sm"
         >
           Submit another application
         </button>
@@ -254,18 +254,18 @@ export default function InlineApplyForm({
   return (
     <form onSubmit={handleSubmit} className="space-y-2">
       {/* University — pre-filled */}
-      <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 flex items-center gap-3 mb-4">
+      <div className="bg-white border border-[#DDE5DD] rounded-xl px-4 py-3 flex items-center gap-3 mb-4">
         <Building2 size={16} className="text-red-500 shrink-0" />
         <div>
-          <p className="text-xs text-gray-500">Applying to</p>
-          <p className="font-bold text-gray-900 text-sm">{universityName}</p>
+          <p className="text-xs text-[#7A877F]">Applying to</p>
+          <p className="font-bold text-[#202D28] text-sm">{universityName}</p>
         </div>
       </div>
 
       {/* Personal Information */}
       <Card
-        icon={<User size={17} className="text-red-600" />}
-        bg="bg-[#EAF1FB]"
+        icon={<User size={17} className="text-[#A52B3A]" />}
+        bg="bg-[#F3F7F3]"
         title="Personal Information"
       >
         <div>
@@ -295,7 +295,7 @@ export default function InlineApplyForm({
           <div className="relative">
             <Mail
               size={14}
-              className="absolute left-3.5 top-3.5 text-gray-500 pointer-events-none"
+              className="absolute left-3.5 top-3.5 text-[#7A877F] pointer-events-none"
             />
             <input
               required
@@ -313,7 +313,7 @@ export default function InlineApplyForm({
             <select
               value={form.countryCode}
               onChange={(e) => set("countryCode", e.target.value)}
-              className="px-2 py-3 border border-gray-200 rounded-xl text-sm outline-none bg-white focus:ring-2 focus:ring-[#285BB5]/500 w-28 shrink-0"
+              className="px-2 py-3 border border-[#DDE5DD] rounded-xl text-sm outline-none bg-white focus:ring-2 focus:ring-[#175747]/500 w-28 shrink-0"
             >
               {PHONE_CODES.map((c) => (
                 <option key={c.code} value={c.code}>
@@ -336,7 +336,7 @@ export default function InlineApplyForm({
           <div className="relative">
             <Calendar
               size={14}
-              className="absolute left-3.5 top-3.5 text-gray-500 pointer-events-none"
+              className="absolute left-3.5 top-3.5 text-[#7A877F] pointer-events-none"
             />
             <input
               required
@@ -437,7 +437,7 @@ export default function InlineApplyForm({
           <div className="relative">
             <Globe
               size={14}
-              className="absolute left-3.5 top-3.5 text-gray-500 pointer-events-none"
+              className="absolute left-3.5 top-3.5 text-[#7A877F] pointer-events-none"
             />
             <select
               required
@@ -467,8 +467,8 @@ export default function InlineApplyForm({
 
       {/* Academic Information */}
       <Card
-        icon={<Award size={17} className="text-red-600" />}
-        bg="bg-[#EAF1FB]"
+        icon={<Award size={17} className="text-[#A52B3A]" />}
+        bg="bg-[#F3F7F3]"
         title="Academic Information"
       >
         <div>
@@ -524,7 +524,7 @@ export default function InlineApplyForm({
         <div>
           <label className={lbl}>
             NEET Score{" "}
-            <span className="text-gray-500 font-normal">(if applicable)</span>
+            <span className="text-[#7A877F] font-normal">(if applicable)</span>
           </label>
           <input
             type="text"
@@ -551,13 +551,13 @@ export default function InlineApplyForm({
             <div className="relative">
               <BookOpen
                 size={14}
-                className="absolute left-3.5 top-3.5 text-gray-500 pointer-events-none"
+                className="absolute left-3.5 top-3.5 text-[#7A877F] pointer-events-none"
               />
               <select
                 value={form.programId}
                 onChange={(e) => set("programId", e.target.value)}
                 disabled={loadingProgs}
-                className={`${inp} pl-10 appearance-none disabled:bg-gray-50`}
+                className={`${inp} pl-10 appearance-none disabled:bg-[#FBF8F0]`}
               >
                 <option value="">
                   {loadingProgs ? "Loading…" : "Select a program (optional)"}
@@ -574,22 +574,22 @@ export default function InlineApplyForm({
       </Card>
 
       {/* Required Documents */}
-      <div className="bg-red-400 border border-gray-200 rounded-2xl p-5 mb-4">
+      <div className="bg-red-400 border border-[#DDE5DD] rounded-2xl p-5 mb-4">
         <div className="flex items-center gap-3 mb-3">
-          <ClipboardList size={17} className="text-red-600" />
-          <h3 className="font-bold text-gray-900">Required Documents</h3>
+          <ClipboardList size={17} className="text-[#A52B3A]" />
+          <h3 className="font-bold text-[#202D28]">Required Documents</h3>
         </div>
         <div className="grid grid-cols-2 gap-1.5">
           {REQUIRED_DOCS.map((doc) => (
             <div
               key={doc}
-              className="flex items-center gap-2 text-sm text-gray-700"
+              className="flex items-center gap-2 text-sm text-[#5F6F67]"
             >
-              <CheckCircle size={13} className="text-red-600 shrink-0" /> {doc}
+              <CheckCircle size={13} className="text-[#A52B3A] shrink-0" /> {doc}
             </div>
           ))}
         </div>
-        <p className="text-xs text-red-600 mt-3">
+        <p className="text-xs text-[#A52B3A] mt-3">
           Please have these documents ready. Our counsellor will guide you on
           submission.
         </p>
@@ -601,13 +601,13 @@ export default function InlineApplyForm({
           type="checkbox"
           checked={form.agreed}
           onChange={(e) => set("agreed", e.target.checked)}
-          className="mt-0.5 h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-[#285BB5]/500"
+          className="mt-0.5 h-4 w-4 rounded border-gray-300 text-[#A52B3A] focus:ring-[#175747]/500"
         />
-        <span className="text-sm text-gray-600">
+        <span className="text-sm text-[#5F6F67]">
           I agree to the{" "}
           <Link
             href="/privacy-policy"
-            className="text-red-600 hover:underline"
+            className="text-[#A52B3A] hover:underline"
           >
             terms and conditions
           </Link>{" "}
@@ -616,7 +616,7 @@ export default function InlineApplyForm({
       </label>
 
       {error && (
-        <div className="rounded-xl bg-white border border-gray-200 px-4 py-3 text-sm text-[#285BB5] mb-4">
+        <div className="rounded-xl bg-white border border-[#DDE5DD] px-4 py-3 text-sm text-[#175747] mb-4">
           {error}
         </div>
       )}
@@ -624,7 +624,7 @@ export default function InlineApplyForm({
       <button
         type="submit"
         disabled={submitting || !form.agreed}
-        className="w-full flex items-center justify-center gap-2 bg-red-600 hover: hover: text-white font-bold py-4 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed text-base"
+        className="w-full flex items-center justify-center gap-2 bg-[#A52B3A] hover: text-white font-bold py-4 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed text-base"
       >
         {submitting ? (
           <>

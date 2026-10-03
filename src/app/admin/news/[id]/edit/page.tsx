@@ -68,7 +68,7 @@ export default function EditNewsPage() {
   if (!form)
     return (
       <div className="p-12 text-center">
-        <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+        <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
       </div>
     );
 
@@ -82,31 +82,31 @@ export default function EditNewsPage() {
         </Button>
         <div className="flex-1">
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl font-bold text-gray-900">
+            <h1 className="text-2xl font-bold text-[#202D28]">
               Edit News Article
             </h1>
             <a
               href={`/news/${categories.find((c) => String(c.id) === String(form.categoryId))?.slug}/${form.slug}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-gray-600 border-gray-200 hover:border-gray-200 hover:text-[#285BB5] transition-all shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-[#5F6F67] border-[#DDE5DD] hover:border-[#DDE5DD] hover:text-[#175747] transition-all shadow-sm"
             >
               Live <Eye size={14} />
             </a>
           </div>
-          <p className="text-sm text-gray-500 line-clamp-1">
+          <p className="text-sm text-[#7A877F] line-clamp-1">
             {String(form.title || "")}
           </p>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 bg-gray-100 p-1 rounded-xl w-fit">
+      <div className="flex gap-1 bg-[#F3F7F3] p-1 rounded-xl w-fit">
         {TABS.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === tab ? "bg-white shadow text-gray-900" : "text-gray-500 hover:text-gray-700"}`}
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${activeTab === tab ? "bg-white shadow text-[#202D28]" : "text-[#7A877F] hover:text-[#5F6F67]"}`}
           >
             {tab}
           </button>
@@ -115,8 +115,8 @@ export default function EditNewsPage() {
 
       {activeTab === "Details" && (
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-            <h2 className="font-semibold text-gray-900 border-b pb-3">
+          <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+            <h2 className="font-semibold text-[#202D28] border-b pb-3">
               Article Details
             </h2>
             <div className="space-y-1.5">
@@ -191,8 +191,8 @@ export default function EditNewsPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-            <h2 className="font-semibold text-gray-900 border-b pb-3">Media</h2>
+          <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+            <h2 className="font-semibold text-[#202D28] border-b pb-3">Media</h2>
             <div className="grid grid-cols-2 gap-4">
               <ImageUpload
                 label="Thumbnail"
@@ -209,8 +209,8 @@ export default function EditNewsPage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-gray-200 p-6">
-            <h2 className="font-semibold text-gray-900 border-b pb-3 mb-4">
+          <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
+            <h2 className="font-semibold text-[#202D28] border-b pb-3 mb-4">
               SEO
             </h2>
             <SeoFields
@@ -232,7 +232,7 @@ export default function EditNewsPage() {
             </Button>
             <Button
               type="submit"
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#175747] hover:bg-[#175747]"
               disabled={loading}
             >
               {loading ? (
@@ -252,7 +252,7 @@ export default function EditNewsPage() {
       )}
 
       {activeTab === "Contents" && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
           <ContentSectionsTab
             entityId={id}
             apiBase={`/api/admin/news/${id}/contents`}
@@ -262,7 +262,7 @@ export default function EditNewsPage() {
       )}
 
       {activeTab === "FAQs" && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
           <FaqsTab apiBase={`/api/admin/news/${id}/faqs`} />
         </div>
       )}

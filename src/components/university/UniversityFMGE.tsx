@@ -16,13 +16,13 @@ interface Props {
 
 export default function UniversityFMGE({ fmgeRates, fmgePassRate }: Props) {
   return (
-    <section className="py-10 bg-gray-50">
+    <section className="py-10 bg-[#FBF8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-7">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-[#202D28] mb-4">
             FMGE Success Rate
           </h2>
-          <p className="text-base text-gray-500">
+          <p className="text-base text-[#7A877F]">
             Year-on-year performance of graduates in the Foreign Medical
             Graduates Examination
           </p>
@@ -31,7 +31,7 @@ export default function UniversityFMGE({ fmgeRates, fmgePassRate }: Props) {
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <table className="w-full text-base">
               <thead>
-                <tr className="bg-red-600 text-white">
+                <tr className="bg-[#A52B3A] text-white">
                   <th className="text-left p-5 font-semibold">Year</th>
                   <th className="text-right p-5 font-semibold">Appeared</th>
                   <th className="text-right p-5 font-semibold">Passed</th>
@@ -41,12 +41,12 @@ export default function UniversityFMGE({ fmgeRates, fmgePassRate }: Props) {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {fmgeRates.map((r) => (
-                  <tr key={r.id} className="hover:bg-gray-50">
+                  <tr key={r.id} className="hover:bg-[#FBF8F0]">
                     <td className="p-5 font-bold text-base">{r.year}</td>
-                    <td className="p-5 text-right text-gray-600">
+                    <td className="p-5 text-right text-[#5F6F67]">
                       {r.appeared ?? "—"}
                     </td>
-                    <td className="p-5 text-right text-gray-600">
+                    <td className="p-5 text-right text-[#5F6F67]">
                       {r.passed ?? "—"}
                     </td>
                     <td className="p-5 text-right">
@@ -85,10 +85,10 @@ export default function UniversityFMGE({ fmgeRates, fmgePassRate }: Props) {
             <p className="text-5xl font-black text-green-600 mb-2">
               {Number(fmgePassRate)}%
             </p>
-            <p className="text-lg font-semibold text-gray-900">
+            <p className="text-lg font-semibold text-[#202D28]">
               Average FMGE Success Rate
             </p>
-            <p className="text-gray-600 text-sm mt-1">
+            <p className="text-[#5F6F67] text-sm mt-1">
               Based on historical data from our graduates
             </p>
           </div>

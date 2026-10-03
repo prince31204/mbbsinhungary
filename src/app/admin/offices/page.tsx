@@ -38,7 +38,7 @@ const blank: Omit<Office, "id"> = {
   address: "",
   city: "",
   state: "",
-  country: "Armenia",
+  country: "Hungary",
   phone: "",
   email: "",
   mapEmbed: "",
@@ -122,10 +122,10 @@ export default function OfficesPage() {
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Building2 size={22} className="text-red-600" />
+          <Building2 size={22} className="text-[#A52B3A]" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Offices</h1>
-            <p className="text-sm text-gray-500">Manage office locations</p>
+            <h1 className="text-2xl font-bold text-[#202D28]">Offices</h1>
+            <p className="text-sm text-[#7A877F]">Manage office locations</p>
           </div>
         </div>
         <Button
@@ -134,7 +134,7 @@ export default function OfficesPage() {
             setEditId(null);
             setForm(blank);
           }}
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#175747] hover:bg-[#175747]"
         >
           {showForm ? (
             <>
@@ -151,8 +151,8 @@ export default function OfficesPage() {
       </div>
 
       {showForm && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28]">
             {editId ? "Edit Office" : "New Office"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -244,7 +244,7 @@ export default function OfficesPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#175747] hover:bg-[#175747]"
             >
               {saving ? (
                 <>
@@ -262,32 +262,32 @@ export default function OfficesPage() {
         </div>
       )}
 
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : items.length === 0 ? (
           <div className="p-12 text-center">
-            <Building2 size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No offices added yet.</p>
+            <Building2 size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No offices added yet.</p>
           </div>
         ) : (
           <div className="divide-y divide-gray-100">
             {items.map((item) => (
               <div
                 key={item.id}
-                className="flex items-start gap-4 p-4 hover:bg-gray-50"
+                className="flex items-start gap-4 p-4 hover:bg-[#FBF8F0]"
               >
-                <Building2 size={20} className="text-gray-500 mt-1 shrink-0" />
+                <Building2 size={20} className="text-[#7A877F] mt-1 shrink-0" />
                 <div className="flex-1 min-w-0">
-                  <div className="font-medium text-gray-800">{item.name}</div>
-                  <div className="text-sm text-gray-500">
+                  <div className="font-medium text-[#202D28]">{item.name}</div>
+                  <div className="text-sm text-[#7A877F]">
                     {item.address}
                     {item.city ? `, ${item.city}` : ""}
                     {item.country ? `, ${item.country}` : ""}
                   </div>
-                  <div className="flex gap-4 mt-1 text-xs text-gray-500">
+                  <div className="flex gap-4 mt-1 text-xs text-[#7A877F]">
                     {item.phone && <span>📞 {item.phone}</span>}
                     {item.email && <span>✉️ {item.email}</span>}
                   </div>
@@ -315,7 +315,7 @@ export default function OfficesPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                    className="h-8 w-8 p-0 text-[#A52B3A] hover:bg-[#175747]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

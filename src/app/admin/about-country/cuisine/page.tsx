@@ -91,22 +91,22 @@ export default function CuisineAdminPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold text-[#202D28]">
             🍜 Cuisine & Food
           </h1>
-          <p className="text-sm text-gray-500">{items.length} dishes listed</p>
+          <p className="text-sm text-[#7A877F]">{items.length} dishes listed</p>
         </div>
         <Button
           onClick={() => setShowAdd(true)}
-          className="ml-auto bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="ml-auto bg-[#175747] hover:bg-[#175747]"
         >
           <Plus size={14} className="mr-1" /> Add Dish
         </Button>
       </div>
 
       {showAdd && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900">Add Dish</h2>
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28]">Add Dish</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <Label>Dish Name *</Label>
@@ -164,16 +164,16 @@ export default function CuisineAdminPage() {
 
       <div className="space-y-3">
         {loading ? (
-          <div className="p-8 text-center text-gray-500">Loading...</div>
+          <div className="p-8 text-center text-[#7A877F]">Loading...</div>
         ) : items.length === 0 ? (
-          <div className="p-8 text-center text-gray-500">
+          <div className="p-8 text-center text-[#7A877F]">
             No dishes added yet.
           </div>
         ) : (
           items.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl border border-gray-200 p-4"
+              className="bg-white rounded-xl border border-[#DDE5DD] p-4"
             >
               {editId === item.id ? (
                 <div className="space-y-3">
@@ -251,11 +251,11 @@ export default function CuisineAdminPage() {
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-gray-900">
+                    <p className="font-semibold text-[#202D28]">
                       {item.iconClass} {item.dishName}
                     </p>
                     {item.dishDescription && (
-                      <p className="text-sm text-gray-500 mt-1 line-clamp-2">
+                      <p className="text-sm text-[#7A877F] mt-1 line-clamp-2">
                         {item.dishDescription}
                       </p>
                     )}
@@ -280,7 +280,7 @@ export default function CuisineAdminPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="text-red-600 hover:text-[#285BB5]"
+                      className="text-[#A52B3A] hover:text-[#175747]"
                       onClick={() => handleDelete(item.id)}
                     >
                       <Trash2 size={14} />

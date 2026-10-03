@@ -9,13 +9,13 @@ function getTypeColor(type: string) {
     case "medical":
       return "bg-green-100 text-green-800";
     case "technical":
-      return "bg-[#EAF1FB] text-[#101B4D]";
+      return "bg-[#F3F7F3] text-[#103D32]";
     case "private":
       return "bg-purple-100 text-purple-800";
     case "public":
-      return "bg-[#EAF1FB] text-[#101B4D]";
+      return "bg-[#F3F7F3] text-[#103D32]";
     default:
-      return "bg-gray-100 text-gray-800";
+      return "bg-[#F3F7F3] text-[#202D28]";
   }
 }
 
@@ -79,16 +79,16 @@ export default async function UniversityGrid() {
   }
 
   return (
-    <section className="py-8 bg-gray-50">
+    <section className="py-8 bg-[#FBF8F0]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Top Medical Universities in Armenia
+          <h2 className="text-4xl font-bold text-[#202D28] mb-4">
+            Top Medical Universities in Hungary
           </h2>
-          <p className="text-lg text-gray-600 max-w-5xl mx-auto">
-            Practicing medicine in Armenia is a structured and transparent
-            process regulated by the Medical Council of Armenia (MCM).
-            International students who complete their MBBS in Armenia or from a
+          <p className="text-lg text-[#5F6F67] max-w-5xl mx-auto">
+            Practicing medicine in Hungary is a structured and transparent
+            process regulated by the Medical Council of Hungary (MCM).
+            International students who complete their MBBS in Hungary or from a
             recognized university abroad can apply for registration and begin
             their medical career in the country.
           </p>
@@ -127,9 +127,9 @@ export default async function UniversityGrid() {
                 <Link
                   key={university.id}
                   href={`/universities/${university.slug}`}
-                  className={`group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-gray-200 hover:shadow-2xl hover: ${universities.length < 3 ? "w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] max-w-md" : ""}`}
+                  className={`group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-[#DDE5DD] bg-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-[#175747] hover:shadow-2xl ${universities.length < 3 ? "w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] max-w-md" : ""}`}
                 >
-                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 bg-[#F3F7F3]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     {(() => {
@@ -139,7 +139,7 @@ export default async function UniversityGrid() {
                             cdn(university.thumbnailPath) ||
                             "https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=600"
                           }
-                          alt={`MBBS students campus at ${university.name}, Armenia`}
+                          alt={`MBBS students campus at ${university.name}, Hungary`}
                           fill
                           priority={index < 3}
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -159,7 +159,7 @@ export default async function UniversityGrid() {
                     )}
                     {university.rating && (
                       <div className="absolute top-4 right-4 flex items-center space-x-1 rounded-lg bg-white px-2 py-1 transition-transform duration-300 group-hover:scale-105">
-                        <Star className="w-4 h-4 text-red-600 fill-current" />
+                        <Star className="w-4 h-4 text-[#A52B3A] fill-current" />
                         <span className="text-sm font-medium">
                           {Number(university.rating).toFixed(1)}
                         </span>
@@ -170,15 +170,15 @@ export default async function UniversityGrid() {
                   {/* Content */}
                   <div className="relative flex flex-grow flex-col p-6">
                     <div className="mb-4">
-                      <h3 className="mb-2 text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-[#285BB5]">
+                      <h3 className="mb-2 text-xl font-bold text-[#202D28] transition-colors duration-300 group-hover:text-[#175747]">
                         {university.name}
                       </h3>
-                      <div className="mb-2 flex items-center text-sm text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      <div className="mb-2 flex items-center text-sm text-[#5F6F67] transition-colors duration-300 group-hover:text-[#5F6F67]">
                         <MapPin className="w-4 h-4 mr-1" />
                         <span>
                           {university.cityRelation?.name ||
                             university.city ||
-                            "Armenia"}
+                            "Hungary"}
                           {university.province?.name
                             ? `, ${university.province.name}`
                             : ""}
@@ -194,35 +194,35 @@ export default async function UniversityGrid() {
 
                     {/* Stats */}
                     <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div className="rounded-lg bg-gray-50 p-3 text-center transition-all duration-300 group-hover:bg-white">
-                        <Users className="mx-auto mb-1 h-5 w-5 text-red-600 transition-transform duration-300 group-hover:scale-110" />
-                        <div className="text-sm font-medium text-gray-800">
+                      <div className="rounded-lg bg-[#FBF8F0] p-3 text-center transition-all duration-300 group-hover:bg-white">
+                        <Users className="mx-auto mb-1 h-5 w-5 text-[#A52B3A] transition-transform duration-300 group-hover:scale-110" />
+                        <div className="text-sm font-medium text-[#202D28]">
                           {formatStudents(university.students)}
                         </div>
-                        <div className="text-xs text-gray-600">Students</div>
+                        <div className="text-xs text-[#5F6F67]">Students</div>
                       </div>
-                      <div className="rounded-lg bg-gray-50 p-3 text-center transition-all duration-300 group-hover:bg-white">
-                        <Award className="mx-auto mb-1 h-5 w-5 text-red-600 transition-transform duration-300 group-hover:scale-110" />
-                        <div className="text-sm font-medium text-gray-800">
+                      <div className="rounded-lg bg-[#FBF8F0] p-3 text-center transition-all duration-300 group-hover:bg-white">
+                        <Award className="mx-auto mb-1 h-5 w-5 text-[#A52B3A] transition-transform duration-300 group-hover:scale-110" />
+                        <div className="text-sm font-medium text-[#202D28]">
                           {university.tuitionFee
                             ? /[a-zA-Z]/.test(String(university.tuitionFee))
                               ? String(university.tuitionFee)
                               : `${String(university.tuitionFee)} USD`
                             : "Contact for details"}
                         </div>
-                        <div className="text-xs text-gray-600">Annual Fees</div>
+                        <div className="text-xs text-[#5F6F67]">Annual Fees</div>
                       </div>
                     </div>
 
                     {/* Badges */}
                     <div className="mb-4 flex flex-wrap gap-2">
                       {university.scholarshipName && (
-                        <span className="rounded-md bg-red-400 px-2 py-1 text-xs text-red-600 transition-colors duration-300 group-hover:bg-red-400">
-                          {university.scholarshipName}
+                        <span className="rounded-md bg-[#F8E9EB] border border-[#A52B3A]/20 px-2 py-1 text-xs text-[#A52B3A] font-medium transition-colors duration-300">
+                          🎓 {university.scholarshipName}
                         </span>
                       )}
                       {university.instituteType && (
-                        <span className="rounded-md bg-white px-2 py-1 text-xs text-red-600 transition-colors duration-300 group-hover:bg-[#EAF1FB]">
+                        <span className="rounded-md bg-[#EAF2EC] border border-[#175747]/20 px-2 py-1 text-xs text-[#175747] font-medium transition-colors duration-300">
                           {university.instituteType.name}
                         </span>
                       )}
@@ -230,7 +230,7 @@ export default async function UniversityGrid() {
 
                     {/* Recognition */}
                     <div className="mb-4 flex-grow">
-                      <div className="flex items-center space-x-2 text-sm text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      <div className="flex items-center space-x-2 text-sm text-[#5F6F67] transition-colors duration-300 group-hover:text-[#5F6F67]">
                         <Globe className="w-4 h-4" />
                         <span>
                           Recognized by: {approvedBy.slice(0, 3).join(", ")}
@@ -240,7 +240,7 @@ export default async function UniversityGrid() {
 
                     {/* CTA */}
                     <div className="mt-auto">
-                      <div className="flex w-full items-center justify-center space-x-2 rounded-lg bg-red-600 py-3 font-medium text-white shadow-sm transition-all duration-300 group-hover: group-hover: group-hover:shadow-md">
+                      <div className="flex w-full items-center justify-center space-x-2 rounded-lg bg-[#A52B3A] py-3 font-medium text-white shadow-sm transition-all duration-300 group-hover:shadow-md">
                         <span>View Details</span>
                         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </div>
@@ -255,7 +255,7 @@ export default async function UniversityGrid() {
         <div className="text-center mt-12">
           <Link
             href="/universities"
-            className="bg-white text-red-600 border-2 border-gray-200 px-8 py-4 rounded-lg font-semibold hover:bg-red-600 hover:text-gray-900 transition-colors"
+            className="bg-white text-[#A52B3A] border-2 border-[#A52B3A] px-8 py-4 rounded-lg font-semibold hover:bg-[#A52B3A] hover:text-white transition-colors"
           >
             View All Universities
           </Link>

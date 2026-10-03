@@ -61,14 +61,14 @@ export function PdfUpload({
 
   return (
     <div className="space-y-2">
-      <Label className="text-sm font-medium text-gray-700">{label}</Label>
+      <Label className="text-sm font-medium text-[#5F6F67]">{label}</Label>
       {value ? (
-        <div className="flex items-center gap-3 p-4 bg-[#EAF1FB]0 border border-gray-200 rounded-xl">
-          <div className="bg-[#EAF1FB]0 p-2 rounded-lg shrink-0">
-            <FileText size={20} className="text-red-600" />
+        <div className="flex items-center gap-3 p-4 bg-[#175747] border border-[#DDE5DD] rounded-xl">
+          <div className="bg-[#175747] p-2 rounded-lg shrink-0">
+            <FileText size={20} className="text-[#A52B3A]" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-gray-800 truncate">
+            <p className="text-sm font-medium text-[#202D28] truncate">
               {filename}
             </p>
             {isLocalFile ? (
@@ -76,12 +76,12 @@ export function PdfUpload({
                 href={value}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-red-600 hover:underline"
+                className="text-xs text-[#A52B3A] hover:underline"
               >
                 Preview PDF ↗
               </a>
             ) : (
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-[#7A877F]">
                 Uploaded file will be stored locally (no public URL).
               </p>
             )}
@@ -111,7 +111,7 @@ export function PdfUpload({
         </div>
       ) : (
         <div
-          className="border-2 border-dashed border-gray-200 rounded-xl p-8 text-center cursor-pointer hover:border-gray-200 hover:bg-[#EAF1FB]0/10 transition-colors"
+          className="border-2 border-dashed border-[#DDE5DD] rounded-xl p-8 text-center cursor-pointer hover:border-[#DDE5DD] hover:bg-[#F3F7F3]/10 transition-colors"
           onDragOver={(e) => e.preventDefault()}
           onDrop={(e) => {
             e.preventDefault();
@@ -123,15 +123,15 @@ export function PdfUpload({
           {loading ? (
             <Loader2
               size={24}
-              className="mx-auto text-gray-500 animate-spin mb-2"
+              className="mx-auto text-[#7A877F] animate-spin mb-2"
             />
           ) : (
-            <FileText size={24} className="mx-auto text-gray-600 mb-2" />
+            <FileText size={24} className="mx-auto text-[#5F6F67] mb-2" />
           )}
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-[#7A877F]">
             {loading ? "Uploading PDF..." : "Drop PDF here or click to browse"}
           </p>
-          <p className="text-xs text-gray-500 mt-1">PDF up to 20MB</p>
+          <p className="text-xs text-[#7A877F] mt-1">PDF up to 20MB</p>
         </div>
       )}
       <input

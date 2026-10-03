@@ -23,10 +23,10 @@ const columns: Column<Blog>[] = [
     sortable: true,
     render: (row) => (
       <div>
-        <p className="font-medium text-gray-900 text-sm line-clamp-1">
+        <p className="font-medium text-[#202D28] text-sm line-clamp-1">
           {row.title}
         </p>
-        <p className="text-xs text-gray-500">
+        <p className="text-xs text-[#7A877F]">
           {row.category?.name ?? "Uncategorized"}
         </p>
       </div>
@@ -36,7 +36,7 @@ const columns: Column<Blog>[] = [
     key: "slug",
     label: "Slug",
     render: (row) => (
-      <span className="text-xs font-mono text-gray-500">/blog/{row.slug}</span>
+      <span className="text-xs font-mono text-[#7A877F]">/blog/{row.slug}</span>
     ),
   },
   {
@@ -44,7 +44,7 @@ const columns: Column<Blog>[] = [
     label: "Featured",
     render: (row) =>
       row.isFeatured ? (
-        <Badge className="bg-red-400 text-red-600">Featured</Badge>
+        <Badge className="bg-red-400 text-[#A52B3A]">Featured</Badge>
       ) : null,
   },
   {
@@ -52,7 +52,7 @@ const columns: Column<Blog>[] = [
     label: "Date",
     sortable: true,
     render: (row) => (
-      <span className="text-xs text-gray-500">
+      <span className="text-xs text-[#7A877F]">
         {new Date(row.createdAt).toLocaleDateString("en-IN")}
       </span>
     ),

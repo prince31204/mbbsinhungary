@@ -28,15 +28,15 @@ const getAutoResponse = (userMessage: string): string => {
     return "Ensure all documents are in PDF format and clearly legible. Required documents typically include 10+2 marksheet, NEET scorecard, and passport. Need help with a specific document?";
   }
   if (msg.includes("visa")) {
-    return "Once you get an admission offer, our team will guide you through the Armenia student visa process. It typically takes 4–6 weeks. Want to know more?";
+    return "Once you get an admission offer, our team will guide you through the Hungary student visa process. It typically takes 4–6 weeks. Want to know more?";
   }
   if (msg.includes("fee") || msg.includes("cost") || msg.includes("tuition")) {
     return replaceCurrencySymbol(
-      "Tuition fees in Armenia are very affordable — typically $3,000–$5,000/year. Total cost of MBBS including accommodation is usually $25,000–$35,000. Want details for a specific university?",
+      "Tuition fees in Hungary are very affordable — typically $3,000–$5,000/year. Total cost of MBBS including accommodation is usually $25,000–$35,000. Want details for a specific university?",
     );
   }
   if (msg.includes("neet") || msg.includes("eligibility")) {
-    return "For MBBS in Armenia, you need NEET qualification (minimum qualifying percentile) and 50% in PCB (Physics, Chemistry, Biology) in 10+2. Specific cutoffs vary by university.";
+    return "For MBBS in Hungary, you need NEET qualification (minimum qualifying percentile) and 50% in PCB (Physics, Chemistry, Biology) in 10+2. Specific cutoffs vary by university.";
   }
   if (
     msg.includes("contact") ||
@@ -48,7 +48,7 @@ const getAutoResponse = (userMessage: string): string => {
   if (msg.includes("status")) {
     return "Check your inquiry status anytime in the 'Applied Colleges' section of your dashboard. Our team typically responds within 24 hours.";
   }
-  return "Thanks for your message! I'm here to help with questions about MBBS in Armenia — fees, eligibility, universities, visa, or the application process. How can I assist you today?";
+  return "Thanks for your message! I'm here to help with questions about MBBS in Hungary — fees, eligibility, universities, visa, or the application process. How can I assist you today?";
 };
 
 export default function StudentChatWidget() {
@@ -58,7 +58,7 @@ export default function StudentChatWidget() {
     {
       id: "1",
       message:
-        "Hello! 👋 I'm here to help with your MBBS Armenia journey. Ask me anything about fees, eligibility, universities, or the admission process!",
+        "Hello! 👋 I'm here to help with your MBBS Hungary journey. Ask me anything about fees, eligibility, universities, or the admission process!",
       isFromSupport: true,
       timestamp: new Date().toISOString(),
     },
@@ -108,7 +108,7 @@ export default function StudentChatWidget() {
           setIsOpen(true);
           setIsMinimized(false);
         }}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 z-40"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-[#A52B3A] hover:bg-[#8C2030] text-white rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 z-40"
         aria-label="Open support chat"
       >
         <MessageCircle className="w-6 h-6" />
@@ -121,7 +121,7 @@ export default function StudentChatWidget() {
     return (
       <button
         onClick={() => setIsMinimized(false)}
-        className="fixed bottom-6 right-6 bg-red-600 text-white rounded-2xl px-5 py-3 shadow-xl flex items-center gap-2 z-40 hover:bg-red-700 transition-colors"
+        className="fixed bottom-6 right-6 bg-[#A52B3A] text-white rounded-2xl px-5 py-3 shadow-xl flex items-center gap-2 z-40 hover:bg-[#8C2030] transition-colors"
       >
         <MessageCircle className="w-5 h-5" />
         <span className="text-sm font-medium">Support Chat</span>
@@ -130,18 +130,18 @@ export default function StudentChatWidget() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 w-80 sm:w-96 h-[480px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col z-40 overflow-hidden">
+    <div className="fixed bottom-6 right-6 w-80 sm:w-96 h-[480px] bg-white rounded-2xl shadow-2xl border border-[#DDE5DD] flex flex-col z-40 overflow-hidden">
       {/* Header */}
-      <div className="bg-red-600 text-white px-4 py-3 flex items-center justify-between">
+      <div className="bg-[#A52B3A] text-white px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-[#EAF1FB]0 rounded-full flex items-center justify-center">
+          <div className="w-8 h-8 bg-[#175747] rounded-full flex items-center justify-center">
             <Bot className="w-4 h-4" />
           </div>
           <div>
             <p className="font-semibold text-sm leading-none">
-              MBBS Armenia Support
+              MBBS Hungary Support
             </p>
-            <p className="text-xs text-slate-600 mt-0.5">
+            <p className="text-xs text-[#5F6F67] mt-0.5">
               Typically replies instantly
             </p>
           </div>
@@ -149,14 +149,14 @@ export default function StudentChatWidget() {
         <div className="flex items-center gap-1">
           <button
             onClick={() => setIsMinimized(true)}
-            className="p-1 hover:bg-[#EAF1FB]0 rounded transition-colors"
+            className="p-1 hover:bg-[#175747] rounded transition-colors"
             aria-label="minimize"
           >
             <Minimize2 className="w-4 h-4" />
           </button>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-1 hover:bg-[#EAF1FB]0 rounded transition-colors"
+            className="p-1 hover:bg-[#175747] rounded transition-colors"
             aria-label="close"
           >
             <X className="w-4 h-4" />
@@ -165,12 +165,12 @@ export default function StudentChatWidget() {
       </div>
 
       {/* Quick prompts */}
-      <div className="px-3 py-2 border-b border-gray-100 flex gap-1.5 overflow-x-auto scrollbar-none">
+      <div className="px-3 py-2 border-b border-[#DDE5DD] flex gap-1.5 overflow-x-auto scrollbar-none">
         {["Fees", "Eligibility", "Visa", "NEET"].map((q) => (
           <button
             key={q}
             onClick={() => setInput(q)}
-            className="shrink-0 text-xs bg-gray-100 hover:bg-white hover:text-[#285BB5] text-gray-600 rounded-full px-3 py-1 transition-colors"
+            className="shrink-0 text-xs bg-[#F3F7F3] hover:bg-white hover:text-[#175747] text-[#5F6F67] rounded-full px-3 py-1 transition-colors"
           >
             {q}
           </button>
@@ -185,33 +185,33 @@ export default function StudentChatWidget() {
             className={`flex gap-2 ${msg.isFromSupport ? "justify-start" : "justify-end"}`}
           >
             {msg.isFromSupport && (
-              <div className="w-7 h-7 bg-[#EAF1FB] rounded-full flex items-center justify-center shrink-0">
-                <Bot className="w-3.5 h-3.5 text-red-600" />
+              <div className="w-7 h-7 bg-[#F3F7F3] rounded-full flex items-center justify-center shrink-0">
+                <Bot className="w-3.5 h-3.5 text-[#A52B3A]" />
               </div>
             )}
             <div className={`max-w-[78%]`}>
               <div
-                className={`px-3 py-2 rounded-2xl text-sm leading-relaxed ${msg.isFromSupport ? "bg-gray-100 text-gray-900 rounded-tl-none" : "bg-red-600 text-white rounded-tr-none"}`}
+                className={`px-3 py-2 rounded-2xl text-sm leading-relaxed ${msg.isFromSupport ? "bg-[#F3F7F3] text-[#202D28] rounded-tl-none" : "bg-[#A52B3A] text-white rounded-tr-none"}`}
               >
                 {msg.message}
               </div>
-              <p className="text-[10px] text-gray-500 mt-1 px-1">
+              <p className="text-[10px] text-[#7A877F] mt-1 px-1">
                 {formatTime(msg.timestamp)}
               </p>
             </div>
             {!msg.isFromSupport && (
-              <div className="w-7 h-7 bg-gray-100 rounded-full flex items-center justify-center shrink-0">
-                <User className="w-3.5 h-3.5 text-gray-600" />
+              <div className="w-7 h-7 bg-[#F3F7F3] rounded-full flex items-center justify-center shrink-0">
+                <User className="w-3.5 h-3.5 text-[#5F6F67]" />
               </div>
             )}
           </div>
         ))}
         {isTyping && (
           <div className="flex gap-2 justify-start">
-            <div className="w-7 h-7 bg-[#EAF1FB] rounded-full flex items-center justify-center shrink-0">
-              <Bot className="w-3.5 h-3.5 text-red-600" />
+            <div className="w-7 h-7 bg-[#F3F7F3] rounded-full flex items-center justify-center shrink-0">
+              <Bot className="w-3.5 h-3.5 text-[#A52B3A]" />
             </div>
-            <div className="bg-gray-100 px-4 py-3 rounded-2xl rounded-tl-none">
+            <div className="bg-[#F3F7F3] px-4 py-3 rounded-2xl rounded-tl-none">
               <div className="flex gap-1">
                 {[0, 0.15, 0.3].map((delay, i) => (
                   <div
@@ -228,7 +228,7 @@ export default function StudentChatWidget() {
       </div>
 
       {/* Input */}
-      <div className="p-3 border-t border-gray-100">
+      <div className="p-3 border-t border-[#DDE5DD]">
         <div className="flex gap-2">
           <input
             type="text"
@@ -236,12 +236,12 @@ export default function StudentChatWidget() {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && sendMessage()}
             placeholder="Type your question..."
-            className="flex-1 text-sm border border-gray-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="flex-1 text-sm border border-[#DDE5DD] rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <button
             onClick={sendMessage}
             disabled={!input.trim()}
-            className="w-9 h-9 bg-red-600 hover:bg-red-700 disabled:opacity-40 text-gray-900 rounded-xl flex items-center justify-center transition-colors shrink-0"
+            className="w-9 h-9 bg-[#A52B3A] hover:bg-[#8C2030] disabled:opacity-40 text-[#202D28] rounded-xl flex items-center justify-center transition-colors shrink-0"
           >
             <Send className="w-4 h-4" />
           </button>

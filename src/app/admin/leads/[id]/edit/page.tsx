@@ -145,12 +145,12 @@ export default function LeadEditPage() {
         <Skeleton className="h-80 w-full" />
       </div>
     );
-  if (!lead) return <div className="p-6 text-red-600">Lead not found</div>;
+  if (!lead) return <div className="p-6 text-[#A52B3A]">Lead not found</div>;
 
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">
+        <h1 className="text-2xl font-bold text-[#202D28]">
           Lead Details — {lead.name}
         </h1>
         <Badge
@@ -164,47 +164,47 @@ export default function LeadEditPage() {
       <div className="grid grid-cols-3 gap-6">
         {/* Profile Info (read-only) */}
         <div className="col-span-1 space-y-4">
-          <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
-            <h2 className="font-semibold text-gray-700 mb-4">Contact Info</h2>
+          <div className="bg-white rounded-xl border border-[#DDE5DD] p-5 shadow-sm">
+            <h2 className="font-semibold text-[#5F6F67] mb-4">Contact Info</h2>
             <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-2 text-gray-700">
-                <User size={14} className="text-gray-500" />
+              <div className="flex items-center gap-2 text-[#5F6F67]">
+                <User size={14} className="text-[#7A877F]" />
                 <span>{lead.name}</span>
               </div>
               {lead.email && (
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Mail size={14} className="text-gray-500" />
+                <div className="flex items-center gap-2 text-[#5F6F67]">
+                  <Mail size={14} className="text-[#7A877F]" />
                   <span className="truncate">{lead.email}</span>
                 </div>
               )}
               {lead.phone && (
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Phone size={14} className="text-gray-500" />
+                <div className="flex items-center gap-2 text-[#5F6F67]">
+                  <Phone size={14} className="text-[#7A877F]" />
                   <span>
                     {lead.phoneCode} {lead.phone}
                   </span>
                 </div>
               )}
               {(lead.city || lead.state) && (
-                <div className="flex items-center gap-2 text-gray-700">
-                  <MapPin size={14} className="text-gray-500" />
+                <div className="flex items-center gap-2 text-[#5F6F67]">
+                  <MapPin size={14} className="text-[#7A877F]" />
                   <span>
                     {[lead.city, lead.state].filter(Boolean).join(", ")}
                   </span>
                 </div>
               )}
-              <div className="flex items-center gap-2 text-gray-500">
-                <Calendar size={14} className="text-gray-500" />
+              <div className="flex items-center gap-2 text-[#7A877F]">
+                <Calendar size={14} className="text-[#7A877F]" />
                 <span>{new Date(lead.createdAt).toLocaleDateString()}</span>
               </div>
               {lead.source && (
-                <div className="mt-4 pt-4 border-t border-gray-100">
-                  <p className="text-[10px] uppercase font-bold text-gray-500 mb-1">
+                <div className="mt-4 pt-4 border-t border-[#DDE5DD]">
+                  <p className="text-[10px] uppercase font-bold text-[#7A877F] mb-1">
                     Lead Source
                   </p>
                   <Badge
                     variant="outline"
-                    className="text-xs font-medium bg-[#EAF1FB]0 text-red-600 border-gray-200 whitespace-normal text-left h-auto py-1 px-3"
+                    className="text-xs font-medium bg-[#175747] text-[#A52B3A] border-[#DDE5DD] whitespace-normal text-left h-auto py-1 px-3"
                   >
                     {formatSource(lead.source)}
                   </Badge>
@@ -215,18 +215,18 @@ export default function LeadEditPage() {
 
           {/* Academics */}
           {(lead.neetScore || lead.neetQualificationStatus) && (
-            <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
-              <h2 className="font-semibold text-gray-700 mb-3">Academic</h2>
-              <div className="space-y-2 text-sm text-gray-700">
+            <div className="bg-white rounded-xl border border-[#DDE5DD] p-5 shadow-sm">
+              <h2 className="font-semibold text-[#5F6F67] mb-3">Academic</h2>
+              <div className="space-y-2 text-sm text-[#5F6F67]">
                 {lead.neetScore && (
                   <div>
-                    <span className="text-gray-500">NEET Score:</span>{" "}
+                    <span className="text-[#7A877F]">NEET Score:</span>{" "}
                     <strong>{lead.neetScore}</strong>
                   </div>
                 )}
                 {lead.neetQualificationStatus && (
                   <div>
-                    <span className="text-gray-500">NEET:</span>{" "}
+                    <span className="text-[#7A877F]">NEET:</span>{" "}
                     <Badge className="text-xs capitalize ml-1">
                       {lead.neetQualificationStatus}
                     </Badge>
@@ -234,7 +234,7 @@ export default function LeadEditPage() {
                 )}
                 {lead.highestLevelOfEducation && (
                   <div>
-                    <span className="text-gray-500">Education:</span>{" "}
+                    <span className="text-[#7A877F]">Education:</span>{" "}
                     {lead.highestLevelOfEducation}
                   </div>
                 )}
@@ -246,8 +246,8 @@ export default function LeadEditPage() {
         {/* Editable CRM Fields */}
         <div className="col-span-2">
           <form onSubmit={handleSubmit} className="space-y-5">
-            <div className="bg-white rounded-xl border border-gray-200 p-5 space-y-4 shadow-sm">
-              <h2 className="font-semibold text-gray-700 border-b pb-2">
+            <div className="bg-white rounded-xl border border-[#DDE5DD] p-5 space-y-4 shadow-sm">
+              <h2 className="font-semibold text-[#5F6F67] border-b pb-2">
                 CRM Management
               </h2>
               <div className="grid grid-cols-2 gap-4">
@@ -346,7 +346,7 @@ export default function LeadEditPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="flex-1 bg-[#175747] hover:bg-[#175747]"
               >
                 {loading ? "Saving…" : "Update Lead"}
               </Button>
@@ -361,30 +361,30 @@ export default function LeadEditPage() {
           </form>
 
           {/* Inquiries & Applications */}
-          <div className="mt-6 bg-white rounded-xl border border-gray-200 p-5 shadow-sm space-y-4">
-            <h2 className="font-semibold text-gray-700 border-b pb-2">
+          <div className="mt-6 bg-white rounded-xl border border-[#DDE5DD] p-5 shadow-sm space-y-4">
+            <h2 className="font-semibold text-[#5F6F67] border-b pb-2">
               Student Inquiries & Applications
             </h2>
 
             {lead.applications?.length > 0 && (
               <div className="space-y-3">
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                <h3 className="text-sm font-semibold text-[#7A877F] uppercase tracking-wide">
                   Program Applications
                 </h3>
                 {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                 {lead.applications.map((app: any) => (
                   <div
                     key={app.id}
-                    className="flex flex-col sm:flex-row gap-3 justify-between items-start sm:items-center bg-gray-50 p-3 rounded-lg border border-gray-100"
+                    className="flex flex-col sm:flex-row gap-3 justify-between items-start sm:items-center bg-[#FBF8F0] p-3 rounded-lg border border-[#DDE5DD]"
                   >
                     <div>
-                      <div className="font-semibold text-gray-800 text-sm">
+                      <div className="font-semibold text-[#202D28] text-sm">
                         {app.program?.programName || "Unknown Program"}
                       </div>
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-[#7A877F]">
                         {app.program?.university?.name || "Unknown University"}
                       </div>
-                      <div className="text-xs text-gray-500 mt-1">
+                      <div className="text-xs text-[#7A877F] mt-1">
                         Applied:{" "}
                         {format(new Date(app.appliedAt), "dd MMM yyyy")}
                       </div>
@@ -414,25 +414,25 @@ export default function LeadEditPage() {
 
             {lead.inquiries?.length > 0 && (
               <div className="space-y-3 mt-4">
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                <h3 className="text-sm font-semibold text-[#7A877F] uppercase tracking-wide">
                   General Inquiries
                 </h3>
                 {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                 {lead.inquiries.map((inq: any) => (
                   <div
                     key={inq.id}
-                    className="flex flex-col sm:flex-row gap-3 justify-between items-start sm:items-center bg-gray-50 p-3 rounded-lg border border-gray-100"
+                    className="flex flex-col sm:flex-row gap-3 justify-between items-start sm:items-center bg-[#FBF8F0] p-3 rounded-lg border border-[#DDE5DD]"
                   >
                     <div>
-                      <div className="font-semibold text-gray-800 text-sm">
+                      <div className="font-semibold text-[#202D28] text-sm">
                         {inq.universityName || "General Inquiry"}
                       </div>
                       {inq.message && (
-                        <div className="text-xs text-gray-600 mt-0.5 line-clamp-2">
+                        <div className="text-xs text-[#5F6F67] mt-0.5 line-clamp-2">
                           {inq.message}
                         </div>
                       )}
-                      <div className="text-xs text-gray-500 mt-1">
+                      <div className="text-xs text-[#7A877F] mt-1">
                         Submitted:{" "}
                         {format(new Date(inq.createdAt), "dd MMM yyyy")}
                       </div>
@@ -458,7 +458,7 @@ export default function LeadEditPage() {
             )}
 
             {!lead.applications?.length && !lead.inquiries?.length && (
-              <div className="text-center py-6 text-sm text-gray-500">
+              <div className="text-center py-6 text-sm text-[#7A877F]">
                 No inquiries or applications found.
               </div>
             )}

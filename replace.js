@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 function replaceInString(str) {
-    let newStr = str.replace(/Armenia/g, 'Armenia');
-    newStr = newStr.replace(/armenia/g, 'armenia');
-    newStr = newStr.replace(/ARMENIA/g, 'ARMENIA');
+    let newStr = str.replace(/Hungary/g, 'Hungary');
+    newStr = newStr.replace(/hungary/g, 'hungary');
+    newStr = newStr.replace(/HUNGARY/g, 'HUNGARY');
     return newStr;
 }
 
@@ -19,7 +19,7 @@ function walk(dir) {
                 results = results.concat(walk(file));
                 // Rename directory if needed after walking inside
                 const basename = path.basename(file);
-                if (basename.includes('armenia') || basename.includes('Armenia')) {
+                if (basename.includes('hungary') || basename.includes('Hungary')) {
                     const newBasename = replaceInString(basename);
                     const newPath = path.join(path.dirname(file), newBasename);
                     fs.renameSync(file, newPath);
@@ -46,7 +46,7 @@ for (const file of files) {
         }
         
         const basename = path.basename(file);
-        if (basename.includes('armenia') || basename.includes('Armenia')) {
+        if (basename.includes('hungary') || basename.includes('Hungary')) {
             const newBasename = replaceInString(basename);
             const newPath = path.join(path.dirname(file), newBasename);
             fs.renameSync(file, newPath);
@@ -57,4 +57,4 @@ for (const file of files) {
     }
 }
 
-console.log('Done replacing Armenia with Armenia.');
+console.log('Done replacing Hungary with Hungary.');

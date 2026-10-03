@@ -108,8 +108,8 @@ export default function UniversityFaqsPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-gray-900">FAQs</h2>
-            <p className="text-sm text-gray-500">
+            <h2 className="text-xl font-bold text-[#202D28]">FAQs</h2>
+            <p className="text-sm text-[#7A877F]">
               {faqs.length} question{faqs.length !== 1 ? "s" : ""}
             </p>
           </div>
@@ -120,7 +120,7 @@ export default function UniversityFaqsPage() {
               setQuestion("");
               setAnswer("");
             }}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
           >
             <Plus size={16} className="mr-2" />
             Add FAQ
@@ -128,8 +128,8 @@ export default function UniversityFaqsPage() {
         </div>
 
         {showForm && (
-          <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-3">
-            <h3 className="font-semibold text-gray-800">
+          <div className="bg-white border border-[#DDE5DD] rounded-xl p-5 space-y-3">
+            <h3 className="font-semibold text-[#202D28]">
               {editId ? "Edit FAQ" : "New FAQ"}
             </h3>
             <div className="space-y-1.5">
@@ -137,7 +137,7 @@ export default function UniversityFaqsPage() {
               <Input
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
-                placeholder="e.g. Is NEET mandatory for MBBS in Armenia?"
+                placeholder="e.g. Is NEET mandatory for MBBS in Hungary?"
               />
             </div>
             <div className="space-y-1.5">
@@ -153,7 +153,7 @@ export default function UniversityFaqsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#175747] hover:bg-[#175747]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -175,12 +175,12 @@ export default function UniversityFaqsPage() {
 
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : faqs.length === 0 ? (
           <div className="p-12 text-center border border-dashed border-gray-300 rounded-xl">
-            <HelpCircle size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">
+            <HelpCircle size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">
               No FAQs yet. Add common questions about this university.
             </p>
           </div>
@@ -189,7 +189,7 @@ export default function UniversityFaqsPage() {
             {faqs.map((faq) => (
               <div
                 key={faq.id}
-                className="bg-white border border-gray-200 rounded-xl overflow-hidden"
+                className="bg-white border border-[#DDE5DD] rounded-xl overflow-hidden"
               >
                 <div className="flex items-start gap-3 p-4">
                   <button
@@ -202,15 +202,15 @@ export default function UniversityFaqsPage() {
                       {expanded === faq.id ? (
                         <ChevronUp
                           size={14}
-                          className="text-gray-500 shrink-0"
+                          className="text-[#7A877F] shrink-0"
                         />
                       ) : (
                         <ChevronDown
                           size={14}
-                          className="text-gray-500 shrink-0"
+                          className="text-[#7A877F] shrink-0"
                         />
                       )}
-                      <span className="font-medium text-gray-900 text-sm">
+                      <span className="font-medium text-[#202D28] text-sm">
                         {faq.question}
                       </span>
                     </div>
@@ -227,7 +227,7 @@ export default function UniversityFaqsPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="h-7 w-7 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                      className="h-7 w-7 p-0 text-[#A52B3A] hover:bg-[#175747]"
                       onClick={() => handleDelete(faq.id)}
                     >
                       <Trash2 size={13} />
@@ -235,7 +235,7 @@ export default function UniversityFaqsPage() {
                   </div>
                 </div>
                 {expanded === faq.id && (
-                  <div className="px-10 pb-4 text-sm text-gray-600 leading-relaxed">
+                  <div className="px-10 pb-4 text-sm text-[#5F6F67] leading-relaxed">
                     {faq.answer}
                   </div>
                 )}

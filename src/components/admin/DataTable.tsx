@@ -168,7 +168,7 @@ export function DataTable<T extends { id: string | number }>({
     <div className="space-y-4">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-gray-900">{title}</h1>
+        <h1 className="text-2xl font-bold text-[#202D28]">{title}</h1>
         <div className="flex items-center gap-2">
           {extraHeaderActions}
           {importHref && (
@@ -188,7 +188,7 @@ export function DataTable<T extends { id: string | number }>({
             </Button>
           )}
           {createHref && (
-            <Button size="sm" className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0" asChild>
+            <Button size="sm" className="bg-[#175747] hover:bg-[#175747]" asChild>
               <Link href={createHref}>
                 <Plus size={14} className="mr-1.5" />
                 {createLabel}
@@ -199,13 +199,13 @@ export function DataTable<T extends { id: string | number }>({
       </div>
 
       {/* Toolbar */}
-      <div className="bg-white rounded-xl border border-gray-200 shadow-sm">
-        <div className="flex items-center justify-between p-4 border-b border-gray-100">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] shadow-sm">
+        <div className="flex items-center justify-between p-4 border-b border-[#DDE5DD]">
           {/* Search */}
           <div className="relative w-72">
             <Search
               size={15}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#7A877F]"
             />
             <Input
               placeholder="Search..."
@@ -221,7 +221,7 @@ export function DataTable<T extends { id: string | number }>({
           {/* Bulk actions */}
           {selectedVisible.length > 0 && onDelete && (
             <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-500">
+              <span className="text-sm text-[#7A877F]">
                 {selectedVisible.length} selected
               </span>
               <Button
@@ -239,7 +239,7 @@ export function DataTable<T extends { id: string | number }>({
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
-              <TableRow className="bg-gray-50/60">
+              <TableRow className="bg-[#FBF8F0]/60">
                 {onDelete && (
                   <TableHead className="w-10">
                     <Checkbox
@@ -255,13 +255,13 @@ export function DataTable<T extends { id: string | number }>({
                   <TableHead
                     key={String(col.key)}
                     className={cn(
-                      "text-xs font-semibold text-gray-600 uppercase tracking-wider",
+                      "text-xs font-semibold text-[#5F6F67] uppercase tracking-wider",
                       col.className,
                     )}
                   >
                     {col.sortable ? (
                       <button
-                        className="flex items-center gap-1 hover:text-gray-900"
+                        className="flex items-center gap-1 hover:text-[#202D28]"
                         suppressHydrationWarning
                         onClick={() => handleSort(String(col.key))}
                       >
@@ -273,7 +273,7 @@ export function DataTable<T extends { id: string | number }>({
                             <ChevronDown size={12} />
                           )
                         ) : (
-                          <ChevronUp size={12} className="text-gray-600" />
+                          <ChevronUp size={12} className="text-[#5F6F67]" />
                         )}
                       </button>
                     ) : (
@@ -282,7 +282,7 @@ export function DataTable<T extends { id: string | number }>({
                   </TableHead>
                 ))}
                 {(actions.length > 0 || onStatusToggle || onDelete) && (
-                  <TableHead className="text-xs font-semibold text-gray-600 uppercase tracking-wider text-right">
+                  <TableHead className="text-xs font-semibold text-[#5F6F67] uppercase tracking-wider text-right">
                     Actions
                   </TableHead>
                 )}
@@ -293,7 +293,7 @@ export function DataTable<T extends { id: string | number }>({
                 <TableRow>
                   <TableCell
                     colSpan={columns.length + (onDelete ? 1 : 0) + 1}
-                    className="text-center py-16 text-gray-500"
+                    className="text-center py-16 text-[#7A877F]"
                   >
                     Loading...
                   </TableCell>
@@ -302,14 +302,14 @@ export function DataTable<T extends { id: string | number }>({
                 <TableRow>
                   <TableCell
                     colSpan={columns.length + (onDelete ? 1 : 0) + 1}
-                    className="text-center py-16 text-gray-500"
+                    className="text-center py-16 text-[#7A877F]"
                   >
                     No records found.
                   </TableCell>
                 </TableRow>
               ) : (
                 data.map((row) => (
-                  <TableRow key={row.id} className="hover:bg-gray-50/50">
+                  <TableRow key={row.id} className="hover:bg-[#FBF8F0]/50">
                     {onDelete && (
                       <TableCell>
                         <Checkbox
@@ -373,7 +373,7 @@ export function DataTable<T extends { id: string | number }>({
                                     }}
                                     className={
                                       action.variant === "destructive"
-                                        ? "text-red-600"
+                                        ? "text-[#A52B3A]"
                                         : ""
                                     }
                                   >
@@ -399,9 +399,9 @@ export function DataTable<T extends { id: string | number }>({
         </div>
 
         {/* Pagination */}
-        <div className="flex items-center justify-between px-4 py-3 border-t border-gray-100">
+        <div className="flex items-center justify-between px-4 py-3 border-t border-[#DDE5DD]">
           <div className="flex items-center gap-3">
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-[#7A877F]">
               Showing {Math.min((page - 1) * pageSize + 1, totalCount)}–
               {Math.min(page * pageSize, totalCount)} of {totalCount}
             </span>
@@ -440,7 +440,7 @@ export function DataTable<T extends { id: string | number }>({
             >
               <ChevronLeft size={14} />
             </Button>
-            <span className="text-sm text-gray-600 px-2">
+            <span className="text-sm text-[#5F6F67] px-2">
               Page {page} / {totalPages}
             </span>
             <Button

@@ -94,7 +94,7 @@ export default function AdminProfilePage() {
   if (loading) {
     return (
       <div className="p-12 text-center">
-        <Loader2 size={24} className="animate-spin mx-auto text-gray-500" />
+        <Loader2 size={24} className="animate-spin mx-auto text-[#7A877F]" />
       </div>
     );
   }
@@ -102,18 +102,18 @@ export default function AdminProfilePage() {
   return (
     <div className="space-y-6 max-w-2xl">
       <div className="flex items-center gap-3">
-        <User size={22} className="text-red-600" />
+        <User size={22} className="text-[#A52B3A]" />
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">My Profile</h1>
-          <p className="text-sm text-gray-500">
+          <h1 className="text-2xl font-bold text-[#202D28]">My Profile</h1>
+          <p className="text-sm text-[#7A877F]">
             {profile?.email} · {profile?.role}
           </p>
         </div>
       </div>
 
       {/* Profile Info */}
-      <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-        <h2 className="font-semibold text-gray-800 border-b pb-2">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+        <h2 className="font-semibold text-[#202D28] border-b pb-2">
           Personal Information
         </h2>
         <div className="grid grid-cols-2 gap-4">
@@ -143,7 +143,7 @@ export default function AdminProfilePage() {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={3}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
               placeholder="Brief bio..."
             />
           </div>
@@ -151,7 +151,7 @@ export default function AdminProfilePage() {
         <Button
           onClick={handleSave}
           disabled={saving}
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#175747] hover:bg-[#175747]"
         >
           {saving ? (
             <Loader2 size={16} className="animate-spin mr-2" />
@@ -163,8 +163,8 @@ export default function AdminProfilePage() {
       </div>
 
       {/* Password */}
-      <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-        <h2 className="font-semibold text-gray-800 border-b pb-2 flex items-center gap-2">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+        <h2 className="font-semibold text-[#202D28] border-b pb-2 flex items-center gap-2">
           <KeyRound size={16} /> Change Password
         </h2>
         <div className="space-y-3">

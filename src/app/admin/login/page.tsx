@@ -43,25 +43,25 @@ export default function AdminLoginPage() {
         <div className="bg-white rounded-2xl shadow-2xl p-8">
           {/* Logo */}
           <div className="text-center mb-8">
-            <div className="w-14 h-14 rounded-2xl bg-[#EAF1FB]0 flex items-center justify-center text-gray-900 font-bold text-2xl mx-auto mb-4">
+            <div className="w-14 h-14 rounded-2xl bg-[#175747] flex items-center justify-center text-[#202D28] font-bold text-2xl mx-auto mb-4">
               M
             </div>
-            <h1 className="text-2xl font-bold text-gray-900">Admin Login</h1>
-            <p className="text-sm text-gray-500 mt-1">MBBS Armenia CMS</p>
+            <h1 className="text-2xl font-bold text-[#202D28]">Admin Login</h1>
+            <p className="text-sm text-[#7A877F] mt-1">MBBS Hungary CMS</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-2">
               <Label
                 htmlFor="email"
-                className="text-sm font-medium text-gray-700"
+                className="text-sm font-medium text-[#5F6F67]"
               >
                 Email Address
               </Label>
               <div className="relative">
                 <Mail
                   size={16}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-[#7A877F]"
                 />
                 <Input
                   id="email"
@@ -77,14 +77,14 @@ export default function AdminLoginPage() {
             <div className="space-y-2">
               <Label
                 htmlFor="password"
-                className="text-sm font-medium text-gray-700"
+                className="text-sm font-medium text-[#5F6F67]"
               >
                 Password
               </Label>
               <div className="relative">
                 <Lock
                   size={16}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-[#7A877F]"
                 />
                 <Input
                   id="password"
@@ -102,7 +102,7 @@ export default function AdminLoginPage() {
 
             <Button
               type="submit"
-              className="w-full bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 text-white h-11"
+              className="w-full bg-[#175747] hover:bg-[#175747] text-white h-11"
               disabled={loading}
             >
               {loading ? (

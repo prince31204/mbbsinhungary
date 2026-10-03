@@ -20,28 +20,28 @@ const columns: Column<City>[] = [
     label: "City Name",
     sortable: true,
     render: (row) => (
-      <span className="font-medium text-gray-900">{row.name}</span>
+      <span className="font-medium text-[#202D28]">{row.name}</span>
     ),
   },
   {
     key: "slug",
     label: "Slug",
     render: (row) => (
-      <span className="text-xs font-mono text-gray-500">{row.slug}</span>
+      <span className="text-xs font-mono text-[#7A877F]">{row.slug}</span>
     ),
   },
   {
     key: "province",
     label: "Province",
     render: (row) => (
-      <span className="text-sm text-gray-600">{row.province?.name ?? "—"}</span>
+      <span className="text-sm text-[#5F6F67]">{row.province?.name ?? "—"}</span>
     ),
   },
   {
     key: "createdAt",
     label: "Created",
     render: (row) => (
-      <span className="text-xs text-gray-500">
+      <span className="text-xs text-[#7A877F]">
         {new Date(row.createdAt).toLocaleDateString("en-IN")}
       </span>
     ),

@@ -207,27 +207,27 @@ export default function AdminFmgeRatesPage() {
     <div className="space-y-5">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <BarChart3 size={22} className="text-red-600" />
+          <BarChart3 size={22} className="text-[#A52B3A]" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">
+            <h1 className="text-2xl font-bold text-[#202D28]">
               FMGE Pass Rates
             </h1>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-[#7A877F]">
               Foreign Medical Graduates Examination results by university and
               year
             </p>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex items-center bg-white h-10 p-1 px-2 rounded-lg border border-gray-200 shadow-sm gap-2">
+          <div className="flex items-center bg-white h-10 p-1 px-2 rounded-lg border border-[#DDE5DD] shadow-sm gap-2">
             <Button
               variant="outline"
               size="sm"
-              className="h-8 border-gray-200 text-gray-700 hover:text-[#285BB5] hover:border-gray-200 hover:bg-[#EAF1FB]0 text-xs font-bold shadow-xs bg-white"
+              className="h-8 border-[#DDE5DD] text-[#5F6F67] hover:text-[#175747] hover:border-[#DDE5DD] hover:bg-[#175747] text-xs font-bold shadow-xs bg-white"
               asChild
             >
               <a href="/api/admin/fmge-rates/bulk-template" download>
-                <FileDown size={14} className="mr-1.5 text-red-600" />
+                <FileDown size={14} className="mr-1.5 text-[#A52B3A]" />
                 Template
               </a>
             </Button>
@@ -236,7 +236,7 @@ export default function AdminFmgeRatesPage() {
               size="sm"
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
-              className="h-8 border-gray-200 text-red-600 hover:bg-[#EAF1FB]0 hover:text-gray-900 transition-all text-xs font-bold"
+              className="h-8 border-[#DDE5DD] text-[#A52B3A] hover:bg-[#175747] hover:text-[#202D28] transition-all text-xs font-bold"
             >
               {isUploading ? (
                 <Loader2 size={14} className="mr-1.5 animate-spin" />
@@ -259,7 +259,7 @@ export default function AdminFmgeRatesPage() {
               setEditId(null);
               setForm(blank);
             }}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 h-10"
+            className="bg-[#175747] hover:bg-[#175747] h-10"
           >
             <Plus size={16} className="mr-2" />
             Add Rate
@@ -269,7 +269,7 @@ export default function AdminFmgeRatesPage() {
 
       {/* Filter */}
       <div className="flex items-center gap-3">
-        <Label className="text-sm text-gray-600 shrink-0">
+        <Label className="text-sm text-[#5F6F67] shrink-0">
           Filter by University:
         </Label>
         <Select value={filterUni} onValueChange={setFilterUni}>
@@ -289,8 +289,8 @@ export default function AdminFmgeRatesPage() {
 
       {/* Form */}
       {showForm && (
-        <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
-          <h3 className="font-semibold text-gray-800">
+        <div className="bg-white border border-[#DDE5DD] rounded-xl p-5 space-y-4">
+          <h3 className="font-semibold text-[#202D28]">
             {editId ? "Edit FMGE Rate" : "Add FMGE Rate"}
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -386,7 +386,7 @@ export default function AdminFmgeRatesPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#175747] hover:bg-[#175747]"
             >
               {saving && <Loader2 size={14} className="mr-2 animate-spin" />}
               {editId ? "Save Changes" : "Add Rate"}
@@ -405,20 +405,20 @@ export default function AdminFmgeRatesPage() {
       )}
 
       {/* Table */}
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : filtered.length === 0 ? (
           <div className="p-12 text-center">
-            <BarChart3 size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No FMGE rate records found.</p>
+            <BarChart3 size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No FMGE rate records found.</p>
           </div>
         ) : (
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-gray-100 bg-gray-50 text-left text-gray-500">
+              <tr className="border-b border-[#DDE5DD] bg-[#FBF8F0] text-left text-[#7A877F]">
                 <th className="px-4 py-3 font-medium">University</th>
                 <th className="px-4 py-3 font-medium">Year</th>
                 <th className="px-4 py-3 font-medium text-center">Appeared</th>
@@ -438,16 +438,16 @@ export default function AdminFmgeRatesPage() {
                 return (
                   <tr
                     key={r.id}
-                    className="border-b border-gray-50 hover:bg-gray-50"
+                    className="border-b border-gray-50 hover:bg-[#FBF8F0]"
                   >
-                    <td className="px-4 py-3 font-medium text-gray-800">
+                    <td className="px-4 py-3 font-medium text-[#202D28]">
                       {r.university?.name || "—"}
                     </td>
-                    <td className="px-4 py-3 text-gray-600">{r.year}</td>
-                    <td className="px-4 py-3 text-center text-gray-600">
+                    <td className="px-4 py-3 text-[#5F6F67]">{r.year}</td>
+                    <td className="px-4 py-3 text-center text-[#5F6F67]">
                       {r.appeared ?? "—"}
                     </td>
-                    <td className="px-4 py-3 text-center text-gray-600">
+                    <td className="px-4 py-3 text-center text-[#5F6F67]">
                       {r.passed ?? "—"}
                     </td>
                     <td className="px-4 py-3 text-center">
@@ -459,7 +459,7 @@ export default function AdminFmgeRatesPage() {
                         "—"
                       )}
                     </td>
-                    <td className="px-4 py-3 text-center text-gray-600">
+                    <td className="px-4 py-3 text-center text-[#5F6F67]">
                       {r.rank ?? "—"}
                     </td>
                     <td className="px-4 py-3 text-right">
@@ -475,7 +475,7 @@ export default function AdminFmgeRatesPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                          className="h-8 w-8 p-0 text-[#A52B3A] hover:bg-[#175747]"
                           onClick={() => handleDelete(r.id)}
                         >
                           <Trash2 size={14} />

@@ -114,7 +114,7 @@ export default function EditUniversityPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="animate-spin text-gray-500" size={32} />
+        <Loader2 className="animate-spin text-[#7A877F]" size={32} />
       </div>
     );
   }
@@ -144,25 +144,25 @@ export default function EditUniversityPage() {
         </Button>
         <div className="flex-1">
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl font-bold text-gray-900">
+            <h1 className="text-2xl font-bold text-[#202D28]">
               Edit University
             </h1>
             <a
               href={`/universities/${form.slug}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-gray-600 border-gray-200 hover:border-gray-200 hover:text-[#285BB5] transition-all shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-[#5F6F67] border-[#DDE5DD] hover:border-[#DDE5DD] hover:text-[#175747] transition-all shadow-sm"
             >
               Live <Eye size={14} />
             </a>
           </div>
-          <p className="text-sm text-gray-500">{String(form.name ?? "")}</p>
+          <p className="text-sm text-[#7A877F]">{String(form.name ?? "")}</p>
         </div>
       </div>
 
       {/* Sub-section navigation */}
-      <div className="bg-white rounded-xl border border-gray-200 p-4">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] p-4">
+        <p className="text-xs font-semibold text-[#7A877F] uppercase tracking-wider mb-3">
           Sub-sections
         </p>
         <div className="flex flex-wrap gap-2">
@@ -170,7 +170,7 @@ export default function EditUniversityPage() {
             <Link
               key={s.href}
               href={s.href}
-              className="px-3 py-1.5 bg-gray-100 hover:bg-[#EAF1FB]0 hover:text-[#285BB5] text-xs rounded-lg text-gray-700 transition-colors"
+              className="px-3 py-1.5 bg-[#F3F7F3] hover:bg-[#175747] hover:text-[#175747] text-xs rounded-lg text-[#5F6F67] transition-colors"
             >
               {s.label}
             </Link>
@@ -180,8 +180,8 @@ export default function EditUniversityPage() {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Basic Info */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Basic Information
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -209,7 +209,7 @@ export default function EditUniversityPage() {
             <div className="space-y-1.5">
               <Label>
                 Unique ID (for internal/bulk sync){" "}
-                <span className="text-red-600">*</span>
+                <span className="text-[#A52B3A]">*</span>
               </Label>
               <Input
                 value={String(form.uniqueId ?? "")}
@@ -227,7 +227,7 @@ export default function EditUniversityPage() {
             <div className="md:col-span-2 space-y-1.5">
               <Label>
                 Apply Now URL{" "}
-                <span className="text-xs text-gray-500 font-normal">
+                <span className="text-xs text-[#7A877F] font-normal">
                   (custom link for the Apply Now button — leave blank to use
                   /apply)
                 </span>
@@ -299,8 +299,8 @@ export default function EditUniversityPage() {
         </div>
 
         {/* Academic */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Academic & Financial
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -364,8 +364,8 @@ export default function EditUniversityPage() {
         </div>
 
         {/* Approvals */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Approvals & Recognitions
           </h2>
           <div className="flex flex-wrap gap-6">
@@ -396,7 +396,7 @@ export default function EditUniversityPage() {
           <div className="space-y-1.5">
             <Label>
               Approved By Bodies{" "}
-              <span className="text-xs text-gray-500 font-normal">
+              <span className="text-xs text-[#7A877F] font-normal">
                 (comma-separated, e.g. WHO, NMC, FAIMER)
               </span>
             </Label>
@@ -409,8 +409,8 @@ export default function EditUniversityPage() {
         </div>
 
         {/* About */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             About &amp; Why Choose Us
           </h2>
           <div className="space-y-1.5">
@@ -424,7 +424,7 @@ export default function EditUniversityPage() {
           <div className="space-y-1.5">
             <Label>
               Full About Note{" "}
-              <span className="text-xs text-gray-500 font-normal">
+              <span className="text-xs text-[#7A877F] font-normal">
                 (HTML supported)
               </span>
             </Label>
@@ -438,7 +438,7 @@ export default function EditUniversityPage() {
             <div className="space-y-1.5">
               <Label>
                 International Recognition{" "}
-                <span className="text-xs text-gray-500 font-normal">
+                <span className="text-xs text-[#7A877F] font-normal">
                   (short phrase)
                 </span>
               </Label>
@@ -489,8 +489,8 @@ export default function EditUniversityPage() {
         </div>
 
         {/* Stats */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Stats &amp; Rankings
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -526,8 +526,8 @@ export default function EditUniversityPage() {
         </div>
 
         {/* Campus Details */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Campus Details
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -587,8 +587,8 @@ export default function EditUniversityPage() {
         </div>
 
         {/* Ratings Metadata */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Ratings Metadata
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -676,8 +676,8 @@ export default function EditUniversityPage() {
         </div>
 
         {/* Media */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">Media</h2>
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">Media</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ImageUpload
               label="Thumbnail"
@@ -719,8 +719,8 @@ export default function EditUniversityPage() {
         </div>
 
         {/* SEO */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 className="font-semibold text-gray-900 border-b pb-3 mb-4">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3 mb-4">
             SEO
           </h2>
           <SeoFields
@@ -743,7 +743,7 @@ export default function EditUniversityPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
             disabled={saving}
           >
             {saving ? (

@@ -7,13 +7,13 @@ import { cdn } from "@/lib/cdn";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "Articles — MBBS Armenia Guides & Medical Education Resources",
+  title: "Articles — MBBS Hungary Guides & Medical Education Resources",
   description:
-    "In-depth articles and guides on MBBS in Armenia, admission process, university rankings, curriculum, and student life.",
+    "In-depth articles and guides on MBBS in Hungary, admission process, university rankings, curriculum, and student life.",
   path: "/articles",
   entitySeo: {
     metaKeyword:
-      "MBBS Armenia articles, MBBS guides, medical education Armenia",
+      "MBBS Hungary articles, MBBS guides, medical education Hungary",
   },
   pageKey: "articles",
 });
@@ -45,9 +45,9 @@ export default async function ArticlesPage() {
   ]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#FBF8F0]">
       {/* Header */}
-      <div className="bg-white text-gray-900 py-16">
+      <div className="bg-white text-[#202D28] py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <BookOpen className="w-10 h-10 text-black" />
@@ -56,7 +56,7 @@ export default async function ArticlesPage() {
             </h1>
           </div>
           <p className="text-xl text-black-100 max-w-3xl mx-auto">
-            In-depth guides and expert articles on MBBS in Armenia, admission
+            In-depth guides and expert articles on MBBS in Hungary, admission
             tips, and student experiences.
           </p>
         </div>
@@ -67,8 +67,8 @@ export default async function ArticlesPage() {
           {/* Main */}
           <div className="lg:col-span-3">
             {recentArticles.length === 0 ? (
-              <div className="text-center py-16 text-gray-500">
-                <BookOpen className="w-12 h-12 mx-auto mb-3 text-gray-600" />
+              <div className="text-center py-16 text-[#7A877F]">
+                <BookOpen className="w-12 h-12 mx-auto mb-3 text-[#5F6F67]" />
                 <p>No articles published yet.</p>
               </div>
             ) : (
@@ -77,7 +77,7 @@ export default async function ArticlesPage() {
                   <Link
                     key={item.id}
                     href={`/articles/${item.category?.slug ?? ""}/${item.slug ?? ""}`}
-                    className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    className="group bg-white rounded-2xl border border-[#DDE5DD] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                   >
                     <div className="relative h-48 bg-green-50">
                       {item.thumbnailPath ? (
@@ -94,22 +94,22 @@ export default async function ArticlesPage() {
                         </div>
                       )}
                       {item.category && (
-                        <span className="absolute top-3 left-3 bg-green-600 text-gray-900 text-xs px-2 py-1 rounded-full font-medium">
+                        <span className="absolute top-3 left-3 bg-green-600 text-[#202D28] text-xs px-2 py-1 rounded-full font-medium">
                           {item.category.name}
                         </span>
                       )}
                     </div>
                     <div className="p-5">
-                      <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-green-600 transition-colors">
+                      <h2 className="font-bold text-[#202D28] mb-2 line-clamp-2 group-hover:text-green-600 transition-colors">
                         {item.title}
                       </h2>
                       {item.shortnote && (
                         <div
-                          className="text-sm text-gray-500 line-clamp-2 mb-3 prose prose-sm max-w-none prose-p:my-0"
+                          className="text-sm text-[#7A877F] line-clamp-2 mb-3 prose prose-sm max-w-none prose-p:my-0"
                           dangerouslySetInnerHTML={{ __html: item.shortnote }}
                         />
                       )}
-                      <div className="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-50">
+                      <div className="flex items-center justify-between text-xs text-[#7A877F] pt-3 border-t border-gray-50">
                         <div className="flex items-center gap-1">
                           <User className="w-3 h-3" />
                           <span>{item.author?.name ?? "Admin"}</span>
@@ -137,8 +137,8 @@ export default async function ArticlesPage() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <div className="bg-white rounded-2xl border border-gray-100 p-5">
-              <h3 className="font-bold text-gray-900 mb-4">
+            <div className="bg-white rounded-2xl border border-[#DDE5DD] p-5">
+              <h3 className="font-bold text-[#202D28] mb-4">
                 Article Categories
               </h3>
               <ul className="space-y-2">
@@ -146,7 +146,7 @@ export default async function ArticlesPage() {
                   <li key={cat.id}>
                     <Link
                       href={`/articles/${cat.slug}`}
-                      className="flex items-center justify-between text-sm text-gray-600 hover:text-green-600 transition-colors py-1 border-b border-gray-50 last:border-0"
+                      className="flex items-center justify-between text-sm text-[#5F6F67] hover:text-green-600 transition-colors py-1 border-b border-gray-50 last:border-0"
                     >
                       <span>{cat.name}</span>
                       <span className="bg-green-50 text-green-600 text-xs px-2 py-0.5 rounded-full">
@@ -157,7 +157,7 @@ export default async function ArticlesPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-green-600 rounded-2xl p-6 text-gray-900 text-center">
+            <div className="bg-green-600 rounded-2xl p-6 text-[#202D28] text-center">
               <h3 className="font-bold text-lg mb-2">Want to Study MBBS?</h3>
               <p className="text-green-100 text-sm mb-4">
                 Free expert counseling, no obligation

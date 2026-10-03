@@ -123,19 +123,19 @@ export default function StaticSeoPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Search size={22} className="text-red-600" />
+          <Search size={22} className="text-[#A52B3A]" />
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">
+            <h1 className="text-2xl font-bold text-[#202D28]">
               Static Page SEO
             </h1>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-[#7A877F]">
               Meta tags for fixed pages (homepage, about, contact...)
             </p>
           </div>
         </div>
         <Button
           size="sm"
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#175747] hover:bg-[#175747]"
           onClick={() => setShowAdd(true)}
         >
           <Plus size={14} className="mr-1" /> Add Page SEO
@@ -143,11 +143,11 @@ export default function StaticSeoPage() {
       </div>
 
       {showAdd && (
-        <div className="bg-white rounded-xl border border-gray-200 p-4 space-y-3">
-          <h3 className="font-medium text-gray-800">New Static Page SEO</h3>
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-4 space-y-3">
+          <h3 className="font-medium text-[#202D28]">New Static Page SEO</h3>
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="text-xs text-gray-500 mb-1 block">
+              <label className="text-xs text-[#7A877F] mb-1 block">
                 Page Path *
               </label>
               <select
@@ -155,7 +155,7 @@ export default function StaticSeoPage() {
                 onChange={(e) =>
                   setNewEntry({ ...newEntry, page: e.target.value })
                 }
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
               >
                 <option value="">Select or type below...</option>
                 {PAGE_SUGGESTIONS.filter(
@@ -176,7 +176,7 @@ export default function StaticSeoPage() {
               />
             </div>
             <div>
-              <label className="text-xs text-gray-500 mb-1 block">
+              <label className="text-xs text-[#7A877F] mb-1 block">
                 Meta Title
               </label>
               <Input
@@ -188,7 +188,7 @@ export default function StaticSeoPage() {
               />
             </div>
             <div className="col-span-2">
-              <label className="text-xs text-gray-500 mb-1 block">
+              <label className="text-xs text-[#7A877F] mb-1 block">
                 Meta Description
               </label>
               <textarea
@@ -198,11 +198,11 @@ export default function StaticSeoPage() {
                 }
                 rows={2}
                 placeholder="Google snippet description (120–160 chars)"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
               />
             </div>
             <div>
-              <label className="text-xs text-gray-500 mb-1 block">
+              <label className="text-xs text-[#7A877F] mb-1 block">
                 Meta Keywords
               </label>
               <Input
@@ -226,7 +226,7 @@ export default function StaticSeoPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#175747] hover:bg-[#175747]"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -242,15 +242,15 @@ export default function StaticSeoPage() {
         </div>
       )}
 
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : entries.length === 0 ? (
           <div className="p-12 text-center">
-            <Search size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No static page SEO entries yet.</p>
+            <Search size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No static page SEO entries yet.</p>
           </div>
         ) : (
           <div className="divide-y divide-gray-100">
@@ -260,7 +260,7 @@ export default function StaticSeoPage() {
                   <div className="space-y-3">
                     <div className="grid grid-cols-2 gap-3">
                       <div>
-                        <label className="text-xs text-gray-500 mb-1 block">
+                        <label className="text-xs text-[#7A877F] mb-1 block">
                           Page Path
                         </label>
                         <Input
@@ -272,7 +272,7 @@ export default function StaticSeoPage() {
                         />
                       </div>
                       <div>
-                        <label className="text-xs text-gray-500 mb-1 block">
+                        <label className="text-xs text-[#7A877F] mb-1 block">
                           Meta Title
                         </label>
                         <Input
@@ -286,7 +286,7 @@ export default function StaticSeoPage() {
                         />
                       </div>
                       <div className="col-span-2">
-                        <label className="text-xs text-gray-500 mb-1 block">
+                        <label className="text-xs text-[#7A877F] mb-1 block">
                           Meta Description
                         </label>
                         <textarea
@@ -298,11 +298,11 @@ export default function StaticSeoPage() {
                             })
                           }
                           rows={2}
-                          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#175747]/500"
                         />
                       </div>
                       <div>
-                        <label className="text-xs text-gray-500 mb-1 block">
+                        <label className="text-xs text-[#7A877F] mb-1 block">
                           Keywords
                         </label>
                         <Input
@@ -346,27 +346,27 @@ export default function StaticSeoPage() {
                   <div className="flex items-start gap-4">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="font-mono text-sm font-semibold text-red-600 bg-[#EAF1FB]0 px-2 py-0.5 rounded">
+                        <span className="font-mono text-sm font-semibold text-[#A52B3A] bg-[#175747] px-2 py-0.5 rounded">
                           {entry.page}
                         </span>
                         <span
-                          className={`text-xs px-1.5 py-0.5 rounded-full ${entry.status ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-500"}`}
+                          className={`text-xs px-1.5 py-0.5 rounded-full ${entry.status ? "bg-green-100 text-green-700" : "bg-[#F3F7F3] text-[#7A877F]"}`}
                         >
                           {entry.status ? "Active" : "Inactive"}
                         </span>
                       </div>
                       {entry.metaTitle && (
-                        <p className="text-sm font-medium text-gray-800 truncate">
+                        <p className="text-sm font-medium text-[#202D28] truncate">
                           {entry.metaTitle}
                         </p>
                       )}
                       {entry.metaDescription && (
-                        <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">
+                        <p className="text-xs text-[#7A877F] mt-0.5 line-clamp-1">
                           {entry.metaDescription}
                         </p>
                       )}
                       {entry.metaKeyword && (
-                        <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">
+                        <p className="text-xs text-[#7A877F] mt-0.5 line-clamp-1">
                           🔑 {entry.metaKeyword}
                         </p>
                       )}
@@ -396,7 +396,7 @@ export default function StaticSeoPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                        className="h-8 w-8 p-0 text-[#A52B3A] hover:bg-[#175747]"
                         onClick={() => handleDelete(entry.id)}
                       >
                         <Trash2 size={14} />

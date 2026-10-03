@@ -77,18 +77,18 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
       {/* modal */}
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[94vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
         {/* header */}
-        <div className="sticky top-0 bg-white rounded-t-2xl border-b border-gray-100 px-6 py-4 flex items-center justify-between z-10">
+        <div className="sticky top-0 bg-white rounded-t-2xl border-b border-[#DDE5DD] px-6 py-4 flex items-center justify-between z-10">
           <div>
-            <h2 className="text-xl font-bold text-gray-900">
+            <h2 className="text-xl font-bold text-[#202D28]">
               Become a Partner
             </h2>
-            <p className="text-sm text-gray-500 mt-0.5">
+            <p className="text-sm text-[#7A877F] mt-0.5">
               Fill in your details and we&apos;ll reach out
             </p>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-xl hover:bg-gray-100 transition-colors text-gray-500 hover:text-gray-600"
+            className="p-2 rounded-xl hover:bg-[#F3F7F3] transition-colors text-[#7A877F] hover:text-[#5F6F67]"
           >
             <X className="w-5 h-5" />
           </button>
@@ -99,7 +99,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
           {/* name + email */}
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-[#5F6F67] mb-1">
                 Full Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -107,12 +107,12 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
                 required
                 value={form.name}
                 onChange={(e) => update("name", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-[#DDE5DD] rounded-xl text-sm focus:ring-2 focus:ring-[#175747]/500 focus:border-[#DDE5DD] outline-none transition-all"
                 placeholder="John Doe"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-[#5F6F67] mb-1">
                 Email <span className="text-red-500">*</span>
               </label>
               <input
@@ -120,7 +120,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
                 required
                 value={form.email}
                 onChange={(e) => update("email", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-[#DDE5DD] rounded-xl text-sm focus:ring-2 focus:ring-[#175747]/500 focus:border-[#DDE5DD] outline-none transition-all"
                 placeholder="john@example.com"
               />
             </div>
@@ -129,26 +129,26 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
           {/* phone + company */}
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-[#5F6F67] mb-1">
                 Phone
               </label>
               <input
                 type="tel"
                 value={form.phone}
                 onChange={(e) => update("phone", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-[#DDE5DD] rounded-xl text-sm focus:ring-2 focus:ring-[#175747]/500 focus:border-[#DDE5DD] outline-none transition-all"
                 placeholder="+91 9876543210"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-[#5F6F67] mb-1">
                 Company / Organization
               </label>
               <input
                 type="text"
                 value={form.company}
                 onChange={(e) => update("company", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-[#DDE5DD] rounded-xl text-sm focus:ring-2 focus:ring-[#175747]/500 focus:border-[#DDE5DD] outline-none transition-all"
                 placeholder="Acme Education Pvt Ltd"
               />
             </div>
@@ -157,25 +157,25 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
           {/* city + partner type */}
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-[#5F6F67] mb-1">
                 City
               </label>
               <input
                 type="text"
                 value={form.city}
                 onChange={(e) => update("city", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-[#DDE5DD] rounded-xl text-sm focus:ring-2 focus:ring-[#175747]/500 focus:border-[#DDE5DD] outline-none transition-all"
                 placeholder="New Delhi"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-[#5F6F67] mb-1">
                 Partner Type
               </label>
               <select
                 value={form.partnerType}
                 onChange={(e) => update("partnerType", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all bg-white"
+                className="w-full px-4 py-2.5 border border-[#DDE5DD] rounded-xl text-sm focus:ring-2 focus:ring-[#175747]/500 focus:border-[#DDE5DD] outline-none transition-all bg-white"
               >
                 <option value="">Select type…</option>
                 {partnerTypes.map((t) => (
@@ -189,14 +189,14 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
 
           {/* message */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-[#5F6F67] mb-1">
               Message
             </label>
             <textarea
               rows={3}
               value={form.message}
               onChange={(e) => update("message", e.target.value)}
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all resize-none"
+              className="w-full px-4 py-2.5 border border-[#DDE5DD] rounded-xl text-sm focus:ring-2 focus:ring-[#175747]/500 focus:border-[#DDE5DD] outline-none transition-all resize-none"
               placeholder="Tell us about your interest in partnering…"
             />
           </div>
@@ -205,7 +205,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-gray-900 font-bold py-3 rounded-xl transition-colors text-sm"
+            className="w-full bg-[#A52B3A] hover:bg-[#8C2030] disabled:bg-red-400 text-[#202D28] font-bold py-3 rounded-xl transition-colors text-sm"
           >
             {loading ? "Submitting…" : "Submit Inquiry"}
           </button>

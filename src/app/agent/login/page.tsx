@@ -33,28 +33,28 @@ export default function AgentLoginPage() {
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-red-600 rounded-2xl mb-4 shadow-lg">
-            <GraduationCap className="w-9 h-9 text-gray-900" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-[#A52B3A] rounded-2xl mb-4 shadow-lg">
+            <GraduationCap className="w-9 h-9 text-[#202D28]" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">Agent Portal</h1>
-          <p className="text-slate-500 mt-1 text-sm">
-            MBBS Armenia — Partner Access
+          <h1 className="text-2xl font-bold text-[#202D28]">Agent Portal</h1>
+          <p className="text-[#7A877F] mt-1 text-sm">
+            MBBS Hungary — Partner Access
           </p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-2xl p-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">
+          <h2 className="text-xl font-bold text-[#202D28] mb-6">
             Sign in to your account
           </h2>
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
                 Email
               </label>
               <div className="relative">
                 <Mail
                   size={16}
-                  className="absolute left-3.5 top-3.5 text-gray-500"
+                  className="absolute left-3.5 top-3.5 text-[#7A877F]"
                 />
                 <input
                   required
@@ -62,18 +62,18 @@ export default function AgentLoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="agent@example.com"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 outline-none text-sm"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#175747]/500 outline-none text-sm"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
                 Password
               </label>
               <div className="relative">
                 <Lock
                   size={16}
-                  className="absolute left-3.5 top-3.5 text-gray-500"
+                  className="absolute left-3.5 top-3.5 text-[#7A877F]"
                 />
                 <input
                   required
@@ -81,26 +81,26 @@ export default function AgentLoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Password"
-                  className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 outline-none text-sm"
+                  className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#175747]/500 outline-none text-sm"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPass(!showPass)}
-                  className="absolute right-3 top-3.5 text-gray-500"
+                  className="absolute right-3 top-3.5 text-[#7A877F]"
                 >
                   {showPass ? <EyeOff size={16} /> : <Eye size={16} />}
                 </button>
               </div>
             </div>
             {error && (
-              <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#285BB5]">
+              <div className="bg-white border border-[#DDE5DD] rounded-xl px-4 py-3 text-sm text-[#175747]">
                 {error}
               </div>
             )}
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition disabled:opacity-60"
+              className="w-full bg-[#A52B3A] hover:bg-[#8C2030] text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 transition disabled:opacity-60"
             >
               {loading ? (
                 <>

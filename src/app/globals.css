@@ -49,29 +49,29 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.623 0.214 259.815); /* Light Blue */
-  --primary-foreground: oklch(1 0 0); /* White */
-  --secondary: oklch(0.95 0.03 260); /* Very light blue */
-  --secondary-foreground: oklch(0.145 0 0);
-  --muted: oklch(0.97 0.01 260);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.95 0.03 260); /* Very light blue */
-  --accent-foreground: oklch(0.623 0.214 259.815); /* Blue */
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --background: #FBF8F0;
+  --foreground: #202D28;
+  --card: #FFFFFF;
+  --card-foreground: #202D28;
+  --popover: #FFFFFF;
+  --popover-foreground: #202D28;
+  --primary: #103D32; /* Deep Emerald */
+  --primary-foreground: #FFFFFF;
+  --secondary: #175747; /* Secondary Emerald */
+  --secondary-foreground: #FFFFFF;
+  --muted: #EAF2EC;
+  --muted-foreground: #7A877F;
+  --accent: #F8E9EB; 
+  --accent-foreground: #A52B3A; /* Burgundy */
+  --destructive: #A52B3A;
+  --border: #DDE5DD;
+  --input: #DDE5DD;
+  --ring: #175747;
+  --chart-1: #103D32;
+  --chart-2: #A52B3A;
+  --chart-3: #D5AE67;
+  --chart-4: #477A48;
+  --chart-5: #175747;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -177,14 +177,14 @@
 
 /* ── Links ── */
 .prose a {
-  color: #2563eb;
+  color: #175747;
   text-decoration: underline;
   font-weight: 500;
   text-underline-offset: 2px;
 }
 
 .prose a:hover {
-  color: #1d4ed8;
+  color: #A52B3A;
 }
 
 /* ── Strong / Bold ── */
@@ -390,10 +390,10 @@
 /* ── Code (inline) ── */
 .prose code {
   font-size: 0.875em;
-  background-color: #f1f5f9;
+  background-color: #FBF8F0;
   padding: 0.2em 0.4em;
   border-radius: 0.25rem;
-  color: #be185d;
+  color: #A52B3A;
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   font-weight: 500;
 }
@@ -542,8 +542,8 @@
 }
 
 /* ── prose-a modifiers ── */
-.prose-a\:text-red-600 a { color: #2563eb; }
-.prose-a\:text-red-600 a:hover { color: #1d4ed8; }
+.prose-a\:text-red-600 a { color: #A52B3A; }
+.prose-a\:text-red-600 a:hover { color: #8C2030; }
 .prose-a\:no-underline a { text-decoration: none; }
 .hover\:prose-a\:underline:hover a { text-decoration: underline; }
 
@@ -551,7 +551,7 @@
 .prose-img\:rounded-xl img { border-radius: 0.75rem; }
 
 /* ── prose-blockquote modifier ── */
-.prose-blockquote\:border-red-400 blockquote { border-left-color: #60a5fa; }
+.prose-blockquote\:border-red-400 blockquote { border-left-color: #D5AE67; }
 
 /* ── prose-p:my-1 pattern ── */
 .prose-p\:my-1 p { margin-top: 0.25em !important; margin-bottom: 0.25em !important; }

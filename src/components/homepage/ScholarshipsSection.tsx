@@ -38,13 +38,13 @@ function getTypeColor(type: string | null): string {
     case "government":
       return "bg-green-100 text-green-800";
     case "embassy":
-      return "bg-[#EAF1FB] text-[#101B4D]";
+      return "bg-[#F3F7F3] text-[#103D32]";
     case "university":
       return "bg-purple-100 text-purple-800";
     case "merit":
-      return "bg-red-400 text-red-600";
+      return "bg-red-400 text-[#A52B3A]";
     default:
-      return "bg-gray-100 text-gray-800";
+      return "bg-[#F3F7F3] text-[#202D28]";
   }
 }
 
@@ -76,13 +76,13 @@ export default async function ScholarshipsSection({
     <section id="scholarships" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-[#202D28] mb-4">
             Scholarships &amp; Financial Aid
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[#5F6F67] max-w-3xl mx-auto">
             Make your education dreams affordable with various scholarship
             opportunities available for international students studying in
-            Armenia.
+            Hungary.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export default async function ScholarshipsSection({
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           {[
             {
-              icon: <Award className="w-12 h-12 text-red-600 mx-auto mb-4" />,
+              icon: <Award className="w-12 h-12 text-[#A52B3A] mx-auto mb-4" />,
               val: stats.scholarships,
               label: "Government & University Scholarships",
               bg: " ",
@@ -104,7 +104,7 @@ export default async function ScholarshipsSection({
               bg: " ",
             },
             {
-              icon: <Users className="w-12 h-12 text-red-600 mx-auto mb-4" />,
+              icon: <Users className="w-12 h-12 text-[#A52B3A] mx-auto mb-4" />,
               val: stats.meritAwards,
               label: "Merit-Based Awards",
               bg: " ",
@@ -121,10 +121,10 @@ export default async function ScholarshipsSection({
               className={`group rounded-2xl bg-gradient-to-br p-6 text-center shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl ${s.bg}`}
             >
               {s.icon}
-              <div className="mb-2 text-3xl font-bold text-gray-800 transition-transform duration-300 group-hover:scale-105">
+              <div className="mb-2 text-3xl font-bold text-[#202D28] transition-transform duration-300 group-hover:scale-105">
                 {s.val}
               </div>
-              <div className="font-medium text-gray-700">{s.label}</div>
+              <div className="font-medium text-[#5F6F67]">{s.label}</div>
             </div>
           ))}
         </div>
@@ -140,10 +140,10 @@ export default async function ScholarshipsSection({
               return (
                 <div
                   key={scholarship.id}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-gray-200 hover:shadow-2xl hover:"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-[#DDE5DD] bg-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-[#DDE5DD] hover:shadow-2xl"
                 >
                   {/* Header banner */}
-                  <div className="relative flex h-32 flex-col justify-end bg-red-600 p-6">
+                  <div className="relative flex h-32 flex-col justify-end bg-[#A52B3A] p-6">
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/10 via-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <div className="absolute top-4 left-4">
                       <span
@@ -152,11 +152,11 @@ export default async function ScholarshipsSection({
                         {scholarship.scholarshipType || "Merit"}
                       </span>
                     </div>
-                    <h3 className="relative text-xl font-bold text-gray-900">
+                    <h3 className="relative text-xl font-bold text-[#202D28]">
                       {scholarship.title}
                     </h3>
                     {scholarship.program && (
-                      <p className="relative text-sm text-slate-600">
+                      <p className="relative text-sm text-[#5F6F67]">
                         {scholarship.program}
                       </p>
                     )}
@@ -167,8 +167,8 @@ export default async function ScholarshipsSection({
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div className="rounded-lg bg-green-50 p-4 transition-colors duration-300 group-hover:bg-green-100">
                         <DollarSign className="mb-2 h-5 w-5 text-green-600 transition-transform duration-300 group-hover:scale-110" />
-                        <div className="text-sm text-gray-600">Amount</div>
-                        <div className="font-semibold text-gray-800">
+                        <div className="text-sm text-[#5F6F67]">Amount</div>
+                        <div className="font-semibold text-[#202D28]">
                           {formatAmount(
                             scholarship.amountMin
                               ? Number(scholarship.amountMin)
@@ -179,10 +179,10 @@ export default async function ScholarshipsSection({
                           )}
                         </div>
                       </div>
-                      <div className="rounded-lg bg-white p-4 transition-colors duration-300 group-hover:bg-[#EAF1FB]">
-                        <Calendar className="mb-2 h-5 w-5 text-red-600 transition-transform duration-300 group-hover:scale-110" />
-                        <div className="text-sm text-gray-600">Deadline</div>
-                        <div className="font-semibold text-gray-800">
+                      <div className="rounded-lg bg-white p-4 transition-colors duration-300 group-hover:bg-[#F3F7F3]">
+                        <Calendar className="mb-2 h-5 w-5 text-[#A52B3A] transition-transform duration-300 group-hover:scale-110" />
+                        <div className="text-sm text-[#5F6F67]">Deadline</div>
+                        <div className="font-semibold text-[#202D28]">
                           {formatDeadline(scholarship.deadline)}
                         </div>
                       </div>
@@ -190,18 +190,18 @@ export default async function ScholarshipsSection({
 
                     {eligibilityItems.length > 0 && (
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-800 mb-2">
+                        <h4 className="font-semibold text-[#202D28] mb-2">
                           Eligibility
                         </h4>
                         <div className="space-y-1">
                           {eligibilityItems.slice(0, 3).map((item, i) => (
-                            <p key={i} className="text-gray-600 text-sm">
+                            <p key={i} className="text-[#5F6F67] text-sm">
                               • {item}
                             </p>
                           ))}
                         </div>
                         {scholarship.availableSeats && (
-                          <div className="flex items-center mt-2 text-sm text-gray-500">
+                          <div className="flex items-center mt-2 text-sm text-[#7A877F]">
                             <Users className="w-4 h-4 mr-1" />
                             <span>
                               {scholarship.availableSeats} scholarships
@@ -214,7 +214,7 @@ export default async function ScholarshipsSection({
 
                     {coverageItems.length > 0 && (
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-800 mb-3">
+                        <h4 className="font-semibold text-[#202D28] mb-3">
                           Coverage Includes
                         </h4>
                         <div className="space-y-2">
@@ -224,7 +224,7 @@ export default async function ScholarshipsSection({
                               className="flex items-center space-x-2"
                             >
                               <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                              <span className="text-gray-600 text-sm">
+                              <span className="text-[#5F6F67] text-sm">
                                 {item}
                               </span>
                             </div>
@@ -236,7 +236,7 @@ export default async function ScholarshipsSection({
                     <div className="mt-auto">
                       <Link
                         href={`/scholarships/${scholarship.slug}`}
-                        className="flex w-full items-center justify-center space-x-2 rounded-lg bg-red-600 py-3 font-medium text-white transition-all duration-300 hover: hover:"
+                        className="flex w-full items-center justify-center space-x-2 rounded-lg bg-[#A52B3A] py-3 font-medium text-white transition-all duration-300"
                       >
                         <span>Apply Now</span>
                         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -251,10 +251,10 @@ export default async function ScholarshipsSection({
 
         {/* Need Help CTA — from old React Scholarships.tsx */}
         <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">
+          <h3 className="text-2xl font-bold text-[#202D28] mb-4">
             Need Help with Scholarship Applications?
           </h3>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-[#5F6F67] mb-8 max-w-2xl mx-auto">
             Our scholarship counselors are here to guide you through the
             application process and help you secure the best financial aid
             opportunities.
@@ -262,13 +262,13 @@ export default async function ScholarshipsSection({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/scholarships"
-              className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+              className="bg-[#A52B3A] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#8C2030] transition-colors"
             >
               Explore Scholarships
             </Link>
             <Link
               href="/contact-us?source=talk_to_counselor"
-              className="border-2 border-gray-200 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-600 hover:text-gray-900 transition-colors"
+              className="border-2 border-[#DDE5DD] text-[#A52B3A] px-8 py-4 rounded-lg font-semibold hover:bg-[#A52B3A] hover:text-[#202D28] transition-colors"
             >
               Talk to a Counselor
             </Link>

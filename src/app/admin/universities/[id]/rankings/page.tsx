@@ -85,8 +85,8 @@ export default function UniversityRankingsPage() {
       <div className="space-y-5">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-gray-900">Rankings</h2>
-            <p className="text-sm text-gray-500">
+            <h2 className="text-xl font-bold text-[#202D28]">Rankings</h2>
+            <p className="text-sm text-[#7A877F]">
               {rankings.length} ranking{rankings.length !== 1 ? "s" : ""}
             </p>
           </div>
@@ -102,7 +102,7 @@ export default function UniversityRankingsPage() {
                 score: "",
               });
             }}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
           >
             <Plus size={16} className="mr-2" />
             Add Ranking
@@ -110,8 +110,8 @@ export default function UniversityRankingsPage() {
         </div>
 
         {showForm && (
-          <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-3">
-            <h3 className="font-semibold text-gray-800">
+          <div className="bg-white border border-[#DDE5DD] rounded-xl p-5 space-y-3">
+            <h3 className="font-semibold text-[#202D28]">
               {editId ? "Edit Ranking" : "Add Ranking"}
             </h3>
             <div className="grid grid-cols-2 gap-3">
@@ -162,7 +162,7 @@ export default function UniversityRankingsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#175747] hover:bg-[#175747]"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -184,18 +184,18 @@ export default function UniversityRankingsPage() {
 
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : rankings.length === 0 ? (
           <div className="p-12 text-center border border-dashed border-gray-300 rounded-xl">
-            <BarChart3 size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No rankings added yet.</p>
+            <BarChart3 size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No rankings added yet.</p>
           </div>
         ) : (
-          <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <div className="bg-white border border-[#DDE5DD] rounded-xl overflow-hidden">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-gray-100 bg-gray-50 text-left text-gray-500">
+                <tr className="border-b border-[#DDE5DD] bg-[#FBF8F0] text-left text-[#7A877F]">
                   <th className="px-4 py-3 font-medium">Ranking Body</th>
                   <th className="px-4 py-3 font-medium">Rank</th>
                   <th className="px-4 py-3 font-medium">Year</th>
@@ -207,14 +207,14 @@ export default function UniversityRankingsPage() {
                 {rankings.map((r) => (
                   <tr
                     key={r.id}
-                    className="border-b border-gray-50 hover:bg-gray-50"
+                    className="border-b border-gray-50 hover:bg-[#FBF8F0]"
                   >
-                    <td className="px-4 py-3 font-medium text-gray-800">
+                    <td className="px-4 py-3 font-medium text-[#202D28]">
                       {r.rankingBody}
                     </td>
-                    <td className="px-4 py-3 text-gray-500">{r.rank ?? "—"}</td>
-                    <td className="px-4 py-3 text-gray-500">{r.year ?? "—"}</td>
-                    <td className="px-4 py-3 text-gray-500">
+                    <td className="px-4 py-3 text-[#7A877F]">{r.rank ?? "—"}</td>
+                    <td className="px-4 py-3 text-[#7A877F]">{r.year ?? "—"}</td>
+                    <td className="px-4 py-3 text-[#7A877F]">
                       {r.category ?? "—"}
                     </td>
                     <td className="px-4 py-3 text-right">
@@ -240,7 +240,7 @@ export default function UniversityRankingsPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 w-7 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                          className="h-7 w-7 p-0 text-[#A52B3A] hover:bg-[#175747]"
                           onClick={async () => {
                             if (confirm("Delete?")) {
                               await fetch(

@@ -124,12 +124,12 @@ export function ContentSectionsTab({
   const childrenOf = (pid: number) => items.filter((i) => i.parentId === pid);
 
   if (loading)
-    return <div className="p-4 text-gray-500 text-sm">Loading sections...</div>;
+    return <div className="p-4 text-[#7A877F] text-sm">Loading sections...</div>;
 
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h3 className="font-semibold text-gray-900">
+        <h3 className="font-semibold text-[#202D28]">
           Content Sections ({items.length})
         </h3>
         <Button size="sm" onClick={() => setAdding(!adding)}>
@@ -138,8 +138,8 @@ export function ContentSectionsTab({
       </div>
 
       {adding && (
-        <div className="border border-gray-200 rounded-xl p-4 bg-white space-y-3">
-          <h4 className="font-medium text-[#101B4D]">New Section</h4>
+        <div className="border border-[#DDE5DD] rounded-xl p-4 bg-white space-y-3">
+          <h4 className="font-medium text-[#103D32]">New Section</h4>
           <div className="grid sm:grid-cols-2 gap-3">
             <div>
               <Label>Title *</Label>
@@ -216,17 +216,17 @@ export function ContentSectionsTab({
 
       <div className="space-y-3">
         {topLevel.length === 0 ? (
-          <p className="text-gray-500 text-sm text-center py-8">
+          <p className="text-[#7A877F] text-sm text-center py-8">
             No content sections yet. Add your first section above.
           </p>
         ) : (
           topLevel.map((section) => (
             <div
               key={section.id}
-              className="border border-gray-200 rounded-xl overflow-hidden"
+              className="border border-[#DDE5DD] rounded-xl overflow-hidden"
             >
               {editingId === section.id ? (
-                <div className="p-4 bg-red-400 space-y-3">
+                <div className="p-4 bg-[#FBF8F0] space-y-3">
                   <div className="grid sm:grid-cols-2 gap-3">
                     <div>
                       <Label>Title</Label>
@@ -289,10 +289,10 @@ export function ContentSectionsTab({
               ) : (
                 <div className="p-4 flex items-start justify-between gap-3">
                   <div className="flex-1 min-w-0">
-                    <p className="font-medium text-gray-900">{section.title}</p>
+                    <p className="font-medium text-[#202D28]">{section.title}</p>
                     {section.description && (
                       <p
-                        className="text-sm text-gray-500 line-clamp-1 mt-0.5"
+                        className="text-sm text-[#7A877F] line-clamp-1 mt-0.5"
                         dangerouslySetInnerHTML={{
                           __html: section.description,
                         }}
@@ -326,7 +326,7 @@ export function ContentSectionsTab({
                       size="sm"
                       variant="ghost"
                       onClick={() => handleDelete(section.id)}
-                      className="text-red-600 hover:text-[#285BB5]"
+                      className="text-[#A52B3A] hover:text-[#175747]"
                     >
                       <Trash2 className="w-4 h-4" />
                     </Button>
@@ -338,7 +338,7 @@ export function ContentSectionsTab({
               {childrenOf(section.id).map((child) => (
                 <div
                   key={child.id}
-                  className="border-t border-gray-100 bg-gray-50"
+                  className="border-t border-[#DDE5DD] bg-[#FBF8F0]"
                 >
                   {editingId === child.id ? (
                     <div className="p-4 space-y-3">
@@ -383,14 +383,14 @@ export function ContentSectionsTab({
                   ) : (
                     <div className="p-3 pl-8 flex items-start justify-between gap-3">
                       <div className="flex items-center gap-2 min-w-0">
-                        <ChevronRight className="w-3 h-3 text-gray-500 shrink-0" />
+                        <ChevronRight className="w-3 h-3 text-[#7A877F] shrink-0" />
                         <div>
-                          <p className="text-sm font-medium text-gray-700">
+                          <p className="text-sm font-medium text-[#5F6F67]">
                             {child.title}
                           </p>
                           {child.description && (
                             <p
-                              className="text-xs text-gray-500 line-clamp-1"
+                              className="text-xs text-[#7A877F] line-clamp-1"
                               dangerouslySetInnerHTML={{
                                 __html: child.description,
                               }}
@@ -420,7 +420,7 @@ export function ContentSectionsTab({
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 px-2 text-red-600 hover:text-[#285BB5]"
+                          className="h-7 px-2 text-[#A52B3A] hover:text-[#175747]"
                           onClick={() => handleDelete(child.id)}
                         >
                           <Trash2 className="w-3 h-3" />

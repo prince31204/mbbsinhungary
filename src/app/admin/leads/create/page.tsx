@@ -19,7 +19,7 @@ import Link from "next/link";
 
 const COUNTRY_CODES = [
   { code: "+91", label: "🇮🇳 +91 (India)" },
-  { code: "+996", label: "🇰🇬 +996 (Armenia)" },
+  { code: "+996", label: "🇰🇬 +996 (Hungary)" },
   { code: "+880", label: "🇧🇩 +880 (Bangladesh)" },
   { code: "+92", label: "🇵🇰 +92 (Pakistan)" },
   { code: "+977", label: "🇳🇵 +977 (Nepal)" },
@@ -128,10 +128,10 @@ export default function CreateLeadPage() {
             <ArrowLeft size={18} />
           </Link>
         </Button>
-        <UserPlus size={22} className="text-red-600" />
+        <UserPlus size={22} className="text-[#A52B3A]" />
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Add Lead</h1>
-          <p className="text-sm text-gray-500">
+          <h1 className="text-2xl font-bold text-[#202D28]">Add Lead</h1>
+          <p className="text-sm text-[#7A877F]">
             Create a new lead/enquiry record
           </p>
         </div>
@@ -139,14 +139,14 @@ export default function CreateLeadPage() {
 
       <form onSubmit={handleSubmit} className="space-y-5">
         {/* Personal Info */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Personal Information
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-1.5 md:col-span-2">
               <Label>
-                Full Name <span className="text-red-600">*</span>
+                Full Name <span className="text-[#A52B3A]">*</span>
               </Label>
               <Input
                 value={form.name}
@@ -216,8 +216,8 @@ export default function CreateLeadPage() {
         </div>
 
         {/* Academic Info */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Academic &amp; Interest Info
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -226,7 +226,7 @@ export default function CreateLeadPage() {
               <Input
                 value={form.interestedIn}
                 onChange={(e) => set("interestedIn", e.target.value)}
-                placeholder="e.g. MBBS in Armenia, International School of Medicine"
+                placeholder="e.g. MBBS in Hungary, International School of Medicine"
               />
             </div>
             <div className="space-y-1.5">
@@ -269,8 +269,8 @@ export default function CreateLeadPage() {
         </div>
 
         {/* CRM Info */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             CRM Classification
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -336,7 +336,7 @@ export default function CreateLeadPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
             disabled={loading}
           >
             {loading ? (

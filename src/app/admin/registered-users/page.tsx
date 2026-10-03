@@ -54,10 +54,10 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-[#202D28] flex items-center gap-2">
             <Users size={22} className="text-indigo-600" /> Registered Users
           </h1>
-          <p className="text-sm text-gray-500 mt-1">
+          <p className="text-sm text-[#7A877F] mt-1">
             Students who signed up via the website and verified their email.
           </p>
         </div>
@@ -71,7 +71,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
         <div className="relative flex-1 max-w-sm">
           <Search
             size={16}
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-[#7A877F]"
           />
           <input
             name="search"
@@ -82,14 +82,14 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
         </div>
         <button
           type="submit"
-          className="px-4 py-2.5 bg-indigo-600 text-gray-900 rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors"
+          className="px-4 py-2.5 bg-indigo-600 text-[#202D28] rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors"
         >
           Search
         </button>
         {search && (
           <Link
             href="/admin/registered-users"
-            className="px-4 py-2.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
+            className="px-4 py-2.5 bg-[#F3F7F3] text-[#5F6F67] rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
           >
             Clear
           </Link>
@@ -97,23 +97,23 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
       </form>
 
       {/* Table */}
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden">
         <table className="w-full text-sm">
-          <thead className="bg-gray-50 border-b border-gray-200">
+          <thead className="bg-[#FBF8F0] border-b border-[#DDE5DD]">
             <tr>
-              <th className="text-left text-xs font-semibold text-gray-500 px-4 py-3">
+              <th className="text-left text-xs font-semibold text-[#7A877F] px-4 py-3">
                 User
               </th>
-              <th className="text-left text-xs font-semibold text-gray-500 px-4 py-3">
+              <th className="text-left text-xs font-semibold text-[#7A877F] px-4 py-3">
                 Phone
               </th>
-              <th className="text-left text-xs font-semibold text-gray-500 px-4 py-3">
+              <th className="text-left text-xs font-semibold text-[#7A877F] px-4 py-3">
                 Status
               </th>
-              <th className="text-left text-xs font-semibold text-gray-500 px-4 py-3">
+              <th className="text-left text-xs font-semibold text-[#7A877F] px-4 py-3">
                 Verified On
               </th>
-              <th className="text-left text-xs font-semibold text-gray-500 px-4 py-3">
+              <th className="text-left text-xs font-semibold text-[#7A877F] px-4 py-3">
                 Registered
               </th>
             </tr>
@@ -121,8 +121,8 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
           <tbody className="divide-y divide-gray-100">
             {users.length === 0 ? (
               <tr>
-                <td colSpan={5} className="text-center py-12 text-gray-500">
-                  <Users size={32} className="mx-auto mb-2 text-gray-600" />
+                <td colSpan={5} className="text-center py-12 text-[#7A877F]">
+                  <Users size={32} className="mx-auto mb-2 text-[#5F6F67]" />
                   {search
                     ? `No users found for "${search}"`
                     : "No registered users yet."}
@@ -130,7 +130,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
               </tr>
             ) : (
               users.map((u) => (
-                <tr key={u.id} className="hover:bg-gray-50 transition-colors">
+                <tr key={u.id} className="hover:bg-[#FBF8F0] transition-colors">
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center shrink-0">
@@ -139,26 +139,26 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
                         </span>
                       </div>
                       <div>
-                        <div className="font-medium text-gray-800">
+                        <div className="font-medium text-[#202D28]">
                           {u.name}
                         </div>
-                        <div className="text-xs text-gray-500">{u.email}</div>
+                        <div className="text-xs text-[#7A877F]">{u.email}</div>
                       </div>
                     </div>
                   </td>
-                  <td className="px-4 py-3 text-gray-600">{u.phone || "—"}</td>
+                  <td className="px-4 py-3 text-[#5F6F67]">{u.phone || "—"}</td>
                   <td className="px-4 py-3">
                     <span
                       className={`text-xs font-medium px-2.5 py-1 rounded-full ${
                         u.status === "active"
                           ? "bg-green-100 text-green-700"
-                          : "bg-[#EAF1FB]0 text-red-600"
+                          : "bg-[#175747] text-[#A52B3A]"
                       }`}
                     >
                       {u.status}
                     </span>
                   </td>
-                  <td className="px-4 py-3 text-gray-500 text-xs">
+                  <td className="px-4 py-3 text-[#7A877F] text-xs">
                     {u.emailVerifiedAt
                       ? new Date(u.emailVerifiedAt).toLocaleDateString(
                           "en-IN",
@@ -170,7 +170,7 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
                           year: "numeric",
                         })}
                   </td>
-                  <td className="px-4 py-3 text-gray-500 text-xs">
+                  <td className="px-4 py-3 text-[#7A877F] text-xs">
                     {new Date(u.createdAt).toLocaleDateString("en-IN", {
                       day: "2-digit",
                       month: "short",
@@ -185,8 +185,8 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex items-center justify-between px-4 py-3 border-t border-gray-100 bg-gray-50">
-            <p className="text-xs text-gray-500">
+          <div className="flex items-center justify-between px-4 py-3 border-t border-[#DDE5DD] bg-[#FBF8F0]">
+            <p className="text-xs text-[#7A877F]">
               Showing {skip + 1}–{Math.min(skip + pageSize, total)} of {total}
             </p>
             <div className="flex gap-1">
@@ -196,8 +196,8 @@ export default async function RegisteredUsersPage({ searchParams }: PageProps) {
                   href={`/admin/registered-users?search=${search}&page=${p}`}
                   className={`w-8 h-8 flex items-center justify-center rounded-lg text-xs font-medium transition-colors ${
                     p === pageNum
-                      ? "bg-indigo-600 text-gray-900"
-                      : "text-gray-600 hover:bg-gray-200"
+                      ? "bg-indigo-600 text-[#202D28]"
+                      : "text-[#5F6F67] hover:bg-gray-200"
                   }`}
                 >
                   {p}

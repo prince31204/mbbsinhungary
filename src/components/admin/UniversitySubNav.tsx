@@ -87,20 +87,20 @@ export function UniversitySubNav({
         <Button variant="ghost" size="sm" asChild>
           <Link
             href="/admin/universities"
-            className="flex items-center gap-1.5 text-gray-500 hover:text-gray-900"
+            className="flex items-center gap-1.5 text-[#7A877F] hover:text-[#202D28]"
           >
             <ArrowLeft size={14} />
             All Universities
           </Link>
         </Button>
-        <span className="text-gray-600">/</span>
-        <span className="text-sm font-medium text-gray-900 truncate max-w-xs">
+        <span className="text-[#5F6F67]">/</span>
+        <span className="text-sm font-medium text-[#202D28] truncate max-w-xs">
           {universityName}
         </span>
       </div>
 
       {/* Tab Bar */}
-      <div className="flex items-center gap-1 border-b border-gray-200 overflow-x-auto pb-px">
+      <div className="flex items-center gap-1 border-b border-[#DDE5DD] overflow-x-auto pb-px">
         {tabs.map((tab) => {
           const active =
             pathname === tab.href || pathname.startsWith(tab.href + "/");
@@ -111,8 +111,8 @@ export function UniversitySubNav({
               className={cn(
                 "flex items-center gap-1.5 px-3 py-2 text-xs font-medium whitespace-nowrap border-b-2 transition-colors -mb-px",
                 active
-                  ? "border-gray-200 text-red-600"
-                  : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-300",
+                  ? "border-[#DDE5DD] text-[#A52B3A]"
+                  : "border-transparent text-[#7A877F] hover:text-[#202D28] hover:border-gray-300",
               )}
             >
               {tab.icon}

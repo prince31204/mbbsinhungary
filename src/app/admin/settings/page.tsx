@@ -48,24 +48,24 @@ export default function AdminSettingsPage() {
   if (loading)
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="animate-spin text-gray-500" size={32} />
+        <Loader2 className="animate-spin text-[#7A877F]" size={32} />
       </div>
     );
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center gap-3">
-        <Settings2 size={24} className="text-gray-500" />
-        <h1 className="text-2xl font-bold text-gray-900">Website Settings</h1>
+        <Settings2 size={24} className="text-[#7A877F]" />
+        <h1 className="text-2xl font-bold text-[#202D28]">Website Settings</h1>
       </div>
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-5">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">General</h2>
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-5">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">General</h2>
           {[
             {
               key: "siteName",
               label: "Site Name",
-              placeholder: "MBBS in Armenia",
+              placeholder: "MBBS in Hungary",
             },
             {
               key: "tagline",
@@ -89,8 +89,8 @@ export default function AdminSettingsPage() {
           ))}
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-5">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-5">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Social Media
           </h2>
           {[
@@ -111,8 +111,8 @@ export default function AdminSettingsPage() {
           ))}
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-5">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-5">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             SEO & Scripts
           </h2>
           <div className="space-y-1.5">
@@ -158,8 +158,8 @@ export default function AdminSettingsPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 border-b pb-3">
+        <div className="bg-white rounded-xl border border-[#DDE5DD] p-6 space-y-4">
+          <h2 className="font-semibold text-[#202D28] border-b pb-3">
             Logo & Favicon
           </h2>
           <ImageUpload
@@ -173,7 +173,7 @@ export default function AdminSettingsPage() {
         <div className="flex justify-end pb-8">
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#175747] hover:bg-[#175747]"
             disabled={saving}
           >
             {saving ? (

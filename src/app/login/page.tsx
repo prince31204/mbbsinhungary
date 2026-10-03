@@ -46,11 +46,11 @@ export default function LoginPage() {
       <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[#A52B3A] rounded-full flex items-center justify-center mx-auto mb-4">
             <GraduationCap className="w-9 h-9 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-800">Welcome Back</h1>
-          <p className="text-gray-500 text-sm mt-1">
+          <h1 className="text-2xl font-bold text-[#202D28]">Welcome Back</h1>
+          <p className="text-[#7A877F] text-sm mt-1">
             Sign in to your student account
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function LoginPage() {
 
         {/* Error */}
         {error && (
-          <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-lg mb-6 text-sm">
+          <div className="bg-white border border-[#DDE5DD] text-[#175747] px-4 py-3 rounded-lg mb-6 text-sm">
             {error}
           </div>
         )}
@@ -72,7 +72,7 @@ export default function LoginPage() {
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
               Email Address
             </label>
             <input
@@ -81,12 +81,12 @@ export default function LoginPage() {
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               placeholder="your@email.com"
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-[#202D28] focus:outline-none focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label className="block text-sm font-medium text-[#5F6F67] mb-1.5">
               Password
             </label>
             <div className="relative">
@@ -96,12 +96,12 @@ export default function LoginPage() {
                 value={form.password}
                 onChange={(e) => setForm({ ...form, password: e.target.value })}
                 placeholder="••••••••"
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-[#202D28] focus:outline-none focus:ring-2 focus:ring-[#175747]/500 focus:border-transparent"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-600"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-[#7A877F] hover:text-[#5F6F67]"
               >
                 {showPassword ? (
                   <EyeOff className="w-5 h-5" />
@@ -116,13 +116,13 @@ export default function LoginPage() {
             <label className="flex items-center space-x-2 cursor-pointer">
               <input
                 type="checkbox"
-                className="rounded border-gray-300 text-red-600"
+                className="rounded border-gray-300 text-[#A52B3A]"
               />
-              <span className="text-gray-600">Remember me</span>
+              <span className="text-[#5F6F67]">Remember me</span>
             </label>
             <Link
               href="/forgot-password"
-              className="text-red-600 hover:text-[#285BB5] font-medium"
+              className="text-[#A52B3A] hover:text-[#175747] font-medium"
             >
               Forgot password?
             </Link>
@@ -131,7 +131,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-red-600 text-white py-3.5 rounded-xl font-semibold hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center space-x-2"
+            className="w-full bg-[#A52B3A] text-white py-3.5 rounded-xl font-semibold hover:bg-[#8C2030] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center space-x-2"
           >
             {loading ? (
               <>
@@ -144,18 +144,18 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <div className="mt-6 text-center text-sm text-gray-600">
+        <div className="mt-6 text-center text-sm text-[#5F6F67]">
           Don&apos;t have an account?{" "}
           <Link
             href="/register"
-            className="text-red-600 hover:text-[#285BB5] font-semibold"
+            className="text-[#A52B3A] hover:text-[#175747] font-semibold"
           >
             Register here
           </Link>
         </div>
 
         <div className="mt-4 text-center">
-          <Link href="/" className="text-gray-500 hover:text-gray-600 text-xs">
+          <Link href="/" className="text-[#7A877F] hover:text-[#5F6F67] text-xs">
             ← Back to Home
           </Link>
         </div>

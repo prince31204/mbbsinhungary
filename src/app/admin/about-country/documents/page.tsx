@@ -29,13 +29,13 @@ const DOC_CONFIGS: {
     type: "embassy_letter",
     label: "Embassy Letter",
     icon: "🏛️",
-    desc: "Issued by the Armenia embassy — applies to all universities in the country",
+    desc: "Issued by the Hungary embassy — applies to all universities in the country",
   },
   {
     type: "nmc_guidelines",
     label: "NMC Guidelines",
     icon: "📋",
-    desc: "National Medical Commission guidelines for studying MBBS in Armenia",
+    desc: "National Medical Commission guidelines for studying MBBS in Hungary",
   },
 ];
 
@@ -113,17 +113,17 @@ export default function CountryDocumentsPage() {
           </Link>
         </Button>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold text-[#202D28]">
             📄 Country Documents
           </h1>
-          <p className="text-sm text-gray-500">
-            Armenia-wide documents shared across all universities
+          <p className="text-sm text-[#7A877F]">
+            Hungary-wide documents shared across all universities
           </p>
         </div>
       </div>
 
       {loading ? (
-        <div className="p-12 text-center text-gray-500">Loading...</div>
+        <div className="p-12 text-center text-[#7A877F]">Loading...</div>
       ) : (
         <div className="space-y-6">
           {DOC_CONFIGS.map(({ type, label, icon, desc }) => {
@@ -133,15 +133,15 @@ export default function CountryDocumentsPage() {
             return (
               <div
                 key={type}
-                className="bg-white rounded-2xl border border-gray-200 p-6 space-y-4"
+                className="bg-white rounded-2xl border border-[#DDE5DD] p-6 space-y-4"
               >
                 {/* Title */}
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <h2 className="font-semibold text-gray-900 text-lg">
+                    <h2 className="font-semibold text-[#202D28] text-lg">
                       {icon} {label}
                     </h2>
-                    <p className="text-sm text-gray-500 mt-0.5">{desc}</p>
+                    <p className="text-sm text-[#7A877F] mt-0.5">{desc}</p>
                   </div>
                   {existing && (
                     <span className="shrink-0 inline-flex items-center gap-1 px-2.5 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full border border-green-200">
@@ -152,10 +152,10 @@ export default function CountryDocumentsPage() {
 
                 {/* Current file if exists */}
                 {existing && !hasPending && (
-                  <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-200">
-                    <FileText size={18} className="text-red-600 shrink-0" />
+                  <div className="flex items-center gap-3 p-3 bg-[#FBF8F0] rounded-xl border border-[#DDE5DD]">
+                    <FileText size={18} className="text-[#A52B3A] shrink-0" />
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-700 truncate">
+                      <p className="text-sm font-medium text-[#5F6F67] truncate">
                         {existing.fileName ||
                           existing.filePath.split("/").pop()}
                       </p>
@@ -163,7 +163,7 @@ export default function CountryDocumentsPage() {
                         href={cdn(existing.filePath)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-red-600 hover:underline"
+                        className="text-xs text-[#A52B3A] hover:underline"
                       >
                         View / Download
                       </a>
@@ -185,7 +185,7 @@ export default function CountryDocumentsPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="text-red-600 hover:text-[#285BB5]"
+                        className="text-[#A52B3A] hover:text-[#175747]"
                         onClick={() => handleDelete(type as DocType)}
                       >
                         <Trash2 size={14} />
@@ -218,7 +218,7 @@ export default function CountryDocumentsPage() {
                         <Button
                           onClick={() => handleSave(type as DocType)}
                           disabled={saving === type}
-                          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                          className="bg-[#175747] hover:bg-[#175747]"
                         >
                           {saving === type ? "Saving..." : "Save Document"}
                         </Button>

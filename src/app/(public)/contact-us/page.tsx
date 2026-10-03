@@ -168,10 +168,10 @@ export default function ContactPage() {
       icon: Mail,
       title: "Email Us",
       desc: "Official inquiries",
-      val: "info@mbbsinarmenia.com",
+      val: "info@mbbsinhungary.com",
       action: "Send Email",
-      href: "mailto:info@mbbsinarmenia.com",
-      color: "bg-blue-500",
+      href: "mailto:info@mbbsinhungary.com",
+      color: "bg-[#175747]",
     },
     {
       icon: MessageSquare,
@@ -196,22 +196,22 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-white text-gray-900 py-16 overflow-hidden">
+      <section className="relative bg-white text-[#202D28] py-16 overflow-hidden">
         <div className="absolute inset-0 bg-white/40 z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20 z-0"></div>
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EAF1FB]0/20 text-slate-600 text-sm font-medium mb-8 border border-gray-200">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F3F7F3]/20 text-[#5F6F67] text-sm font-medium mb-8 border border-[#DDE5DD]">
               <HeadphonesIcon className="w-4 h-4" />
               24/7 Consultation Available
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Get In Touch With <span className="text-red-600">Our Team.</span>
+              Get In Touch With <span className="text-[#A52B3A]">Our Team.</span>
             </h1>
-            <p className="text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-[#5F6F67] mb-10 max-w-3xl mx-auto leading-relaxed">
               Start your journey to international medical education with the
-              help of India's most trusted consultants for MBBS in Armenia.
+              help of India's most trusted consultants for MBBS in Hungary.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
@@ -223,12 +223,12 @@ export default function ContactPage() {
               ].map((stat, i) => (
                 <div
                   key={i}
-                  className="bg-gray-50 rounded-2xl p-4 border border-gray-200"
+                  className="bg-[#FBF8F0] rounded-2xl p-4 border border-[#DDE5DD]"
                 >
-                  <div className="text-3xl font-bold text-red-600 mb-1">
+                  <div className="text-3xl font-bold text-[#A52B3A] mb-1">
                     {stat.val}
                   </div>
-                  <div className="text-xs text-slate-600 uppercase tracking-wider">
+                  <div className="text-xs text-[#5F6F67] uppercase tracking-wider">
                     {stat.lbl}
                   </div>
                 </div>
@@ -239,13 +239,13 @@ export default function ContactPage() {
       </section>
 
       {/* Quick Contact Options */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#FBF8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-[#202D28] mb-4">
               Connect Instantly
             </h2>
-            <p className="text-gray-600">
+            <p className="text-[#5F6F67]">
               Choose your preferred channel to reach our advisors
             </p>
           </div>
@@ -254,18 +254,18 @@ export default function ContactPage() {
             {quickOptions.map((opt, i) => (
               <div
                 key={i}
-                className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 flex flex-col h-full"
+                className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group border border-[#DDE5DD] flex flex-col h-full"
               >
                 <div
-                  className={`w-14 h-14 ${opt.color} rounded-2xl flex items-center justify-center mb-6 text-gray-900 group-hover:scale-110 transition-transform`}
+                  className={`w-14 h-14 ${opt.color} rounded-2xl flex items-center justify-center mb-6 text-[#202D28] group-hover:scale-110 transition-transform`}
                 >
                   <opt.icon className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-[#202D28] mb-2">
                   {opt.title}
                 </h3>
-                <p className="text-gray-500 text-sm mb-6 flex-1">{opt.desc}</p>
-                <div className="text-sm font-semibold text-gray-800 mb-6">
+                <p className="text-[#7A877F] text-sm mb-6 flex-1">{opt.desc}</p>
+                <div className="text-sm font-semibold text-[#202D28] mb-6">
                   {opt.val}
                 </div>
                 {opt.href ? (
@@ -273,7 +273,7 @@ export default function ContactPage() {
                     href={opt.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full py-3 rounded-xl text-center text-gray-900 font-medium ${opt.color} hover:opacity-90 transition-opacity`}
+                    className={`w-full py-3 rounded-xl text-center text-[#202D28] font-medium ${opt.color} hover:opacity-90 transition-opacity`}
                   >
                     {opt.action}
                   </a>
@@ -281,7 +281,7 @@ export default function ContactPage() {
                   <button
                     suppressHydrationWarning
                     onClick={opt.onClick}
-                    className={`w-full py-3 rounded-xl text-gray-900 font-medium ${opt.color} hover:opacity-90 transition-opacity`}
+                    className={`w-full py-3 rounded-xl text-[#202D28] font-medium ${opt.color} hover:opacity-90 transition-opacity`}
                   >
                     {opt.action}
                   </button>
@@ -297,19 +297,19 @@ export default function ContactPage() {
         <section className="py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-[#202D28] mb-4">
                 Meet Our Expert Team
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-[#5F6F67] max-w-2xl mx-auto">
                 Our dedicated team is here to guide you through admission, visa,
-                and relocation for MBBS in Armenia.
+                and relocation for MBBS in Hungary.
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-8">
               {team.map((member) => (
                 <div
                   key={member.id}
-                  className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-gray-100 flex flex-col h-full w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] min-w-[280px] max-w-[320px]"
+                  className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-[#DDE5DD] flex flex-col h-full w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] min-w-[280px] max-w-[320px]"
                 >
                   <div className="aspect-[4/5] relative overflow-hidden">
                     <img
@@ -320,19 +320,19 @@ export default function ContactPage() {
                       alt={member.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                    <div className="absolute top-4 right-4 bg-[#A52B3A] text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
                       {member.designation || "Advisor"}
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                    <h3 className="text-xl font-bold text-[#202D28] mb-1">
                       {member.name}
                     </h3>
-                    <p className="text-sm text-red-600 font-medium mb-4">
+                    <p className="text-sm text-[#A52B3A] font-medium mb-4">
                       {member.designation}
                     </p>
                     <div className="flex-1">
-                      <p className="text-gray-500 text-sm line-clamp-3 mb-6">
+                      <p className="text-[#7A877F] text-sm line-clamp-3 mb-6">
                         {member.description}
                       </p>
                     </div>
@@ -346,7 +346,7 @@ export default function ContactPage() {
                           subject: `Inquiry for ${member.name}`,
                         }));
                       }}
-                      className="flex items-center justify-center gap-2 text-red-600 font-bold text-sm group/btn"
+                      className="flex items-center justify-center gap-2 text-[#A52B3A] font-bold text-sm group/btn"
                     >
                       Consult Now{" "}
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -360,15 +360,15 @@ export default function ContactPage() {
       )}
 
       {/* Contact Form Section */}
-      <section id="contact-form" className="pt-16 pb-10 bg-gray-50">
+      <section id="contact-form" className="pt-16 pb-10 bg-[#FBF8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-16 items-start">
             <div className="lg:col-span-2 space-y-10">
               <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  Send Us a <span className="text-red-600">Message</span>
+                <h2 className="text-4xl font-bold text-[#202D28] mb-6">
+                  Send Us a <span className="text-[#A52B3A]">Message</span>
                 </h2>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-[#5F6F67] leading-relaxed">
                   Our expert counsellors are ready to answer your questions. Get
                   end-to-end guidance for your medical career journey.
                 </p>
@@ -389,18 +389,18 @@ export default function ContactPage() {
                   {
                     icon: AlertCircle,
                     title: "Pre-departure Info",
-                    desc: "Briefing sessions before you leave for Armenia",
+                    desc: "Briefing sessions before you leave for Hungary",
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-5">
-                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-sm text-red-600 border border-gray-100">
+                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-sm text-[#A52B3A] border border-[#DDE5DD]">
                       <item.icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <div className="font-bold text-gray-900 mb-1">
+                      <div className="font-bold text-[#202D28] mb-1">
                         {item.title}
                       </div>
-                      <div className="text-sm text-gray-500 leading-relaxed">
+                      <div className="text-sm text-[#7A877F] leading-relaxed">
                         {item.desc}
                       </div>
                     </div>
@@ -410,22 +410,22 @@ export default function ContactPage() {
             </div>
 
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-[2.5rem] p-10 shadow-xl border border-gray-100">
+              <div className="bg-white rounded-[2.5rem] p-10 shadow-xl border border-[#DDE5DD]">
                 {success ? (
                   <div className="text-center py-12">
                     <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
                       <CheckCircle className="w-12 h-12 text-green-600" />
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-3xl font-bold text-[#202D28] mb-4">
                       Message Sent!
                     </h3>
-                    <p className="text-gray-600 mb-10 text-lg">
+                    <p className="text-[#5F6F67] mb-10 text-lg">
                       Thank you! One of our experts will contact you within 24
                       hours.
                     </p>
                     <button
                       onClick={() => setSuccess(false)}
-                      className="bg-red-600 text-white px-10 py-4 rounded-2xl font-bold hover:bg-red-700 transition-colors shadow-lg "
+                      className="bg-[#A52B3A] text-white px-10 py-4 rounded-2xl font-bold hover:bg-[#8C2030] transition-colors shadow-lg "
                     >
                       Send Another Message
                     </button>
@@ -434,11 +434,11 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-gray-700 ml-1">
+                        <label className="text-sm font-bold text-[#5F6F67] ml-1">
                           Full Name *
                         </label>
                         <div className="relative">
-                          <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                          <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#7A877F]" />
                           <input
                             suppressHydrationWarning
                             required
@@ -448,16 +448,16 @@ export default function ContactPage() {
                               handleInputChange("name", e.target.value)
                             }
                             placeholder="e.g. John Doe"
-                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium"
+                            className="w-full pl-12 pr-4 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#175747]/600/20 focus:border-[#DDE5DD] transition-all font-medium"
                           />
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-gray-700 ml-1">
+                        <label className="text-sm font-bold text-[#5F6F67] ml-1">
                           Email Address *
                         </label>
                         <div className="relative">
-                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#7A877F]" />
                           <input
                             suppressHydrationWarning
                             required
@@ -467,7 +467,7 @@ export default function ContactPage() {
                               handleInputChange("email", e.target.value)
                             }
                             placeholder="john@example.com"
-                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium"
+                            className="w-full pl-12 pr-4 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#175747]/600/20 focus:border-[#DDE5DD] transition-all font-medium"
                           />
                         </div>
                       </div>
@@ -475,11 +475,11 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-gray-700 ml-1">
+                        <label className="text-sm font-bold text-[#5F6F67] ml-1">
                           Phone Number *
                         </label>
                         <div className="relative">
-                          <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                          <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#7A877F]" />
                           <input
                             suppressHydrationWarning
                             required
@@ -489,12 +489,12 @@ export default function ContactPage() {
                               handleInputChange("phone", e.target.value)
                             }
                             placeholder="+91 98765 43210"
-                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium"
+                            className="w-full pl-12 pr-4 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#175747]/600/20 focus:border-[#DDE5DD] transition-all font-medium"
                           />
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-gray-700 ml-1">
+                        <label className="text-sm font-bold text-[#5F6F67] ml-1">
                           Inquiry Type *
                         </label>
                         <select
@@ -504,7 +504,7 @@ export default function ContactPage() {
                           onChange={(e) =>
                             handleInputChange("inquiryType", e.target.value)
                           }
-                          className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium appearance-none"
+                          className="w-full px-4 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#175747]/600/20 focus:border-[#DDE5DD] transition-all font-medium appearance-none"
                         >
                           <option value="">Select Option</option>
                           <option value="admission">Admission Guidance</option>
@@ -519,7 +519,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-gray-700 ml-1">
+                      <label className="text-sm font-bold text-[#5F6F67] ml-1">
                         Subject
                       </label>
                       <input
@@ -530,12 +530,12 @@ export default function ContactPage() {
                           handleInputChange("subject", e.target.value)
                         }
                         placeholder="Subject of your inquiry"
-                        className="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium"
+                        className="w-full px-6 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#175747]/600/20 focus:border-[#DDE5DD] transition-all font-medium"
                       />
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-gray-700 ml-1">
+                      <label className="text-sm font-bold text-[#5F6F67] ml-1">
                         Message *
                       </label>
                       <textarea
@@ -547,12 +547,12 @@ export default function ContactPage() {
                           handleInputChange("message", e.target.value)
                         }
                         placeholder="Write your message here..."
-                        className="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium resize-none"
+                        className="w-full px-6 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#175747]/600/20 focus:border-[#DDE5DD] transition-all font-medium resize-none"
                       />
                     </div>
 
                     {error && (
-                      <div className="bg-white border border-gray-200 text-red-600 px-4 py-3 rounded-2xl text-sm font-medium">
+                      <div className="bg-white border border-[#DDE5DD] text-[#A52B3A] px-4 py-3 rounded-2xl text-sm font-medium">
                         {error}
                       </div>
                     )}
@@ -561,7 +561,7 @@ export default function ContactPage() {
                       suppressHydrationWarning
                       type="submit"
                       disabled={loading}
-                      className="w-full bg-red-600 text-white py-5 rounded-2xl font-bold hover:bg-red-700 disabled:opacity-70 transition-all shadow-lg flex items-center justify-center gap-3"
+                      className="w-full bg-[#A52B3A] text-white py-5 rounded-2xl font-bold hover:bg-[#8C2030] disabled:opacity-70 transition-all shadow-lg flex items-center justify-center gap-3"
                     >
                       {loading ? (
                         <Loader2 className="w-6 h-6 animate-spin" />
@@ -583,10 +583,10 @@ export default function ContactPage() {
         <section className="pt-10 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-[#202D28] mb-4">
                 Our Offices
               </h2>
-              <p className="text-gray-600">
+              <p className="text-[#5F6F67]">
                 Find our local offices for personalized offline consultation.
               </p>
             </div>
@@ -594,9 +594,9 @@ export default function ContactPage() {
               {offices.map((office) => (
                 <div
                   key={office.id}
-                  className="group bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] min-w-[300px] max-w-[380px]"
+                  className="group bg-white rounded-[2rem] border border-[#DDE5DD] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] min-w-[300px] max-w-[380px]"
                 >
-                  <div className="aspect-[16/10] relative overflow-hidden bg-gray-100">
+                  <div className="aspect-[16/10] relative overflow-hidden bg-[#F3F7F3]">
                     {office.imagePath ? (
                       <img
                         src={office.imagePath}
@@ -605,23 +605,23 @@ export default function ContactPage() {
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-white">
-                        <MapPin className="w-12 h-12 text-slate-600" />
+                        <MapPin className="w-12 h-12 text-[#5F6F67]" />
                       </div>
                     )}
                     <div className="absolute top-4 left-4">
-                      <div className="px-4 py-2 rounded-xl bg-white text-xs font-bold text-red-600 uppercase shadow-sm">
+                      <div className="px-4 py-2 rounded-xl bg-white text-xs font-bold text-[#A52B3A] uppercase shadow-sm">
                         {office.city || "Regional Office"}
                       </div>
                     </div>
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-[#285BB5] transition-colors uppercase tracking-tight">
+                    <h3 className="text-2xl font-bold text-[#202D28] mb-6 group-hover:text-[#175747] transition-colors uppercase tracking-tight">
                       {office.name}
                     </h3>
-                    <div className="space-y-5 text-[15px] text-gray-500 flex-1">
+                    <div className="space-y-5 text-[15px] text-[#7A877F] flex-1">
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center shrink-0 border border-gray-100">
-                          <MapPin className="w-5 h-5 text-red-600" />
+                        <div className="w-10 h-10 bg-[#FBF8F0] rounded-xl flex items-center justify-center shrink-0 border border-[#DDE5DD]">
+                          <MapPin className="w-5 h-5 text-[#A52B3A]" />
                         </div>
                         <p className="font-medium leading-relaxed">
                           {office.address}
@@ -630,12 +630,12 @@ export default function ContactPage() {
                       </div>
                       {office.phone && (
                         <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center shrink-0 border border-gray-100">
-                            <Phone className="w-5 h-5 text-red-600" />
+                          <div className="w-10 h-10 bg-[#FBF8F0] rounded-xl flex items-center justify-center shrink-0 border border-[#DDE5DD]">
+                            <Phone className="w-5 h-5 text-[#A52B3A]" />
                           </div>
                           <a
                             href={`tel:${office.phone}`}
-                            className="font-medium text-gray-500 hover:text-[#285BB5] transition-colors"
+                            className="font-medium text-[#7A877F] hover:text-[#175747] transition-colors"
                           >
                             {office.phone}
                           </a>
@@ -643,12 +643,12 @@ export default function ContactPage() {
                       )}
                       {office.email && (
                         <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center shrink-0 border border-gray-100">
-                            <Mail className="w-5 h-5 text-red-600" />
+                          <div className="w-10 h-10 bg-[#FBF8F0] rounded-xl flex items-center justify-center shrink-0 border border-[#DDE5DD]">
+                            <Mail className="w-5 h-5 text-[#A52B3A]" />
                           </div>
                           <a
                             href={`mailto:${office.email}`}
-                            className="font-medium text-gray-500 hover:text-[#285BB5] transition-colors"
+                            className="font-medium text-[#7A877F] hover:text-[#175747] transition-colors"
                           >
                             {office.email}
                           </a>
@@ -660,7 +660,7 @@ export default function ContactPage() {
                         href={office.mapEmbed}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-8 pt-8 border-t border-gray-50 flex items-center justify-center gap-2 text-sm font-bold text-red-600 hover:gap-3 transition-all"
+                        className="mt-8 pt-8 border-t border-gray-50 flex items-center justify-center gap-2 text-sm font-bold text-[#A52B3A] hover:gap-3 transition-all"
                       >
                         View Complete Map <ArrowRight className="w-4 h-4" />
                       </a>
@@ -686,16 +686,16 @@ export default function ContactPage() {
                 <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
                   <CheckCircle className="w-12 h-12 text-green-600" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-[#202D28] mb-4">
                   Request Received!
                 </h2>
-                <p className="text-gray-600 mb-8">
+                <p className="text-[#5F6F67] mb-8">
                   Our expert will contact you shortly to confirm your video
                   consultation slot.
                 </p>
                 <button
                   onClick={() => setShowSchedulePopup(false)}
-                  className="bg-red-600 text-white px-10 py-4 rounded-2xl font-bold"
+                  className="bg-[#A52B3A] text-white px-10 py-4 rounded-2xl font-bold"
                 >
                   Close Window
                 </button>
@@ -704,25 +704,25 @@ export default function ContactPage() {
               <div className="p-10 md:p-12">
                 <div className="flex items-center justify-between mb-10">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-red-600">
+                    <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-[#A52B3A]">
                       <Video className="w-7 h-7" />
                     </div>
-                    <h2 className="text-3xl font-bold text-gray-900">
+                    <h2 className="text-3xl font-bold text-[#202D28]">
                       Schedule Video Call
                     </h2>
                   </div>
                   <button
                     onClick={() => setShowSchedulePopup(false)}
-                    className="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+                    className="w-10 h-10 flex items-center justify-center bg-[#F3F7F3] rounded-full hover:bg-gray-200 transition-colors"
                   >
-                    <X className="w-5 h-5 text-gray-500" />
+                    <X className="w-5 h-5 text-[#7A877F]" />
                   </button>
                 </div>
 
                 <form onSubmit={handleScheduleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">
+                      <label className="text-xs font-bold text-[#7A877F] uppercase tracking-wider ml-1">
                         Full Name
                       </label>
                       <input
@@ -732,12 +732,12 @@ export default function ContactPage() {
                         onChange={(e) =>
                           handleScheduleChange("name", e.target.value)
                         }
-                        className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none"
+                        className="w-full px-5 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:ring-2 focus:ring-[#175747]/600 focus:outline-none"
                         placeholder="Enter name"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">
+                      <label className="text-xs font-bold text-[#7A877F] uppercase tracking-wider ml-1">
                         Email Address
                       </label>
                       <input
@@ -747,7 +747,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           handleScheduleChange("email", e.target.value)
                         }
-                        className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none"
+                        className="w-full px-5 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:ring-2 focus:ring-[#175747]/600 focus:outline-none"
                         placeholder="Enter email"
                       />
                     </div>
@@ -755,7 +755,7 @@ export default function ContactPage() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">
+                      <label className="text-xs font-bold text-[#7A877F] uppercase tracking-wider ml-1">
                         Phone Number
                       </label>
                       <input
@@ -765,12 +765,12 @@ export default function ContactPage() {
                         onChange={(e) =>
                           handleScheduleChange("phone", e.target.value)
                         }
-                        className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none"
+                        className="w-full px-5 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:ring-2 focus:ring-[#175747]/600 focus:outline-none"
                         placeholder="+91..."
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">
+                      <label className="text-xs font-bold text-[#7A877F] uppercase tracking-wider ml-1">
                         Preferred Slot
                       </label>
                       <div className="flex gap-2">
@@ -784,7 +784,7 @@ export default function ContactPage() {
                               e.target.value,
                             )
                           }
-                          className="w-full px-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none text-sm"
+                          className="w-full px-4 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:ring-2 focus:ring-[#175747]/600 focus:outline-none text-sm"
                         />
                         <input
                           required
@@ -796,14 +796,14 @@ export default function ContactPage() {
                               e.target.value,
                             )
                           }
-                          className="w-full px-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none text-sm"
+                          className="w-full px-4 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:ring-2 focus:ring-[#175747]/600 focus:outline-none text-sm"
                         />
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">
+                    <label className="text-xs font-bold text-[#7A877F] uppercase tracking-wider ml-1">
                       Consultation Type
                     </label>
                     <select
@@ -812,7 +812,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         handleScheduleChange("consultationType", e.target.value)
                       }
-                      className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none font-medium appearance-none"
+                      className="w-full px-5 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:ring-2 focus:ring-[#175747]/600 focus:outline-none font-medium appearance-none"
                     >
                       <option value="">Choose Priority</option>
                       <option value="admission">
@@ -829,7 +829,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">
+                    <label className="text-xs font-bold text-[#7A877F] uppercase tracking-wider ml-1">
                       Brief Description
                     </label>
                     <textarea
@@ -838,7 +838,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         handleScheduleChange("message", e.target.value)
                       }
-                      className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none resize-none"
+                      className="w-full px-5 py-4 bg-[#FBF8F0] border border-[#DDE5DD] rounded-2xl focus:ring-2 focus:ring-[#175747]/600 focus:outline-none resize-none"
                       placeholder="What would you like to discuss?"
                     ></textarea>
                   </div>
@@ -847,7 +847,7 @@ export default function ContactPage() {
                     suppressHydrationWarning
                     type="submit"
                     disabled={isScheduling}
-                    className="w-full bg-red-600 text-white py-5 rounded-2xl font-bold hover:bg-red-700 transition-all shadow-xl flex items-center justify-center gap-3"
+                    className="w-full bg-[#A52B3A] text-white py-5 rounded-2xl font-bold hover:bg-[#8C2030] transition-all shadow-xl flex items-center justify-center gap-3"
                   >
                     {isScheduling ? (
                       <Loader2 className="w-6 h-6 animate-spin" />

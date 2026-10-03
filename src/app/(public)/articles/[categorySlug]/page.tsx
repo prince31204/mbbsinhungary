@@ -44,11 +44,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch(() => null);
   if (!cat) return { title: "Article Category Not Found" };
   return buildMetadata({
-    title: cat.metaTitle || `${cat.name} — MBBS Armenia Articles`,
+    title: cat.metaTitle || `${cat.name} — MBBS Hungary Articles`,
     description:
       cat.metaDescription ||
       cat.description ||
-      `Articles about ${cat.name} — MBBS in Armenia.`,
+      `Articles about ${cat.name} — MBBS in Hungary.`,
     path: `/articles/${categorySlug}`,
   });
 }
@@ -104,9 +104,9 @@ export default async function ArticleCategoryPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-[#FBF8F0]">
         <div className="bg-white border-b">
-          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-gray-500">
+          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-[#7A877F]">
             <Link href="/" className="hover:text-green-600">
               Home
             </Link>
@@ -115,11 +115,11 @@ export default async function ArticleCategoryPage({ params }: Props) {
               Articles
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900 font-medium">{category.name}</span>
+            <span className="text-[#202D28] font-medium">{category.name}</span>
           </div>
         </div>
 
-        <div className="bg-white text-gray-900 py-12">
+        <div className="bg-white text-[#202D28] py-12">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <h1 className="text-3xl lg:text-4xl font-bold mb-3">
               {category.name}
@@ -140,8 +140,8 @@ export default async function ArticleCategoryPage({ params }: Props) {
           <div className="grid lg:grid-cols-4 gap-8">
             <div className="lg:col-span-3">
               {category.articles.length === 0 ? (
-                <div className="text-center py-16 text-gray-500">
-                  <BookOpen className="w-12 h-12 mx-auto mb-3 text-gray-600" />
+                <div className="text-center py-16 text-[#7A877F]">
+                  <BookOpen className="w-12 h-12 mx-auto mb-3 text-[#5F6F67]" />
                   <p>No articles in this category yet.</p>
                 </div>
               ) : (
@@ -150,7 +150,7 @@ export default async function ArticleCategoryPage({ params }: Props) {
                     <Link
                       key={item.id}
                       href={`/articles/${category.slug}/${item.slug ?? ""}`}
-                      className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                      className="group bg-white rounded-2xl border border-[#DDE5DD] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                     >
                       <div className="relative h-48 bg-green-50">
                         {item.thumbnailPath ? (
@@ -170,16 +170,16 @@ export default async function ArticleCategoryPage({ params }: Props) {
                         )}
                       </div>
                       <div className="p-5">
-                        <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-green-600 transition-colors">
+                        <h2 className="font-bold text-[#202D28] mb-2 line-clamp-2 group-hover:text-green-600 transition-colors">
                           {item.title}
                         </h2>
                         {item.shortnote && (
                           <div
-                            className="text-sm text-gray-500 line-clamp-2 mb-3 prose prose-sm max-w-none prose-p:my-0"
+                            className="text-sm text-[#7A877F] line-clamp-2 mb-3 prose prose-sm max-w-none prose-p:my-0"
                             dangerouslySetInnerHTML={{ __html: item.shortnote }}
                           />
                         )}
-                        <div className="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-50">
+                        <div className="flex items-center justify-between text-xs text-[#7A877F] pt-3 border-t border-gray-50">
                           <div className="flex items-center gap-1">
                             <User className="w-3 h-3" />
                             <span>{item.author?.name ?? "Admin"}</span>
@@ -205,14 +205,14 @@ export default async function ArticleCategoryPage({ params }: Props) {
               )}
             </div>
             <div className="space-y-6">
-              <div className="bg-white rounded-2xl border border-gray-100 p-5">
-                <h3 className="font-bold text-gray-900 mb-4">All Categories</h3>
+              <div className="bg-white rounded-2xl border border-[#DDE5DD] p-5">
+                <h3 className="font-bold text-[#202D28] mb-4">All Categories</h3>
                 <ul className="space-y-2">
                   {categories.map((cat) => (
                     <li key={cat.slug}>
                       <Link
                         href={`/articles/${cat.slug}`}
-                        className={`flex items-center justify-between text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-green-600 font-semibold" : "text-gray-600 hover:text-green-600"}`}
+                        className={`flex items-center justify-between text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-green-600 font-semibold" : "text-[#5F6F67] hover:text-green-600"}`}
                       >
                         <span>{cat.name}</span>
                         <span className="bg-green-50 text-green-600 text-xs px-2 py-0.5 rounded-full">
@@ -223,7 +223,7 @@ export default async function ArticleCategoryPage({ params }: Props) {
                   ))}
                 </ul>
               </div>
-              <div className="bg-green-600 rounded-2xl p-6 text-gray-900 text-center">
+              <div className="bg-green-600 rounded-2xl p-6 text-[#202D28] text-center">
                 <h3 className="font-bold text-lg mb-2">Get Free Counseling</h3>
                 <p className="text-green-100 text-sm mb-4">
                   Talk to our MBBS experts today

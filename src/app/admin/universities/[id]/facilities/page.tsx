@@ -119,16 +119,16 @@ export default function UniversityFacilitiesPage() {
       <UniversitySubNav universityId={id} universityName={universityName} />
       <div className="space-y-5">
         <div>
-          <h2 className="text-xl font-bold text-gray-900">Facilities</h2>
-          <p className="text-sm text-gray-500">
+          <h2 className="text-xl font-bold text-[#202D28]">Facilities</h2>
+          <p className="text-sm text-[#7A877F]">
             {linked.length} facilit{linked.length !== 1 ? "ies" : "y"} linked
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-xl p-4 space-y-4">
+        <div className="bg-white border border-[#DDE5DD] rounded-xl p-4 space-y-4">
           <div className="flex gap-3 items-end">
             <div className="flex-1 space-y-1.5">
-              <Label className="text-sm font-medium text-gray-700">
+              <Label className="text-sm font-medium text-[#5F6F67]">
                 Link a facility to this university
               </Label>
               <Select
@@ -156,7 +156,7 @@ export default function UniversityFacilitiesPage() {
             <Button
               onClick={handleLink}
               disabled={adding || !selectedFacility}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 shrink-0"
+              className="bg-[#175747] hover:bg-[#175747] shrink-0"
             >
               {adding ? (
                 <Loader2 size={14} className="mr-2 animate-spin" />
@@ -167,8 +167,8 @@ export default function UniversityFacilitiesPage() {
             </Button>
           </div>
           {selectedFacility && (
-            <div className="space-y-1.5 pt-2 border-t border-gray-100">
-              <Label className="text-xs text-gray-500">
+            <div className="space-y-1.5 pt-2 border-t border-[#DDE5DD]">
+              <Label className="text-xs text-[#7A877F]">
                 Facility Description (Optional)
               </Label>
               <Input
@@ -182,27 +182,27 @@ export default function UniversityFacilitiesPage() {
 
         {loading ? (
           <div className="p-12 text-center">
-            <Loader2 size={20} className="animate-spin mx-auto text-gray-500" />
+            <Loader2 size={20} className="animate-spin mx-auto text-[#7A877F]" />
           </div>
         ) : linked.length === 0 ? (
           <div className="p-12 text-center border border-dashed border-gray-300 rounded-xl">
-            <Wrench size={36} className="mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-500">No facilities linked yet.</p>
+            <Wrench size={36} className="mx-auto mb-3 text-[#5F6F67]" />
+            <p className="text-[#7A877F]">No facilities linked yet.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {linked.map((l) => (
               <div
                 key={l.id}
-                className="bg-white border border-gray-200 rounded-xl p-4 space-y-3 shadow-sm hover:shadow-md transition-shadow group relative"
+                className="bg-white border border-[#DDE5DD] rounded-xl p-4 space-y-3 shadow-sm hover:shadow-md transition-shadow group relative"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-gray-900">
+                  <span className="font-bold text-[#202D28]">
                     {l.facility.name}
                   </span>
                   <button
                     onClick={() => handleUnlink(l.facilityId)}
-                    className="text-gray-500 hover:text-[#285BB5] transition-colors"
+                    className="text-[#7A877F] hover:text-[#175747] transition-colors"
                     title="Unlink"
                   >
                     <Trash2 size={14} />
@@ -243,13 +243,13 @@ export default function UniversityFacilitiesPage() {
                   </div>
                 ) : (
                   <div
-                    className="cursor-pointer hover:bg-gray-50 p-2 rounded -m-2 transition-colors"
+                    className="cursor-pointer hover:bg-[#FBF8F0] p-2 rounded -m-2 transition-colors"
                     onClick={() => {
                       setEditingId(l.id);
                       setEditValue(l.description || "");
                     }}
                   >
-                    <p className="text-sm text-gray-600 italic">
+                    <p className="text-sm text-[#5F6F67] italic">
                       {l.description || "No description. Click to add one..."}
                     </p>
                   </div>

@@ -59,13 +59,13 @@ export default function UniversityGallery({ universityName, photos }: Props) {
   if (photos.length === 0) return null;
 
   return (
-    <section className="py-16 bg-gray-50 border-t border-gray-100">
+    <section className="py-16 bg-[#FBF8F0] border-t border-[#DDE5DD]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#202D28] mb-3">
             Campus Gallery
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-[#5F6F67]">
             A glimpse into life at {universityName}
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function UniversityGallery({ universityName, photos }: Props) {
             <div
               key={photo.id}
               onClick={() => photo.imagePath && openLightbox(index)}
-              className={`group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-200 bg-white transition-all duration-300 ${photo.imagePath ? "cursor-pointer" : ""}`}
+              className={`group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-[#DDE5DD] bg-white transition-all duration-300 ${photo.imagePath ? "cursor-pointer" : ""}`}
             >
               {photo.imagePath ? (
                 <>
@@ -87,20 +87,20 @@ export default function UniversityGallery({ universityName, photos }: Props) {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-colors duration-300 flex items-center justify-center">
-                    <div className="bg-white text-gray-900 p-3 rounded-full opacity-0 group-hover:opacity-100 transform scale-50 group-hover:scale-100 transition-all duration-300 shadow-md">
+                    <div className="bg-white text-[#202D28] p-3 rounded-full opacity-0 group-hover:opacity-100 transform scale-50 group-hover:scale-100 transition-all duration-300 shadow-md">
                       <Maximize2 className="w-5 h-5" />
                     </div>
                   </div>
                 </>
               ) : (
-                <div className="flex flex-col items-center justify-center h-full text-gray-500 text-sm bg-gray-50">
+                <div className="flex flex-col items-center justify-center h-full text-[#7A877F] text-sm bg-[#FBF8F0]">
                   <Maximize2 className="w-8 h-8 opacity-20 mb-2" />
                   <span>No image</span>
                 </div>
               )}
               {photo.title && (
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
-                  <p className="text-gray-900 text-sm font-medium p-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-[#202D28] text-sm font-medium p-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     {photo.title}
                   </p>
                 </div>
@@ -122,25 +122,25 @@ export default function UniversityGallery({ universityName, photos }: Props) {
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
           >
             {/* Top Bar inside the popup */}
-            <div className="flex justify-between items-center p-4 border-b border-gray-100">
+            <div className="flex justify-between items-center p-4 border-b border-[#DDE5DD]">
               <div>
-                <h3 className="text-lg font-bold text-gray-900">
+                <h3 className="text-lg font-bold text-[#202D28]">
                   {photos[lightboxIndex].title || universityName}
                 </h3>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-[#7A877F]">
                   Image {lightboxIndex + 1} of {photos.length}
                 </p>
               </div>
               <button
                 onClick={closeLightbox}
-                className="text-gray-500 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 p-2 rounded-full transition-colors"
+                className="text-[#7A877F] hover:text-[#202D28] bg-[#FBF8F0] hover:bg-[#F3F7F3] p-2 rounded-full transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Main Image Container */}
-            <div className="relative w-full aspect-video sm:aspect-[16/9] bg-gray-100 flex items-center justify-center overflow-hidden">
+            <div className="relative w-full aspect-video sm:aspect-[16/9] bg-[#F3F7F3] flex items-center justify-center overflow-hidden">
               <Image
                 src={cdn(photos[lightboxIndex].imagePath) || ""}
                 alt={photos[lightboxIndex].title || "Campus enlarged"}
@@ -155,13 +155,13 @@ export default function UniversityGallery({ universityName, photos }: Props) {
                 <>
                   <button
                     onClick={goPrev}
-                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 hover:text-gray-900 shadow-md p-2 rounded-full transition-all group border border-gray-200"
+                    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#5F6F67] hover:text-[#202D28] shadow-md p-2 rounded-full transition-all group border border-[#DDE5DD]"
                   >
                     <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
                   </button>
                   <button
                     onClick={goNext}
-                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 hover:text-gray-900 shadow-md p-2 rounded-full transition-all group border border-gray-200"
+                    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#5F6F67] hover:text-[#202D28] shadow-md p-2 rounded-full transition-all group border border-[#DDE5DD]"
                   >
                     <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
                   </button>

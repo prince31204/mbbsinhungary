@@ -120,9 +120,9 @@ export default async function ArticleDetailPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-[#FBF8F0]">
         <div className="bg-white border-b">
-          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-[#7A877F] flex-wrap">
             <Link href="/" className="hover:text-green-600">
               Home
             </Link>
@@ -138,14 +138,14 @@ export default async function ArticleDetailPage({ params }: Props) {
               {item.category.name}
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900 line-clamp-1">{item.title}</span>
+            <span className="text-[#202D28] line-clamp-1">{item.title}</span>
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 py-10">
           <div className="grid lg:grid-cols-4 gap-10">
             <article className="lg:col-span-3">
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#DDE5DD]">
                 {item.thumbnailPath && (
                   <div className="relative h-72 lg:h-96">
                     <Image
@@ -166,7 +166,7 @@ export default async function ArticleDetailPage({ params }: Props) {
                     >
                       {item.category.name}
                     </Link>
-                    <span className="text-gray-500 text-xs flex items-center gap-1">
+                    <span className="text-[#7A877F] text-xs flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
                       {new Date(item.createdAt).toLocaleDateString("en-US", {
                         year: "numeric",
@@ -175,20 +175,20 @@ export default async function ArticleDetailPage({ params }: Props) {
                       })}
                     </span>
                     {item.author?.name && (
-                      <span className="text-gray-500 text-xs flex items-center gap-1">
+                      <span className="text-[#7A877F] text-xs flex items-center gap-1">
                         <User className="w-3 h-3" />
                         {item.author.name}
                       </span>
                     )}
                   </div>
 
-                  <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                  <h1 className="text-2xl lg:text-3xl font-bold text-[#202D28] mb-4">
                     {item.title}
                   </h1>
                   {item.shortnote && (
                     <div className="border-l-4 border-green-200 pl-4 mb-6">
                       <div
-                        className="text-lg text-gray-500 italic prose prose-sm max-w-none prose-p:my-0"
+                        className="text-lg text-[#7A877F] italic prose prose-sm max-w-none prose-p:my-0"
                         dangerouslySetInnerHTML={{ __html: item.shortnote }}
                       />
                     </div>
@@ -202,7 +202,7 @@ export default async function ArticleDetailPage({ params }: Props) {
 
                   {topLevel.map((section) => (
                     <div key={section.id} className="mb-8">
-                      <h2 className="text-xl font-bold text-gray-900 mb-3">
+                      <h2 className="text-xl font-bold text-[#202D28] mb-3">
                         {section.title}
                       </h2>
                       <div
@@ -227,7 +227,7 @@ export default async function ArticleDetailPage({ params }: Props) {
                           key={child.id}
                           className="ml-4 mt-4 pl-4 border-l-2 border-green-100"
                         >
-                          <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                          <h3 className="text-lg font-semibold text-[#202D28] mb-2">
                             {child.title}
                           </h3>
                           <div
@@ -243,7 +243,7 @@ export default async function ArticleDetailPage({ params }: Props) {
 
                   {item.faqs.length > 0 && (
                     <div className="mt-10">
-                      <h2 className="text-xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-xl font-bold text-[#202D28] mb-4">
                         Frequently Asked Questions
                       </h2>
                       <div className="space-y-4">
@@ -252,14 +252,14 @@ export default async function ArticleDetailPage({ params }: Props) {
                             key={faq.id}
                             className="bg-green-50 rounded-xl p-4 group"
                           >
-                            <summary className="font-semibold text-gray-900 cursor-pointer list-none flex justify-between items-center">
+                            <summary className="font-semibold text-[#202D28] cursor-pointer list-none flex justify-between items-center">
                               {faq.question}
                               <span className="text-green-600 ml-2 shrink-0 transition-transform group-open:rotate-45">
                                 +
                               </span>
                             </summary>
                             <div
-                              className="mt-3 text-gray-600 text-sm"
+                              className="mt-3 text-[#5F6F67] text-sm"
                               dangerouslySetInnerHTML={{ __html: faq.answer }}
                             />
                           </details>
@@ -268,7 +268,7 @@ export default async function ArticleDetailPage({ params }: Props) {
                     </div>
                   )}
 
-                  <div className="mt-8 pt-6 border-t border-gray-100">
+                  <div className="mt-8 pt-6 border-t border-[#DDE5DD]">
                     <Link
                       href={`/articles/${item.category.slug}`}
                       className="flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors"
@@ -282,7 +282,7 @@ export default async function ArticleDetailPage({ params }: Props) {
 
               {relatedArticles.length > 0 && (
                 <div className="mt-8">
-                  <h2 className="text-xl font-bold text-gray-900 mb-4">
+                  <h2 className="text-xl font-bold text-[#202D28] mb-4">
                     Related Articles
                   </h2>
                   <div className="grid sm:grid-cols-3 gap-4">
@@ -290,7 +290,7 @@ export default async function ArticleDetailPage({ params }: Props) {
                       <Link
                         key={r.title}
                         href={`/articles/${r.category?.slug ?? ""}/${r.slug ?? ""}`}
-                        className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow group"
+                        className="bg-white rounded-xl border border-[#DDE5DD] overflow-hidden hover:shadow-md transition-shadow group"
                       >
                         <div className="relative h-36 bg-green-50">
                           {r.thumbnailPath ? (
@@ -306,7 +306,7 @@ export default async function ArticleDetailPage({ params }: Props) {
                           )}
                         </div>
                         <div className="p-3">
-                          <p className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-green-600 transition-colors">
+                          <p className="text-sm font-semibold text-[#202D28] line-clamp-2 group-hover:text-green-600 transition-colors">
                             {r.title}
                           </p>
                         </div>
@@ -318,8 +318,8 @@ export default async function ArticleDetailPage({ params }: Props) {
             </article>
 
             <aside className="space-y-6">
-              <div className="bg-white rounded-2xl border border-gray-100 p-5">
-                <h3 className="font-bold text-gray-900 mb-4">
+              <div className="bg-white rounded-2xl border border-[#DDE5DD] p-5">
+                <h3 className="font-bold text-[#202D28] mb-4">
                   Article Categories
                 </h3>
                 <ul className="space-y-2">
@@ -327,7 +327,7 @@ export default async function ArticleDetailPage({ params }: Props) {
                     <li key={cat.name}>
                       <Link
                         href={`/articles/${cat.slug}`}
-                        className={`flex items-center gap-2 text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-green-600 font-semibold" : "text-gray-600 hover:text-green-600"}`}
+                        className={`flex items-center gap-2 text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-green-600 font-semibold" : "text-[#5F6F67] hover:text-green-600"}`}
                       >
                         <ArrowRight className="w-3 h-3 shrink-0" /> {cat.name}
                       </Link>
@@ -335,7 +335,7 @@ export default async function ArticleDetailPage({ params }: Props) {
                   ))}
                 </ul>
               </div>
-              <div className="bg-green-600 rounded-2xl p-6 text-gray-900 text-center">
+              <div className="bg-green-600 rounded-2xl p-6 text-[#202D28] text-center">
                 <h3 className="font-bold text-lg mb-2">Apply for MBBS</h3>
                 <p className="text-green-100 text-sm mb-4">
                   Get expert guidance for free

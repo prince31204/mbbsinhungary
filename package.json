@@ -1,5 +1,5 @@
 {
-  "name": "mbbsinarmenia-nextjs",
+  "name": "mbbsinhungary-nextjs",
   "version": "0.1.0",
   "private": true,
   "overrides": {
@@ -12,9 +12,9 @@
     "start": "next start",
     "lint": "eslint",
     "seed": "dotenv -e .env -- npx ts-node --project tsconfig.json -e 'require(\"./prisma/seed.ts\")'",
-    "seed:armenia": "npx dotenv-cli -e .env -- npx tsx scripts/seed-armenia.ts",
-    "seed:armenia:all": "npx dotenv-cli -e .env -- npx tsx scripts/seed-armenia-comprehensive.ts",
-    "seed:armenia:universities": "npx dotenv-cli -e .env -- npx tsx scripts/seed-armenia-universities.ts",
+    "seed:hungary": "npx dotenv-cli -e .env -- npx tsx scripts/seed-hungary.ts",
+    "seed:hungary:all": "npx dotenv-cli -e .env -- npx tsx scripts/seed-hungary-comprehensive.ts",
+    "seed:hungary:universities": "npx dotenv-cli -e .env -- npx tsx scripts/seed-hungary-universities.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },
