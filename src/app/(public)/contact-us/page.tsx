@@ -159,9 +159,9 @@ export default function ContactPage() {
       icon: Phone,
       title: "Call Us",
       desc: "Consult directly",
-      val: "+91 9667 667 331",
+      val: "+91-9818 560 331",
       action: "Call Now",
-      href: "tel:+91 9667 667 331",
+      href: "tel:+91-9818 560 331",
       color: "bg-green-500",
     },
     {

@@ -69,7 +69,7 @@ export default async function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-[#D5AE67] flex-shrink-0" />
-                <span className="text-[#7A877F] text-sm">+91 9667 667 331</span>
+                <span className="text-[#7A877F] text-sm">+91-9818 560 331</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-[#D5AE67] flex-shrink-0" />
