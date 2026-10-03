@@ -153,7 +153,7 @@ export default function UniversityMap({
   );
 
   const markerIcon = createMarkerIcon();
-  const center: [number, number] = [40.0691, 45.0382];
+  const center: [number, number] = [47.1625, 19.5033];
 
   const tileLayers: Record<LayerType, { url: string; attribution: string }> = {
     map: {
@@ -172,7 +172,7 @@ export default function UniversityMap({
     <div style={{ position: "relative", width: "100%", height: "520px" }}>
       <MapContainer
         center={center}
-        zoom={10}
+        zoom={7}
         scrollWheelZoom={false}
         zoomControl={false}
         style={{ height: "100%", width: "100%", background: "#e5e3df" }}

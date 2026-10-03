@@ -31,13 +31,13 @@ export default function UniversityDocuments({ university }: Props) {
   if (!hasDocuments) return null;
 
   return (
-    <section className="py-14 bg-red-700 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 bg-[#FBF8F0] rounded-full -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#FBF8F0] rounded-full translate-y-1/2 -translate-x-1/2" />
+    <section className="py-14 bg-[#FBF8F0] border-y border-[#DDE5DD] relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-72 h-72 bg-[#F3F7F3] rounded-full -translate-y-1/2 translate-x-1/2 hidden md:block" />
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#F3F7F3] rounded-full translate-y-1/2 -translate-x-1/2 hidden md:block" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <span className="inline-block bg-red-400 text-[#202D28] text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
+          <span className="inline-block bg-[#F3F7F3] text-[#A52B3A] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3 border border-[#DDE5DD]">
             Official Documents
           </span>
           <h2 className="text-3xl font-extrabold text-[#202D28] mb-1">
@@ -50,9 +50,9 @@ export default function UniversityDocuments({ university }: Props) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {university.brochurePath && (
-            <div className="group flex items-center gap-4 bg-[#F3F7F3] hover:bg-white/15 border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
-              <div className="bg-red-400 group-hover:bg-[#8C2030] transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <FileText className="w-6 h-6 text-[#103D32]" />
+            <div className="group flex items-center gap-4 bg-white hover:bg-[#F3F7F3] border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md cursor-pointer">
+              <div className="bg-[#FBF8F0] group-hover:bg-[#175747] transition-colors p-3 rounded-xl shrink-0 border border-[#DDE5DD] group-hover:border-[#175747]">
+                <FileText className="w-6 h-6 text-[#A52B3A] group-hover:text-white transition-colors" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-[#202D28] text-sm">
@@ -71,9 +71,9 @@ export default function UniversityDocuments({ university }: Props) {
           )}
 
           {university.nmcGuidelinesPath && (
-            <div className="group flex items-center gap-4 bg-[#F3F7F3] hover:bg-white/15 border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
-              <div className="bg-red-400 group-hover:bg-[#8C2030] transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <Award className="w-6 h-6 text-[#103D32]" />
+            <div className="group flex items-center gap-4 bg-white hover:bg-[#F3F7F3] border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md cursor-pointer">
+              <div className="bg-[#FBF8F0] group-hover:bg-[#175747] transition-colors p-3 rounded-xl shrink-0 border border-[#DDE5DD] group-hover:border-[#175747]">
+                <Award className="w-6 h-6 text-[#A52B3A] group-hover:text-white transition-colors" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-[#202D28] text-sm">
@@ -96,9 +96,9 @@ export default function UniversityDocuments({ university }: Props) {
           )}
 
           {university.embassyLetterPath && (
-            <div className="group flex items-center gap-4 bg-[#F3F7F3] hover:bg-white/15 border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
-              <div className="bg-red-400 group-hover:bg-[#8C2030] transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <Globe className="w-6 h-6 text-[#103D32]" />
+            <div className="group flex items-center gap-4 bg-white hover:bg-[#F3F7F3] border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md cursor-pointer">
+              <div className="bg-[#FBF8F0] group-hover:bg-[#175747] transition-colors p-3 rounded-xl shrink-0 border border-[#DDE5DD] group-hover:border-[#175747]">
+                <Globe className="w-6 h-6 text-[#A52B3A] group-hover:text-white transition-colors" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-[#202D28] text-sm">
@@ -121,9 +121,9 @@ export default function UniversityDocuments({ university }: Props) {
           )}
 
           {university.universityLicensePath && (
-            <div className="group flex items-center gap-4 bg-[#F3F7F3] hover:bg-white/15 border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
-              <div className="bg-red-400 group-hover:bg-[#8C2030] transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <Shield className="w-6 h-6 text-[#103D32]" />
+            <div className="group flex items-center gap-4 bg-white hover:bg-[#F3F7F3] border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md cursor-pointer">
+              <div className="bg-[#FBF8F0] group-hover:bg-[#175747] transition-colors p-3 rounded-xl shrink-0 border border-[#DDE5DD] group-hover:border-[#175747]">
+                <Shield className="w-6 h-6 text-[#A52B3A] group-hover:text-white transition-colors" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-[#202D28] text-sm">
@@ -146,9 +146,9 @@ export default function UniversityDocuments({ university }: Props) {
           )}
 
           {university.aggregationLetterPath && (
-            <div className="group flex items-center gap-4 bg-[#F3F7F3] hover:bg-white/15 border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
-              <div className="bg-red-400 group-hover:bg-[#8C2030] transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <CheckCircle className="w-6 h-6 text-[#103D32]" />
+            <div className="group flex items-center gap-4 bg-white hover:bg-[#F3F7F3] border border-[#DDE5DD] rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md cursor-pointer">
+              <div className="bg-[#FBF8F0] group-hover:bg-[#175747] transition-colors p-3 rounded-xl shrink-0 border border-[#DDE5DD] group-hover:border-[#175747]">
+                <CheckCircle className="w-6 h-6 text-[#A52B3A] group-hover:text-white transition-colors" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-[#202D28] text-sm">

@@ -277,17 +277,10 @@ export default async function UniversityDetailPage({ params }: Props) {
       <section className="bg-[#FBF8F0] border-y border-[#DDE5DD] py-6">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center gap-4 text-sm text-[#5F6F67]">
           <span className="font-semibold text-[#202D28]">
-            Frequently Compared With:
+            Compare Universities:
           </span>
           <Link href="/compare" className="text-[#A52B3A] hover:underline">
             Full Comparison Tool
-          </Link>
-          <span className="text-[#5F6F67]">|</span>
-          <Link
-            href="/universities/anna-medical-college"
-            className="hover:text-[#175747] transition-colors"
-          >
-            Anna Medical College
           </Link>
         </div>
       </section>
@@ -692,12 +685,15 @@ export default async function UniversityDetailPage({ params }: Props) {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-10 bg-[#103D32] text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-3">
+      <section className="py-12 bg-gradient-to-br from-[#175747] to-[#202D28] text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+        
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Medical Journey?
           </h2>
-          <p className="text-[#DCE8E2] text-lg mb-8">
+          <p className="text-gray-200 text-lg mb-8">
             Secure your seat at {universityMapped.name} — limited spots
             available for {APP_YEAR} intake.
           </p>
@@ -708,13 +704,13 @@ export default async function UniversityDetailPage({ params }: Props) {
               rel={
                 universityMapped.applyNowUrl ? "noopener noreferrer" : undefined
               }
-              className="bg-[#A52B3A] text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#8C2030] transition-all hover:scale-105"
+              className="bg-[#A52B3A] text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#8C2030] transition-all hover:scale-105 shadow-lg"
             >
               Apply Now <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/universities"
-              className="border-2 border-white text-white px-10 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#103D32] hover:border-[#103D32] transition-all"
+              className="border-2 border-white/30 text-white px-10 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-white/10 transition-all"
             >
               ← Back to Universities
             </Link>

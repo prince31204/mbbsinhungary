@@ -574,9 +574,11 @@ export default function InlineApplyForm({
       </Card>
 
       {/* Required Documents */}
-      <div className="bg-red-400 border border-[#DDE5DD] rounded-2xl p-5 mb-4">
+      <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-4">
         <div className="flex items-center gap-3 mb-3">
-          <ClipboardList size={17} className="text-[#A52B3A]" />
+          <div className="bg-white border border-amber-200 p-2 rounded-lg shadow-sm">
+            <ClipboardList size={17} className="text-[#A52B3A]" />
+          </div>
           <h3 className="font-bold text-[#202D28]">Required Documents</h3>
         </div>
         <div className="grid grid-cols-2 gap-1.5">
@@ -585,12 +587,12 @@ export default function InlineApplyForm({
               key={doc}
               className="flex items-center gap-2 text-sm text-[#5F6F67]"
             >
-              <CheckCircle size={13} className="text-[#A52B3A] shrink-0" /> {doc}
+              <CheckCircle size={13} className="text-[#175747] shrink-0" /> {doc}
             </div>
           ))}
         </div>
-        <p className="text-xs text-[#A52B3A] mt-3">
-          Please have these documents ready. Our counsellor will guide you on
+        <p className="text-xs text-[#5F6F67] mt-3 font-medium">
+          * Please have these documents ready. Our counsellor will guide you on
           submission.
         </p>
       </div>

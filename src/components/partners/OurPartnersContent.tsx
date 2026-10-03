@@ -263,32 +263,20 @@ export default function OurPartnersContent({
   return (
     <div className="min-h-screen bg-[#FBF8F0]" suppressHydrationWarning>
       {/* -- HEMD -- */}
-      <section className="relative overflow-hidden text-[#202D28] bg-white">
-        {/* Background Image Setup */}
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            // Using an Unsplash handshake placeholder. You can replace this URL with your local image path (e.g., '/images/handshake.jpg')
-            backgroundImage: `url('/image/partners.jpg')`,
-          }}
-        />
-
-        {/* Brand Overlay to ensure text readability */}
-        <div className="absolute inset-0 z-0 bg-white " />
-
+      <section className="relative overflow-hidden text-white bg-gradient-to-br from-[#175747] to-[#202D28]">
         {/* decorative blobs */}
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#F3F7F3]/20 rounded-full hidden z-0" />
-        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-[#D5AE67]/20 rounded-full hidden z-0" />
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full hidden z-0" />
+        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-white/5 rounded-full hidden z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 lg:py-10 text-center">
-          <span className="inline-flex items-center gap-2 bg-white/20 text-[#202D28] text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-3 border border-[#DDE5DD]">
+          <span className="inline-flex items-center gap-2 bg-white/20 text-white text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-3 border border-white/30">
             <MapPin className="w-4 h-4" />
             India Network
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 mt-2">
-            Our <span className="text-[#A52B3A]">Partners</span> in India
+            Our <span className="text-[#D5AE67]">Partners</span> in India
           </h1>
-          <p className="text-[#5F6F67] max-w-4xl mx-auto text-lg md:text-xl leading-relaxed mb-6">
+          <p className="text-gray-200 max-w-4xl mx-auto text-lg md:text-xl leading-relaxed mb-6">
             Meet our trusted network of education consultants and partners
             across India who help students achieve their dreams of studying
             medicine abroad. From counseling to admissions, they provide
@@ -307,7 +295,7 @@ export default function OurPartnersContent({
             </button>
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 border-2 border-[#DDE5DD] text-[#202D28] font-bold px-7 py-3.5 rounded-xl hover:bg-[#F3F7F3] transition-colors"
+              className="inline-flex items-center gap-2 border-2 border-white/30 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-white/10 transition-colors"
             >
               Contact Our Team
               <ArrowRight className="w-4 h-4" />
@@ -318,10 +306,10 @@ export default function OurPartnersContent({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto py-2 pb-6">
             {stats.map((s, idx) => (
               <div key={idx} className="text-center">
-                <p className="text-4xl lg:text-5xl font-extrabold text-[#A52B3A] mb-1">
+                <p className="text-4xl lg:text-5xl font-extrabold text-[#D5AE67] mb-1">
                   {s.value}
                 </p>
-                <p className="text-[#5F6F67] text-sm md:text-base font-medium tracking-wide">
+                <p className="text-gray-200 text-sm md:text-base font-medium tracking-wide">
                   {s.label}
                 </p>
               </div>
@@ -732,16 +720,16 @@ export default function OurPartnersContent({
       </section>
 
       {/* -- BOTTOM CTA -- */}
-      <section className="relative overflow-hidden bg-white text-[#202D28] py-16">
-        <div className="absolute -top-20 right-0 w-72 h-72 bg-[#F3F7F3]/10 rounded-full hidden" />
-        <div className="absolute bottom-0 left-10 w-60 h-60 bg-[#F3F7F3]/10 rounded-full hidden" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#175747] to-[#202D28] text-white py-16">
+        <div className="absolute -top-20 right-0 w-72 h-72 bg-white/5 rounded-full hidden" />
+        <div className="absolute bottom-0 left-10 w-60 h-60 bg-white/5 rounded-full hidden" />
 
         <div className="relative max-w-3xl mx-auto px-4 text-center">
-          <Star className="w-10 h-10 text-[#A52B3A] mx-auto mb-5" />
+          <Star className="w-10 h-10 text-[#D5AE67] mx-auto mb-5" />
           <h2 className="text-3xl lg:text-4xl font-extrabold mb-4">
             Ready to Join Our Network?
           </h2>
-          <p className="text-[#5F6F67] mb-10 text-lg">
+          <p className="text-gray-200 mb-10 text-lg">
             Partner with us and be part of a trusted ecosystem that connects
             aspiring medical students with world-class universities in Hungary.
           </p>
@@ -755,7 +743,7 @@ export default function OurPartnersContent({
             </button>
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 border-2 border-[#DDE5DD] text-[#202D28] font-bold px-7 py-3.5 rounded-xl hover:bg-[#F3F7F3] transition-colors"
+              className="inline-flex items-center gap-2 border-2 border-white/30 text-white font-bold px-7 py-3.5 rounded-xl hover:bg-white/10 transition-colors"
             >
               <Users className="w-5 h-5" />
               Contact Our Team

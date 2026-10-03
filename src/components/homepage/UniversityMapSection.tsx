@@ -21,9 +21,7 @@ export default async function UniversityMapSection() {
     })
     .catch(() => []);
 
-  if (universities.length === 0) {
-    return null;
-  }
+
 
   const mapData = universities.map((u) => ({
     ...u,

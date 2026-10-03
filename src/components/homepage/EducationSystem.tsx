@@ -190,10 +190,10 @@ export default async function EducationSystem() {
           </div>
         </div>
 
-        <div className="mt-12 text-center bg-gradient-to-r from-[#175747] to-[#103D32] rounded-[2rem] p-10 shadow-lg">
+        <div className="mt-12 text-center bg-[#FBF8F0] border border-[#DDE5DD] rounded-[2rem] p-10 shadow-md">
           <Link
             href="/education-system"
-            className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-[#103D32] transition-colors hover:bg-gray-100"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#A52B3A] px-8 py-4 font-semibold text-white transition-all border border-transparent hover:bg-white hover:text-black hover:border-gray-300 shadow-sm"
           >
             Learn More About the Education System
           </Link>

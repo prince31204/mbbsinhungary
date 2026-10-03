@@ -376,13 +376,13 @@ export default async function ScholarshipsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact-us?source=talk_to_counselor"
-              className="bg-[#A52B3A] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#8C2030] transition-colors"
+              className="bg-[#A52B3A] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#8C2030] hover:text-white transition-colors"
             >
               Talk to a Counselor
             </Link>
             <Link
               href="/universities"
-              className="border-2 border-[#DDE5DD] text-[#A52B3A] px-8 py-4 rounded-lg font-semibold hover:bg-[#A52B3A] hover:text-[#202D28] transition-colors"
+              className="border-2 border-[#DDE5DD] text-[#A52B3A] px-8 py-4 rounded-lg font-semibold hover:bg-[#A52B3A] hover:text-white transition-colors"
             >
               Browse Universities
             </Link>
